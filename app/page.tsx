@@ -11,7 +11,7 @@ export default function Home() {
   let tog
 
   function changeBackground(e: any) {
-    tog = e.target.querySelector('#del')
+    tog = document.querySelector('#del')
     console.log(e, e.target.id, tog)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
@@ -26,7 +26,7 @@ export default function Home() {
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
-      <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+      <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
       {/* {changeBackground(isShown)} */}
       </Col> </Row>
     <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
@@ -152,10 +152,10 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           </svg> </Col> </Row> 
 
 {/* () => {co = 'red'; () =>{ co = 'white';  */}
-    <Row id='r1' onMouseEnter={changeBackground }
+    <Row id='r1' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"> <Row className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+          <Col id='del1' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
