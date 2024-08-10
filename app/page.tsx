@@ -12,7 +12,7 @@ export default function Home() {
 
   function changeBackground(e: any) {let parent = e.target.parentElement
     while (parent.id.match(/r\d/) == null) {
-      // console.log(parent)
+      console.log(parent)
       parent = parent.parentElement }
     tog = parent.querySelector('#del')
     console.log(e
