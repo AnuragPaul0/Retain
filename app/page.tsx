@@ -6,29 +6,30 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 
-export default function Home() {const [isShown, setIsShown] = useState(false)
+export default function Home() {
+  // const [isShown, setIsShown] = useState(false)
   // const d = document
 
   function changeBackground(e: any) {
     // document.querySelector('#del')
     console.log(e)
-    // id={'r'+p.toString()} 
-    let tr = <CiTrash style={{ height: '2em', color: co, strokeWidth: .5}}/>
+    // id={'r'+p.toString()} () =>{ co = 'white';
+    let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
+      <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     return createRoot(e).render(tr)
   }
-  let p = 2, co = ''
+  let p = 2, co = true
   const greeting = () => {
-  const container = document.createElement('div')
+    const container = document.createElement('div')
 
-    createRoot(container).render(<Row onMouseEnter={() => {co = 'red'
-      changeBackground} }
-    onMouseLeave={() =>{ co = 'white'; changeBackground} } className="justify-content-md-center">
+    createRoot(container).render(<Row onMouseEnter={changeBackground}
+    onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
       <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
       {/* {changeBackground(isShown)} */}
       </Col> </Row>
     <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
-      <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >p</p>
+      <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >{p}</p>
         <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
   <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
   <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -142,9 +143,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-ellipsis-vertical">
           <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg> </Col> </Row> 
-
-    <Row onMouseEnter={() => {co = 'red'; changeBackground} }
-    onMouseLeave={() =>{ co = 'white'; changeBackground}} className="justify-content-md-center">
+{/* () => {co = 'red'; () =>{ co = 'white';  */}
+    <Row onMouseEnter={changeBackground }
+    onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"> <Row className="justify-content-md-center">
           <Col id='del1' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
