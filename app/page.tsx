@@ -1,8 +1,6 @@
 'use client'
-import React, { useState, createElement } from "react"; import { CiTrash } from "react-icons/ci"
-import {
-  MdOutlineSettings,
-} from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
+import React, { useState} from "react"; import { CiTrash } from "react-icons/ci"
+import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
@@ -10,12 +8,11 @@ import { createRoot } from 'react-dom/client'
 
 export default function Home() {const [isShown, setIsShown] = useState(false)
   // const d = document
-  // function trash(c) {console.log(c)
-  //   return (<CiTrash style={{ height: '2em', color: c, strokeWidth: .5}}/>)}
 
   function changeBackground(e: any) {
     // document.querySelector('#del')
-    // console.log(e, trash(e)) id={'r'+p.toString()} 
+    console.log(e)
+    // id={'r'+p.toString()} 
     let tr = <CiTrash style={{ height: '2em', color: co, strokeWidth: .5}}/>
     return createRoot(e).render(tr)
   }
