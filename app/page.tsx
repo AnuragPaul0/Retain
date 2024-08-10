@@ -11,8 +11,8 @@ export default function Home() {
   let tog
 
   function changeBackground(e: any) {let parent = e.parentElement
-    while (parent.id.match(/r\d/) != null)
-      parent = parent.parentElement
+    while (parent.id.match(/r\d/) != null) { console.log(parent)
+      parent = parent.parentElement }
     tog = parent.querySelector('#del')
     console.log(e
       // ._reactName
