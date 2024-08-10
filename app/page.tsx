@@ -10,8 +10,9 @@ export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
   let tog
 
-  function changeBackground(e: any) {let parent = e.parentElement
-    while (parent.id.match(/r\d/) != null) { console.log(parent)
+  function changeBackground(e: any) {let parent = e.target.parentElement
+    while (parent.id.match(/r\d/) != null) {
+      // console.log(parent)
       parent = parent.parentElement }
     tog = parent.querySelector('#del')
     console.log(e
