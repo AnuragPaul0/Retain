@@ -1,5 +1,5 @@
 'use client'
-import React, { useState} from "react"; import { CiTrash } from "react-icons/ci"
+import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -12,7 +12,7 @@ export default function Home() {
 
   function changeBackground(e: any) {
     tog = document.querySelector('#del')
-    console.log(e, e.target.id, tog)
+    console.log(e._reactName, e.target.id, tog, co)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
@@ -23,7 +23,7 @@ export default function Home() {
   const greeting = () => {
     let container = document.createElement('div')
 // +p.toString() 
-    createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
+    createRoot(container).render(<Row id={'r'+p.toString()} onMouseOver={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
       <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
