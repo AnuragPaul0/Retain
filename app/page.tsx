@@ -12,7 +12,7 @@ export default function Home() {
 
   function changeBackground(e: any) {let parent = e.target
     while (parent.id.match(/r\d/) == null) {
-      console.log(parent)
+      // console.log(parent)
       parent = parent.parentElement }
     tog = parent.querySelector('#del')
     console.log(e
@@ -33,7 +33,7 @@ export default function Home() {
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
-      <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
+      <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
       {/* {changeBackground(isShown)} */}
       </Col> </Row>
     <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
@@ -162,7 +162,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     <Row id='r1' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"> <Row className="justify-content-md-center">
-          <Col id='del1' className="justify-content-md-center" style={{display: 'flex'}}>
+          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
