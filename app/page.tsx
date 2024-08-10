@@ -12,11 +12,11 @@ export default function Home() {
 
   function changeBackground(e: any) {
     tog = document.querySelector('#del'+e.target.id)
-    console.log(e)
+    console.log(e, e.target.id, tog)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
-    if (tog) return createRoot(tog).render(tr)
+    if (tog) createRoot(tog).render(tr)
   }
   let p = 2, co = true
 
