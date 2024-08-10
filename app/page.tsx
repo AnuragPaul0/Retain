@@ -1,4 +1,4 @@
-import Image from "next/image"
+'use client'
 import React, { useState, createElement } from "react"; import { CiTrash } from "react-icons/ci"
 import {
   MdOutlineSettings,
