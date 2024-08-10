@@ -50,7 +50,8 @@ function greeting() {
      </Col>
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>+</Col>
       </Row>)
-      // document.querySelector('#addr').insertAdjacentElement('beforebegin', container)
+      let a = document.querySelector('#addr')
+      if (a) a.insertAdjacentElement('beforebegin', container)
     console.log(document)
       // createElement( 'div', { className: 'greeting' },)
       }
