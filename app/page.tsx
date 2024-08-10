@@ -1,6 +1,5 @@
 import Image from "next/image"
 import React, { useState, createElement } from "react"; import { CiTrash } from "react-icons/ci"
-import { Disclosure } from "@headlessui/react"
 import {
   MdOutlineSettings,
 } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
