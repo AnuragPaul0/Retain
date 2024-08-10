@@ -8,10 +8,10 @@ import { createRoot } from 'react-dom/client'
 
 export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
-  let tog = document.querySelector('#del')
+  let tog
 
   function changeBackground(e: any) {let parent = e.parentElement
-
+    tog = document.querySelector('#del')
     while (parent.id.match(/r\d/) != null)
       tog = parent.querySelector('#del')
     console.log(e
