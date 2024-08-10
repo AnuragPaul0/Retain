@@ -10,7 +10,7 @@ export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
   let tog
 
-  function changeBackground(e: any) {let parent = e.target.parentElement
+  function changeBackground(e: any) {let parent = e.target
     while (parent.id.match(/r\d/) == null) {
       console.log(parent)
       parent = parent.parentElement }
