@@ -8,10 +8,12 @@ import { createRoot } from 'react-dom/client'
 
 export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
-  let tog
+  let tog = document.querySelector('#del')
 
-  function changeBackground(e: any) {
-    tog = document.querySelector('#del')
+  function changeBackground(e: any) {let parent = e.parentElement
+
+    while (parent.id.match(/r\d/) != null)
+      tog = parent.querySelector('#del')
     console.log(e
       // ._reactName
       , e.target
@@ -27,7 +29,7 @@ export default function Home() {
   const greeting = () => {
     let container = document.createElement('div')
 // +p.toString() 
-    createRoot(container).render(<Row id={'r'+p.toString()} onMouseOver={changeBackground}
+    createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
       <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
