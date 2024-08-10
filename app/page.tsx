@@ -109,12 +109,14 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           </div>
         </div>
         <div style={{marginLeft: '7rem', marginTop: '3rem'}} className="framer-1s4jv5d" data-framer-name=
-      "Fuel your Brand's Growth with Personalized Dynamic Creatives" data-framer-component-type="RichTextContainer">
+      "Fuel your Brand's Growth with Personalized Dynamic Creatives"
+      data-framer-component-type="RichTextContainer">
 <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
   <HiArrowLeft style={{display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem'}}/>
   <span style={{width: '25%', display: 'inline-block', borderBottom: '1px solid grey'}}>Rules space</span> </p></div>
   
-  <button className="button" style={{verticalAlign:'middle', display: 'inline-block', position: 'absolute', top: '3rem',
+  <button className="button" style={{verticalAlign:'middle', display: 'inline-block',
+  position: 'absolute', top: '3rem',
   borderRadius: '4px', right: '2rem',
   backgroundColor: 'limegreen',
   border: 'none',
@@ -127,7 +129,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
   cursor: 'pointer',
   margin: '5px'}}><span>Publish Feed</span></button>
 
-    <Container> <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
+    <Container>
+      <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}>Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p> <svg style={{
