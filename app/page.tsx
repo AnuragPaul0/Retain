@@ -12,7 +12,11 @@ export default function Home() {
 
   function changeBackground(e: any) {
     tog = document.querySelector('#del')
-    console.log(e._reactName, e.target.id, tog, co)
+    console.log(e
+      // ._reactName
+      , e.target
+      // .id
+      , tog, co)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
