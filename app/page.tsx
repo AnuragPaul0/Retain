@@ -8,21 +8,22 @@ import { createRoot } from 'react-dom/client'
 
 export default function Home() {
   // const [isShown, setIsShown] = useState(false)
-  // const d = document
+  let d = document, tog
 
   function changeBackground(e: any) {
-    // document.querySelector('#del')
+    tog = d.querySelector('#del'+e.target.id)
     console.log(e)
-    // id={'r'+p.toString()} () =>{ co = 'white';
+    // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
-    return createRoot(e).render(tr)
+    if (tog) return createRoot(tog).render(tr)
   }
   let p = 2, co = true
-  const greeting = () => {
-    const container = document.createElement('div')
 
-    createRoot(container).render(<Row onMouseEnter={changeBackground}
+  const greeting = () => {
+    let container = d.createElement('div')
+
+    createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
       <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
