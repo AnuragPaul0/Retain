@@ -7,11 +7,11 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 
 export default function Home() {
-  // const [isShown, setIsShown] = useState(false)
-  let d = document, tog
+  // const [isShown, setIsShown] = useState(false) d = document, 
+  let tog
 
   function changeBackground(e: any) {
-    tog = d.querySelector('#del'+e.target.id)
+    tog = document.querySelector('#del'+e.target.id)
     console.log(e)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
@@ -21,7 +21,7 @@ export default function Home() {
   let p = 2, co = true
 
   const greeting = () => {
-    let container = d.createElement('div')
+    let container = document.createElement('div')
 
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
