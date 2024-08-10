@@ -11,7 +11,7 @@ export default function Home() {
   let tog
 
   function changeBackground(e: any) {
-    tog = document.querySelector('#del'+e.target.id)
+    tog = e.target.querySelector('#del')
     console.log(e, e.target.id, tog)
     // () =>{ co = 'white';
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
@@ -22,11 +22,11 @@ export default function Home() {
 
   const greeting = () => {
     let container = document.createElement('div')
-
+// +p.toString() 
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'> <Row className="justify-content-md-center">
-      <Col id={'del'+p.toString()} className="justify-content-md-center" style={{display: 'flex'}}>
+      <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
       {/* {changeBackground(isShown)} */}
       </Col> </Row>
     <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
@@ -57,13 +57,13 @@ export default function Home() {
       // createElement( 'div', { className: 'greeting' },)
       }
   return ( <div style={{backgroundColor: 'white'}}>
-        <div style={{width: '4rem'}} className=
-        "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
-          <div className="flex-col justify-start item-center">
-            <div className="my-4"> <div className=
-              "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
-                
-              <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
+    <div style={{width: '4rem'}} className=
+    "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
+      <div className="flex-col justify-start item-center">
+        <div className="my-4"> <div className=
+          "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
+            
+          <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
 
 <g mask="url(#svg-230198041_977_mask0_18594_7116)"> <path  d=
 "M22.6407 0.822266V22.8675L13.0248 13.2486C12.1316 12.3479 11.6276 11.1326 11.6211 9.86415V0.822266H22.6407Z"
@@ -132,23 +132,30 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 
     <Container>
       <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
-        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}>Product Filter</Col>
+        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p> <svg style={{
           marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-ellipsis-vertical">
-          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg> </Col>
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        className="lucide lucide-ellipsis-vertical">
+          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+          </svg> </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-        <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-ellipsis-vertical">
-          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg> </Col> </Row> 
+        <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        className="lucide lucide-ellipsis-vertical">
+          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+          </svg> </Col> </Row> 
+
 {/* () => {co = 'red'; () =>{ co = 'white';  */}
-    <Row onMouseEnter={changeBackground }
+    <Row id='r1' onMouseEnter={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"> <Row className="justify-content-md-center">
-          <Col id='del1' className="justify-content-md-center" style={{display: 'flex'}}>
+          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
@@ -164,19 +171,22 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
-        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}>Product Filter</Col>
+        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
          </Col>
-          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>+</Col>
+          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+          >+</Col>
           </Row>
           
           <Row id="addr" onClick={greeting} className="justify-content-md-center">
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-      <button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',  paddingLeft: '7px',
+      <button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
+      paddingLeft: '7px',
   // width: '100px',
   paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
         <Col xs lg="9"></Col> </Row> </Container> </div> )
