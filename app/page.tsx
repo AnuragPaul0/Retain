@@ -1,4 +1,13 @@
 import Image from "next/image"
+import React, { useState, createElement } from "react"; import { CiTrash } from "react-icons/ci"
+import { Disclosure } from "@headlessui/react"
+import {
+  MdOutlineSettings,
+} from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
+import { createRoot } from 'react-dom/client'
 
 export default function Home() {
   return (
