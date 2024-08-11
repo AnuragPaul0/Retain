@@ -195,7 +195,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">Single Image prduct...</p>
+        <p className="text-tiny">Single Image prduct...</p>
         <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
         size="sm">
           Notify
@@ -214,7 +214,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">Single Image prduct...</p>
+        <p className="text-tiny">Single Image prduct...</p>
         <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
         size="sm">
           Notify
@@ -256,7 +256,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">Single Image prduct...</p>
+        <p className="text-tiny">Single Image prduct...</p>
         <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
         size="sm">
           Notify
@@ -276,7 +276,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">Single Image prduct...</p>
+        <p className="text-tiny">Single Image prduct...</p>
         <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
         size="sm">
           Notify
@@ -318,7 +318,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               width={200} />
             <CardFooter className=
             "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Single Image prduct...</p>
+              <p className="text-tiny">Single Image prduct...</p>
               <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
               size="sm">
                 Notify
@@ -338,7 +338,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               width={200} />
             <CardFooter className=
             "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Single Image prduct...</p>
+              <p className="text-tiny">Single Image prduct...</p>
               <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
               size="sm">
                 Notify
