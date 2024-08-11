@@ -224,7 +224,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
           >+</Col></Row>
           
-    <Row id='r1' onMouseOver={changeBackground }
+    <Row id='r2' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
@@ -286,7 +286,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
           >+</Col></Row>
           
-          <Row id='r1' onMouseOver={changeBackground }
+          <Row id='r3' onMouseOver={changeBackground }
           onMouseLeave={changeBackground } className="justify-content-md-center">
             <Col xs lg="1"><Row className="justify-content-md-center">
                 <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
@@ -346,7 +346,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
                 <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
                 >+</Col></Row>
           
-                <Row id='r1' onMouseOver={changeBackground }
+                <Row id='r4' onMouseOver={changeBackground }
                 onMouseLeave={changeBackground } className="justify-content-md-center">
                   <Col xs lg="1"><Row className="justify-content-md-center">
                       <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
@@ -354,7 +354,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
                       </Col> </Row>
             
                     <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
-                      <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+                      <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
                         <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
             <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
             <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
