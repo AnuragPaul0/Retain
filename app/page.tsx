@@ -432,7 +432,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
                           <Card isFooterBlurred
                         radius="lg" className="border-none" >
                         <Image alt="Woman"
-                          className="object-cover" height={200} style={{opacity: '100'}} src=
+                          className="object-cover opacity-100" height={200} style={{opacity: '100'}} src=
                           "https://cdn.pixabay.com/photo/2024/02/27/00/13/heliconia-8599119_640.jpg"
                           width={200} /> <CardFooter className=
                         "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
