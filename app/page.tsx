@@ -203,7 +203,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200}
+        className="object-cover opacity-1" height={200}
         src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
         width={200} />
       <CardFooter className=
@@ -244,7 +244,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200}
+        className="object-cover opacity-1" height={200}
         src=
         "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
         width={200} />
@@ -264,7 +264,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200}
+        className="object-cover opacity-1" height={200}
         src=
         "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
         width={200} />
@@ -306,7 +306,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200} style={{opacity: '100'}} src=
+        className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
         "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
         width={200} />
       <CardFooter className=
@@ -325,7 +325,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200} style={{opacity: '100'}} src=
+        className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
         "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
         width={200} />
       <CardFooter className=
@@ -366,7 +366,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200} style={{opacity: '100'}} src=
+        className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
         "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
         width={200} />
       <CardFooter className=
@@ -385,7 +385,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred
       radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200} style={{opacity: '100'}} src=
+        className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
         "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
         width={200} />
       <CardFooter className=
@@ -441,10 +441,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     </Col>
 
     <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-    <Card isFooterBlurred
-  radius="lg" className="border-none" >
+    <Card isFooterBlurred radius="lg" className="border-none" >
   <Image alt="Woman"
-    className="object-cover" height={200} style={{opacity: '100'}} src=
+    className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
     "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
     width={200} /> <CardFooter className=
   "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
