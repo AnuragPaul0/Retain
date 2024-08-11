@@ -307,7 +307,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       radius="lg" className="border-none" >
       <Image alt="Woman"
         className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
-        "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+        "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -367,7 +367,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       radius="lg" className="border-none" >
       <Image alt="Woman"
         className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
-        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
         width={200} />
       <CardFooter className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
