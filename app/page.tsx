@@ -64,12 +64,7 @@ export default function Home() {
     // console.log(document)
       // createElement( 'div', { className: 'greeting' },)
       }
-  return ( <div style={{backgroundColor: 'white'}}> <div>
-    <Head>
-      <link rel="shortcut icon" href="/static/favicon.ico" />
-    </Head>
-    {/* // Other layout/components */}
-  </div>
+  return ( <div style={{backgroundColor: 'white'}}>
     <div style={{width: '4rem'}} className=
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
       <div className="flex-col justify-start item-center">
@@ -187,10 +182,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <Card isFooterBlurred
-      radius="lg" className="border-none" >
+        <Card isFooterBlurred radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover" height={200}
+        className="object-cover opacity-1" height={200}
         src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
         width={200} />
       <CardFooter className=
@@ -286,189 +280,189 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
           >+</Col></Row>
           
-          <Row id='r3' onMouseOver={changeBackground }
-          onMouseLeave={changeBackground } className="justify-content-md-center">
-            <Col xs lg="1"><Row className="justify-content-md-center">
-                <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-                {/* {changeBackground(isShown)} */}
-                </Col> </Row>
-      
-              <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
-                <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
-                  <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
-      <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-      <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-      <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-      <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-      <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-      <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-      <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-      <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-      <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-                  </svg> </Col> </Row> </Col>
-              <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-              >Product Filter</Col>
-              <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-              <Card isFooterBlurred
-            radius="lg" className="border-none" >
-            <Image alt="Woman"
-              className="object-cover" height={200} style={{opacity: '100'}} src=
-              "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-              width={200} />
-            <CardFooter className=
-            "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-              <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-              size="sm">
-                Notify
-              </Button>
-            </CardFooter>
-          </Card>
-          {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+    <Row id='r3' onMouseOver={changeBackground }
+    onMouseLeave={changeBackground } className="justify-content-md-center">
+      <Col xs lg="1"><Row className="justify-content-md-center">
+          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+          {/* {changeBackground(isShown)} */}
+          </Col> </Row>
+
+        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+            <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+<path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+<path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+<path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+<path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+<path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+<path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+<path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+            </svg> </Col> </Row> </Col>
+        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        >Product Filter</Col>
+        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred
+      radius="lg" className="border-none" >
+      <Image alt="Woman"
+        className="object-cover" height={200} style={{opacity: '100'}} src=
+        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        width={200} />
+      <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button>
+      </CardFooter>
+    </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+    </Col>
+
+        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred
+      radius="lg" className="border-none" >
+      <Image alt="Woman"
+        className="object-cover" height={200} style={{opacity: '100'}} src=
+        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        width={200} />
+      <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button> </CardFooter> </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
           </Col>
-      
-              <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-              <Card isFooterBlurred
-            radius="lg" className="border-none" >
-            <Image alt="Woman"
-              className="object-cover" height={200} style={{opacity: '100'}} src=
-              "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-              width={200} />
-            <CardFooter className=
-            "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-              <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-              size="sm">
-                Notify
-              </Button> </CardFooter> </Card>
-          {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-               </Col>
-                <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-                >+</Col></Row>
+          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+          >+</Col></Row>
+    
+    <Row id='r4' onMouseOver={changeBackground }
+    onMouseLeave={changeBackground } className="justify-content-md-center">
+      <Col xs lg="1"><Row className="justify-content-md-center">
+          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+          {/* {changeBackground(isShown)} */}
+          </Col> </Row>
+
+        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
+            <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+<path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+<path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+<path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+<path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+<path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+<path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+<path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+            </svg> </Col> </Row> </Col>
+        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        >Product Filter</Col>
+        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred
+      radius="lg" className="border-none" >
+      <Image alt="Woman"
+        className="object-cover" height={200} style={{opacity: '100'}} src=
+        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        width={200} />
+      <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button>
+      </CardFooter>
+    </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+    </Col>
+
+        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred
+      radius="lg" className="border-none" >
+      <Image alt="Woman"
+        className="object-cover" height={200} style={{opacity: '100'}} src=
+        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        width={200} />
+      <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button> </CardFooter> </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+          </Col>
+          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+          >+</Col></Row>
+
+    <Row id='r5' onMouseOver={changeBackground }
+    onMouseLeave={changeBackground } className="justify-content-md-center">
+      <Col xs lg="1"><Row className="justify-content-md-center">
+          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+          {/* {changeBackground(isShown)} */}
+          </Col> </Row>
+
+        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
+            <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+<path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+<path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+<path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+<path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+<path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+<path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+<path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+            </svg> </Col> </Row> </Col>
+        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        >Product Filter</Col>
+        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred
+      radius="lg" className="border-none" >
+      <Image alt="Woman"
+        className="object-cover opacity-100" height={200} style={{opacity: '100'}} src=
+        "https://cdn.pixabay.com/photo/2024/02/27/00/13/heliconia-8599119_640.jpg"
+        width={200} /> <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button>
+      </CardFooter>
+    </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+    </Col>
+
+    <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+    <Card isFooterBlurred
+  radius="lg" className="border-none" >
+  <Image alt="Woman"
+    className="object-cover" height={200} style={{opacity: '100'}} src=
+    "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+    width={200} /> <CardFooter className=
+  "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+    <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+    <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+    size="sm">
+      Notify
+    </Button> </CardFooter> </Card>
+{/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+      </Col>
+      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+      >+</Col></Row>
           
-                <Row id='r4' onMouseOver={changeBackground }
-                onMouseLeave={changeBackground } className="justify-content-md-center">
-                  <Col xs lg="1"><Row className="justify-content-md-center">
-                      <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-                      {/* {changeBackground(isShown)} */}
-                      </Col> </Row>
-            
-                    <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
-                      <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
-                        <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
-            <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-            <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-            <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-            <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-            <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-            <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-            <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-            <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-                        </svg> </Col> </Row> </Col>
-                    <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-                    >Product Filter</Col>
-                    <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-                    <Card isFooterBlurred
-                  radius="lg" className="border-none" >
-                  <Image alt="Woman"
-                    className="object-cover" height={200} style={{opacity: '100'}} src=
-                    "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                    width={200} />
-                  <CardFooter className=
-                  "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                    <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-                    <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-                    size="sm">
-                      Notify
-                    </Button>
-                  </CardFooter>
-                </Card>
-                {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-                </Col>
-            
-                    <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-                    <Card isFooterBlurred
-                  radius="lg" className="border-none" >
-                  <Image alt="Woman"
-                    className="object-cover" height={200} style={{opacity: '100'}} src=
-                    "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                    width={200} />
-                  <CardFooter className=
-                  "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                    <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-                    <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-                    size="sm">
-                      Notify
-                    </Button> </CardFooter> </Card>
-                {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-                     </Col>
-                      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-                      >+</Col></Row>
-          
-                      <Row id='r5' onMouseOver={changeBackground }
-                      onMouseLeave={changeBackground } className="justify-content-md-center">
-                        <Col xs lg="1"><Row className="justify-content-md-center">
-                            <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-                            {/* {changeBackground(isShown)} */}
-                            </Col> </Row>
-                  
-                          <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
-                            <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
-                              <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-                  <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-                  <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-                  <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-                  <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-                  <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-                  <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-                  <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-                  <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-                              </svg> </Col> </Row> </Col>
-                          <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-                          >Product Filter</Col>
-                          <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-                          <Card isFooterBlurred
-                        radius="lg" className="border-none" >
-                        <Image alt="Woman"
-                          className="object-cover opacity-100" height={200} style={{opacity: '100'}} src=
-                          "https://cdn.pixabay.com/photo/2024/02/27/00/13/heliconia-8599119_640.jpg"
-                          width={200} /> <CardFooter className=
-                        "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                          <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-                          <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-                          size="sm">
-                            Notify
-                          </Button>
-                        </CardFooter>
-                      </Card>
-                      {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-                      </Col>
-                  
-                      <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-                      <Card isFooterBlurred
-                    radius="lg" className="border-none" >
-                    <Image alt="Woman"
-                      className="object-cover" height={200} style={{opacity: '100'}} src=
-                      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-                      width={200} /> <CardFooter className=
-                    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-                      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-                      size="sm">
-                        Notify
-                      </Button> </CardFooter> </Card>
-                  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-                        </Col>
-                        <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-                        >+</Col></Row>
-          
-          <Row id="addr" onClick={greeting} className="justify-content-md-center">
-      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-      <button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
-      paddingLeft: '7px',
-  // width: '100px',
-  paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
-        <Col xs lg="9"></Col> </Row> </Container> </div> )
+    <Row id="addr" onClick={greeting} className="justify-content-md-center">
+<Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+<button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
+paddingLeft: '7px',
+// width: '100px',
+paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
+  <Col xs lg="9"></Col> </Row> </Container> </div> )
 }
