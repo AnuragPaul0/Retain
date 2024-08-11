@@ -68,7 +68,7 @@ export default function Home() {
     <Head>
       <link rel="shortcut icon" href="/static/favicon.ico" />
     </Head>
-    // Other layout/components
+    {/* // Other layout/components */}
   </div>
     <div style={{width: '4rem'}} className=
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
