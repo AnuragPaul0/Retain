@@ -199,8 +199,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <Card isFooterBlurred
-      radius="lg" className="border-none" >
+        <Card isFooterBlurred radius="lg" className="border-none" >
       <Image alt="Woman"
         className="object-cover opacity-1" height={200}
         src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
@@ -217,7 +216,11 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
           <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-          >+</Col></Row>
+          ><button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
+            paddingLeft: '7px',
+            // width: '100px',
+            paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
+      </Col></Row>
           
     <Row id='r2' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
