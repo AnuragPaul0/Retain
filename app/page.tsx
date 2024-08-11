@@ -5,12 +5,13 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
+import {Card, CardFooter, Image, Button} from "@nextui-org/react"
 
 export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
-  let tog
+  let tog, parent
 
-  function changeBackground(e: any) {let parent = e.target
+  function changeBackground(e: any) { parent = e.target
     while (parent.id.match(/r\d/) == null) {
       // console.log(parent)
       parent = parent.parentElement }
@@ -29,10 +30,10 @@ export default function Home() {
 
   const greeting = () => {
     let container = document.createElement('div')
-// +p.toString() 
+// +p.toString()
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
-  <Col xs lg='1'> <Row className="justify-content-md-center">
+  <Col xs lg='1'><Row className="justify-content-md-center">
       <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
       {/* {changeBackground(isShown)} */}
       </Col> </Row>
@@ -161,7 +162,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1"> <Row className="justify-content-md-center">
+      <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
@@ -181,7 +182,28 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> </Col>
+        <Card isFooterBlurred
+      radius="lg"
+      className="border-none"
+    >
+      <Image
+        alt="Woman"
+        className="object-cover"
+        height={200}
+        src="https://nextui.org/images/hero-card.jpeg"
+        width={200}
+      />
+      <CardFooter className=
+      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny text-white/80">Single Image prduct...</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        size="sm">
+          Notify
+        </Button>
+      </CardFooter>
+    </Card>
+    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+    </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
