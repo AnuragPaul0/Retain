@@ -190,7 +190,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         alt="Woman"
         className="object-cover"
         height={200}
-        src="https://nextui.org/images/hero-card.jpeg"
+        src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
         width={200}
       />
       <CardFooter className=
