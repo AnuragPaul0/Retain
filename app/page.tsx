@@ -190,7 +190,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               "absolute text-tiny text-white bg-black/20 z-10" variant="flat" color="default"
             radius="lg" size="sm">
               <svg fill="#000000" height="200px" width="200px" version="1.1"
-            id="Capa_1" viewBox="0 0 348.882 348.882" xml:space="preserve">
+            id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier"> <g> <path d=
