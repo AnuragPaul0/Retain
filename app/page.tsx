@@ -183,7 +183,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               width={200} />
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-                "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+                "justify-centre before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                 <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                   >Single Image prduct...</p></CardFooter></Card>
           <Button style={{ top: '50%' }} className=
