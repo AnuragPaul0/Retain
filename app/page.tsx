@@ -1,5 +1,5 @@
 'use client'
-import Head from 'next/head'; import React from "react"; import { CiTrash } from "react-icons/ci"
+import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,7 +9,7 @@ import {Card, CardFooter, Image, Button} from "@nextui-org/react"
 
 export default function Home() {
   // const [isShown, setIsShown] = useState(false) d = document, 
-  let tog, parent
+  let tog, parent, p = 6, co = true, container
 
   function changeBackground(e: any) { parent = e.target
     while (parent.id.match(/r\d/) == null) {
@@ -26,11 +26,7 @@ export default function Home() {
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     if (tog) createRoot(tog).render(tr)
   }
-  let p = 2, co = true
-
-  const greeting = () => {
-    let container = document.createElement('div')
-// +p.toString()
+  const greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'><Row className="justify-content-md-center">
@@ -59,11 +55,10 @@ export default function Home() {
      </Col>
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>+</Col>
       </Row>)
-      let a = document.querySelector('#addr')
-      if (a) a.insertAdjacentElement('beforebegin', container), p++
+    let a = document.querySelector('#addr')
+    if (a) a.insertAdjacentElement('beforebegin', container), p++
     // console.log(document)
-      // createElement( 'div', { className: 'greeting' },)
-      }
+    }
   return ( <div style={{backgroundColor: 'white'}}>
     <div style={{width: '4rem'}} className=
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
@@ -115,9 +110,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               "flex mb-2 justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                 <MdOutlineSettings className="text-2xl fill-white" />
               </div> </div>
-          </div>
-        </div>
-        <div style={{marginLeft: '7rem', marginTop: '3rem'}} className="framer-1s4jv5d" data-framer-name=
+        </div> </div>
+      <div style={{marginLeft: '7rem', marginTop: '3rem'}} className="framer-1s4jv5d" data-framer-name=
       "Fuel your Brand's Growth with Personalized Dynamic Creatives"
       data-framer-component-type="RichTextContainer">
 <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
@@ -180,7 +174,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        >Product Filter</Col>
+          >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
           display: 'flex'}}>
           <Card isFooterBlurred radius="lg" className="border-none">
@@ -199,7 +193,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
     </Col>
 
-        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+      <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none" >
       <Image alt="Woman"
         className="object-cover opacity-1" height={200}
@@ -218,11 +212,10 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         </Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
-          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-          ><button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
-            paddingLeft: '7px',
-            // width: '100px',
-            paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
+      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+      ><button onClick={greeting} className="button" style={{ borderRadius: '4px',
+        backgroundColor: 'whitesmoke', paddingLeft: '7px',
+        paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
       </Col></Row>
           
     <Row id='r2' onMouseOver={changeBackground }
@@ -480,10 +473,10 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
       >+</Col></Row>
           
-    <Row id="addr" onClick={greeting} className="justify-content-md-center">
+    <Row id="addr" className="justify-content-md-center">
 <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-<button className="button" style={{ borderRadius: '4px', backgroundColor: 'whitesmoke',
-paddingLeft: '7px',
+<button onClick={greeting} className="button" style={{ borderRadius: '4px',
+backgroundColor: 'whitesmoke', paddingLeft: '7px',
 // width: '100px',
 paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
   <Col xs lg="9"></Col> </Row> </Container> </div> )
