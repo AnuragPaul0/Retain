@@ -7,9 +7,8 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button} from "@nextui-org/react"
 
-export default function Home() {
-  // const [isShown, setIsShown] = useState(false) d = document, 
-  let tog, parent, p = 6, co = true, container
+export default function Home() { let tog, parent, p = 6, co = true, container
+  // const [isShown, setIsShown] = useState(false)
 
   function changeBackground(e: any) { parent = e.target
     while (parent.id.match(/r\d/) == null) {
@@ -21,11 +20,11 @@ export default function Home() {
       , e.target
       // .id
       , tog, co)
-    // () =>{ co = 'white';
+    // () =>{ co = 'white'
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
-    if (tog) createRoot(tog).render(tr)
-  }
+    if (tog) createRoot(tog).render(tr) }
+
   const greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
@@ -58,7 +57,7 @@ export default function Home() {
     let a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement('beforebegin', container), p++
     // console.log(document)
-    }
+  }
   return ( <div style={{backgroundColor: 'white'}}>
     <div style={{width: '4rem'}} className=
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
