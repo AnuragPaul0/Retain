@@ -138,7 +138,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
   cursor: 'pointer',
   margin: '5px'}}><span>Publish Feed</span></button>
 
-    <Container className="rounded-large">
+    <Container className="rounded-large bg-black\/20">
       <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
@@ -189,12 +189,12 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
               width={200} />
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-              borderBottomLeftRadius: 'var(--nextui-radius-large)'
-            }} className=
+              borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
         "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
           <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
           </CardFooter> </Card>
-          <Button className="absolute text-tiny text-white bg-black/20" variant="flat" color="default"
+          <Button style={{ top: '50%' }} className=
+              "absolute text-tiny text-white bg-black/20 z-1" variant="flat" color="default"
           radius="lg" size="sm">Notify</Button>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
     </Col>
@@ -210,7 +210,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       }} className=
       "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
         <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+        <Button style={{ top: '50%' }} className=
+              "absolute text-tiny text-white bg-black/20 z-1" variant="flat" color="default"
+          radius="lg"
         size="sm">
           Notify
         </Button> </CardFooter> </Card>
