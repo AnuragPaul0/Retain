@@ -129,7 +129,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
   // width: '100px',
   transition: 'all 0.5s',
   cursor: 'pointer',
-  margin: '5px'}}><span>Publish Feed</span></button>
+    margin: '5px'}}><span>Publish Feed</span></button>
 
     <Container className="rounded-large bg-black\/20">
       <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
@@ -154,7 +154,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 
 {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="justify-content-md-center">
+      onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
@@ -183,38 +183,36 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               width={200} />
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-        "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-          <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-          </CardFooter> </Card>
+                "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+                <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+                  >Single Image prduct...</p></CardFooter></Card>
           <Button style={{ top: '50%' }} className=
               "absolute text-tiny text-white bg-black/20 z-1" variant="flat" color="default"
           radius="lg" size="sm">Notify</Button>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-    </Col>
+      </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none" >
-      <Image alt="Woman"
-        className="object-cover opacity-1" height={200}
-        src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
-        width={200} />
-      <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+        <Image alt="Woman"
+          className="object-cover opacity-1" height={200}
+          src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
+          width={200} />
+        <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+          borderBottomLeftRadius: 'var(--nextui-radius-large)'
+        }} className=
+          "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
+          ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+            >Single Image prduct...</p>
         <Button style={{ top: '50%' }} className=
               "absolute text-tiny text-white bg-black/20 z-1" variant="flat" color="default"
-          radius="lg"
-        size="sm">
-          Notify
-        </Button> </CardFooter> </Card>
+          radius="lg" size="sm">Notify</Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-      ><button onClick={greeting} className="button" style={{ borderRadius: '4px',
-        backgroundColor: 'whitesmoke', paddingLeft: '7px',
-        paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
+        ><button onClick={greeting} className="button" style={{ borderRadius: '4px',
+          backgroundColor: 'whitesmoke', paddingLeft: '7px',
+          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
       </Col></Row>
           
     <Row id='r2' onMouseOver={changeBackground }
