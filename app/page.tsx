@@ -138,7 +138,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
   cursor: 'pointer',
   margin: '5px'}}><span>Publish Feed</span></button>
 
-    <Container radius="lg">
+    <Container className="rounded-large">
       <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
@@ -181,7 +181,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
             </svg> </Col> </Row> </Col>
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
-        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
+          display: 'flex'}}>
           <Card isFooterBlurred radius="lg" className="border-none">
             <Image alt="Woman"
               className="object-cover opacity-1" height={200}
@@ -193,8 +194,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
           <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
           </CardFooter> </Card>
-          <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-        size="sm">Notify</Button>
+          <Button className="absolute text-tiny text-white bg-black/20" variant="flat" color="default"
+          radius="lg" size="sm">Notify</Button>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
     </Col>
 
