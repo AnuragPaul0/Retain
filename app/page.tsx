@@ -172,8 +172,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
+
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        ><Row className="justify-content-md-center">
+        ><Row className="pb-7 justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
               "p-4 shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10"
@@ -195,6 +196,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
             <Button className=
               "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
               radius="lg" size="sm">0</Button></Col></Row></Col>
+
       <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
         display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none">
