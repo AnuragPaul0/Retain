@@ -155,6 +155,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="pb-7 justify-content-md-center">
+
       <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
@@ -174,7 +175,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
             </svg> </Col> </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        ><Row className="pb-7 justify-content-md-center">
+        ><Container className="rounded-large bg-black\/20">
+          <Row className="justify-content-md-center" style={{paddingBottom: '1.75rem'}}>
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
               "p-4 shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10"
@@ -195,7 +197,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
               "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
-              radius="lg" size="sm">0</Button></Col></Row></Col>
+              radius="lg" size="sm">0</Button></Col></Row></Container></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
         display: 'flex'}}>
