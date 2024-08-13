@@ -155,7 +155,8 @@ fill="#04AE56"/> <path d=
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r1' onMouseOver={changeBackground }
       onMouseLeave={ changeBackground } className="pb-7 justify-content-md-center">
 
-      <Col xs lg="1"><Row className="justify-content-md-center">
+      <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
+        <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
@@ -245,7 +246,8 @@ fill="#04AE56"/> <path d=
           
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1"><Row className="justify-content-md-center">
+      <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
+        <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
@@ -330,7 +332,8 @@ fill="#04AE56"/> <path d=
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r3' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1"><Row className="justify-content-md-center">
+      <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
+        <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
@@ -394,7 +397,8 @@ fill="#04AE56"/> <path d=
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r4' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1"><Row className="justify-content-md-center">
+      <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
+        <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
@@ -458,7 +462,8 @@ fill="#04AE56"/> <path d=
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r5' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1"><Row className="justify-content-md-center">
+      <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
+        <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
