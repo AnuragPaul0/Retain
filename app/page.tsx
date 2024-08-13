@@ -207,7 +207,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
         <Button style={{ top: '50%' }} className=
-          "p-4 radius-large absolute text-tiny text-white bg-black/20 z-10" variant="flat"
+          "p-4 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -234,8 +234,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           radius="lg" size="sm">Notify</Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
-      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-        ><button onClick={greeting} className="button" style={{ borderRadius: '4px',
+
+      <Col xs lg="1" style={{zoom: '2'}}>
+        <button radius="lg" onClick={greeting} className="button" style={{ borderRadius: '4px',
           backgroundColor: 'whitesmoke', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
       </Col></Row>
