@@ -239,10 +239,10 @@ fill="#04AE56"/> <path d=
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
 
-      <Col id="addc"xs lg="1" style={{paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}><row>
+      <Col id="addc" xs lg="1" style={{paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}><Row>
         <button onClick={greeting} className="button" style={{ fontFamily: 'Recoleta Medium',
           borderRadius: '4px', paddingLeft: '7px',
-          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></row></Col></Row>
+          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></Row></Col></Row>
           
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
