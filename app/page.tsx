@@ -243,7 +243,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       <Col xs lg="1" style={{zoom: '2'}}>
         <button onClick={greeting} className="button" style={{ borderRadius: '4px',
           backgroundColor: 'whitesmoke', paddingLeft: '7px',
-          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button>
+          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button>
       </Col></Row>
           
     <Row id='r2' onMouseOver={changeBackground }
