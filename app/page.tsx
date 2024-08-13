@@ -23,7 +23,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     // () =>{ co = 'white'
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
-    if (tog) createRoot(tog).render(tr) }
+    if (tog) createRoot(tog).render(tr)
+    parent.querySelectorAll('#b1').forEach((e) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
 
   const greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
@@ -211,7 +212,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
-        <Button style={{ top: '50%' }} className=
+        <Button id='b1' className=
           "self-center p-4 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
@@ -234,13 +235,13 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
           ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
             >Single Image prduct...</p>
-        <Button style={{ top: '50%' }} className=
+        <Button id='b1' className=
               "absolute text-tiny text-white bg-black/20 z-10" variant="flat" color="default"
           radius="lg" size="sm">Notify</Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
 
-      <Col xs lg="1" style={{paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}>
+      <Col id="addc"xs lg="1" style={{paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}>
         <button onClick={greeting} className="button" style={{ borderRadius: '4px',
           backgroundColor: 'whitesmoke', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}><span>+</span></button>
