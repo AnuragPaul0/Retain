@@ -136,21 +136,22 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p> <svg style={{
-          marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        className="lucide lucide-ellipsis-vertical">
-          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+        <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p>
+          <svg style={{
+            marginLeft: '1rem'}} height="22" viewBox="0 0 15 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            className="lucide lucide-ellipsis-vertical">
+            <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
           </svg> </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <p style={{fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-        <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        className="lucide lucide-ellipsis-vertical">
-          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-          </svg> </Col> </Row>
+          <p style={{fontFamily: 'Recoleta Medium'}}>Variant 2</p>
+          <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 15 24" fill="none"
+          stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          className="lucide lucide-ellipsis-vertical">
+            <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+            </svg> </Col> </Row>
 
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' onMouseOver={changeBackground }
