@@ -175,25 +175,25 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         ><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ top: '50%' }} className=
-              "radius-large absolute text-tiny text-white bg-white/20 z-10" variant="flat" color="default"
-              radius="lg" size="sm">Image list Product Image 2</Button>
+            <Button className=
+              "shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat"
+              color="default" radius="lg" size="sm">Image list Product Image 2</Button>
           {/* {changeBackground(isShown)} */}
           </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ top: '50%' }} className=
-              "radius-large absolute text-tiny text-white bg-limegreen/20 z-10" variant="flat" color="default"
+            <Button className=
+              "radius-large absolute text-tiny text-black bg-limegreen/20 z-10" variant="flat" color="default"
               radius="lg" size="sm">is empty</Button></Col></Row>
         <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <Button style={{ top: '50%' }} className=
-            "radius-large absolute text-tiny text-white bg-white/20 z-10" variant="flat" color="default"
+          <Button className=
+            "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
             radius="lg" size="sm">and Discount %</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ top: '50%' }} className=
-              "radius-large absolute text-tiny text-white bg-limegreen/20 z-10" variant="flat" color="default"
+            <Button className=
+              "radius-large absolute text-tiny text-black bg-limegreen/20 z-10" variant="flat" color="default"
               radius="lg" size="sm">is</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ top: '50%' }} className=
-              "radius-large absolute text-tiny text-white bg-white/20 z-10" variant="flat" color="default"
+            <Button className=
+              "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
               radius="lg" size="sm">0</Button></Col></Row></Col>
       <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
         display: 'flex'}}>
@@ -210,7 +210,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Button style={{ top: '50%' }} className=
             "radius-large absolute text-tiny text-white bg-black/20 z-10" variant="flat" color="default"
           radius="lg" size="sm">
-            <svg fill="#000000" height="200px" width="200px" version="1.1"
+            <svg fill="#000000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
