@@ -24,7 +24,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     if (tog) createRoot(tog).render(tr)
-    parent.querySelectorAll('#b1').forEach((e) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
+    parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
 
   const greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
