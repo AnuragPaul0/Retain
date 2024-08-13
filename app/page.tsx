@@ -110,25 +110,26 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
                 <MdOutlineSettings className="text-2xl fill-white" />
               </div> </div>
         </div> </div>
-      <div style={{marginLeft: '7rem', marginTop: '3rem'}} className="framer-1s4jv5d" data-framer-name=
-      "Fuel your Brand's Growth with Personalized Dynamic Creatives"
-      data-framer-component-type="RichTextContainer">
-<p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-  <HiArrowLeft style={{display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem'}}/>
-  <span style={{width: '25%', display: 'inline-block', borderBottom: '1px solid grey'}}>Rules space</span> </p></div>
-  
-  <button className="button" style={{verticalAlign:'middle', display: 'inline-block',
-  position: 'absolute', top: '3rem', borderRadius: '4px', right: '2rem',
-  backgroundColor: 'limegreen',
-  border: 'none',
-  color: '#FFFFFF',
-  textAlign: 'center',
-  fontSize: '18px',
-  padding: '10px',
-  // width: '100px',
-  transition: 'all 0.5s',
-  cursor: 'pointer',
-    margin: '5px'}}><span>Publish Feed</span></button>
+    <div style={{marginLeft: '7rem', marginTop: '3rem'}} className="framer-1s4jv5d" data-framer-name=
+    "Fuel your Brand's Growth with Personalized Dynamic Creatives"
+    data-framer-component-type="RichTextContainer">
+    <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+      <HiArrowLeft style={{display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem'}}/>
+        <span style={{width: '25%', display: 'inline-block', borderBottom: '1px solid grey'}}
+          >Rules space</span></p></div>
+
+    <button className="button" style={{verticalAlign:'middle', display: 'inline-block',
+    position: 'absolute', top: '3rem', borderRadius: '4px', right: '2rem',
+    backgroundColor: 'limegreen',
+    border: 'none',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontSize: '18px',
+    padding: '10px',
+    // width: '100px',
+    transition: 'all 0.5s',
+    cursor: 'pointer',
+      margin: '5px'}}><span>Publish Feed</span></button>
 
     <Container className="rounded-large bg-black\/20">
       <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>
@@ -149,9 +150,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         className="lucide lucide-ellipsis-vertical">
           <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-          </svg> </Col> </Row> 
+          </svg> </Col> </Row>
 
-{/* () => {co = 'red'; () =>{ co = 'white';  */}
+    {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="pb-7 justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
@@ -499,5 +500,4 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 backgroundColor: 'whitesmoke', paddingLeft: '7px',
 // width: '100px',
 paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
-  <Col xs lg="9"></Col> </Row> </Container> </div> )
-}
+  <Col xs lg="9"></Col> </Row> </Container> </div> ) }
