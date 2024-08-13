@@ -176,8 +176,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         ><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
-              "shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat"
-              color="default" radius="lg" size="sm">Image list Product Image 2</Button>
+              "p-4 shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10"
+              variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
           {/* {changeBackground(isShown)} */}
           </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
@@ -207,9 +207,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
         <Button style={{ top: '50%' }} className=
-            "radius-large absolute text-tiny text-white bg-black/20 z-10" variant="flat" color="default"
-          radius="lg" size="sm">
-            <svg fill="#000000" width="20px" version="1.1"
+          "p-4 radius-large absolute text-tiny text-white bg-black/20 z-10" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
