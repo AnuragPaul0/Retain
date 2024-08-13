@@ -185,8 +185,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           {/* {changeBackground(isShown)} */}
           </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
-              "radius-large absolute text-tiny text-black bg-limegreen/20 z-10" variant="flat" color="default"
-              radius="lg" size="sm">is empty</Button></Col></Row>
+              "p-2 radius-large absolute text-tiny text-black bg-limegreen/20 z-10" variant="flat"
+              color="default" radius="lg" size="sm">is empty</Button></Col></Row>
         <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
           <Button className=
             "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
