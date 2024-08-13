@@ -240,7 +240,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
 
-      <Col xs lg="1" style={{padingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}>
+      <Col xs lg="1" style={{paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}>
         <button onClick={greeting} className="button" style={{ borderRadius: '4px',
           backgroundColor: 'whitesmoke', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}><span>+</span></button>
