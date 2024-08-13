@@ -198,9 +198,8 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
         display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none">
-          <Image alt="Woman"
-            className="object-cover opacity-1" height={200}
-            src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
+          <Image alt="Woman" className="object-cover opacity-1" height={200}
+            src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
             width={200} />
           <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
@@ -222,10 +221,9 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 
       <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none" >
-        <Image alt="Woman"
-          className="object-cover opacity-1" height={200}
-          src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/6e61b/MainBefore.avif"
-          width={200} />
+          <Image alt="Woman" className="object-cover opacity-1" height={200}
+            src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
+            width={200} />
         <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
           borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
           "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
@@ -243,7 +241,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       </Col></Row>
           
     <Row id='r2' onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="justify-content-md-center">
+      onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
@@ -262,51 +260,73 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
-        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        >Product Filter</Col>
-        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <Card isFooterBlurred radius="lg" className="border-none" >
-      <Image alt="Woman"
-        className="object-cover opacity-1" height={200}
-        src=
-        "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-        width={200} />
-      <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-        size="sm">
-          Notify
-        </Button></CardFooter></Card>
-    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-    </Col>
+      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        ><Col className="justify-content-md-center" style={{display: 'flex'}}>
+        <Button className=
+          "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
+          radius="lg" size="sm">tags</Button></Col>
+        <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <Button className=
+            "radius-large absolute text-tiny text-black bg-limegreen/20 z-10" variant="flat" color="default"
+            radius="lg" size="sm">contain</Button></Col>
+        <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <Button className=
+            "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
+            radius="lg" size="sm">onsale</Button></Col></Col>
+      <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+      <Card isFooterBlurred radius="lg" className="border-none" >
+    <Image alt="Woman"
+      className="object-cover opacity-1" height={200}
+      src=
+      "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+      width={200} />
+    <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+      borderBottomLeftRadius: 'var(--nextui-radius-large)'
+    }} className=
+    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
+      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+      size="sm">
+        Notify
+      </Button></CardFooter></Card>
+  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+      </Col>
 
-        <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
-        <Card isFooterBlurred
-      radius="lg" className="border-none" >
-      <Image alt="Woman"
-        className="object-cover opacity-1" height={200}
-        src=
-        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-        width={200} />
-      <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-        size="sm">
-          Notify
-        </Button> </CardFooter> </Card>
-    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-         </Col>
-          <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
-          >+</Col></Row>
-          
+      <Col xs lg="2" className="justify-content-md-center" style={{display: 'flex'}}>
+        <Card isFooterBlurred radius="lg" className="border-none" >
+          <Col className="justify-content-md-center" style={{display: 'flex'}}>
+            <Row className="justify-content-md-center">
+              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+"https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+                width={200} /></Row>
+            <Row className="justify-content-md-center">
+              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+                "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
+                width={200} /></Row>
+            <Row className="justify-content-md-center">
+              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+                "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg"
+                width={200} /></Row></Col>
+        <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+        "https://cdn.pixabay.com/photo/2024/03/04/16/07/winter-8612635_640.jpg"
+              width={200} /></Col>
+        <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+          borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+          "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+          ><p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>4 Images - On Sale - ...</p>
+          <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+          size="sm">
+            Notify
+            </Button> </CardFooter> </Card>
+  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
+        </Col>
+
+      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
+        >+</Col></Row>
+
     <Row id='r3' onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="justify-content-md-center">
+      onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
@@ -368,7 +388,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
           </Col>
           <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
           >+</Col></Row>
-    
+
     <Row id='r4' onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1"><Row className="justify-content-md-center">
@@ -493,7 +513,7 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
       </Col>
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}
       >+</Col></Row>
-          
+
     <Row id="addr" className="justify-content-md-center">
 <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
 <button onClick={greeting} className="button" style={{ borderRadius: '4px',
