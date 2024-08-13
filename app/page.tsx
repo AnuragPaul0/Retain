@@ -296,15 +296,15 @@ d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72
         <Card isFooterBlurred radius="lg" className="border-none" >
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
-"https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
+  "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                 width={200} /></Row>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
                 "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                 width={200} /></Row>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
                 "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg"
                 width={200} /></Row></Col>
         <Col className="justify-content-md-center" style={{display: 'flex'}}>
