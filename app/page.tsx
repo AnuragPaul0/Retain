@@ -150,8 +150,7 @@ fill="#04AE56"/> <path d=
             textAlign: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
-              {/* <p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
-            marginBottom: '0px', fontFamily: 'Recoleta Medium'}}></p> */}
+              {/* <p style={{ marginBottom: '0px', fontFamily: 'Recoleta Medium'}}></p> */}
             <button onClick={greeting} className="button" style={{ backgroundColor: 'white',
               fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
               paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
@@ -164,17 +163,16 @@ fill="#04AE56"/> <path d=
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}>
-            {/* <p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
-            marginBottom: '0px'}}> */}
-              <Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
-                alignSelf: 'center',
-                borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
+          <Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
+            textAllign: 'center',
+            borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+            isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button className="self-center p-2 radius-large bg-white"
-             variant="flat" color="default" radius="lg"
-            //  style={{ backgroundColor: 'white', borderRadius: '4px', paddingLeft: '7px',
-            // paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}
+          <Button className="self-center p-2 radius-large" variant="flat" color="default" radius="lg"
+             style={{ backgroundColor: '#f5f5f5'
+              // , borderRadius: '4px', paddingLeft: '7px',
+            // paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer'
+            }}
             ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -194,7 +192,7 @@ fill="#04AE56"/> <path d=
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row>
-          {/* <Col className="justify-content-md-center" style={{display: 'flex'}}> */}
+          <Col id='req' className="justify-content-md-center" style={{display: 'flex'}}>
           <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
             <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -207,26 +205,27 @@ fill="#04AE56"/> <path d=
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg>
-            {/* </Col> */}
+            </Col>
             </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
-        <Card isFooterBlurred radius="lg" className="border-none">
+        <Card className="justify-content-md-center" style={{ height: '100%' }} isFooterBlurred radius="lg"
+          className="border-none">
           <Row style={{ height: '50%', alignContent: 'center', paddingBottom: '1.75rem' }}>
-          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button className=
-              "p-4 shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10"
-              variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
-          {/* {changeBackground(isShown)} */}
-          </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
-              backgroundColor: '#adff2333' }} className=
-              "p-2 radius-large text-tiny text-black z-10" variant="flat"
-              color="default" size="sm">is empty</Button></Col></Row>
+            <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}>
+              <Button className=
+                "p-2 radius-large absolute text-black"
+                variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
+          {/* shadow-medium {changeBackground(isShown)} */}
+            </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}>
+              <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
+                backgroundColor: '#adff2333' }} className=
+                "p-2 radius-large text-tiny text-black z-10" variant="flat"
+                color="default" size="sm">is empty</Button></Col></Row>
           <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
-            "radius-large text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
-            size="sm">and Discount %</Button></Col>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "shadow-medium radius-large text-black" variant="flat" color="default"
+              size="sm">and Discount %</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
               backgroundColor: '#adff2333' }} className=
@@ -234,7 +233,7 @@ fill="#04AE56"/> <path d=
               size="sm">is</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
-              "shadow-medium radius-large text-tiny text-black bg-white/20 z-10" variant="flat"
+              "shadow-medium radius-large text-black" variant="flat"
               color="default" size="sm">0</Button></Col></Row></Card>
               {/* </Container> */}
       </Col>
@@ -250,8 +249,8 @@ fill="#04AE56"/> <path d=
               "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
-        <Button id='b1' className=
-          "self-center p-2 radius-large absolute text-tiny bg-white/20 z-0" variant="flat"
+        <Button style={{ zIndex: 0 }} id='b1' className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -264,7 +263,7 @@ fill="#04AE56"/> <path d=
       </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}>
+        position: 'relative', display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none" >
           <Image alt="Woman" className="object-cover opacity-1" height={200}
             src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
@@ -272,10 +271,10 @@ fill="#04AE56"/> <path d=
         <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
           borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
           "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
-          ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+          ><p style={{marginBottom: 0, fontFamily: 'Recoleta Medium' }}
             >Single Image prduct...</p>
-        <Button id='b1' className=
-          "self-center p-2 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
+        <Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -290,13 +289,13 @@ fill="#04AE56"/> <path d=
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="shadow-medium self-center radius-large"
+        <Button onClick={greeting} radius="lg" className="shadow-medium self-center"
           variant="flat" color="default" style={{
             zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .3)',
           // , borderRadius: '4px' , transition: 'all 0.5s', cursor: 'pointer'
           paddingRight: 'calc(var(--bs-gutter-x) * .3)' }}>+</Button></Row></Col></Row>
 
-    <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2'
+    <Row id='r2' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }}
       onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
