@@ -135,23 +135,32 @@ fill="#04AE56"/> <path d=
         marginBottom: '1rem' }}>
         <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex', borderRight: '1px solid #eee',
             fontFamily: 'Recoleta Medium' }}>
-          <Card style={{ blockSize: 'fit-content', alignSelf: 'center',
-            borderRadius: 'calc(var(--nextui-radius-large)/2)', width: 'fit-content' }}
+              {/* blockSize: 'fit-content', , width: 'fit-content' */}
+          <Card style={{ backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
+            borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
             marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Primary Variant</p>
-          <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+            <button onClick={greeting} className="button" style={{ backgroundColor: 'white',
+          fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
+          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
+            <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           className="lucide lucide-ellipsis-vertical">
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></Col>
+            </svg></button></Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
-          display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
-            marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-          <button onClick={greeting} className="button" style={{ backgroundColor: 'white', zoom: '2',
+          display: 'flex'}}>
+            {/* <p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
+            marginBottom: '0px', fontFamily: 'Recoleta Medium'}}> */}
+              <Card style={{ backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
+              isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
+              {/* </p> */}
+          <button onClick={greeting} className="button" style={{ backgroundColor: 'white',
           fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
             <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
@@ -193,21 +202,23 @@ fill="#04AE56"/> <path d=
               variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
           {/* {changeBackground(isShown)} */}
           </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ backgroundColor: 'green' }} className=
-              "p-2 radius-large absolute text-tiny text-black z-10" variant="flat"
-              color="default" radius="lg" size="sm">is empty</Button></Col></Row>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
+              backgroundColor: '#adff2333' }} className=
+              "p-2 radius-large text-tiny text-black z-10" variant="flat"
+              color="default" size="sm">is empty</Button></Col></Row>
         <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <Button className=
-            "radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
-            radius="lg" size="sm">and Discount %</Button></Col>
+          <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+            "radius-large text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
+            size="sm">and Discount %</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button className=
-              "radius-large absolute text-tiny text-black bg-green/20 z-10" variant="flat" color="default"
-              radius="lg" size="sm">is</Button></Col>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
+              backgroundColor: '#adff2333' }} className=
+              "radius-large text-tiny text-black z-10" variant="flat" color="default"
+              size="sm">is</Button></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button className=
-              "shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10" variant="flat"
-              color="default" radius="lg" size="sm">0</Button></Col></Row>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "shadow-medium radius-large text-tiny text-black bg-white/20 z-10" variant="flat"
+              color="default" size="sm">0</Button></Col></Row>
               {/* </Container> */}
               </Col>
 
@@ -247,10 +258,17 @@ fill="#04AE56"/> <path d=
           ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
             >Single Image prduct...</p>
         <Button id='b1' className=
-              "absolute text-tiny text-white bg-black/20 z-10" variant="flat" color="default"
-          radius="lg" size="sm">Notify</Button> </CardFooter> </Card>
+          "self-center p-4 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+                ></path></g></g></svg></Button></CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-         </Col>
+      </Col>
 
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
