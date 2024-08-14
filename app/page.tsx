@@ -254,8 +254,8 @@ fill="#04AE56"/> <path d=
 
       <Col id="addc" xs lg="1" style={{display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row style={{ alignSelf: 'center' }}>
-        <button onClick={greeting} className="button" style={{ zoom: '2', fontFamily: 'Recoleta Medium',
-          borderRadius: '4px', paddingLeft: '7px',
+        <button onClick={greeting} className="button" style={{ backgroundColor: 'white', zoom: '2',
+          fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></Row></Col></Row>
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2' onMouseOver={changeBackground }
@@ -546,7 +546,7 @@ fill="#04AE56"/> <path d=
     <Row id="addr" className="justify-content-md-center">
 <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
 <button onClick={greeting} className="button" style={{ borderRadius: '4px',
-backgroundColor: 'whitesmoke', paddingLeft: '7px',
+backgroundColor: 'white', paddingLeft: '7px',
 // width: '100px',
 paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}> <span>+</span> </button> </Col>
   <Col xs lg="9"></Col> </Row> </Container> </div> ) }
