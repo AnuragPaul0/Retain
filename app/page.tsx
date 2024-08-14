@@ -10,7 +10,7 @@ import {Card, CardFooter, Image, Button} from "@nextui-org/react"
 export default function Home() { let tog, parent, p = 6, co = true, container
   // const [isShown, setIsShown] = useState(false)
 
-  function changeBackground(e: any) { parent = e.target
+  function changeBackground(e:any) { parent = e.target
     while (parent.id.match(/r\d/) == null) {
       // console.log(parent)
       parent = parent.parentElement }
@@ -24,7 +24,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     if (tog) createRoot(tog).render(tr)
-    parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
+    parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = +e.style.zIndex ? 0 : 10} ) }
 
   let greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
@@ -55,7 +55,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       display: 'flex'}}>
     <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
      </Col>
-      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>+</Col>
+      <Col xs lg="1" className="text-center" style={{ zoom: '2', fontFamily: 'Recoleta Medium'}}>+</Col>
       </Row>)
     let a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement('beforebegin', container), p++
@@ -220,7 +220,7 @@ fill="#04AE56"/> <path d=
               "shadow-medium radius-large text-tiny text-black bg-white/20 z-10" variant="flat"
               color="default" size="sm">0</Button></Col></Row>
               {/* </Container> */}
-              </Col>
+      </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         position: 'relative',
@@ -234,7 +234,7 @@ fill="#04AE56"/> <path d=
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
         <Button id='b1' className=
-          "self-center p-4 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
+          "self-center p-2 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -258,7 +258,7 @@ fill="#04AE56"/> <path d=
           ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
             >Single Image prduct...</p>
         <Button id='b1' className=
-          "self-center p-4 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
+          "self-center p-2 radius-large absolute text-tiny bg-white/20 z-10" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
               id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
