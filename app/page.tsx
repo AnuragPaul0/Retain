@@ -26,7 +26,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     if (tog) createRoot(tog).render(tr)
     parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
 
-  greeting = () => { container = document.createElement('div')
+  let greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'><Row className="justify-content-md-center">
