@@ -133,13 +133,15 @@ fill="#04AE56"/> <path d=
 
       <Row className="justify-content-md-center" style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))',
         marginBottom: '1rem' }}>
-        <Col xs lg="4" className="text-center" style={{borderRight: '1px solid #eee',
-        fontFamily: 'Recoleta Medium'}}>
-          <Card isFooterBlurred radius="lg" className="border-none">Product Filter</Card></Col>
+        <Col xs lg="4" className="text-center" style={{ borderRight: '1px solid #eee',
+          fontFamily: 'Recoleta Medium'}}>
+          <Card style={{ width: 'fit-content' }} isFooterBlurred radius="lg"
+            className="pl-1 border-none">Product Filter</Card></Col>
         <Col xs lg="2" className="justify-content-md-center" style={{borderRight: '1px solid #eee',
           display: 'flex'}}><Col xs lg="4" className="justify-content-md-center">
             <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p></Col>
-          <Col xs lg="1" className="justify-content-md-center"><svg style={{
+          <Col xs lg="1" className="justify-content-md-center">
+            <svg style={{
               marginLeft: '1rem'}} height="22" viewBox="0 0 15 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               className="lucide lucide-ellipsis-vertical">
@@ -147,8 +149,10 @@ fill="#04AE56"/> <path d=
             </svg></Col></Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{borderRight: '1px solid #eee',
-          display: 'flex'}}><p style={{fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-          <svg  style={{marginLeft: '1rem'}} height="22" viewBox="0 0 15 24" fill="none"
+          display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
+            marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Variant 2</p>
+          <svg style={{ alignSelf: 'center', marginLeft: '1rem'}} height="22" viewBox="0 0 15 24"
+            fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           className="lucide lucide-ellipsis-vertical">
