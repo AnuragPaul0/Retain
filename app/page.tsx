@@ -66,7 +66,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
       <div className="flex-col justify-start item-center">
         <div className="my-4"> <div className=
-          "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
+  "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
             
           <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
 
@@ -77,8 +77,8 @@ fill="#04AE56"/> <path d=
 <path d=
 "M22.6407 44.9112V22.866L32.255 32.497C32.7087 32.9455 33.067 33.4811 33.3082 34.0716C33.5495 34.6621 33.6687 35.2954 33.6587 35.9332V44.9736L22.6407 44.9112ZM0.601562 22.8675H22.6407L13.0248 32.4849C12.1266 33.3831 10.9086 33.8886 9.6404 33.8886H0.601562V22.866V22.8675Z" fill="#04AE56"/>
             </g> </svg> </div> <div className=
-                          "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
-                          <svg fill="white" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4" xmlSpace="preserve">
+  "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
+              <svg fill="white" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4" xmlSpace="preserve">
             <g> <g> <path 
                 d="M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
                 <path 
@@ -130,7 +130,7 @@ fill="#04AE56"/> <path d=
     <Container style={{ backgroundColor: 'rgba(0, 0, 0, .01)', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
         marginLeft: 'calc(var(--bs-gutter-x) * 4)',
         marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
-      className="rounded-large bg-black/200">
+      className="shadow-medium rounded-large">
 
       <Row className="justify-content-md-center" style={{marginLeft: 'calc(-1.5 * var(--bs-gutter-x))',
         marginBottom: '1rem' }}>
@@ -160,7 +160,8 @@ fill="#04AE56"/> <path d=
 
       <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
         <Row className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
+          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
+            display: 'grid'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
@@ -203,8 +204,7 @@ fill="#04AE56"/> <path d=
               color="default" radius="lg" size="sm">0</Button></Col></Row></Container></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{position: 'relative',
-        display: 'flex'}}>
-        <Card isFooterBlurred radius="lg" className="border-none">
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
           <Image alt="Woman" className="object-cover opacity-1" height={200}
             src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
             width={200} />
@@ -243,12 +243,12 @@ fill="#04AE56"/> <path d=
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
 
-      <Col id="addc" xs lg="1" style={{borderLeft: '1px solid grey',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)', zoom: '2'}}><Row>
-        <button onClick={greeting} className="button" style={{ fontFamily: 'Recoleta Medium',
+      <Col id="addc" xs lg="1" style={{display: 'flex', borderLeft: '1px solid grey',
+        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row style={{ alignSelf: 'center' }}>
+        <button onClick={greeting} className="button" style={{ zoom: '2', fontFamily: 'Recoleta Medium',
           borderRadius: '4px', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></Row></Col></Row>
-          
+
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid grey' }}>
@@ -333,7 +333,7 @@ fill="#04AE56"/> <path d=
   {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
         </Col>
 
-      <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',zoom: '2',
+      <Col id="addc" xs lg="1" className="text-center" style={{ borderLeft: '1px solid grey',
         fontFamily: 'Recoleta Medium'}}>+</Col></Row>
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r3' onMouseOver={changeBackground }
@@ -357,7 +357,7 @@ fill="#04AE56"/> <path d=
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
-        <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
+        <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium' }}
         >Product Filter</Col>
         <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid grey',
           display: 'flex'}}>
@@ -379,7 +379,7 @@ fill="#04AE56"/> <path d=
       </CardFooter>
     </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-    </Col>
+        </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid grey',
           display: 'flex'}}>
@@ -400,7 +400,7 @@ fill="#04AE56"/> <path d=
         </Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
           </Col>
-        <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',zoom: '2',
+        <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',
           fontFamily: 'Recoleta Medium'}}>+</Col></Row>
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r4' onMouseOver={changeBackground }
@@ -446,7 +446,7 @@ fill="#04AE56"/> <path d=
       </CardFooter>
     </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-    </Col>
+      </Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid grey',
           display: 'flex'}}>
@@ -467,7 +467,7 @@ fill="#04AE56"/> <path d=
         </Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
           </Col>
-          <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',zoom: '2',
+          <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',
             fontFamily: 'Recoleta Medium'}}>+</Col></Row>
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r5' onMouseOver={changeBackground }
@@ -531,7 +531,7 @@ fill="#04AE56"/> <path d=
     </Button> </CardFooter> </Card>
 {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
-    <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',zoom: '2',
+    <Col id="addc" xs lg="1" className="text-center" style={{borderLeft: '1px solid grey',
       fontFamily: 'Recoleta Medium'}}>+</Col></Row>
 
     <Row id="addr" className="justify-content-md-center">
