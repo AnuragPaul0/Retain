@@ -290,9 +290,8 @@ fill="#04AE56"/> <path d=
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="self-center radius-large bg-white"
+        <Button onClick={greeting} className="shadow-medium self-center radius-large"
           variant="flat" color="default" style={{
-            // backgroundColor: 'white',
             zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .3)',
           // , borderRadius: '4px' , transition: 'all 0.5s', cursor: 'pointer'
           paddingRight: 'calc(var(--bs-gutter-x) * .3)' }}>+</Button></Row></Col></Row>
