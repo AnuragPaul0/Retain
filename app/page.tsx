@@ -273,9 +273,13 @@ fill="#04AE56"/> <path d=
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
-        <button onClick={greeting} className="button" style={{ backgroundColor: 'white', zoom: '2',
-          fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
-          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></Row></Col></Row>
+        <Button onClick={greeting} className="self-center p-2 radius-large bg-white/20"
+          variant="flat" color="default" radius="lg"style={{
+            // backgroundColor: 'white',
+            zoom: '2', fontFamily: 'Recoleta Medium'
+          // , borderRadius: '4px', paddingLeft: '7px', paddingRight: '7px', transition: 'all 0.5s',
+          // cursor: 'pointer'
+          }}>+</Button></Row></Col></Row>
 
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r2' onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
@@ -331,35 +335,34 @@ fill="#04AE56"/> <path d=
       </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}>
-        <Card isFooterBlurred radius="lg" className="border-none" >
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Row className="justify-content-md-center">
               <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                width={200} /></Row>
+                /></Row>
             <Row className="justify-content-md-center">
               <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
                 "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                width={200} /></Row>
+                /></Row>
             <Row className="justify-content-md-center">
               <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
                 "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg"
-                width={200} /></Row></Col>
-        <Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <Image alt="Woman" className="object-cover opacity-1" height={200} src=
-        "https://cdn.pixabay.com/photo/2024/03/04/16/07/winter-8612635_640.jpg"
-              width={200} /></Col>
-        <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-          borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-          "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-          ><p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>4 Images - On Sale - ...</p>
-          <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-          size="sm">
-            Notify
-            </Button> </CardFooter> </Card>
+                /></Row></Col>
+          <Col className="justify-content-md-center" style={{display: 'flex'}}>
+            <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+          "https://cdn.pixabay.com/photo/2024/03/04/16/07/winter-8612635_640.jpg"
+                width={400/3} /></Col>
+          <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+            "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+            ><p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>4 Images - On Sale - ...</p>
+            <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+            size="sm">
+              Notify
+              </Button></CardFooter></Card>
   {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-        </Col>
+      </Col>
 
       <Col id="addc" xs lg="1" className="text-center" style={{ borderLeft: '1px solid #eee',
         fontFamily: 'Recoleta Medium'}}>+</Col></Row>
