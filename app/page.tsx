@@ -121,12 +121,11 @@ fill="#04AE56"/> <path d=
         <span style={{width: '25%', display: 'inline-block', borderBottom: '1px solid #eee'}}
           >Rules space</span></p></div>
 
-    <Button className="self-center p-2 radius-large absolute" variant="flat" color="default" radius="lg"
+    <Button className="self-center p-2 absolute" variant="flat" color="default"
       style={{ top: '3rem', right: '2rem', backgroundColor: 'limegreen', color: '#FFFFFF',
-        fontSize: '18px'
+        fontSize: '18px', borderRadius: '4px'
       // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
-      // borderRadius: '4px', textAlign: 'center', padding: '10px',
-      // transition: 'all 0.5s', cursor: 'pointer', margin: '5px'
+      // , textAlign: 'center', padding: '10px', transition: 'all 0.5s', cursor: 'pointer', margin: '5px'
       }}>
         {/* <span> */}
           Publish Feed
@@ -145,9 +144,10 @@ fill="#04AE56"/> <path d=
           <Card style={{ backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
+
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
-            alignSelf: 'center',
+            textAlign: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
               {/* <p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
@@ -171,7 +171,7 @@ fill="#04AE56"/> <path d=
                 borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
                 isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button onClick={greeting} className="self-center p-2 radius-large absolute bg-white/20"
+          <Button className="self-center p-2 radius-large bg-white"
              variant="flat" color="default" radius="lg"
             //  style={{ backgroundColor: 'white', borderRadius: '4px', paddingLeft: '7px',
             // paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}
@@ -187,13 +187,14 @@ fill="#04AE56"/> <path d=
       onMouseOver={changeBackground }
       onMouseLeave={ changeBackground } className="pb-9 justify-content-md-center">
 
-      <Col xs lg="1" style={{ display: 'grid', borderRight: '1px solid #eee' }}>
+      <Col xs lg="2" style={{ display: 'grid', borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
             display: 'grid'}}>
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
-        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+        <Row>
+          {/* <Col className="justify-content-md-center" style={{display: 'flex'}}> */}
           <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
             <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -205,9 +206,12 @@ fill="#04AE56"/> <path d=
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg> </Col> </Row> </Col>
+            </svg>
+            {/* </Col> */}
+            </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
+        <Card isFooterBlurred radius="lg" className="border-none">
           <Row style={{ height: '50%', alignContent: 'center', paddingBottom: '1.75rem' }}>
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
@@ -219,7 +223,7 @@ fill="#04AE56"/> <path d=
               backgroundColor: '#adff2333' }} className=
               "p-2 radius-large text-tiny text-black z-10" variant="flat"
               color="default" size="sm">is empty</Button></Col></Row>
-        <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
           <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
             "radius-large text-tiny text-black bg-white/20 z-10" variant="flat" color="default"
             size="sm">and Discount %</Button></Col>
@@ -231,7 +235,7 @@ fill="#04AE56"/> <path d=
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "shadow-medium radius-large text-tiny text-black bg-white/20 z-10" variant="flat"
-              color="default" size="sm">0</Button></Col></Row>
+              color="default" size="sm">0</Button></Col></Row></Card>
               {/* </Container> */}
       </Col>
 
