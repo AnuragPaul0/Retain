@@ -164,7 +164,7 @@ fill="#04AE56"/> <path d=
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}>
           <Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
-            textAllign: 'center',
+            textAlign: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
