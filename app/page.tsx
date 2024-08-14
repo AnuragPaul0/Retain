@@ -209,8 +209,8 @@ fill="#04AE56"/> <path d=
             </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
-        <Card className="justify-content-md-center" style={{ height: '100%' }} isFooterBlurred radius="lg"
-          className="border-none">
+        <Card className="border-none justify-content-md-center" style={{ height: '100%' }}
+          isFooterBlurred radius="lg">
           <Row style={{ height: '50%', alignContent: 'center', paddingBottom: '1.75rem' }}>
             <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}>
               <Button className=
