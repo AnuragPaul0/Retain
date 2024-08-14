@@ -291,7 +291,7 @@ fill="#04AE56"/> <path d=
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
         <Button onClick={greeting} className="self-center radius-large bg-white"
-          variant="flat" color="default" radius="lg"style={{
+          variant="flat" color="default" style={{
             // backgroundColor: 'white',
             zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .3)',
           // , borderRadius: '4px' , transition: 'all 0.5s', cursor: 'pointer'
