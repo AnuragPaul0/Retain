@@ -121,13 +121,13 @@ fill="#04AE56"/> <path d=
         <span style={{width: '25%', display: 'inline-block', borderBottom: '1px solid #eee'}}
           >Rules space</span></p></div>
 
-    <button className="button" style={{verticalAlign:'middle', display: 'inline-block',
+    <button className="button" style={{ verticalAlign:'middle', display: 'inline-block',
       position: 'absolute', top: '3rem', borderRadius: '4px', right: '2rem', backgroundColor: 'limegreen',
       border: 'none', color: '#FFFFFF', textAlign: 'center', fontSize: '18px', padding: '10px',
       // width: '100px',
       transition: 'all 0.5s', cursor: 'pointer', margin: '5px'}}><span>Publish Feed</span></button>
 
-    <Container style={{ backgroundColor: 'rgba(0, 0, 0, .03)', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+    <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
         marginLeft: 'calc(var(--bs-gutter-x) * 4)',
         marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
@@ -151,12 +151,15 @@ fill="#04AE56"/> <path d=
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
             marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-          <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+          <button onClick={greeting} className="button" style={{ backgroundColor: 'white', zoom: '2',
+          fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
+          paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
+            <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           className="lucide lucide-ellipsis-vertical">
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></Col></Row>
+            </svg></button></Col></Row>
 
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r1' onMouseOver={changeBackground }
@@ -182,18 +185,16 @@ fill="#04AE56"/> <path d=
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg> </Col> </Row> </Col>
 
-      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        >
-          {/* <Container className="rounded-large bg-black\/20"> */}
-          <Row className="justify-content-md-center" style={{paddingBottom: '1.75rem'}}>
+      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}>
+          <Row style={{ height: '50%', alignContent: 'center', paddingBottom: '1.75rem' }}>
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
             <Button className=
               "p-4 shadow-medium radius-large absolute text-tiny text-black bg-white/20 z-10"
               variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
           {/* {changeBackground(isShown)} */}
           </Col><Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button className=
-              "p-2 radius-large absolute text-tiny text-black bg-green/20 z-10" variant="flat"
+            <Button style={{ backgroundColor: 'green' }} className=
+              "p-2 radius-large absolute text-tiny text-black z-10" variant="flat"
               color="default" radius="lg" size="sm">is empty</Button></Col></Row>
         <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
           <Button className=
@@ -251,8 +252,9 @@ fill="#04AE56"/> <path d=
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
          </Col>
 
-      <Col id="addc" xs lg="1" style={{display: 'grid', borderLeft: '1px solid #eee',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row style={{ alignSelf: 'center' }}>
+      <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
+        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+          style={{ display: 'grid', alignSelf: 'center' }}>
         <button onClick={greeting} className="button" style={{ backgroundColor: 'white', zoom: '2',
           fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
           paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>+</button></Row></Col></Row>
