@@ -134,7 +134,8 @@ fill="#04AE56"/> <path d=
       <Row className="justify-content-md-center" style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))',
         marginBottom: '1rem' }}>
         <Col xs lg="4" className="text-center" style={{borderRight: '1px solid #eee',
-        fontFamily: 'Recoleta Medium'}}>Product Filter</Col>
+        fontFamily: 'Recoleta Medium'}}>
+          <Card isFooterBlurred radius="lg" className="border-none">Product Filter</Card></Col>
         <Col xs lg="2" className="justify-content-md-center" style={{borderRight: '1px solid #eee',
           display: 'flex'}}><Col xs lg="4" className="justify-content-md-center">
             <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p></Col>
