@@ -26,7 +26,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     if (tog) createRoot(tog).render(tr)
     parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = e.style.zIndex ? 0 : 10} ) }
 
-  const greeting = () => { container = document.createElement('div')
+  greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
     onMouseLeave={changeBackground } className="justify-content-md-center">
   <Col xs lg='1'><Row className="justify-content-md-center">
@@ -133,26 +133,25 @@ fill="#04AE56"/> <path d=
 
       <Row className="justify-content-md-center" style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))',
         marginBottom: '1rem' }}>
-        <Col xs lg="4" className="text-center" style={{ borderRight: '1px solid #eee',
-          fontFamily: 'Recoleta Medium'}}>
-          <Card style={{ width: 'fit-content' }} isFooterBlurred radius="lg"
-            className="pl-1 border-none">Product Filter</Card></Col>
-        <Col xs lg="2" className="justify-content-md-center" style={{borderRight: '1px solid #eee',
-          display: 'flex'}}><Col xs lg="4" className="justify-content-md-center">
-            <p style={{fontFamily: 'Recoleta Medium'}}>Primary Variant</p></Col>
-          <Col xs lg="1" className="justify-content-md-center">
-            <svg style={{
-              marginLeft: '1rem'}} height="22" viewBox="0 0 15 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              className="lucide lucide-ellipsis-vertical">
-              <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></Col></Col>
+        <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex', borderRight: '1px solid #eee',
+            fontFamily: 'Recoleta Medium' }}>
+          <Card style={{ blockSize: 'fit-content', alignSelf: 'center',
+            borderRadius: 'calc(var(--nextui-radius-large)/2)', width: 'fit-content' }}
+            isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
+        <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
+          display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
+            marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Primary Variant</p>
+          <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+          stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          className="lucide lucide-ellipsis-vertical">
+            <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+            </svg></Col>
 
-        <Col xs lg="2" className="justify-content-md-center" style={{borderRight: '1px solid #eee',
+        <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><p style={{ flexGrow: 1, textAlign: 'center', alignSelf: 'center',
             marginBottom: '0px', fontFamily: 'Recoleta Medium'}}>Variant 2</p>
-          <svg style={{ alignSelf: 'center', marginLeft: '1rem'}} height="22" viewBox="0 0 15 24"
-            fill="none"
+          <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           className="lucide lucide-ellipsis-vertical">
