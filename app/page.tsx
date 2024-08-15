@@ -139,11 +139,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Row className="justify-content-md-center" style={{ 
         // , marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
-        <Col xs lg="4" style={{ width: '50%',
-          textAlign: 'center', justifyContent: 'center', display: 'flex',
+        <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex',
           borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
               {/* blockSize: 'fit-content', , width: 'fit-content' */}
-          <Card style={{ backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
+          <Card style={{ width: '50%',
+            textAlign: 'center', backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
 
@@ -211,9 +211,10 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </Row></Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
-        <Card className="border-none justify-content-md-center" style={{ height: '100% !important' }}
-          radius="lg"><Card className="border-none justify-content-md-center"
-            style={{ width: '80%', alignSelf: 'center', height: '70% !important' }} radius="lg">
+        <Card className="border-none" style={{ height: '100%' }}
+        //  !important
+          radius="lg"><Card className="border-none"
+            style={{ width: '80%', alignSelf: 'center', height: '70%' }} radius="lg">
           <div style={{ marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
             <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
