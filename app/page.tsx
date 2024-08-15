@@ -180,7 +180,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' style={{ justifyContent: 'flex-start !important',
-      marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseEnter={changeBackground }
+      // marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
+      }} onMouseEnter={changeBackground }
       onMouseLeave={ changeBackground } className="pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ display: 'grid', borderRight: '1px solid #eee' }}>
