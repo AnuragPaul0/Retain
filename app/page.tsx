@@ -158,15 +158,14 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
               {/* <p style={{ marginBottom: '0px', fontFamily: 'Recoleta Medium'}}></p> */}
-            <button onClick={greeting} style={{ backgroundColor: '#f5f5f5',
-              fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
-              paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
-            <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-              stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              className="lucide lucide-ellipsis-vertical">
+            <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px',
+            paddingLeft: '7px !important', paddingRight: '7px !important' }}
+            ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+          stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          className="lucide lucide-ellipsis-vertical">
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></button></Col>
+            </svg></Button></Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}>
@@ -330,15 +329,18 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '70% !important' }}
-            radius="lg"><Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
+            radius="lg"><Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
               >tags</Button>
-            <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
+            <Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
               "p-2 radius-large" variant="flat" color="default">contain</Button>
-            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+            <Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat"
               color="default">onsale</Button></Card></Card></Col>
 
