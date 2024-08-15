@@ -215,13 +215,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
-            style={{ width: '90%', alignSelf: 'center', height: '70%' }}>
+            style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
           <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
-            {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
-            <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
-              <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-                "shadow-medium p-2 radius-large text-black"
-                variant="flat" color="default">Image list Product Image 2</Button>
+            <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+              "shadow-medium p-2 radius-large text-black"
+              variant="flat" color="default">Image list Product Image 2</Button>
           {/* shadow-medium {changeBackground(isShown)} */}
             {/* </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}> */}
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
@@ -330,10 +328,10 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{fontFamily: 'Recoleta Medium'}}
-        ><Card className="justify-content-md-center" style={{ height: '100%' }} radius="lg">
-          <Card className="justify-content-md-center"
-            style={{ width: '80%', alignSelf: 'center', height: '70%' }} radius="lg">
-            <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
+        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="justify-content-md-center"
+            style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '70% !important' }}
+            radius="lg"><Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
               >tags</Button>
@@ -516,13 +514,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}>
-      <Card isFooterBlurred
-    radius="lg" className="border-none" >
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
     <Image alt="Woman"
-      className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
+      className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
       "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
-      width={200} />
+      width={150} />
     <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
       borderBottomLeftRadius: 'var(--nextui-radius-large)'
     }} className=
@@ -538,13 +534,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-          display: 'flex'}}>
-        <Card isFooterBlurred
-      radius="lg" className="border-none" >
+          display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
       <Image alt="Woman"
-        className="object-cover opacity-1" height={200} style={{opacity: '100'}} src=
+        className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
         "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-        width={200} />
+        width={150} />
       <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
         borderBottomLeftRadius: 'var(--nextui-radius-large)'
       }} className=
@@ -567,8 +561,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id='r5' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="justify-content-md-center">
-      <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
+      onMouseLeave={changeBackground } className="">
+      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
           {/* {changeBackground(isShown)} */}
