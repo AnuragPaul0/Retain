@@ -136,8 +136,10 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         marginLeft: 'calc(var(--bs-gutter-x) * 4)',
         marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-      <Row className="justify-content-md-center" style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))',
-        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <Row className="justify-content-md-center" style={{ width: '50%',
+        textAlign: 'center'
+        // , marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
+        , marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex', borderRight: '1px solid #eee',
             fontFamily: 'Recoleta Medium' }}>
               {/* blockSize: 'fit-content', , width: 'fit-content' */}
@@ -179,13 +181,13 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </svg></Button></Col></Row>
 
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
-    <Row id='r1' style={{ justifyContent: 'flex-start !important',
+    <Row id='r1' style={{ justifyContent: 'flex-start'
       // marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
       }} onMouseEnter={changeBackground }
-      onMouseLeave={ changeBackground } className="pb-9 justify-content-md-center">
+      onMouseLeave={ changeBackground } className="pb-9">
 
-      <Col xs lg="2" style={{ display: 'grid', borderRight: '1px solid #eee' }}>
-        <Row className="justify-content-md-center">
+      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
             display: 'grid'}}>
           {/* {changeBackground(isShown)} */}
@@ -223,7 +225,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
                 backgroundColor: '#04ae5620' }} className=
                 "p-2 radius-large text-black z-10" variant="flat"
-                color="default" size="sm">is empty</Button>
+                color="default">is empty</Button>
                 {/* </Col> */}
           </div>
           <div>
@@ -231,17 +233,17 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
-              size="sm">and Discount %</Button>
+              >and Discount %</Button>
               {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
               "p-2 radius-large text-tiny" variant="flat" color="default"
-              size="sm">is</Button>
+              >is</Button>
               {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat"
-              color="default" size="sm">0</Button>
+              color="default">0</Button>
               {/* </Col> */}
               </div></Card></Card>
               {/* </Container> */}
@@ -306,8 +308,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r2' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }}
-      onMouseOver={changeBackground }
+    <Row id='r2' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
