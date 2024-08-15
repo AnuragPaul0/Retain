@@ -167,7 +167,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button variant="flat" color="default" radius="lg"
+          <Button
              style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px',
             paddingRight: '7px'
             // , transition: 'all 0.5s', cursor: 'pointer'
@@ -211,8 +211,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="border-none justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="border-none justify-content-md-center"
-            style={{ width: '80%', alignSelf: 'center', height: '50% !important' }} radius="lg">
-          <div style={{ marginBottom: '' }}>
+            style={{ width: '80%', alignSelf: 'center', height: '70% !important' }} radius="lg">
+          <div style={{ marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
             <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
               <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
