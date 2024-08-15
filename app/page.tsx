@@ -138,7 +138,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
           </Button>
 
     <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
-        marginLeft: 'calc(var(--bs-gutter-x) * 4)',
+        marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
         marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
       <Row className="justify-content-md-center" style={{ 
@@ -243,8 +243,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               "p-2 shadow-medium radius-large text-black" variant="flat"
               color="default">0</Button>
               {/* </Col> */}
-              </div></Card></Card>
-      </Col>
+              </div></Card></Card></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         position: 'relative',
