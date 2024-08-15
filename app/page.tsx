@@ -150,7 +150,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
               {/* <p style={{ marginBottom: '0px', fontFamily: 'Recoleta Medium'}}></p> */}
-            <button onClick={greeting} className="button" style={{ backgroundColor: '#f5f5f5',
+            <button onClick={greeting} style={{ backgroundColor: '#f5f5f5',
               fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
               paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
             <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
@@ -162,15 +162,15 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}>
-          <Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
+          <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
             textAlign: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button className="self-center p-2 radius-large" variant="flat" color="default" radius="lg"
-             style={{ backgroundColor: '#f5f5f5'
-              // , borderRadius: '4px', paddingLeft: '7px',
-            // paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer'
+          <Button className="self-center radius-large" variant="flat" color="default" radius="lg"
+             style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px',
+            paddingRight: '7px'
+            // , transition: 'all 0.5s', cursor: 'pointer'
             }}
             ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
@@ -193,7 +193,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         <Row>
           <Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
             display: 'flex' }}>
-            <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+            <p style={{ marginBottom: '1rem', zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
             <svg style={{alignSelf: 'center'}} height="20px" viewBox="0 0 24 24" fill="none">
   <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
   <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -209,45 +209,48 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
-        <Card className="border-none justify-content-md-center" style={{ height: '100%' }}
-          radius="lg">
-          <Row style={{ alignContent: 'center', paddingBottom: '1.75rem' }}>
-            {/* <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
-              <Button className="shadow-low p-2 radius-large text-black"
+        <Card className="border-none justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="border-none justify-content-md-center"
+            style={{ height: '50% !important' }} radius="lg">
+          <div>
+            {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
+            <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
+              <Button className="shadow-medium p-2 radius-large text-black"
                 variant="flat" color="default">Image list Product Image 2</Button>
           {/* shadow-medium {changeBackground(isShown)} */}
             {/* </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}> */}
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
                 backgroundColor: '#04ae5620' }} className=
-                "p-2 radius-large text-tiny text-black z-10" variant="flat"
+                "p-2 radius-large text-black z-10" variant="flat"
                 color="default" size="sm">is empty</Button>
                 {/* </Col> */}
-                </Row>
-          <Row>
+          </div>
+          <div>
             {/* <Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
-              "shadow-medium radius-large text-black" variant="flat" color="default"
+              "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
               size="sm">and Discount %</Button>
               {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
-              "radius-large text-tiny" variant="flat" color="default"
+              "p-2 radius-large text-tiny" variant="flat" color="default"
               size="sm">is</Button>
               {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
-              "shadow-medium radius-large text-black" variant="flat"
+              "p-2 shadow-medium radius-large text-black" variant="flat"
               color="default" size="sm">0</Button>
               {/* </Col> */}
-              </Row></Card>
+              </div></Card></Card>
               {/* </Container> */}
       </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         position: 'relative',
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
-          <Image alt="Woman" className="object-cover opacity-1" height={200}
+          <Image alt="Woman" className="object-cover opacity-1" height={150}
             src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
-            width={200} />
+            // width={200}
+            />
           <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
@@ -271,7 +274,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         <Card isFooterBlurred radius="lg" className="border-none">
           <Image alt="Woman" className="object-cover opacity-1" height={150}
             src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
-            width={150}/>
+            // width={150}
+            />
         <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
           borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
@@ -293,10 +297,9 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="shadow-medium self-center"
-          variant="flat" color="default" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .3)',
-            borderRadius: '4px',
+        <Button onClick={greeting} className="shadow-medium self-center" style={{
+            zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31)',
+            borderRadius: '2px',
           // transition: 'all 0.5s', cursor: 'pointer'
           paddingRight: 'calc(var(--bs-gutter-x) * .3)' }}>+</Button></Row></Col></Row>
 
