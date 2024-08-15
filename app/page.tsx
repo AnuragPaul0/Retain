@@ -167,7 +167,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button className="self-center radius-large" variant="flat" color="default" radius="lg"
+          <Button className="radius-large" variant="flat" color="default" radius="lg"
              style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px',
             paddingRight: '7px'
             // , transition: 'all 0.5s', cursor: 'pointer'
