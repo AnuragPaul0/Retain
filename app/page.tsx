@@ -185,7 +185,6 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
             </svg></Button></Col></Row>
 
-    {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' style={{ justifyContent: 'flex-start'
       // marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
       }} onMouseEnter={changeBackground }
@@ -193,10 +192,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
-            display: 'grid'}}>
-          {/* {changeBackground(isShown)} */}
-          </Col> </Row>
+          <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
+            display: 'grid' }}></Col></Row>
         <Row>
           <Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
             display: 'flex' }}>
@@ -218,7 +215,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
-            style={{ width: '80%', alignSelf: 'center', height: '70%' }} radius="lg">
+            style={{ width: '90%', alignSelf: 'center', height: '70%' }}>
           <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
             <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
@@ -249,7 +246,6 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               color="default">0</Button>
               {/* </Col> */}
               </div></Card></Card>
-              {/* </Container> */}
       </Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
@@ -316,11 +312,10 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-          {/* {changeBackground(isShown)} */}
-          </Col> </Row>
-
-        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+          <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
+            display: 'grid' }}>
+          </Col></Row>
+        <Row> <Col className="justify-content-md-center" style={{ display: 'flex' }}>
           <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >2</p>
             <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -648,9 +643,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     <Row id="addr" className="justify-content-md-center">
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
       <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium',
-            paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
+            fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
-            // transition: 'all 0.5s', cursor: 'pointer'
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Col>
         <Col xs lg="9"></Col></Row></Container></div> ) }
