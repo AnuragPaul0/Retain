@@ -346,9 +346,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
     <Image alt="Woman"
-      className="object-cover opacity-1" height={150}
-      src=
-      "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+      className="object-cover opacity-1" height={150} src=
+  "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
       width={150} /><CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
       borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
@@ -371,21 +370,21 @@ export default function Home() { let tog, parent, p = 6, co = true, container
           <Row style={{ justifyContent: 'flex-start !important' }}>
             <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
+              <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                 /></Row>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
+              <Image alt="Woman" className="object-cover opacity-1" height={50} src=
                 "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                 /></Row>
             <Row className="justify-content-md-center">
-              <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
+              <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                 "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"
                 /></Row></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Image alt="Woman" className="object-cover opacity-1" height={200} src=
+            <Image alt="Woman" className="object-cover opacity-1" height={150} src=
           "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-                width={400/3} /></Col></Row>
+                width={100} /></Col></Row>
           {/* <Row className="justify-content-md-center"> */}
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
