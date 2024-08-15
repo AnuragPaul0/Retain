@@ -63,18 +63,17 @@ export default function Home() { let tog, parent, p = 6, co = true, container
   }
   return ( <div style={{backgroundColor: 'white'}}>
     <div style={{width: '4rem'}} className=
-    "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
-      <div className="flex-col justify-start item-center">
-        <div className="my-4"> <div className=
+  "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
+      <div className="flex-col justify-start item-center"><div className="my-4"> <div className=
   "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
-            
+
           <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
 
-<g mask="url(#svg-230198041_977_mask0_18594_7116)"> <path  d=
-"M22.6407 0.822266V22.8675L13.0248 13.2486C12.1316 12.3479 11.6276 11.1326 11.6211 9.86415V0.822266H22.6407Z"
-fill="#04AE56"/> <path d=
-"M44.6895 22.8676H22.6367L32.2632 13.2487C32.7118 12.7956 33.2473 12.4378 33.8374 12.1966C34.4276 11.9554 35.0604 11.8358 35.6979 11.845H44.7367L44.6865 22.8676H44.6895Z" fill="#04AE56"/>
-<path d=
+    <g mask="url(#svg-230198041_977_mask0_18594_7116)"> <path  d=
+    "M22.6407 0.822266V22.8675L13.0248 13.2486C12.1316 12.3479 11.6276 11.1326 11.6211 9.86415V0.822266H22.6407Z"
+    fill="#04AE56"/> <path d=
+    "M44.6895 22.8676H22.6367L32.2632 13.2487C32.7118 12.7956 33.2473 12.4378 33.8374 12.1966C34.4276 11.9554 35.0604 11.8358 35.6979 11.845H44.7367L44.6865 22.8676H44.6895Z" fill="#04AE56"/>
+    <path d=
 "M22.6407 44.9112V22.866L32.255 32.497C32.7087 32.9455 33.067 33.4811 33.3082 34.0716C33.5495 34.6621 33.6687 35.2954 33.6587 35.9332V44.9736L22.6407 44.9112ZM0.601562 22.8675H22.6407L13.0248 32.4849C12.1266 33.3831 10.9086 33.8886 9.6404 33.8886H0.601562V22.866V22.8675Z" fill="#04AE56"/>
             </g> </svg> </div> <div className=
   "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
@@ -122,7 +121,7 @@ fill="#04AE56"/> <path d=
           >Rules space</span></p></div>
 
     <Button className="self-center p-2 absolute" variant="flat" color="default"
-      style={{ top: '3rem', right: '2rem', backgroundColor: 'limegreen', color: '#FFFFFF',
+      style={{ top: '3rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
         fontSize: '18px', borderRadius: '4px'
       // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
       // , textAlign: 'center', padding: '10px', transition: 'all 0.5s', cursor: 'pointer', margin: '5px'
@@ -147,11 +146,11 @@ fill="#04AE56"/> <path d=
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
-            textAlign: 'center',
+            textAlign: 'center', alignSelf: 'center',
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
               {/* <p style={{ marginBottom: '0px', fontFamily: 'Recoleta Medium'}}></p> */}
-            <button onClick={greeting} className="button" style={{ backgroundColor: 'white',
+            <button onClick={greeting} className="button" style={{ backgroundColor: '#f5f5f5',
               fontFamily: 'Recoleta Medium', borderRadius: '4px', paddingLeft: '7px',
               paddingRight: '7px', transition: 'all 0.5s', cursor: 'pointer' }}>
             <svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
@@ -192,49 +191,54 @@ fill="#04AE56"/> <path d=
           {/* {changeBackground(isShown)} */}
           </Col> </Row>
         <Row>
-          <Col id='req' className="justify-content-md-center" style={{display: 'flex'}}>
-          <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-            <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
-<path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-<path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-<path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-<path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-<path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-<path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-<path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-<path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+          <Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
+            display: 'flex' }}>
+            <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+            <svg style={{alignSelf: 'center'}} height="20px" viewBox="0 0 24 24" fill="none">
+  <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+  <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+  <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+  <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+  <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+  <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+  <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+  <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+  <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg>
             </Col>
             </Row> </Col>
 
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="border-none justify-content-md-center" style={{ height: '100%' }}
-          isFooterBlurred radius="lg">
-          <Row style={{ height: '50%', alignContent: 'center', paddingBottom: '1.75rem' }}>
-            <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}>
-              <Button className=
-                "p-2 radius-large absolute text-black"
-                variant="flat" color="default" radius="lg" size="sm">Image list Product Image 2</Button>
+          radius="lg">
+          <Row style={{ alignContent: 'center', paddingBottom: '1.75rem' }}>
+            {/* <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
+              <Button className="shadow-low p-2 radius-large text-black"
+                variant="flat" color="default">Image list Product Image 2</Button>
           {/* shadow-medium {changeBackground(isShown)} */}
-            </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}>
-              <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
-                backgroundColor: '#adff2333' }} className=
+            {/* </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}> */}
+              <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+                backgroundColor: '#04ae5620' }} className=
                 "p-2 radius-large text-tiny text-black z-10" variant="flat"
-                color="default" size="sm">is empty</Button></Col></Row>
-          <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
+                color="default" size="sm">is empty</Button>
+                {/* </Col> */}
+                </Row>
+          <Row>
+            {/* <Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "shadow-medium radius-large text-black" variant="flat" color="default"
-              size="sm">and Discount %</Button></Col>
-          <Col className="justify-content-md-center" style={{display: 'flex'}}>
-            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#050',
-              backgroundColor: '#adff2333' }} className=
-              "radius-large text-tiny text-black z-10" variant="flat" color="default"
-              size="sm">is</Button></Col>
-          <Col className="justify-content-md-center" style={{display: 'flex'}}>
+              size="sm">and Discount %</Button>
+              {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+              backgroundColor: '#04ae5620' }} className=
+              "radius-large text-tiny" variant="flat" color="default"
+              size="sm">is</Button>
+              {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "shadow-medium radius-large text-black" variant="flat"
-              color="default" size="sm">0</Button></Col></Row></Card>
+              color="default" size="sm">0</Button>
+              {/* </Col> */}
+              </Row></Card>
               {/* </Container> */}
       </Col>
 
@@ -246,10 +250,10 @@ fill="#04AE56"/> <path d=
             width={200} />
           <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
               <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card>
-        <Button style={{ zIndex: 0 }} id='b1' className=
+        <Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
@@ -264,15 +268,15 @@ fill="#04AE56"/> <path d=
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
         position: 'relative', display: 'flex'}}>
-        <Card isFooterBlurred radius="lg" className="border-none" >
-          <Image alt="Woman" className="object-cover opacity-1" height={200}
+        <Card isFooterBlurred radius="lg" className="border-none">
+          <Image alt="Woman" className="object-cover opacity-1" height={150}
             src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
-            width={200} />
+            width={150}/>
         <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
           borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-          "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
-          ><p style={{marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-            >Single Image prduct...</p>
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
+          ><p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+            >Single Image prduct...</p></CardFooter></Card>
         <Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
@@ -282,17 +286,18 @@ fill="#04AE56"/> <path d=
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-                ></path></g></g></svg></Button></CardFooter></Card>
+                ></path></g></g></svg></Button>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
 
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} radius="lg" className="shadow-medium self-center"
+        <Button onClick={greeting} className="shadow-medium self-center"
           variant="flat" color="default" style={{
             zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .3)',
-          // , borderRadius: '4px' , transition: 'all 0.5s', cursor: 'pointer'
+            borderRadius: '4px',
+          // transition: 'all 0.5s', cursor: 'pointer'
           paddingRight: 'calc(var(--bs-gutter-x) * .3)' }}>+</Button></Row></Col></Row>
 
     <Row id='r2' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }}
@@ -317,19 +322,23 @@ fill="#04AE56"/> <path d=
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg></Col></Row></Col>
+
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        ><Col className="justify-content-md-center" style={{display: 'flex'}}>
+        ><Card className="border-none justify-content-md-center" style={{ height: '100%' }}
+        radius="lg">
+        <Col className="justify-content-md-center" style={{display: 'flex'}}>
         <Button className=
-          "shadow-medium radius-large absolute text-black" variant="flat" color="default"
+          "shadow-medium radius-large text-black" variant="flat" color="default"
           radius="lg" size="sm">tags</Button></Col>
         <Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <Button className=
-            "radius-large absolute text-black" variant="flat" color="default"
-            radius="lg" size="sm">contain</Button></Col>
+          <Button  style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+              backgroundColor: '#04ae5620' }} className=
+            "radius-large" variant="flat" color="default" radius="lg" size="sm">contain</Button></Col>
         <Col className="justify-content-md-center" style={{display: 'flex'}}>
           <Button className=
-            "shadow-medium radius-large absolute text-black" variant="flat" color="default"
-            radius="lg" size="sm">onsale</Button></Col></Col>
+            "shadow-medium radius-large text-black" variant="flat" color="default"
+            radius="lg" size="sm">onsale</Button></Col></Card></Col>
+
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
     <Image alt="Woman"
@@ -338,9 +347,8 @@ fill="#04AE56"/> <path d=
       "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
       width={200} />
     <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-      borderBottomLeftRadius: 'var(--nextui-radius-large)'
-    }} className=
-    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+      borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
       <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
       size="sm">
@@ -382,7 +390,7 @@ fill="#04AE56"/> <path d=
       <Col id="addc" xs lg="1" className="text-center" style={{ borderLeft: '1px solid #eee',
         fontFamily: 'Recoleta Medium'}}>+</Col></Row>
 
-    <Row style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} id='r3' onMouseOver={changeBackground }
+    <Row id='r3' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
