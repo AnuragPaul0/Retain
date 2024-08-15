@@ -24,7 +24,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     let tr = co ? <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/> :
       <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     if (tog) createRoot(tog).render(tr)
-    parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = +e.style.zIndex ? 0 : 10} ) }
+    parent.querySelectorAll('#b1').forEach((e:any) => {e.style.zIndex = +e.style.zIndex ? 0 : 10
+      e.style.zIndex += ' !important'} ) }
 
   let greeting = () => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} onMouseEnter={changeBackground}
@@ -167,11 +168,9 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
             isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
               {/* </p> */}
-          <Button
-             style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px',
-            paddingRight: '7px'
+          <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px !important',
+            paddingRight: '7px !important' }}
             // , transition: 'all 0.5s', cursor: 'pointer'
-            }}
             ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
           stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -208,7 +207,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </Col>
             </Row></Col>
 
-      <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
+      <Col xs lg="3" className="text-center" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="border-none justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="border-none justify-content-md-center"
             style={{ width: '80%', alignSelf: 'center', height: '70% !important' }} radius="lg">
@@ -299,10 +298,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
         <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31)',
+            zoom: '2', fontFamily: 'Recoleta Medium',
+            paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
-          // transition: 'all 0.5s', cursor: 'pointer'
-          paddingRight: 'calc(var(--bs-gutter-x) * .3)' }}>+</Button></Row></Col></Row>
+            // transition: 'all 0.5s', cursor: 'pointer'
+            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id='r2' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }}
       onMouseOver={changeBackground }
