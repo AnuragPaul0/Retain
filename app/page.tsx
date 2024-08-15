@@ -390,8 +390,15 @@ export default function Home() { let tog, parent, p = 6, co = true, container
   {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
 
-      <Col id="addc" xs lg="1" className="text-center" style={{ borderLeft: '1px solid #eee',
-        fontFamily: 'Recoleta Medium'}}>+</Col></Row>
+      <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
+        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+          style={{ display: 'grid', alignSelf: 'center' }}>
+        <Button onClick={greeting} className="shadow-medium self-center" style={{
+            zoom: '2', fontFamily: 'Recoleta Medium',
+            paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
+            borderRadius: '2px',
+            // transition: 'all 0.5s', cursor: 'pointer'
+            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id='r3' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
