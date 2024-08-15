@@ -216,10 +216,10 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             </Row></Col>
 
       <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
-        <Card className="border-none" style={{ height: '100%' }}
-          radius="lg"><Card className="border-none"
+        <Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="justify-content-md-center"
             style={{ width: '80%', alignSelf: 'center', height: '70%' }} radius="lg">
-          <div style={{ marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
+          <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             {/*  style={{ alignContent: 'center', paddingBottom: '1.75rem' }}
             <Col id='del' xs className="justify-content-md-center" style={{display: 'flex'}}> */}
               <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
@@ -233,8 +233,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
                 color="default">is empty</Button>
                 {/* </Col> */}
           </div>
-          <div>
-            {/* <Col className="justify-content-md-center" style={{display: 'flex'}}> */}
+          <div style={{ alignSelf: 'center' }}>
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
@@ -335,9 +334,9 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
             </svg></Col></Row></Col>
 
-      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        ><Card className="border-none" style={{ height: '100%' }} radius="lg">
-          <Card className="border-none"
+      <Col xs lg="4" style={{fontFamily: 'Recoleta Medium'}}
+        ><Card className="justify-content-md-center" style={{ height: '100%' }} radius="lg">
+          <Card className="justify-content-md-center"
             style={{ width: '80%', alignSelf: 'center', height: '70%' }} radius="lg">
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
@@ -388,11 +387,11 @@ export default function Home() { let tog, parent, p = 6, co = true, container
                 /></Row>
             <Row className="justify-content-md-center">
               <Image alt="Woman" className="object-cover opacity-1" height={200/3} src=
-                "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg"
+                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"
                 /></Row></Col>
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Image alt="Woman" className="object-cover opacity-1" height={200} src=
-          "https://cdn.pixabay.com/photo/2024/03/04/16/07/winter-8612635_640.jpg"
+          "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
                 width={400/3} /></Col></Row>
           {/* <Row className="justify-content-md-center"> */}
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
@@ -426,7 +425,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r3' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
+    <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
@@ -501,7 +500,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r4' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
+    <Row id='r4' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
@@ -575,7 +574,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             // transition: 'all 0.5s', cursor: 'pointer'
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
-    <Row id='r5' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
+    <Row id='r5' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
       <Col xs lg="1" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
