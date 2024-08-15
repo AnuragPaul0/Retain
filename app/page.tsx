@@ -180,7 +180,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
     {/* () => {co = 'red'; () =>{ co = 'white';  */}
     <Row id='r1' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }}
-      onMouseOver={changeBackground }
+      onMouseEnter={changeBackground }
       onMouseLeave={ changeBackground } className="pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ display: 'grid', borderRight: '1px solid #eee' }}>
@@ -399,6 +399,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderRadius: '2px',
             // transition: 'all 0.5s', cursor: 'pointer'
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+
 
     <Row id='r3' style={{ marginLeft: 'calc(-1.5 * var(--bs-gutter-x))' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="justify-content-md-center">
