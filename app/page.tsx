@@ -384,10 +384,9 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
             "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>4 Images - On Sale - ...</p>
-            <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-            size="sm">
-              Notify
-              </Button></CardFooter></Card>
+            </CardFooter></Card>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
+          size="sm">Notify</Button>
   {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
 
