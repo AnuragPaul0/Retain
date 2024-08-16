@@ -67,7 +67,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         <Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
       color="default" radius="lg" size="sm">+ Add design</Button></Col>
-    
+
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         position: 'relative', display: 'flex'}}>
         <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -795,7 +795,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
     <p className="framer-text" style={{  marginLeft: '6rem', fontFamily: 'Recoleta Medium' }}>
       <span style={{ width: '30%', display: 'inline-block' }}
-        >Design for remaining SKU's</span><Switch color="#04AE56" defaultSelected 
+      // #04AE56
+        >Design for remaining SKU's</span><Switch color="success" defaultSelected 
     aria-label="Automatic updates"/></p>
 
   <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
