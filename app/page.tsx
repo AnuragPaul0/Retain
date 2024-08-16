@@ -356,14 +356,14 @@ export default function Home() { let tog, parent, p = 6, co = true, container
           <div
           // Row
           style={{ height: '150px', width: '150px', justifyContent: 'flex-start !important' }}>
-            <Col className="justify-content-md-center" style={{display: 'flex'}}>
+            <Col className="justify-content-md-center">
               {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                   />
                   {/* </Row> */}
               {/* <Row className="justify-content-md-center"> */}
-                <Image alt="Woman" className="object-cover opacity-1" height={50} src=
+                <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                   />
                   {/* </Row> */}
@@ -408,17 +408,18 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-      onMouseLeave={changeBackground } className="pb-9 justify-content-md-center">
+    <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
+      onMouseLeave={changeBackground } className="pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-          </Col></Row>
+        <Row style={{ height: '50%' }} className="justify-content-md-center">
+          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
+            display: 'grid' }}></Col></Row>
 
-        <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
-          <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
-            <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
+        <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
+          display: 'flex'}}>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+            <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
 <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
@@ -480,7 +481,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
 
     <Row id='r4' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="justify-content-md-center">
+    onMouseLeave={changeBackground } className="pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
@@ -503,6 +504,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
+
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
     <Image alt="Woman"
@@ -540,6 +542,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         </Button> </CardFooter> </Card>
     {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
+
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
@@ -551,7 +554,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id='r5' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-      onMouseLeave={changeBackground } className="">
+      onMouseLeave={changeBackground } className="pb-9">
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
