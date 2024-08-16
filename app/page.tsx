@@ -355,27 +355,23 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none"><div
           style={{ display: 'flex', height: '150px', width: '150px',
             justifyContent: 'flex-start !important' }}>
-            <Col style={{ width: '50px' }} className="justify-content-md-center">
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
               {/* <Row className="justify-content-md-center"> */}
-                <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                   />
-                  {/* </Row> */}
-              {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                   />
-                  {/* </Row> */}
-            {/* <Row className="justify-content-md-center"> */}
               <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"
-            /></Col>
+                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
             <Image alt="Woman" className="object-cover opacity-1" height={150} src=
               "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
         width={100} /></Col></div>
-            <CardFooter style={{ paddingLeft: '0 !important', paddingRight: '0 !important',
-            borderBottomRightRadius: 'var(--nextui-radius-large)',
+            <CardFooter style={{ paddingBottom: '0 !important', paddingLeft: '0 !important',
+              paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
