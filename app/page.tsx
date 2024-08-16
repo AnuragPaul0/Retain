@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
-import {Card, CardFooter, Image, Button} from "@nextui-org/react"
+import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, co = true, container
   // const [isShown, setIsShown] = useState(false)
@@ -117,14 +117,15 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               "flex mb-2 justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                 <MdOutlineSettings className="text-2xl fill-white" />
               </div> </div>
-        </div></div>
+    </div></div>
+
     <div style={{marginLeft: '6rem', marginTop: '2rem'}} className="framer-1s4jv5d" data-framer-name=
     "Fuel your Brand's Growth with Personalized Dynamic Creatives"
     data-framer-component-type="RichTextContainer">
     <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
       <HiArrowLeft style={{display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem'}}/>
         <span style={{width: '30%', display: 'inline-block', borderBottom: '1px solid #eee'}}
-          >Rules space</span></p></div>
+    >Rules space</span></p></div>
 
     <Button className="self-center p-2 absolute" variant="flat" color="default"
       style={{ top: '3rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
@@ -205,16 +206,14 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
           </svg></Col></Row></Col>
 
-      <Col xs lg="3" style={{ fontFamily: 'Recoleta Medium'}}>
+      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
           <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "shadow-medium p-2 radius-large text-black"
+              "shadow-medium p-1 radius-large text-black"
               variant="flat" color="default">Image list Product Image 2</Button>
-          {/* shadow-medium {changeBackground(isShown)} */}
-            {/* </Col><Col xs className="justify-content-md-center" style={{display: 'flex'}}> */}
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
                 backgroundColor: '#04ae5620' }} className= "p-2 radius-large z-10" variant="flat"
                 color="default">is empty</Button></div>
@@ -223,17 +222,14 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
               >and Discount %</Button>
-              {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
               "p-2 radius-large" variant="flat" color="default">is</Button>
-              {/* </Col><Col className="justify-content-md-center" style={{display: 'flex'}}> */}
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
               "p-2 shadow-medium radius-large text-black" variant="flat"
               color="default">0</Button>
-              {/* </Col> */}
-              </div></Card></Card></Col>
+      </div></Card></Card></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         position: 'relative',
@@ -255,9 +251,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-                ></path> </g> </g></svg></Button>
-  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-      </Col>
+      ></path> </g> </g></svg></Button></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
         position: 'relative', display: 'flex'}}>
@@ -278,7 +272,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-                ></path></g></g></svg></Button></Col>
+      ></path></g></g></svg></Button></Col>
 
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
@@ -312,7 +306,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{fontFamily: 'Recoleta Medium'}}
+      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium' }}
         ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
@@ -353,7 +347,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-        >Multi Image - on Sale</p></CardFooter></Card><Button  id='b1' style={{ zIndex: 0 }} className=
+        >Multi Image - on Sale</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
@@ -405,15 +399,15 @@ export default function Home() { let tog, parent, p = 6, co = true, container
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
       ></path></g></g></svg></Button></Col>
 
-      <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
-          style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium',
-            paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
-            borderRadius: '2px',
-            // transition: 'all 0.5s', cursor: 'pointer'
-            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+    <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
+      paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+        style={{ display: 'grid', alignSelf: 'center' }}>
+      <Button onClick={greeting} className="shadow-medium self-center" style={{
+          zoom: '2', fontFamily: 'Recoleta Medium',
+          paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
+          borderRadius: '2px',
+          // transition: 'all 0.5s', cursor: 'pointer'
+    paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
     <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
@@ -437,46 +431,101 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg></Col></Row></Col>
-      <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium' }}
-        >Product Filter</Col>
+      </svg></Col></Row></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card isFooterBlurred
-        radius="lg" className="border-none" ><Image alt="Woman"
-          className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
-            "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={150} />
-    <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-      borderBottomLeftRadius: 'var(--nextui-radius-large)'
-    }} className=
-    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-      size="sm">
-        Notify
-      </Button>
-    </CardFooter>
-  </Card>
-  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-      </Col>
+      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium' }}
+        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="justify-content-md-center"
+            style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
+            radius="lg"><Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
+              >tags</Button>
+            <Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+              backgroundColor: '#04ae5620' }} className=
+              "p-2 radius-large" variant="flat" color="default">contain</Button>
+            <Button style={{ blockSize: 'fit-content',
+              alignSelf: 'center', borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "p-2 shadow-medium radius-large text-black" variant="flat"
+      color="default">__labelNew</Button></Card></Card></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
-    <Image alt="Woman"
-      className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
-      "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-      width={150} />
-    <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-      borderBottomLeftRadius: 'var(--nextui-radius-large)'
-    }} className=
-    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-      size="sm">
-        Notify
-      </Button> </CardFooter> </Card>
-  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-      </Col>
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+        display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
+        <div style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+              <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                borderTopRightRadius: 0
+                }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg"/>
+              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                "	https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
+          <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+        "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>
+        <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
+          borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+          <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+            >Multi Image - new arr...</p></CardFooter></Card>
+        <Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path></g></g></svg></Button></Col>
+
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+        display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
+        <div style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+                <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+  "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+                  />
+                <Image style={{ borderRadius: 0
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
+                  />
+              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+          <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+              "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+          width={100} /></Col></div>
+        <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
+            paddingLeft: '0 !important',
+            paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+            ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+              >4 Images - new arrival</p>
+        </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path></g></g></svg></Button></Col>
+
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
@@ -485,7 +534,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
             // transition: 'all 0.5s', cursor: 'pointer'
-            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+      paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
 
     <Row id='r4' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
@@ -509,12 +558,25 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg></Col></Row></Col>
+      </svg></Col></Row></Col>
 
-      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-        >Product Filter</Col>
+      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium' }}
+        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="justify-content-md-center"
+            style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
+            radius="lg"><Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "p-2 shadow-medium radius-large text-black" variant="flat" color="default"
+              >Discount %</Button>
+            <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+              backgroundColor: '#04ae5620' }} className=
+              "p-2 radius-large" variant="flat" color="default">is</Button>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
+              "p-2 shadow-medium radius-large text-black" variant="flat"
+      color="default">0</Button></Card></Card></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
     <Image alt="Woman"
       className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
@@ -534,33 +596,57 @@ export default function Home() { let tog, parent, p = 6, co = true, container
   {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
       </Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-          display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
-      <Image alt="Woman"
-        className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
-        "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-        width={150} />
-      <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-      "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-        <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-        size="sm">
-          Notify
-        </Button> </CardFooter> </Card>
-    {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-      </Col>
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+          display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
+      <div style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+                <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+  "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+                  />
+                <Image style={{ borderRadius: 0
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
+                  />
+              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+          <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+              "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+          width={100} /></Col></div>
+        <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
+            paddingLeft: '0 !important',
+            paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+            ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+              >4 Images - new arrival</p>
+        </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path></g></g></svg></Button></Col>
 
-      <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
-          style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium',
-            paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
-            borderRadius: '2px',
-            // transition: 'all 0.5s', cursor: 'pointer'
-            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+    <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
+      paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+        style={{ display: 'grid', alignSelf: 'center' }}>
+      <Button onClick={greeting} className="shadow-medium self-center" style={{
+          zoom: '2', fontFamily: 'Recoleta Medium',
+          paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
+          borderRadius: '2px',
+          // transition: 'all 0.5s', cursor: 'pointer'
+    paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+
 
     <Row id='r5' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="pb-9">
@@ -572,7 +658,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -583,46 +669,62 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg></Col></Row></Col>
+      </svg></Col></Row></Col>
 
-      <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
-      >Product Filter</Col>
+      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium' }}
+        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          radius="lg"><Card className="justify-content-md-center"
+            style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
+            radius="lg"><Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }}
+            className="shadow-medium p-1 radius-large text-black"
+            variant="flat" color="default">Image list Product Image 2</Button>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
+              backgroundColor: '#04ae5620' }} className= "p-2 radius-large z-10" variant="flat"
+              color="default">is empty</Button></Card></Card></Col>
+
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+        position: 'relative',
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
+          <Image alt="Woman" className="object-cover opacity-1" height={150}
+            src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
+            width={150}/>
+          <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+              <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+                >Single Image prduct...</p></CardFooter></Card>
+        <Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path> </g> </g></svg></Button></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
-    <Image alt="Woman"
-      className="object-cover opacity-100" height={150} style={{opacity: '100'}} src=
-      "https://cdn.pixabay.com/photo/2024/02/27/00/13/heliconia-8599119_640.jpg"
-      width={150} /> <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-      size="sm">
-        Notify
-      </Button>
-    </CardFooter>
-  </Card>
-  {/* <p style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p> */}
-      </Col>
+        position: 'relative', display: 'flex'}}>
+        <Card isFooterBlurred radius="lg" className="border-none">
+          <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
+            src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
+        <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+          borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
+          ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+            >Single Image prduct...</p></CardFooter></Card>
+        <Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path></g></g></svg></Button></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}>
-      <Card isFooterBlurred radius="lg" className="border-none" >
-    <Image alt="Woman"
-      className="object-cover opacity-1" height={150} style={{opacity: '100'}} src=
-      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-      width={150} /> <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-        borderBottomLeftRadius: 'var(--nextui-radius-large)'
-      }} className=
-    "justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-      <p className="text-tiny" style={{fontFamily: 'Recoleta Medium'}}>Single Image prduct...</p>
-      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg"
-      size="sm">
-        Notify
-      </Button> </CardFooter> </Card>
-      </Col>
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}>
@@ -631,7 +733,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
             // transition: 'all 0.5s', cursor: 'pointer'
-            paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
+    paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id="addr" className="justify-content-md-center">
       <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
@@ -639,4 +741,92 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Col>
-        <Col xs lg="9"></Col></Row></Container></div> ) }
+  <Col xs lg="9"></Col></Row></Container>
+
+  <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+    <span style={{width: '30%', display: 'inline-block', borderBottom: '1px solid #eee'}}
+  >Design for remaining SKU's</span><Switch  color="default" defaultSelected 
+  aria-label="Automatic updates"/></p>
+
+  <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+      marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
+      marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
+
+    <Row id='r2' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
+      onMouseLeave={changeBackground } className="pb-9">
+
+      <Col xs lg="5" style={{ borderRight: '1px solid #eee' }}>N/A</Col>
+
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+        display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
+          <div style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+              <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                borderTopRightRadius: 0
+                }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
+              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+          <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+  "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+          width={100} /></Col></div>
+          <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+      <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+        >Multi Image - on Sale</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      ></path></g></g></svg></Button></Col>
+
+      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
+        display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
+          <div style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
+            <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+                <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+  "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+                  />
+                <Image style={{ borderRadius: 0
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
+                  />
+              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  borderTopRightRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+          <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+              "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+          width={100} /></Col></div>
+          <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
+            paddingLeft: '0 !important',
+            paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
+            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+            ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+              >4 Images - On Sale - ...</p>
+            </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">
+            <svg fill="#000" width="20px" version="1.1"
+              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> <g> <path d=
+          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+></path></g></g></svg></Button></Col></Row></Container></div> ) }
