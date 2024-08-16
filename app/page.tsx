@@ -352,9 +352,9 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       ></path></g></g></svg></Button></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card  style={{ width: 'fit-content', display: 'flex'}} isFooterBlurred radius="lg" className="border-none"><div
-          // Row
-          style={{ height: '150px', width: '150px', justifyContent: 'flex-start !important' }}>
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none"><div
+          style={{ display: 'flex', height: '150px', width: '150px',
+            justifyContent: 'flex-start !important' }}>
             <Col style={{ width: '50px' }} className="justify-content-md-center">
               {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
