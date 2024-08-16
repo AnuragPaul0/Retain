@@ -741,12 +741,12 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Col>
-  <Col xs lg="9"></Col></Row></Container>
+    <Col xs lg="10"></Col></Row></Container>
 
-  <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-    <span style={{width: '30%', display: 'inline-block', borderBottom: '1px solid #eee'}}
-  >Design for remaining SKU's</span><Switch  color="default" defaultSelected 
-  aria-label="Automatic updates"/></p>
+    <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+      <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}
+        >Design for remaining SKU's</span><Switch color="default" defaultSelected 
+    aria-label="Automatic updates"/></p>
 
   <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
