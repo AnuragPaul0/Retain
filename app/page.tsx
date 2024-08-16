@@ -144,7 +144,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Row className="justify-content-md-center" style={{ 
         // , marginLeft: 'calc(-1.5 * var(--bs-gutter-x))'
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
-        <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex',
+        <Col xs lg="3" style={{ justifyContent: 'center', display: 'flex',
           borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
               {/* blockSize: 'fit-content', , width: 'fit-content' */}
           <Card style={{ width: '50%',
@@ -352,18 +352,17 @@ export default function Home() { let tog, parent, p = 6, co = true, container
                 ></path></g></g></svg></Button></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
-          <div
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none"><div
           // Row
           style={{ height: '150px', width: '150px', justifyContent: 'flex-start !important' }}>
-            <Col className="justify-content-md-center">
+            <Col style={{ width: '50px' }} className="justify-content-md-center">
               {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                   />
                   {/* </Row> */}
               {/* <Row className="justify-content-md-center"> */}
-                <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                <Image alt="Woman" className="object-cover opacity-1" height={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                   />
                   {/* </Row> */}
