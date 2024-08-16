@@ -204,7 +204,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-          </svg></Col></Row></Col>
+      </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="justify-content-md-center" style={{ height: '100% !important' }}
@@ -212,7 +212,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
           <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
             <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "shadow-medium p-1 radius-large text-black"
+              "shadow-medium p-1 radius-small text-black"
               variant="flat" color="default">Image list Product Image 2</Button>
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-large)/2)', color: '#052',
                 backgroundColor: '#04ae5620' }} className= "p-2 radius-large z-10" variant="flat"
@@ -736,12 +736,12 @@ export default function Home() { let tog, parent, p = 6, co = true, container
     paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Row></Col></Row>
 
     <Row id="addr" className="justify-content-md-center">
-      <Col xs lg="1" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+      <Col xs lg="2" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
       <Button onClick={greeting} className="shadow-medium self-center" style={{
             fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) * .31) !important',
             borderRadius: '2px',
             paddingRight: 'calc(var(--bs-gutter-x) * .3) !important' }}>+</Button></Col>
-    <Col xs lg="10"></Col></Row></Container>
+    <Col xs lg="8"></Col></Row></Container>
 
     <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
       <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}
