@@ -316,7 +316,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
       <Col xs lg="4" style={{fontFamily: 'Recoleta Medium'}}
         ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
-            style={{ flexDirection: 'row', width: '40%', alignSelf: 'center', height: '70% !important' }}
+            style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
             radius="lg"><Button style={{ blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }} className=
@@ -340,7 +340,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-        >Single Image prduct...</p><Button  id='b1' style={{ zIndex: 0 }} className=
+        >Single Image prduct...</p></CardFooter></Card><Button  id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
@@ -349,11 +349,13 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-                ></path></g></g></svg></Button></CardFooter></Card></Col>
+                ></path></g></g></svg></Button></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
-        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
-          <Row style={{ justifyContent: 'flex-start !important' }}>
+        display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
+          <div
+          // Row
+          style={{ justifyContent: 'flex-start !important' }}>
             <Col className="justify-content-md-center" style={{display: 'flex'}}>
               <Row className="justify-content-md-center">
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
@@ -370,7 +372,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Image alt="Woman" className="object-cover opacity-1" height={150} src=
           "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-                width={100} /></Col></Row>
+            width={100} /></Col></div>
+                {/* Row */}
           {/* <Row className="justify-content-md-center"> */}
             <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
@@ -379,8 +382,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
               >4 Images - On Sale - ...</p>
             </CardFooter>
             {/* </Row> */}
-            </Card>
-        <Button id='b1' style={{ zIndex: 0 }} className=
+            </Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
