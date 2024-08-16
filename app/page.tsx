@@ -355,29 +355,33 @@ export default function Home() { let tog, parent, p = 6, co = true, container
         display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
           <div
           // Row
-          style={{ justifyContent: 'flex-start !important' }}>
+          style={{ height: '150px', width: '150px', justifyContent: 'flex-start !important' }}>
             <Col className="justify-content-md-center" style={{display: 'flex'}}>
-              <Row className="justify-content-md-center">
+              {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-    "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                  /></Row>
-              <Row className="justify-content-md-center">
+  "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+                  />
+                  {/* </Row> */}
+              {/* <Row className="justify-content-md-center"> */}
                 <Image alt="Woman" className="object-cover opacity-1" height={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                  /></Row>
-            <Row className="justify-content-md-center">
+                  />
+                  {/* </Row> */}
+            {/* <Row className="justify-content-md-center"> */}
               <Image alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                 "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"
-                /></Row></Col>
+                /></Col>
+                {/* </Row> */}
           <Col className="justify-content-md-center" style={{display: 'flex'}}>
             <Image alt="Woman" className="object-cover opacity-1" height={150} src=
-          "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-            width={100} /></Col></div>
+              "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+              width={100} /></Col></div>
                 {/* Row */}
           {/* <Row className="justify-content-md-center"> */}
-            <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
+            <CardFooter style={{ paddingLeft: '0 !important', paddingRight: '0 !important',
+            borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+  "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
               >4 Images - On Sale - ...</p>
             </CardFooter>
@@ -406,13 +410,13 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
     <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
       onMouseLeave={changeBackground } className="pb-9 justify-content-md-center">
+
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-          {/* {changeBackground(isShown)} */}
-          </Col> </Row>
+          </Col></Row>
 
-        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+        <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
           <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
             <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -424,7 +428,7 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg> </Col> </Row> </Col>
+            </svg></Col></Row></Col>
       <Col xs lg="4" className="text-center" style={{ fontFamily: 'Recoleta Medium' }}
         >Product Filter</Col>
 
@@ -477,13 +481,13 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 
     <Row id='r4' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
     onMouseLeave={changeBackground } className="justify-content-md-center">
+
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{display: 'flex'}}>
-          {/* {changeBackground(isShown)} */}
-          </Col> </Row>
+          </Col></Row>
 
-        <Row> <Col className="justify-content-md-center" style={{display: 'flex'}}>
+        <Row><Col className="justify-content-md-center" style={{display: 'flex'}}>
           <p style={{zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
             <svg style={{marginTop: '.7rem'}} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -495,7 +499,8 @@ export default function Home() { let tog, parent, p = 6, co = true, container
 <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
 <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-            </svg> </Col> </Row> </Col>
+            </svg></Col></Row></Col>
+
       <Col xs lg="4" className="text-center" style={{fontFamily: 'Recoleta Medium'}}
         >Product Filter</Col>
       <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #eee',
