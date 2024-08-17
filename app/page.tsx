@@ -173,11 +173,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     >Rules space</span></p></div>
 
     <Button className="p-3 self-center absolute" variant="flat" color="default"
-      style={{ top: '2rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
-        fontSize: '18px', borderRadius: '4px'
-      // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
-      // , textAlign: 'center', padding: '10px', transition: 'all 0.5s', cursor: 'pointer', margin: '5px'
-      }}>
+      style={{ padding: '.75rem !important', top: '2rem', right: '2rem', backgroundColor: '#04AE56',
+        color: '#FFFFFF', fontSize: '18px', borderRadius: '4px' }}>
         {/* <span> */}
           Publish Feed
           {/* </span> */}
