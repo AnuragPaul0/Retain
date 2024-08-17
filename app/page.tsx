@@ -210,8 +210,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
       </svg></Button></Col></Row>
 
-    <Row id='r1' style={{ justifyContent: 'flex-start'}} onMouseEnter={ changeBackground(this, 'h') }
-      onMouseLeave={ changeBackground(this, 'h') } className="pb-9">
+    <Row id='r1' style={{ justifyContent: 'flex-start'}} onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
       <Col xs lg="1.5" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
