@@ -200,7 +200,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
         isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col></Row>
 
-    <Row id='r1' style={{ height: '15%', justifyContent: 'flex-start'}}
+    <Row id='r1' style={{ height: '15%'}}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 {/* width: '11%',  */}
