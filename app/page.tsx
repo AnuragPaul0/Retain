@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any, b, f,
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b, f, co = 2
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -33,7 +33,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = (el:any) => { container = document.createElement('div'); f = el.id == 'btnr'
+  let relm = (rel:any) => { container = document.createElement('div')
+  createRoot(container).render(rel); return container }
+
+  let greeting = (el:any) => { f = el.id == 'btnr'
     k = f ? ( <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
@@ -90,26 +93,24 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       {/* </Row> */}
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
-    if (!f) document.querySelector('#rt')?.append(createRoot(<Col xs lg="2"
-      className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
-      display: 'flex'}}>
+    if (!f) { document.querySelector('#rt')?.append(
+      relm(<Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
+        display: 'flex'}}>
       <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
         textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-        isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
-          {/* </p> */}
+        isFooterBlurred radius="lg" className="p-1 border-none">Variant {co++}</Card>
       <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px !important',
         paddingRight: '7px !important' }}
-        // , transition: 'all 0.5s', cursor: 'pointer'
         ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
       stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button></Col>) )
-    createRoot(container).render(k)
-    a = document.querySelector('#addr')
-  if (a) a.insertAdjacentElement(b as InsertPosition, container), p++ }
+      </svg></Button></Col>) ); document.querySelectorAll('#addc').forEach( (e) =>
+      e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
+    else { a = document.querySelector('#addr')
+  if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
