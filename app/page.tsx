@@ -19,10 +19,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   function changeBackground(e:any, h:any){
     console.log(e); parent = e.target
     while (parent.id.match(/r\d/) == null) {
-      console.log(parent)
+      // console.log(parent)aq
     parent = parent.parentElement }
     if (h == 'h') {
-      tog = parent.querySelector('#b1, #del')
+      tog = parent.querySelectorAll('#b1, #del')
     // console.log(e , e.target, tog, co)
     // () =>{ co = 'white'
     // let tr = co ?  :
