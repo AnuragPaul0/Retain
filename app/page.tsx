@@ -92,7 +92,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
     b = (el.id == 'btnr' ? 'before' : 'after') + 'begin'
     createRoot(container).render(k)
     a = document.querySelector('#addr')
-  if (a) a.insertAdjacentElement(b, container), p++ }
+  if (a) a.insertAdjacentElement(b as InsertPosition, container), p++ }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
@@ -164,8 +164,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
           Publish Feed
           {/* </span> */}
     </Button>
-
-    <Container style={{ backgroundColor: '#fafafa', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+{/* a */}
+    <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
