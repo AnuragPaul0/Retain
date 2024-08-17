@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any, b, f, co = 2
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, co = 2
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
