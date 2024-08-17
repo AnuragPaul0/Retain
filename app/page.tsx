@@ -33,7 +33,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = (el) => { container = document.createElement('div')
+  let greeting = (el:any) => { container = document.createElement('div')
     k = el.id == 'btnr' ? ( <Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
