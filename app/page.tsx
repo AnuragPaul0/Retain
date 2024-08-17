@@ -90,6 +90,23 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       {/* </Row> */}
       </Col></Row> ) : {c}
     b = (el.id == 'btnr' ? 'before' : 'after') + 'begin'
+    document.querySelector('#rt')?.append(<Col xs lg="2" className="justify-content-md-center" style={{
+      borderRight: '1px solid #eee',
+      display: 'flex'}}>
+      <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
+        textAlign: 'center',
+        borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+        isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
+          {/* </p> */}
+      <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px !important',
+        paddingRight: '7px !important' }}
+        // , transition: 'all 0.5s', cursor: 'pointer'
+        ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+      stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      className="lucide lucide-ellipsis-vertical">
+        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+  </svg></Button></Col>)
     createRoot(container).render(k)
     a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, container), p++ }
@@ -169,7 +186,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-      <Row className="justify-content-md-center" style={{
+      <Row id='rt' className="justify-content-md-center" style={{
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ width: '11%', borderRight: '1px solid #eee' }}>
         </Col>
@@ -325,8 +342,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
     paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r2' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
-      onMouseLeave={changeBackground } className="pb-9">
+    <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
+      onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -455,8 +473,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
     paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r3' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
-      onMouseLeave={changeBackground } className="pb-9">
+    <Row id='r3' style={{ justifyContent: 'flex-start !important' }}
+      onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -586,8 +605,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r4' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-    onMouseLeave={changeBackground } className="pb-9 justify-content-md-center">
+    <Row id='r4' style={{ justifyContent: 'flex-start !important' }}
+      onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -720,8 +740,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
     paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-    <Row id='r5' style={{ justifyContent: 'flex-start !important' }} onMouseOver={changeBackground }
-      onMouseLeave={changeBackground } className="pb-9">
+    <Row id='r5' style={{ justifyContent: 'flex-start !important' }}
+      onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -838,8 +859,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-    <Row id='r2' style={{ justifyContent: 'flex-start !important' }} onMouseEnter={changeBackground }
-      onMouseLeave={changeBackground } className="pb-9">
+    <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
+      onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 {/* , alignSelf: 'center', textAlign: 'center' */}
       <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium',
         borderRight: '1px solid #eee' }}>
