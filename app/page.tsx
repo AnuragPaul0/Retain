@@ -89,10 +89,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
       </Col></Row> ) : {c}
-    b = el.id == 'btnr' ? 'before' : 'after'
+    b = (el.id == 'btnr' ? 'before' : 'after') + 'begin'
     createRoot(container).render(k)
     a = document.querySelector('#addr')
-  if (a) a.insertAdjacentElement(b + 'begin', container), p++ }
+  if (a) a.insertAdjacentElement(b, container), p++ }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
@@ -171,13 +171,15 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
 
       <Row className="justify-content-md-center" style={{
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+        <Col xs lg="2" style={{ width: '11%', borderRight: '1px solid #eee' }}>
+        </Col>
         <Col xs lg="4" style={{ justifyContent: 'center', display: 'flex',
-          borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
-              {/* blockSize: 'fit-content', , width: 'fit-content' */}
-          <Card style={{ width: '50%',
-            textAlign: 'center', backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
-            borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
-            isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
+            borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
+                {/* blockSize: 'fit-content', , width: 'fit-content' */}
+            <Card style={{ width: '50%',
+              textAlign: 'center', backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
+        isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}><Card style={{ flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
@@ -192,7 +194,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           className="lucide lucide-ellipsis-vertical">
             <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></Button></Col>
+        </svg></Button></Col>
 
         <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
           display: 'flex'}}>
