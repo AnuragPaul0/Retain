@@ -260,7 +260,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </div></Card></Card></Col></Row>
 
 
-    <Row id='r2' style={{ width: '11%' }}
+    <Row id='r2'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
@@ -305,7 +305,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">onsale</Button></Card></Card></Col></Row>
 
 
-    <Row id='r3' style={{ width: '11%' }}
+    <Row id='r3'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
@@ -351,7 +351,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">__labelNew</Button></Card></Card></Col></Row>
 
 
-    <Row id='r4' style={{ width: '11%' }}
+    <Row id='r4'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9 justify-content-md-center">
 
@@ -398,7 +398,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">0</Button></Card></Card></Col></Row>
 
 
-    <Row id='r5' style={{ width: '11%' }}
+    <Row id='r5'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
