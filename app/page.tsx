@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a
+export default function Home() { let tog, parent, p = 6, container, a,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -32,7 +32,8 @@ export default function Home() { let tog, parent, p = 6, container, a
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = (c) => { container = document.createElement('div')
+  let greeting = () => { container = document.createElement('div')
+    // parent.id == 'addc'
     createRoot(container).render(<Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ changeBackground(this, 'h') }
     onMouseLeave={ changeBackground(this, 'h') } className="pb-9 justify-content-md-center">
