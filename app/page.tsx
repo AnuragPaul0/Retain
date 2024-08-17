@@ -886,17 +886,17 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     aria-label="Automatic updates"/></p>
 
     <Container style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
-      marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '600px', paddingRight: '60px',
+      marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-    <Row id='r2' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+    <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
-{/* , alignSelf: 'center', textAlign: 'center' */}
+{/* , alignSelf: 'center',  */}
       <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium',
         borderRight: '1px solid #eee' }}>
-          <Card className="justify-content-md-center" style={{ backgroundColor: '#fafafa',
-          height: '100% !important' }}
+          <Card className="justify-content-md-center" style={{ textAlign: 'center',
+            backgroundColor: '#fafafa', height: '100% !important' }}
         radius="lg">N/A</Card></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
