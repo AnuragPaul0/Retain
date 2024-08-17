@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any,
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -38,7 +38,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
-      <Col xs lg='2'style={{ borderRight: '1px solid #eee' }}>
+      <Col xs lg='2'style={{ width: '11%', borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button onClick={(e) => changeBackground(e, 'c')}
@@ -89,9 +89,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
       </Col></Row> ) : {c}
+    b = el.id == 'btnr' ? 'before' : 'after'
     createRoot(container).render(k)
     a = document.querySelector('#addr')
-  if (a) a.insertAdjacentElement('beforebegin', container), p++ }
+  if (a) a.insertAdjacentElement(b + 'begin', container), p++ }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
@@ -213,7 +214,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
     <Row id='r1' style={{ justifyContent: 'flex-start'}} onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
-      <Col xs lg="1.5" style={{ borderRight: '1px solid #eee' }}>
+      <Col xs lg="2" style={{ width: '11%', borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button onClick={changeBackground(this, 'c')}
