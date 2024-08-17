@@ -240,22 +240,22 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               variant="flat" color="default">Image list Product Image 2</Button>
               <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
                 paddingRight: '.4rem !important', paddingLeft: '.4rem !important', color: '#052',
-                backgroundColor: '#04ae5620' }} className= "p-2 z-10" variant="flat"
+                backgroundColor: '#04ae5620' }} className= "p-1 z-10" variant="flat"
                 color="default">is empty</Button></div>
           <div style={{ alignSelf: 'center' }}>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "p-2 shadow-medium text-black" variant="flat" color="default"
+              "p-1 shadow-medium text-black" variant="flat" color="default"
               >and Discount %</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
-              "p-" variant="flat" color="default">is</Button>
+              "p-1" variant="flat" color="default">is</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
               color="default">0</Button>
     </div></Card></Card></Col></Row>
 
