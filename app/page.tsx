@@ -32,7 +32,7 @@ export default function Home() { let tog, parent, p = 6, container, a
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = () => { container = document.createElement('div')
+  let greeting = (c) => { container = document.createElement('div')
     createRoot(container).render(<Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ changeBackground(this, 'h') }
     onMouseLeave={ changeBackground(this, 'h') } className="pb-9 justify-content-md-center">
@@ -79,12 +79,15 @@ export default function Home() { let tog, parent, p = 6, container, a
       color="default" radius="lg" size="sm">+ Add design</Button></Col>{c}
 
       <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #eee',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
-          style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button id="btnc" onClick={greeting} className="shadow-medium self-center" style={{
+        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
+          {/* <Row className="justify-content-md-center"
+          style={{ display: 'grid', alignSelf: 'center' }}> */}
+        <Button id="btnc" onClick={greeting(c)} className="shadow-medium self-center" style={{
             zoom: '2', fontFamily: 'Recoleta Medium',
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>)
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
+      {/* </Row> */}
+      </Col></Row>)
     a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement('beforebegin', container), p++ }
 
