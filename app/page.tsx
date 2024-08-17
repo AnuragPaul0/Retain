@@ -42,7 +42,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
       <Col xs lg='2'style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
-            display: 'grid' }}><Button onClick={changeBackground(this, 'c')}
+            display: 'grid' }}><Button onClick={(e) => changeBackground(e, 'c')}
             className="shadow-medium self-center"
             style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
