@@ -172,7 +172,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}
     >Rules space</span></p></div>
 
-    <Button className="self-center absolute" variant="flat" color="default"
+    <Button className="p-2 self-center absolute" variant="flat" color="default"
       style={{ top: '3rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
         fontSize: '18px', borderRadius: '4px'
       // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
@@ -186,6 +186,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
+        
+      <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+        marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '600px', paddingRight: '60px',
+        marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
+
 
       <Row id='rt' className="justify-content-md-center" style={{
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
@@ -450,7 +455,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-    <Col xs lg="9"></Col></Row></Container>
+    <Col xs lg="4"></Col></Row></Container>
 
     <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
@@ -1117,7 +1122,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-    <Col xs lg="9"></Col></Row></Container>
+    <Col xs lg="9"></Col></Row></Container></Container>
 
     <p className="framer-text" style={{  marginLeft: '6rem', fontFamily: 'Recoleta Medium' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
@@ -1126,7 +1131,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     aria-label="Automatic updates"/></p>
 
     <Container style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
-      marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
+      marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '600px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
     <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
