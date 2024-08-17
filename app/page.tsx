@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b, f,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -16,7 +16,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true
 
-  function changeBackground(e:any, h:any) {
+  function changeBackground(e:any, h:any){
     console.log(e); parent = e.target
     while (parent.id.match(/r\d/) == null) {
       console.log(parent)
@@ -33,8 +33,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = (el:any) => { container = document.createElement('div')
-    k = el.id == 'btnr' ? ( <Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
+  let greeting = (el:any) => { container = document.createElement('div'); f = el.id == 'btnr'
+    k = f ? ( <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
@@ -88,10 +88,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
-      </Col></Row> ) : {c}
-    b = (el.id == 'btnr' ? 'before' : 'after') + 'begin'
-    document.querySelector('#rt')?.append(<Col xs lg="2" className="justify-content-md-center" style={{
-      borderRight: '1px solid #eee',
+    </Col></Row> ) : {c}
+    b = (f ? 'before' : 'after') + 'begin'
+    if (!f) document.querySelector('#rt')?.append(createRoot(<Col xs lg="2"
+      className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
       display: 'flex'}}>
       <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
         textAlign: 'center',
@@ -106,7 +106,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b,
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-  </svg></Button></Col>)
+    </svg></Button></Col>) )
     createRoot(container).render(k)
     a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, container), p++ }
