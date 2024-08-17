@@ -164,8 +164,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               </div> </div>
     </div></div>
 
-    <div style={{ marginLeft: '6rem', marginTop: '2rem'}} className="framer-1s4jv5d" data-framer-name=
-    "Fuel your Brand's Growth with Personalized Dynamic Creatives"
+    <div style={{ marginBottom: '4%', marginLeft: '6rem', marginTop: '2rem' }} className="framer"
+    data-framer-name="Fuel your Brand's Growth with Personalized Dynamic Creatives"
     data-framer-component-type="RichTextContainer">
     <p className="framer-text" style={{ zoom: '2', fontFamily: 'Recoleta Medium' }}>
       <HiArrowLeft style={{ display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem' }}/>
@@ -173,7 +173,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     >Rules space</span></p></div>
 
     <Button className="p-3 self-center absolute" variant="flat" color="default"
-      style={{ top: '3rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
+      style={{ top: '2rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
         fontSize: '18px', borderRadius: '4px'
       // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
       // , textAlign: 'center', padding: '10px', transition: 'all 0.5s', cursor: 'pointer', margin: '5px'
@@ -260,9 +260,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </div></Card></Card></Col></Row>
 
 
-    <Row id='r2' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+    <Row id='r2' style={{ width: '11%' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -305,9 +305,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">onsale</Button></Card></Card></Col></Row>
 
 
-    <Row id='r3' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+    <Row id='r3' style={{ width: '11%' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -351,9 +351,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">__labelNew</Button></Card></Card></Col></Row>
 
 
-    <Row id='r4' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+    <Row id='r4' style={{ width: '11%' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -398,9 +398,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">0</Button></Card></Card></Col></Row>
 
 
-    <Row id='r5' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+    <Row id='r5' style={{ width: '11%' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -453,6 +453,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
       <Col xs lg="4"></Col></Row></Container>
+
 {/* maxWidth: '600px',  */}
       <Container style={{ display: 'inline-block' }} className="rounded-large">
 
@@ -493,7 +494,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Row id='r1' style={{ justifyContent: 'flex-start'}} onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
-        <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+        <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           position: 'relative',
           display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
             <Image alt="Woman" className="object-cover opacity-1" height={150}
@@ -515,7 +516,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
         ></path> </g> </g></svg></Button></Col>
 
-        <Col xs lg="2" className="justify-content-md-center" style={{borderLeft: '1px solid #ddd',
+        <Col xs lg="2" className="w3 justify-content-md-center" style={{borderLeft: '1px solid #ddd',
           position: 'relative', display: 'flex'}}>
           <Card isFooterBlurred radius="lg" className="border-none">
             <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
@@ -551,7 +552,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
-        <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+        <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
             <div style={{ display: 'flex', height: '150px', width: '150px',
               justifyContent: 'flex-start !important' }}>
@@ -586,7 +587,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
         ></path></g></g></svg></Button></Col>
 
-        <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+        <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
             <div style={{ display: 'flex', height: '150px', width: '150px',
               justifyContent: 'flex-start !important' }}>
