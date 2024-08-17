@@ -190,7 +190,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Container style={{ display: 'inline-block' }} className="rounded-large">
 
  {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
-      <Row id='rt' className='sp' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <Row id='rt' className='sp' style={{ justifyContent: 'space-evenly',
+        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
         <Col xs lg="4" style={{ width: '67%', justifyContent: 'center', display: 'flex',
             borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
@@ -200,7 +201,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
         isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col></Row>
 
-    <Row id='r1' style={{ height: '15%'}}
+    <Row id='r1' style={{ height: '15%' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 {/* width: '11%',  */}
@@ -260,8 +261,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </div></Card></Card></Col></Row>
 
 
-    <Row id='r2'
-      onMouseEnter={ (e) => changeBackground(e, 'h') }
+    <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
@@ -290,23 +290,21 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "p-2 shadow-medium text-black" variant="flat" color="default"
-              >tags</Button>
+              "p-1 shadow-medium text-black" variant="flat" color="default">tags</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
               backgroundColor: '#04ae5620' }} className=
-              "p-2" variant="flat" color="default">contain</Button>
+              "p-1" variant="flat" color="default">contain</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content', alignSelf: 'center' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
       color="default">onsale</Button></Card></Card></Col></Row>
 
 
-    <Row id='r3'
-      onMouseEnter={ (e) => changeBackground(e, 'h') }
+    <Row id='r3' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
@@ -337,7 +335,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "p-2 shadow-medium text-black" variant="flat" color="default"
+              "p-1 shadow-medium text-black" variant="flat" color="default"
               >tags</Button><Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
                 paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
                 blockSize: 'fit-content',
@@ -347,7 +345,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content', alignSelf: 'center' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
       color="default">__labelNew</Button></Card></Card></Col></Row>
 
 
@@ -383,7 +381,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
       color="default">Discount %</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
@@ -394,7 +392,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content', alignSelf: 'center' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
       color="default">0</Button></Card></Card></Col></Row>
 
 
@@ -430,7 +428,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
               blockSize: 'fit-content',
               alignSelf: 'center', marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-              "p-2 shadow-medium text-black" variant="flat"
+              "p-1 shadow-medium text-black" variant="flat"
       color="default">Image list Product Image 2</Button>
             <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
@@ -443,7 +441,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                 paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
                 blockSize: 'fit-content',
                 alignSelf: 'center' }} className=
-                "p-2 shadow-medium text-black" variant="flat"
+                "p-1 shadow-medium text-black" variant="flat"
         color="default">empty</Button></Card></Card></Col></Row>
 
     <Row id="addr" className="pb-9 justify-content-md-center">
@@ -548,7 +546,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-      <Row id='r2' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+      <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
@@ -639,7 +637,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-      <Row id='r3' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+      <Row id='r3' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
@@ -730,7 +728,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-      <Row id='r4' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+      <Row id='r4' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
@@ -823,7 +821,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
 
 
-      <Row id='r5' style={{ width: '11%', justifyContent: 'flex-start !important' }}
+      <Row id='r5' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
