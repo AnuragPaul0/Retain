@@ -167,12 +167,12 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     <div style={{ marginLeft: '6rem', marginTop: '2rem'}} className="framer-1s4jv5d" data-framer-name=
     "Fuel your Brand's Growth with Personalized Dynamic Creatives"
     data-framer-component-type="RichTextContainer">
-    <p className="framer-text" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-      <HiArrowLeft style={{display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem'}}/>
-        <span style={{width: '30%', display: 'inline-block', borderBottom: '1px solid #eee'}}
+    <p className="framer-text" style={{ zoom: '2', fontFamily: 'Recoleta Medium' }}>
+      <HiArrowLeft style={{ display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem' }}/>
+        <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}
     >Rules space</span></p></div>
 
-    <Button className="self-center p-4 absolute" variant="flat" color="default"
+    <Button className="self-center absolute" variant="flat" color="default"
       style={{ top: '3rem', right: '2rem', backgroundColor: '#04AE56', color: '#FFFFFF',
         fontSize: '18px', borderRadius: '4px'
       // verticalAlign:'middle', display: 'inline-block', position: 'absolute', border: 'none',
