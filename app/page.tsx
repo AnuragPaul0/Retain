@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a,
+export default function Home() { let tog, parent, p = 6, container, a, k,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #eee',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -16,7 +16,8 @@ export default function Home() { let tog, parent, p = 6, container, a,
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true
 
-  function changeBackground(e:any, h:any) { parent = e.target
+  function changeBackground(e:any, h:any) {
+    console.log(e); parent = e.target
     while (parent.id.match(/r\d/) == null) {
       console.log(parent)
     parent = parent.parentElement }
