@@ -36,8 +36,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
   let greeting = () => { container = document.createElement('div')
     // parent.id == 'addc'
     createRoot(container).render(<Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
-    onMouseEnter={ changeBackground(this, 'h') }
-    onMouseLeave={ changeBackground(this, 'h') } className="pb-9 justify-content-md-center">
+    onMouseEnter={ (e) => changeBackground(e, 'h') }
+    onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
       <Col xs lg='2'style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
