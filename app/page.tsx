@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, co = 2, pd,
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, co = 3, pd,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -36,6 +36,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
   let relm = (rel:any) => { container = document.createElement('div')
   createRoot(container).render(rel); return container }
+
 
   let greeting = (el:any) => { f = el.id == 'btnr'
     k = f ? ( <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
@@ -94,7 +95,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       {/* </Row> */}
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
-    if (!f) { document.querySelector('#rt')?.append(
+    if (!f) { document.querySelector('#rt.r')?.append(
       relm(<Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
         display: 'flex'}}>
       <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
@@ -452,7 +453,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Container style={{ display: 'inline-block' }} className="rounded-large">
 
-        <Row id='rt' style={{ justifyContent: 'flex-start',
+        <Row id='rt' className='r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="justify-content-md-center" style={{ width: '33.3%',
