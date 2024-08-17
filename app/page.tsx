@@ -33,9 +33,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let greeting = () => { container = document.createElement('div')
-    // parent.id == 'addc'
-    createRoot(container).render(<Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
+  let greeting = (el) => { container = document.createElement('div')
+    k = el.id == 'btnr' ? ( <Row id={'r'+p.toString()} style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
@@ -84,12 +83,13 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any,
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
           {/* <Row className="justify-content-md-center"
           style={{ display: 'grid', alignSelf: 'center' }}> */}
-        <Button id="btnc" onClick={greeting(c)} className="shadow-medium self-center" style={{
+        <Button onClick={greeting} className="shadow-medium self-center" style={{
             zoom: '2', fontFamily: 'Recoleta Medium',
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
-      </Col></Row>)
+      </Col></Row> ) : {c}
+    createRoot(container).render(k)
     a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement('beforebegin', container), p++ }
 
