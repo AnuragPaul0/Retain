@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, pd, tr, node:any,
-  clone:any,
+  clone:any, cl,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
@@ -100,9 +100,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     if (!f) { tr = document.querySelector('#rt.r')
       if (tr) { node = tr.lastChild
         // console.log(node)
-      clone = node.cloneNode(true)
+      clone = node.cloneNode(true); cl = clone.children[0].innerHTML
       // console.log(clone)
-      clone.children[0].innerHTML.replace(/.$/, +clone.children[0].innerHTML.slice(-1)+1)
+      clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
       tr.appendChild(clone) }
       // document.querySelector('#rt.r')?.append(
