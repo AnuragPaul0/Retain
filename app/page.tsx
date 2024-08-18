@@ -112,13 +112,13 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       // tr.appendChild(clone)
       // }
-      tr?.append(relm(<Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
-        width: '33.3%', display: 'flex'}}><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+      tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
+        style={{ borderRight: '1px solid #eee', width: '33.3%', display: 'flex' }}>
+          <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
         textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
-      <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-        paddingRight: '7px !important' }}
+      <Button className='cb' 
         ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
       stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
