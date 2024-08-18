@@ -7,14 +7,15 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, co = 3, pd,
+export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, pd, tr, node,
+  clone,
   c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
     <Button id='b1' style={{ zIndex: 0 }} className=
       "self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
-  // const [isShown, setIsShown] = useState(false), co = true
+  // const [isShown, setIsShown] = useState(false), co = true, co = 3
 
   function changeBackground(e:any, h:any) {
     // console.log(e)
@@ -96,19 +97,25 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       {/* </Row> */}
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
-    if (!f) { document.querySelector('#rt.r')?.append(
-      relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-        textAlign: 'center',
-        borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-        isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
-      <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-        paddingRight: '7px !important' }}
-        ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-      stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      className="lucide lucide-ellipsis-vertical">
-        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></div>, 'top') ); console.log(relm(k))
+    if (!f) { tr = document.querySelector('#rt.r')
+      node = tr.lastChild
+      clone = node.cloneNode(true)
+      clone.children[0].innerHTML.replace(/.$/, +clone.children[0].innerHTML.slice(-1)+1)
+
+      tr.appendChild(clone)
+      // document.querySelector('#rt.r')?.append(
+      // relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+      //   textAlign: 'center',
+      //   borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+      //   isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
+      // <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+      //   paddingRight: '7px !important' }}
+      //   ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+      // stroke="currentColor"
+      // stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      // className="lucide lucide-ellipsis-vertical">
+      //   <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+      // </svg></Button></div>, 'top') ); console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
     else { a = document.querySelector('#addr')
