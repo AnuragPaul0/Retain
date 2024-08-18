@@ -34,7 +34,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let relm = (rel:any, c='') => { container = document.createElement('div');
+  let relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
   createRoot(container).render(rel); return container }
 
@@ -97,7 +97,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { document.querySelector('#rt.r')?.append(
-      relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none', textAlign: 'center',
+      relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+        textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
       <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
@@ -107,8 +108,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></div>, 'top') ); document.querySelectorAll('#addc').forEach( (e) =>
-      e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
+      </svg></Button></div>, 'top') ); console.log(relm(k))
+      document.querySelectorAll('#addc').forEach( (e) =>
+    e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
     else { a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
 
