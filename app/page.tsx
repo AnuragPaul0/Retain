@@ -199,7 +199,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col className="justify-content-md-center" style={{ alignContent: 'end',
@@ -212,7 +212,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >1</p>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -258,14 +258,14 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
+          <Col id='del' className="r2 justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}></Col></Row>
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
-          display: 'flex' }}><p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
+          display: 'flex' }}><p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
           >2</p><svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -301,16 +301,16 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r3' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
+          <Col id='del' className="r3 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >3</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -345,18 +345,17 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">__labelNew</Button></Card></Card></Col></Row>
 
 
-    <Row id='r4'
-      onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9 justify-content-md-center">
+    <Row id='r4' onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
+          <Col id='del' className="r4 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
+          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >4</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -392,18 +391,17 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       color="default">0</Button></Card></Card></Col></Row>
 
 
-    <Row id='r5'
-      onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
+    <Row id='r5' onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{alignContent: 'end',
+          <Col id='del' className="r5 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
+          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >5</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -568,8 +566,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                >Multi Image - on Sale</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                >Multi Image - on Sale</p></CardFooter></Card>
+            <Button id='b1' style={{ zIndex: 0 }} className=
+            "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -610,7 +609,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - On Sale - ...</p>
               </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -660,7 +659,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
               >Multi Image - new arr...</p></CardFooter></Card>
           <Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -701,7 +700,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - new arrival</p>
           </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -753,7 +752,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Images - Left - ...</p>
           </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -794,7 +793,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - 0 disco...</p>
           </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -831,7 +830,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                 <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
                   >Single Image prduct...</p></CardFooter></Card>
           <Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -852,7 +851,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
               >Single Image prduct...</p></CardFooter></Card>
           <Button id='b1' style={{ zIndex: 0 }} className=
-            "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+            "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">

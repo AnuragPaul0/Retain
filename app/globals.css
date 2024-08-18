@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.cb { background-color: '#f0f0f0' }
-.h2 { height: 212px }
+.cb { background-color: #f0f0f0 }
+.h21 { height: 212px }
 .sp { justify-content: space-evenly }
 .w3 { width: 33.3% !important }
 
