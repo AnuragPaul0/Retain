@@ -98,8 +98,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
-      node = tr!.lastChild
-      clone = node!.cloneNode(true); console.log(clone)
+      if (tr) node = tr.lastChild
+      clone = node.cloneNode(true); console.log(clone)
       (clone! as ReactNode).children[0].innerHTML.replace(/.$/, +clone.children[0].innerHTML.slice(-1)+1)
 
       tr.appendChild(clone)
