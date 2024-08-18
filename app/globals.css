@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.sp{ justify-content: space-evenly; height: 212px }
-.w3{ width: 33.3% !important }
+.cb { background-color: '#f0f0f0' }
+.h2 { height: 212px }
+.sp { justify-content: space-evenly }
+.w3 { width: 33.3% !important }
 
 :root {
   --foreground-rgb: 0, 0, 0;

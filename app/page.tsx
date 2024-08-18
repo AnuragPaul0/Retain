@@ -19,9 +19,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   function changeBackground(e:any, h:any) {
     // console.log(e)
     parent = e.target
-    while (parent.id.match(/r\d/) == null) {
-      // console.log(parent)
-    parent = parent.parentElement }
+    while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
+    console.log(parent)
     pd = parent.id
     if (h == 'h') {
       tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
@@ -187,29 +186,27 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'flex' }} className="rounded-large">
 
-      <Container style={{ display: 'inline-block' }} className="rounded-large">
+      <Container style={{ width: '80%' }} className="rounded-large">
 
  {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
-      <Row id='rt' style={{ justifyContent: 'space-evenly',
-        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <Row id='rt' className='sp' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
         <Col xs lg="4" style={{ width: '67%', justifyContent: 'center', display: 'flex',
             borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
                 {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
-            <Card style={{ 
-              textAlign: 'center', backgroundColor: '#f5f5f5', boxShadow: 'none', alignSelf: 'center',
+            <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
-        isFooterBlurred radius="lg" className="p-1 border-none">Product Filter</Card></Col></Row>
+        isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}>
-              {/* zoom: '2',  */}
+              {/* zoom: '2',  shadow-medium */}
               <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-            className="r1 shadow-medium self-center" style={{ display: "none",
+            className="r1 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
@@ -261,7 +258,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -304,7 +301,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r3' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -350,7 +347,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
     <Row id='r4'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9 justify-content-md-center">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9 justify-content-md-center">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -397,7 +394,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
     <Row id='r5'
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h2 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -458,11 +455,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="justify-content-md-center" style={{ width: '33.3%',
-            display: 'flex' }}><Card style={{ flexGrow: 1, backgroundColor: '#f0f0f0', boxShadow: 'none',
+            display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
               textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
               borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-              isFooterBlurred radius="lg" className="p-1 border-none">Primary Variant</Card>
-              <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px',
+              isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+              <Button className='cb' style={{ borderRadius: '4px',
               paddingLeft: '7px !important', paddingRight: '7px !important' }}
               ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
             stroke="currentColor"
@@ -473,14 +470,12 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
           <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
             width: '33.3%', display: 'flex'}}>
-            <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
+            <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
               textAlign: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-              isFooterBlurred radius="lg" className="p-1 border-none">Variant 2</Card>
-                {/* </p> */}
-            <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px !important',
+              isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
+            <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
               paddingRight: '7px !important' }}
-              // , transition: 'all 0.5s', cursor: 'pointer'
               ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
             stroke="currentColor"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
