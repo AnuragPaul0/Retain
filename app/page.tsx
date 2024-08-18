@@ -24,7 +24,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     parent = parent.parentElement }
     pd = parent.id
     if (h == 'h') {
-      tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as HTMLCollectionOf<HTMLElement>
+      tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
     // console.log(e , e.target, tog, co)
     // () =>{ co = 'white'
     // let tr = co ?  :
