@@ -99,7 +99,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
       node = tr?.lastChild
-      clone = node?.cloneNode(true)
+      clone = node?.cloneNode(true); console.log(clone)
       clone!.children[0].innerHTML.replace(/.$/, +clone.children[0].innerHTML.slice(-1)+1)
 
       tr.appendChild(clone)
