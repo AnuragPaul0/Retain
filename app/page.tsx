@@ -118,7 +118,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
-      <Button className='cb' 
+      <Button className='tb cb'
         ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
       stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
