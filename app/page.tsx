@@ -37,10 +37,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
   let relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
-  createRoot(container).render(rel); console.log('c', container, Object.keys(container),
-  Object.values(container), typeof(container), container.children, container.children[0])
-  du = document.createElement('div').appendChild(container)
-  console.log(du, du.children)
+  createRoot(container).render(rel)
+  // console.log('c', container, Object.keys(container),
+  // Object.values(container), typeof(container), container.children, container.children[0])
+  // du = document.createElement('div').appendChild(container)
+  // console.log(du, du.children)
   return container
   // .children[0]
 }
@@ -104,45 +105,28 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
-      if (tr) { node = tr.lastChild
+      // if (tr) { node = tr.lastChild
       //   // console.log(node)
-      clone = node.cloneNode(true); cl = clone.children[0].innerHTML
+      // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
       // console.log(clone)
       // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
       // tr.appendChild(clone)
-      }
-      // tr?
-      clone.append(relm(<Col xs lg="2" className="justify-content-md-center"
-        style={{ borderRight: '1px solid #eee',
-        width: '33.3%', display: 'flex'}}>
-        <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-          textAlign: 'center',
-          borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-          isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
-        <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-          paddingRight: '7px !important' }}
-          ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-        stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        className="lucide lucide-ellipsis-vertical">
-          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button></Col>
-    // <div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-    //     textAlign: 'center',
-    //     borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-    //     isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
-    //   <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-    //     paddingRight: '7px !important' }}
-    //     ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-    //   stroke="currentColor"
-    //   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    //   className="lucide lucide-ellipsis-vertical">
-    //     <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    //   </svg></Button></div>, 'top'
-      ) )
-      console.log(clone.children)
-      // console.log(relm(k))
+      // }
+      tr?.append(relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+        textAlign: 'center',
+        borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+        isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
+      <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+        paddingRight: '7px !important' }}
+        ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+      stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      className="lucide lucide-ellipsis-vertical">
+        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+      </svg></Button></div>, 'top' ) )
+      // console.log(clone.children)
+      console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
     else { a = document.querySelector('#addr')
