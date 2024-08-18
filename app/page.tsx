@@ -34,7 +34,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
-  let relm = (rel:any) => { container = document.createElement('div')
+  let relm = (rel:any, c='') => { container = document.createElement('div');
+    if (c != '') container.className+=' '+c
   createRoot(container).render(rel); return container }
 
 
@@ -96,20 +97,17 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { document.querySelector('#rt.r')?.append(
-      relm(<Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
-        display: 'flex'}}>
-      <Card style={{ alignSelf: 'center', flexGrow: 1, backgroundColor: '#f5f5f5', boxShadow: 'none',
-        textAlign: 'center',
+      relm(<div><Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none', textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-        isFooterBlurred radius="lg" className="p-1 border-none">Variant {co++}</Card>
-      <Button style={{ backgroundColor: '#f5f5f5', borderRadius: '4px', paddingLeft: '7px !important',
+        isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
+      <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
         paddingRight: '7px !important' }}
         ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
       stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col>) ); document.querySelectorAll('#addc').forEach( (e) =>
+      </svg></Button></div>, 'top') ); document.querySelectorAll('#addc').forEach( (e) =>
       e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
     else { a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
@@ -195,7 +193,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
                 {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
             <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
-              borderRadius: 'calc(var(--nextui-radius-large)/2)' }}
+              borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
+              paddingRight: '3% !important' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
@@ -212,7 +211,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}>
-          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >1</p>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -265,7 +264,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
           <Col id='del' className="r2 justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}></Col></Row>
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
-          display: 'flex' }}><p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+          display: 'flex' }}><p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
           >2</p><svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -310,7 +309,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >3</p>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -355,7 +354,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >4</p>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -401,7 +400,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}} >5</p>
+          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>

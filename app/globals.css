@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.top { border-right: 1px solid #eee; width: 33.3%; display: flex;}
 .cb { background-color: #f0f0f0 }
 .h21 { height: 212px }
 .sp { justify-content: space-evenly }
