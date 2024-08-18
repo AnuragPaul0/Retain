@@ -38,7 +38,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   let relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
   createRoot(container).render(rel); console.log('c', container, Object.keys(container),
-  Object.values(container), typeof(container), container.children)
+  Object.values(container), typeof(container), container.children, container.children[0])
   du = document.createElement('div').appendChild(container)
   console.log(du, du.children)
   return container.children[0] }
