@@ -41,7 +41,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   Object.values(container), typeof(container), container.children, container.children[0])
   du = document.createElement('div').appendChild(container)
   console.log(du, du.children)
-  return container.children[0] }
+  return container
+  // .children[0]
+}
 
 
   let greeting = (el:any) => { f = el.id == 'btnr'
@@ -102,14 +104,16 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
-      // if (tr) { node = tr.lastChild
+      // if (tr) {
+    node = tr.lastChild
       //   // console.log(node)
-      // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
-      // // console.log(clone)
+      clone = node.cloneNode(true); cl = clone.children[0].innerHTML
+      // console.log(clone)
       // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
       // tr.appendChild(clone) }
-      tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
+      // tr?
+      clone.append(relm(<Col xs lg="2" className="justify-content-md-center"
         style={{ borderRight: '1px solid #eee',
         width: '33.3%', display: 'flex'}}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
@@ -136,7 +140,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     //   className="lucide lucide-ellipsis-vertical">
     //     <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     //   </svg></Button></div>, 'top'
-      ) ); console.log(relm(k))
+      ) )
+      console.log(clone.children)
+      // console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
     else { a = document.querySelector('#addr')
