@@ -8,14 +8,14 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, pd, tr, co = 3,
-  du
+  clone:any, cl, node:any, du
   , c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
     position: 'relative', display: 'flex'}}>
     <Card isFooterBlurred radius="lg" className="border-none"></Card>
     <Button id='b1' style={{ zIndex: 0 }} className=
       "self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
-  // const [isShown, setIsShown] = useState(false), co = true,   // clone:any, cl, node:any
+  // const [isShown, setIsShown] = useState(false), co = true,
 
   function changeBackground(e:any, h:any) {
     // console.log(e)
