@@ -104,14 +104,14 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     </Col></Row> ) : {c}
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
-      // if (tr) {
-    node = tr.lastChild
+      if (tr) { node = tr.lastChild
       //   // console.log(node)
       clone = node.cloneNode(true); cl = clone.children[0].innerHTML
       // console.log(clone)
       // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
-      // tr.appendChild(clone) }
+      // tr.appendChild(clone)
+      }
       // tr?
       clone.append(relm(<Col xs lg="2" className="justify-content-md-center"
         style={{ borderRight: '1px solid #eee',
@@ -758,7 +758,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r4' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
+        onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
