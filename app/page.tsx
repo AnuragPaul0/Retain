@@ -18,7 +18,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
 
-  function changeBackground(e:any, h:any) {
+  function changeBackground(e:any, h:any, o=0) {
     // console.log(e)
     parent = e.target
     while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
@@ -30,9 +30,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     // () =>{ co = 'white'
     // let tr = co ?  :
     //   <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
-    // if (tog) createRoot(tog).render(tr)
-    k = tog[0].style.display === "none" ? "block" : 'none'
-    tog.forEach((e:any) => {e.style.display = k})
+    // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
+      k = o ? "block" : 'none'
+      tog.forEach((e:any) => {e.style.display = k})
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
 
@@ -50,7 +50,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     // console.log(el)
     k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 justify-content-md-center">
 
       <Col xs lg='2'style={{ width: '11%', borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -215,7 +215,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col className="justify-content-md-center" style={{ alignContent: 'end',
@@ -270,11 +270,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
               "p-1 shadow-medium text-black" variant="flat"
               color="default">0</Button>
-    </div></Card></Card></Col><Col style={{ borderRight: '1px solid #eee' }}></Col></Row>
-
+    </div></Card></Card></Col></Row>
+{/* <Col style={{ borderRight: '1px solid #eee' }}></Col> */}
 
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -317,7 +317,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r3' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -362,7 +362,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r4' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -408,7 +408,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r5' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -498,7 +498,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r1' style={{ justifyContent: 'flex-start'}}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="rw pb-9">
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           position: 'relative',
@@ -555,7 +555,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="rw pb-9">
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
@@ -647,7 +647,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r3' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="rw pb-9">
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
@@ -738,7 +738,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r4' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="rw pb-9">
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
@@ -831,7 +831,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Row id='r5' style={{ justifyContent: 'flex-start !important' }}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h') } className="rw pb-9">
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           position: 'relative',
@@ -899,7 +899,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
     <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
 {/* , alignSelf: 'center',  */}
       <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium',
         borderRight: '1px solid #eee' }}>
