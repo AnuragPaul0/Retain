@@ -46,7 +46,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   return container }
 
 
-  let greeting = (el:any) => { f = el.id == 'btnr'
+  let greeting = (el:any) => { console.log(el); f = el.id == 'btnr'
     k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
@@ -462,9 +462,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col style={{ width: '67%' }} xs lg="4"></Col></Row></Container>
 
 
-      <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
+      <Container style={{ display: 'inline-block' }} className="rounded-large">
 
-        <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
+        <div style={{  overflow: 'auto' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="w3 justify-content-md-center" style={{
@@ -883,7 +883,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
               borderRadius: '2px',
               // transition: 'all 0.5s', cursor: 'pointer'
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row>
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row></Col></Row></div>
     </Container></Container>
 
     <p className="framer-text" style={{  marginLeft: '6rem', fontFamily: 'Recoleta Medium' }}>
