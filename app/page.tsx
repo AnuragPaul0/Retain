@@ -31,7 +31,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     // let tr = co ?  :
     //   <CiTrash style={{ height: '2em', color: 'white', strokeWidth: .5}}/>; co = !co
     // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
-      k = o ? "block" : 'none'
+      k = o ? "none" : 'block'
       tog.forEach((e:any) => {e.style.display = k})
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
   } else parent.remove() }
