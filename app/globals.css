@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.df { display: flex }
+.bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
-.top { border-right: 1px solid #eee; width: 33.3% !important; display: flex}
+.top { border-right: 1px solid #eee; width: 33.3% !important}
 .cb { background-color: #f0f0f0 }
 .h21 { height: 212px }
 .sp { justify-content: space-evenly }
-.w3 { width: 33.3% !important }
+.w3 { width: 15vw !important }
 
 :root {
   --foreground-rgb: 0, 0, 0;

@@ -8,14 +8,16 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a, k:any, b:any, f, pd, tr, co = 3
-  , c = <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-    position: 'relative', display: 'flex'}}>
-    <Card isFooterBlurred radius="lg" className="border-none"></Card>
+  , c = <Col xs lg="2" className="justify-content-md-center" style={{ width: '150px',
+    position: 'relative', display: 'flex' }}>
+    <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
+      className="border-none"></Card>
     <Button id='b1' style={{ zIndex: 0 }} className=
       "self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
-  console.log(c)
+  // console.log(c)
+
   function changeBackground(e:any, h:any) {
     // console.log(e)
     parent = e.target
@@ -41,13 +43,12 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   // Object.values(container), typeof(container), container.children, container.children[0])
   // du = document.createElement('div').appendChild(container)
   // console.log(du, du.children)
-  return container
+  return container }
   // .children[0]
-}
 
 
   let greeting = (el:any) => { f = el.id == 'btnr'
-    k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
+    k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
@@ -101,8 +102,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
-    </Col></Row> : c
-    b = 'beforebegin'
+    </Col></Row> : c; b = 'beforebegin'
     if (!f) { tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
       //   // console.log(node)
@@ -113,7 +113,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       // tr.appendChild(clone)
       // }(f ? ' : 'after') + '
       tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
-        style={{ borderRight: '1px solid #eee', width: '100%', display: 'flex' }}>
+        style={{ width: '100%', display: 'flex' }}>
           <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
         textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
@@ -124,11 +124,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col>, 'top' ) )
+      </svg></Button></Col>, 'df top' ) )
       console.log(b)
       console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
-    e.insertAdjacentElement(b as InsertPosition, relm(k, 'w3') ) ) }
+    e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
     else { a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
 
@@ -362,7 +362,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
     <Row id='r4' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9 justify-content-md-center">
+      onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
 
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
@@ -454,16 +454,16 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                 "p-1 shadow-medium text-black" variant="flat"
         color="default">empty</Button></Card></Card></Col></Row>
 
-    <Row id="addr" className="pb-9 justify-content-md-center">
+    <Row id="addr" className="pb-9 sp">
       <Col id="ar" xs lg="2" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
-      <Button onClick={greeting} className="shadow-medium self-center" style={{
+      <Button id='btnr' onClick={greeting} className="shadow-medium self-center" style={{
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
       <Col xs lg="4"></Col></Row></Container>
 
 
-      <Container style={{ display: 'inline-block' }} className="rounded-large">
+      <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
         <Row id='rt' className='r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
