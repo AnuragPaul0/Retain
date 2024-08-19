@@ -15,12 +15,12 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       "self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
-
+  console.log(c)
   function changeBackground(e:any, h:any) {
     // console.log(e)
     parent = e.target
     while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
-    console.log(parent)
+    // console.log(parent)
     pd = parent.id
     if (h == 'h') {
       tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
@@ -47,7 +47,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
 
   let greeting = (el:any) => { f = el.id == 'btnr'
-    k = f ? ( <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
+    k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start'}}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
 
@@ -101,7 +101,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
-    </Col></Row> ) : {c}
+    </Col></Row> : c
     b = (f ? 'before' : 'after') + 'begin'
     if (!f) { tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
@@ -194,7 +194,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
     <Button className="p-3 self-center absolute" variant="flat" color="default"
       style={{ padding: '.75rem !important', top: '2rem', right: '2rem', backgroundColor: '#04AE56',
-        color: '#FFFFFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
+    color: '#FFFFFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
 
     <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
@@ -203,15 +203,16 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Container style={{ width: '80%' }} className="rounded-large">
 
  {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
-      <Row id='rt' className='sp' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
+        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
         <Col xs lg="4" style={{ width: '67%', justifyContent: 'center', display: 'flex',
-            borderRight: '1px solid #eee', fontFamily: 'Recoleta Medium' }}>
+            fontFamily: 'Recoleta Medium' }}>
                 {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
             <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
               paddingRight: '3% !important' }}
-        isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col></Row>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h') } className="h21 sp pb-9">
