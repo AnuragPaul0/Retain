@@ -13,7 +13,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
       className="border-none"></Card>
     <Button id='b1' style={{ zIndex: 0 }} className=
-      "self-center p-2 radius-large absolute bg-white/20" variant="flat"
+      "shadow-medium self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
@@ -46,7 +46,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   return container }
 
 
-  let greeting = (el:any) => { console.log(el); f = el.id == 'btnr'
+  let greeting = (el:any) => { f = el.target.id == 'btnr'
+    // console.log(el)
     k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h') } className="pb-9 justify-content-md-center">
@@ -76,7 +77,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
-          <Card className="justify-content-md-center" style={{ height: '100% !important' }}
+          <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
             radius="lg"><Card className="justify-content-md-center"
               style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
             <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
@@ -241,7 +242,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium'}}>
-        <Card className="justify-content-md-center" style={{ height: '100% !important' }}
+        <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
           <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
@@ -294,7 +295,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
-        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+        ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
             radius="lg"><Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -339,7 +340,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
-        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+        ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
             radius="lg"><Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -384,7 +385,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
-        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+        ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
             radius="lg"><Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -430,7 +431,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       </svg></Col></Row></Col>
 
       <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
-        ><Card className="justify-content-md-center" style={{ height: '100% !important' }}
+        ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
             radius="lg"><Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -462,7 +463,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col style={{ width: '67%' }} xs lg="4"></Col></Row></Container>
 
 
-      <Container style={{ display: 'inline-block' }} className="rounded-large">
+      <Container style={{ width: '45vw', display: 'inline-block' }} className="rounded-large">
 
         <div style={{  overflow: 'auto' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
