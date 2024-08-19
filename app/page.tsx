@@ -270,7 +270,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
               "p-1 shadow-medium text-black" variant="flat"
               color="default">0</Button>
-    </div></Card></Card></Col></Row>
+    </div></Card></Card></Col><Col style={{ borderRight: '1px solid #eee' }}></Col></Row>
 
 
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
