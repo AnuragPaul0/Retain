@@ -113,7 +113,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       // tr.appendChild(clone)
       // }
       tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
-        style={{ borderRight: '1px solid #eee', width: '33.3%', display: 'flex' }}>
+        style={{ borderRight: '1px solid #eee', width: '100%', display: 'flex' }}>
           <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
         textAlign: 'center',
         borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
