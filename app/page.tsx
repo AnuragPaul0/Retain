@@ -76,7 +76,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
           <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
             radius="lg"><Card className="justify-content-md-center"
               style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
@@ -206,7 +206,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
-        <Col xs lg="4" style={{ width: '67%', justifyContent: 'center', display: 'flex',
+        <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex',
             fontFamily: 'Recoleta Medium' }}>
                 {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
             <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
@@ -241,7 +241,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium'}}>
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
         <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
@@ -294,7 +294,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium' }}
         ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
@@ -339,7 +339,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium' }}
         ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
@@ -384,7 +384,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium' }}
         ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}
@@ -430,7 +430,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
       </svg></Col></Row></Col>
 
-      <Col xs lg="4" style={{ width: '67%', fontFamily: 'Recoleta Medium' }}
+      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium' }}
         ><Card className="top justify-content-md-center" style={{ height: '100% !important' }}
           radius="lg"><Card className="justify-content-md-center"
             style={{ flexDirection: 'row', width: '80%', alignSelf: 'center', height: '40% !important' }}

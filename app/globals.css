@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* .rw { width: calc(var(--cw)*3) } */
+.c2w { width: 80% }
 .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
