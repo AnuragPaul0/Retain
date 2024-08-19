@@ -44,7 +44,6 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
   // du = document.createElement('div').appendChild(container)
   // console.log(du, du.children)
   return container }
-  // .children[0]
 
 
   let greeting = (el:any) => { f = el.id == 'btnr'
@@ -124,7 +123,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col>, 'df top' ) )
+      </svg></Button></Col>, 'w3 df top' ) )
       console.log(b)
       console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
@@ -468,7 +467,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
         <Row id='rt' className='r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
-          <Col xs lg="2" className="justify-content-md-center" style={{ width: '33.3%',
+          <Col xs lg="2" className="w3 justify-content-md-center" style={{
             display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
               textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
               borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
@@ -482,8 +481,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
           </svg></Button></Col>
 
-          <Col xs lg="2" className="justify-content-md-center" style={{ borderRight: '1px solid #eee',
-            width: '33.3%', display: 'flex'}}>
+          <Col xs lg="2" className="top df w3 justify-content-md-center">
             <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
               textAlign: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
