@@ -125,7 +125,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
       </svg></Button></Col>, 'top' ) )
-      // console.log(clone.children)
+      console.log(b)
       console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
