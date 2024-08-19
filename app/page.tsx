@@ -200,7 +200,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'flex' }} className="rounded-large">
 
-      <Container id='le' style={{ width: '40vw' }} className="rounded-large">
+      <Container id='le' style={{ maxWidth: '35vw' }} className="rounded-large">
 
  {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
       <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
@@ -454,8 +454,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                 "p-1 shadow-medium text-black" variant="flat"
         color="default">empty</Button></Card></Card></Col></Row>
 
-    <Row id="addr" className="pb-9 sp">
-      <Col id="ar" xs lg="2" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium'}}>
+    <Row id="addr" className="c2w pb-9 sp">
+      <Col id="ar" xs lg="2" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium' }}>
       <Button id='btnr' onClick={greeting} className="shadow-medium self-center" style={{
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
