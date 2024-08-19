@@ -128,7 +128,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       console.log(b)
       console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
-    e.insertAdjacentElement(b as InsertPosition, relm(k) ) ) }
+    e.insertAdjacentElement(b as InsertPosition, relm(k, 'w3') ) ) }
     else { a = document.querySelector('#addr')
   if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
 
