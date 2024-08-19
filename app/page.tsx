@@ -103,7 +103,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
     </Col></Row> : c; b = 'beforebegin'
-    if (!f) 
+    if (!f) {
       document.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
         slice(0, -2)+15+'vh'
       tr = document.querySelector('#rt.r')
