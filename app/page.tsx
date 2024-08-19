@@ -103,7 +103,10 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
     </Col></Row> : c; b = 'beforebegin'
-    if (!f) { tr = document.querySelector('#rt.r')
+    if (!f) 
+      document.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
+        slice(0, -2)+15+'vh'
+      tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
       //   // console.log(node)
       // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
@@ -465,7 +468,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
-        <div style={{ width: '45vw' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
+        <div id='scrw' style={{ width: '45vw' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="w3 justify-content-md-center" style={{
