@@ -200,7 +200,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'flex' }} className="rounded-large">
 
-      <Container id='le' style={{ width: '80%' }} className="rounded-large">
+      <Container id='le' style={{ width: '40vw' }} className="rounded-large">
 
  {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
       <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
@@ -463,9 +463,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col style={{ width: '67%' }} xs lg="4"></Col></Row></Container>
 
 
-      <Container style={{ width: '45vw', display: 'inline-block' }} className="rounded-large">
+      <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
-        <div style={{  overflow: 'auto' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
+        <div style={{ width: '45vw' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
           marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="w3 justify-content-md-center" style={{
