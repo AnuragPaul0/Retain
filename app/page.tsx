@@ -102,7 +102,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
       {/* </Row> */}
     </Col></Row> : c
-    b = (f ? 'before' : 'after') + 'begin'
+    b = 'beforebegin'
     if (!f) { tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
       //   // console.log(node)
@@ -111,7 +111,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
       // tr.appendChild(clone)
-      // }
+      // }(f ? ' : 'after') + '
       tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
         style={{ borderRight: '1px solid #eee', width: '100%', display: 'flex' }}>
           <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
