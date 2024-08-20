@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr,
+export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
   co = 3 , c = <Col xs lg="2" className="justify-content-md-center" style={{ width: '150px',
     position: 'relative', display: 'flex' }}>
     <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
@@ -1010,16 +1010,11 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
   <div className="modal-content">
     <div className=
-  "flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group cursor-pointer hover:shadow-lg">
-    <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
-      <g mask="url(#svg-230198041_977_mask0_18594_7116)"> <path  d=
-  "M22.6407 0.822266V22.8675L13.0248 13.2486C12.1316 12.3479 11.6276 11.1326 11.6211 9.86415V0.822266H22.6407Z"
-    fill="#04AE56"/> <path d=
-  "M44.6895 22.8676H22.6367L32.2632 13.2487C32.7118 12.7956 33.2473 12.4378 33.8374 12.1966C34.4276 11.9554 35.0604 11.8358 35.6979 11.845H44.7367L44.6865 22.8676H44.6895Z" fill="#04AE56"/>
-    <path d=
-"M22.6407 44.9112V22.866L32.255 32.497C32.7087 32.9455 33.067 33.4811 33.3082 34.0716C33.5495 34.6621 33.6687 35.2954 33.6587 35.9332V44.9736L22.6407 44.9112ZM0.601562 22.8675H22.6407L13.0248 32.4849C12.1266 33.3831 10.9086 33.8886 9.6404 33.8886H0.601562V22.866V22.8675Z" fill="#04AE56"/>
-    </g></svg></div><span onclick="myFunction" className="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div></div> ) }
+  "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
+      <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
+        xmlSpace="preserve"><g><g><path d=
+  "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
+          <path d=
+  "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
+    </g></g></svg></div><span onclick="myFunction" className="close">&times;</span>
+<p>Some text in the Modal..</p></div></div></div> ) }
