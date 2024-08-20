@@ -274,7 +274,6 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               "p-1 shadow-medium text-black" variant="flat"
               color="default">0</Button>
     </div></Card></Card></Col></Row>
-{/* <Col style={{ borderRight: '1px solid #eee' }}></Col> */}
 
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
@@ -282,7 +281,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="r2 justify-content-md-center" style={{ alignContent: 'end',
-            display: 'grid' }}></Col></Row>
+            display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+            className="r2 self-center" style={{ display: "none",
+              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+          <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}><p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
           >2</p><svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
@@ -325,7 +328,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="r3 justify-content-md-center" style={{alignContent: 'end',
-            display: 'grid' }}></Col></Row>
+            display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+            className="r3 self-center" style={{ display: "none",
+              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+          <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
@@ -370,7 +377,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="r4 justify-content-md-center" style={{alignContent: 'end',
-            display: 'grid' }}></Col></Row>
+            display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+            className="r4 self-center" style={{ display: "none",
+              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+          <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
@@ -416,7 +427,11 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="r5 justify-content-md-center" style={{alignContent: 'end',
-            display: 'grid' }}></Col></Row>
+            display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+            className="r5 self-center" style={{ display: "none",
+              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+          <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
         <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
@@ -468,8 +483,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
-        <div id='scrw' style={{ width: '45vw' }}><Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
-          marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+        <div id='scrw' style={{ width: '45vw' }}>
+          <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
+            marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="w3 justify-content-md-center" style={{
             display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
