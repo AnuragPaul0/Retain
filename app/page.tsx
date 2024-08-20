@@ -12,7 +12,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     position: 'relative', display: 'flex' }}>
     <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
       className="border-none"></Card>
-    <Button onClick={ myFunction(1) } id='b1' style={{ zIndex: 0 }} className=
+    <Button onClick={ () => myFunction(1) } id='b1' style={{ zIndex: 0 }} className=
       "shadow-medium self-center p-2 radius-large absolute bg-white/20" variant="flat"
   color="default" radius="lg" size="sm">+ Add design</Button></Col>
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
@@ -1007,9 +1007,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 ></path></g></g></svg></Button></Col></Row></Container>
 
 <div id="imodal" className="modal">
-
-  <div className="modal-content">
-    <div className=
+  <div className="modal-content"><div className=
   "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
       <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
         xmlSpace="preserve"><g><g><path d=
@@ -1022,4 +1020,12 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
   <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
   <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
     </g></svg></div><span onClick="myFunction" className="close">&times;</span>
-<p>Selecta design to link</p></div></div></div> ) }
+<p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
+  <form class="container-fluid">
+    <div class="input-group">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+        aria-describedby="basic-addon1"/>
+    </div>
+  </form>
+</nav></div></div></div> ) }
