@@ -34,7 +34,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       k = o ? "none" : 'block'
       tog.forEach((e:any) => {e.style.display = k})
       // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
-  } else parent.remove() }
+  } else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
   let relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
@@ -86,7 +86,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                 variant="flat" color="default">+ Add Product Filters</Button></div>
       </Card></Card></Col></Row> : c; b = 'beforebegin'
     if (!f) {
-      document!.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
+      document!.querySelector('#scrw').style.width = +document!.querySelector('#scrw').style.width.
         slice(0, -2)+15+'vh'
       tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
@@ -110,8 +110,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
       </svg></Button></Col>, 'w3 df top' ) )
-      console.log(b)
-      console.log(relm(k))
+      // console.log(b)
+      // console.log(relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
     else { a = document.querySelector('#addr')
