@@ -84,27 +84,9 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
               <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
                 "shadow-medium p-1 radius-large text-black"
                 variant="flat" color="default">+ Add Product Filters</Button></div>
-      </Card></Card></Col>
-
-      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-        position: 'relative', display: 'flex'}}>
-        <Card isFooterBlurred radius="lg" className="border-none"></Card>
-        <Button id='b1' style={{ zIndex: 0 }} className=
-          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
-      color="default" radius="lg" size="sm">+ Add design</Button></Col>{c}
-
-      <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #ddd',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
-          {/* <Row className="justify-content-md-center"
-          style={{ display: 'grid', alignSelf: 'center' }}> */}
-        <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium',
-            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
-      {/* </Row> */}
-    </Col></Row> : c; b = 'beforebegin'
+      </Card></Card></Col></Row> : c; b = 'beforebegin'
     if (!f) {
-      document?.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
+      document.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
         slice(0, -2)+15+'vh'
       tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
@@ -133,7 +115,19 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
     else { a = document.querySelector('#addr')
-  if (a) a.insertAdjacentElement(b as InsertPosition, relm(k)), p++ } }
+  if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
+    a = document.querySelector('#scrw')
+  if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
+  onMouseEnter={ (e) => changeBackground(e, 'h') }
+  onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 justify-content-md-center">{c}{c}
+
+<Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #ddd',
+  paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
+  <Button onClick={greeting} className="shadow-medium self-center" style={{
+      zoom: '2', fontFamily: 'Recoleta Medium',
+      paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
+</Col></Row>)), p++ } }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
