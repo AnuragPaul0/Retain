@@ -25,7 +25,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
     // User clicks anywhere outside of the modal, close it
     
-    if (!o) { window.addEventListener('click', (event) =>{ console.log(event.target.name, "clicked")
+    if (!o) { window.addEventListener('click', (event) =>{ console.log(event.target?.name, "clicked")
     if (event.target.id == tr) { a.style.display = "none" } }, { signal: controller.signal } ) }
   else controller.abort() }
 
