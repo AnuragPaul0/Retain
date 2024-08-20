@@ -104,7 +104,7 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       {/* </Row> */}
     </Col></Row> : c; b = 'beforebegin'
     if (!f) {
-      document.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
+      document?.querySelector('#scrw').style.width = +document.querySelector('#scrw').style.width.
         slice(0, -2)+15+'vh'
       tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
@@ -199,7 +199,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
       style={{ padding: '.75rem !important', top: '2rem', right: '2rem', backgroundColor: '#04AE56',
     color: '#FFFFFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
 
-    <Container style={{ backgroundColor: '#f5f5f5', paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+    <Container style={{ marginBottom: 'calc(var(--bs-gutter-x)* .5)', backgroundColor: '#f5f5f5',
+      paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'flex' }} className="rounded-large">
 
@@ -919,14 +920,13 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
     <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
-{/* , alignSelf: 'center',  */}
-      <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium',
-        borderRight: '1px solid #eee' }}>
+  
+      <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium', borderRight: '1px solid #ddd' }}>
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
             backgroundColor: '#fafafa', height: '100% !important' }}
         radius="lg">N/A</Card></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+      <Col xs lg="2" className="justify-content-md-center" style={{
         display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
           <div style={{ display: 'flex', height: '150px', width: '150px',
             justifyContent: 'flex-start !important' }}>
@@ -944,7 +944,8 @@ export default function Home() { let tog, parent, p = 6, container, a, k:any, b:
                   }} alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
           width={100} /></Col></div>
-          <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
+          <CardFooter style={{ paddingLeft: '0 !important',
+            paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
