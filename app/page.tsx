@@ -1032,11 +1032,11 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
           <ellipse id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
           <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
       </g></svg></div><span onClick={ () => myFunction(0) } className="close">&times;</span>
-      <p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
-    <form class="container-fluid">
-      <div class="input-group">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+      <p>Selecta design to link</p><nav className="navbar navbar-light bg-light">
+    <form className="container-fluid">
+      <div className="input-group">
+        <span className="input-group-text" id="basic-addon1">@</span>
+        <input type="text" className="form-control" placeholder="Username" aria-label="Username"
           aria-describedby="basic-addon1"/>
       </div>
     </form>
@@ -1050,14 +1050,32 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
                 className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
                 position: 'relative',
-                display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
-                  <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
-                    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
-                  <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
-                    borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-                      <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                  >Single Image prduct...</p></CardFooter></Card>
+                display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
+                <div style={{ display: 'flex', height: '150px', width: '150px',
+                  justifyContent: 'flex-start !important' }}>
+                  <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+                    <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
+                          }} alt="Woman" className="object-cover opacity-1" height={150} src=
+                      "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
+                  width={100} /></Col>
+                  <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+                      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                        borderBottomRightRadius: 0
+                        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                        "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
+                    <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
+                        borderTopRightRadius: 0,
+                        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                      "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
+                </div>
+            <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
+                  paddingLeft: '0 !important',
+                  paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
+                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+            "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+                  ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+                    >Single Images - Left - ...</p>
+              </CardFooter></Card>
                 <Button id='b1' style={{ display: "none" }} className=
                   "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">
@@ -1174,7 +1192,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
             ></path></g></g></svg></Button></Col></Row>
 
 
-            <Row id='r3' style={{ justifyContent: 'flex-start !important' }} className="rw pb-9">
+            <Row id='r2' style={{ justifyContent: 'flex-start !important' }} className="rw pb-9">
 
               <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
@@ -1259,32 +1277,14 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
               <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
                 className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-                display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none" >
-                  <div style={{ display: 'flex', height: '150px', width: '150px',
-                    justifyContent: 'flex-start !important' }}>
-                    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                      <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
-                            }} alt="Woman" className="object-cover opacity-1" height={150} src=
-                        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
-                    width={100} /></Col>
-                    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                        <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                          borderBottomRightRadius: 0
-                          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                          "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
-                      <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
-                          borderTopRightRadius: 0,
-                          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                        "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-                  </div>
-              <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                    paddingLeft: '0 !important',
-                    paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-                    borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-                    ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                      >Single Images - Left - ...</p>
-                </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+                display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
+                <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
+                  src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
+                <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
+                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+            "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+                    <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+                >Single Image prduct...</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
                   "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">
                     <svg fill="#000" width="20px" version="1.1"
