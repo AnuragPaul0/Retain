@@ -74,7 +74,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
       <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '25%' }} className="justify-content-md-center">
-          <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
+          <Col id='del' className={ 'r'+p.toString()+"justify-content-md-center" }
+            style={{ alignContent: 'end',
             display: 'grid' }}><Button onClick={(e) => changeBackground(e, 'c')}
             className="shadow-medium self-center"
             style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
@@ -149,7 +150,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               borderRadius: '2px',
               // transition: 'all 0.5s', cursor: 'pointer'
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
-</Col></Row>)), p++ } }
+  </Col></Row>)), p++ } }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
@@ -223,7 +224,6 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
       <Container id='le' style={{ maxWidth: '35vw' }} className="rounded-large">
 
- {/* className="justify-content-md-center" justifyContent: 'flex-start', */}
       <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
