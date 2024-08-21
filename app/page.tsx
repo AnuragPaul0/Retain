@@ -37,8 +37,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
     // console.log(parent) as HTMLElement
     pd = parent.id
-    if (h == 'h') {
-      parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
+    if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
 
   function changeBackground(e:any, h:any, o=0) {
     // console.log(e)
@@ -1026,10 +1025,12 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
             <path d=
     "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
       </g></g></svg><svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
-        <defs id="defs2"/><g id="layer1">
-    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
-    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
-    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
+        <defs id="defs2"/><g  style={{ fill:'none', stroke:'#545454',
+          strokeWidth:1, strokeMiterlimit:4, strokeDasharray:'none', strokeDashoffset:0 }}
+          id="layer1"><ellipse
+          id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
+          <ellipse id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
+          <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
       </g></svg></div><span onClick="myFunction" className="close">&times;</span>
       <p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
     <form class="container-fluid">
