@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.p5 { padding-right: 5% }
 .fd { flex-direction: column; justify-content: center }
 
-.h10 { height: 100% !important }
+div.h10 { height: 100% !important }
 
 /* The Modal (background) */
 .modal {

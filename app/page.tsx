@@ -84,7 +84,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
           style={{ blockSize: 'fit-content', display: 'flex' }}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}>{p}</p>
+          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}
+            >{p}</p>
               <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
     <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
     <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -246,7 +247,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -302,7 +303,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
-          display: 'flex' }}><p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
+          display: 'flex' }}><p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
           >2</p><svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -351,7 +352,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
+          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -400,7 +401,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
+          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -450,7 +451,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
-          <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
+          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
