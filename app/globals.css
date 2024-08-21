@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.wh { width: 150px; height: 204.89px !important }
+.wh { width: 150px; height: 176px !important }
 .p5 { padding-right: 5% }
 .fd { flex-direction: column; justify-content: center }
 
@@ -24,7 +24,7 @@ div.h10 { height: 100% !important }
 }
 
 /* Modal Content */
-.modal-content {
+.imodal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;

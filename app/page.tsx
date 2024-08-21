@@ -12,7 +12,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }}>
     <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
-    <Button onClick={ () => myFunction(1) } id='b1' style={{ display: "none" }} className=
+    <Button onClick={ () => myFunction(1) } id='b1' className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
@@ -70,7 +70,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   greeting = (el:any) => { f = el.target.id == 'btnr'
     // console.log(el)
     k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 h21 sp">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 h21 sp">
 
       <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -106,7 +106,13 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
                 "shadow-medium p-1 radius-large text-black"
                 variant="flat" color="default">+ Add Product Filters</Button></div>
-      </Card></Card></Col></Row> : colum(p); b = 'beforebegin'
+      </Card></Card></Col></Row> : <Col xs lg="2" className="justify-content-md-center" style={{
+        width: '150px', position: 'relative', display: 'flex' }}>
+    <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
+    <Button onClick={ () => myFunction(1) } id='b1' className=
+      { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+      variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+    b = 'beforebegin'
     if (!f) { a = document.querySelector('#scrw') as HTMLElement
       if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vw'
       tr = document.querySelector('#rt.r')
@@ -1018,22 +1024,26 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
 
-    <div id="imodal" className="modal"><div className="modal-content">
+    <div id="imodal" className="modal"><div className="modal-content" id="imodal-content">
       <div className=
 "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
-        <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
+        <Button onClick={ () => myFunction(1) } id='b1' className=
+      { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+  variant="flat" color="default" radius="lg" size="sm"><svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
           xmlSpace="preserve"><g><g><path d=
-    "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
+  "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
             <path d=
-    "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
-      </g></g></svg><svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
+  "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
+      </g></g></svg></Button>
+      {/* <svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
         <defs id="defs2"/><g  style={{ fill:'none', stroke:'#545454',
           strokeWidth:1, strokeMiterlimit:4, strokeDasharray:'none', strokeDashoffset:0 }}
           id="layer1"><ellipse
           id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
           <ellipse id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
           <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
-      </g></svg></div><span onClick={ () => myFunction(0) } className="close">&times;</span>
+      </g></svg> */}
+      </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
       <p>Selecta design to link</p><nav className="navbar navbar-light bg-light">
     <form className="container-fluid">
       <div className="input-group">
