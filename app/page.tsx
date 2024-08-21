@@ -9,13 +9,13 @@ import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
   co = 3 ,
-  colum = (o:any) => <Col xs lg="2" className="justify-content-md-center" style={{ width: '150px',
+  colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }}>
     <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
       className="border-none"></Card>
     <Button onClick={ () => myFunction(1) } id='b1' style={{ display: "none" }} className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-      variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+  variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
@@ -70,11 +70,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
   greeting = (el:any) => { f = el.target.id == 'btnr'
     // console.log(el)
-    k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
-    onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 justify-content-md-center">
+    k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'h') }
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 h21 sp">
 
-      <Col xs lg='2'style={{ width: '11%', borderRight: '1px solid #eee' }}>
+      <Col xs lg='2'style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '50%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button onClick={(e) => changeBackground(e, 'c')}
@@ -99,7 +98,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
       </svg></Col></Row></Col>
 
       <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-          <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
+          <Card className="h10 top justify-content-md-center"
             radius="lg"><Card className="justify-content-md-center"
               style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
             <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
@@ -139,7 +138,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
         a = document.querySelector('#scrw')
       if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
   onMouseEnter={ (e) => changeBackground(e, 'h') }
-  onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 justify-content-md-center">{c}{c}
+  onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
 
 <Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #ddd',
   paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
