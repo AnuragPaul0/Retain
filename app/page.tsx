@@ -73,8 +73,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 h21 sp">
 
-      <Col xs lg='2'style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col id='del' className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button onClick={(e) => changeBackground(e, 'c')}
             className="shadow-medium self-center"
@@ -82,8 +82,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
-        <Row><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
-          display: 'flex' }}>
+        <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+          style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}>{p}</p>
               <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
     <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -234,8 +234,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
     <Row id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
-      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}>
               {/* zoom: '2',  shadow-medium */}
@@ -244,7 +244,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
-        <Row><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
+        <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}>
           <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
@@ -293,15 +293,15 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     <Row id='r2' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col id='del' className="r2 justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
             className="r2 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
-        <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
+        <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex' }}><p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
           >2</p><svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -340,8 +340,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     <Row id='r3' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col id='del' className="r3 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
             className="r3 self-center" style={{ display: "none",
@@ -349,7 +349,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
-        <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
+        <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
           <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >3</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
@@ -389,8 +389,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     <Row id='r4' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col id='del' className="r4 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
             className="r4 self-center" style={{ display: "none",
@@ -398,7 +398,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
-        <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
+        <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
           <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >4</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
@@ -439,8 +439,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     <Row id='r5' onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-      <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '50%' }} className="justify-content-md-center">
+      <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+        <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col id='del' className="r5 justify-content-md-center" style={{alignContent: 'end',
             display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
             className="r5 self-center" style={{ display: "none",
@@ -448,7 +448,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <CiTrash style={{ height: '2em', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
 
-        <Row><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
+        <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
           <p style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >5</p>
             <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
