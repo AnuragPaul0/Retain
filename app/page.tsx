@@ -8,13 +8,14 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
-  co = 3 , c = <Col xs lg="2" className="justify-content-md-center" style={{ width: '150px',
+  co = 3 ,
+  colum = (o:any) => <Col xs lg="2" className="justify-content-md-center" style={{ width: '150px',
     position: 'relative', display: 'flex' }}>
     <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
       className="border-none"></Card>
-    <Button onClick={ () => myFunction(1) } id='b1' style={{ zIndex: 0 }} className=
-      "shadow-medium self-center p-2 radius-large absolute bg-white/20" variant="flat"
-  color="default" radius="lg" size="sm">+ Add design</Button></Col>
+    <Button onClick={ () => myFunction(1) } id='b1' style={{ display: "none" }} className=
+      { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+      variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
@@ -29,15 +30,15 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
       console.log(event.target, "clicked")
       if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
       { signal: controller.signal } ) }
-  else controller.abort() }
+  else controller.abort() },
 
-  let inim = (e:any, h:any, o=0) => {
+  inim = (e:any, h:any, o=0) => {
     // console.log(e)
     parent = e.target
     while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
     // console.log(parent) as HTMLElement
     pd = parent.id
-    if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
+  if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
 
   function changeBackground(e:any, h:any, o=0) {
     // console.log(e)
@@ -64,10 +65,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // Object.values(container), typeof(container), container.children, container.children[0])
   // du = document.createElement('div').appendChild(container)
   // console.log(du, du.children)
-  return container }
+  return container },
 
 
-  let greeting = (el:any) => { f = el.target.id == 'btnr'
+  greeting = (el:any) => { f = el.target.id == 'btnr'
     // console.log(el)
     k = f ? <Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
@@ -105,7 +106,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
                 "shadow-medium p-1 radius-large text-black"
                 variant="flat" color="default">+ Add Product Filters</Button></div>
-      </Card></Card></Col></Row> : c; b = 'beforebegin'
+      </Card></Card></Col></Row> : colum(p); b = 'beforebegin'
     if (!f) { a = document.querySelector('#scrw') as HTMLElement
       if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vh'
       tr = document.querySelector('#rt.r')
@@ -130,8 +131,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
       </svg></Button></Col>, 'w3 df top' ) )
-      // console.log(b)
-      // console.log(relm(k))
+      // console.log(b, relm(k))
       document.querySelectorAll('#addc').forEach( (e) =>
     e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
     else { a = document.querySelector('#addr')
@@ -544,7 +544,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                 <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-            >Single Image prduct...</p></CardFooter></Card>
+          >Single Image prduct...</p></CardFooter></Card>
           <Button id='b1' style={{ display: "none" }} className=
             "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
@@ -616,9 +616,9 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                >Multi Image - on Sale</p></CardFooter></Card>
-            <Button id='b1' style={{ zIndex: 0 }} className=
-            "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          >Multi Image - on Sale</p></CardFooter></Card>
+            <Button id='b1' style={{ display: "none" }} className=
+            "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -658,8 +658,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - On Sale - ...</p>
-              </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+              </CardFooter></Card><Button id='b1' style={{ display: "none" }} className=
+            "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -708,8 +708,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
             <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
               >Multi Image - new arr...</p></CardFooter></Card>
-          <Button id='b1' style={{ zIndex: 0 }} className=
-            "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          <Button id='b1' style={{ display: "none" }} className=
+            "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -749,8 +749,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - new arrival</p>
-          </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          </CardFooter></Card><Button id='b1' style={{ display: "none" }} className=
+            "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -801,8 +801,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Images - Left - ...</p>
-          </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          </CardFooter></Card><Button id='b1' style={{ display: "none" }} className=
+            "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -842,8 +842,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
               ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >4 Images - 0 disco...</p>
-          </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-            "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          </CardFooter></Card><Button id='b1' style={{ display: "none" }} className=
+            "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -879,8 +879,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                 <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
                   >Single Image prduct...</p></CardFooter></Card>
-          <Button id='b1' style={{ zIndex: 0 }} className=
-            "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          <Button id='b1' style={{ display: "none" }} className=
+            "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -900,8 +900,8 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
             ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
               >Single Image prduct...</p></CardFooter></Card>
-          <Button id='b1' style={{ zIndex: 0 }} className=
-            "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          <Button id='b1' style={{ display: "none" }} className=
+            "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
             color="default" radius="lg" size="sm">
               <svg fill="#000" width="20px" version="1.1"
                 id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
