@@ -108,7 +108,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                 variant="flat" color="default">+ Add Product Filters</Button></div>
       </Card></Card></Col></Row> : colum(p); b = 'beforebegin'
     if (!f) { a = document.querySelector('#scrw') as HTMLElement
-      if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vh'
+      if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vw'
       tr = document.querySelector('#rt.r')
       // if (tr) { node = tr.lastChild
       //   // console.log(node)
