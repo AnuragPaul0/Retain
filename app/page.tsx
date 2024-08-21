@@ -35,10 +35,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     // console.log(e)
     parent = e.target
     while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
-    // console.log(parent)
+    // console.log(parent) as HTMLElement
     pd = parent.id
     if (h == 'h') {
-      (parent.querySelectorAll('#b1') as NodeListOf<HTMLElement>).style.display = o ? "none" : 'block' } }
+      parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
 
   function changeBackground(e:any, h:any, o=0) {
     // console.log(e)
@@ -1018,28 +1018,28 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
     ></path></g></g></svg></Button></Col></Row></Container>
 
     <div id="imodal" className="modal"><div className="modal-content">
-        <div className=
-  "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
-          <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
-            xmlSpace="preserve"><g><g><path d=
-      "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
-              <path d=
-      "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
-        </g></g></svg><svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
-          <defs id="defs2"/><g id="layer1">
-      <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
-      <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
-      <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
-        </g></svg></div><span onClick="myFunction" className="close">&times;</span>
-        <p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
-      <form class="container-fluid">
-        <div class="input-group">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-            aria-describedby="basic-addon1"/>
-        </div>
-      </form>
-        </nav><Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
+      <div className=
+"flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
+        <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
+          xmlSpace="preserve"><g><g><path d=
+    "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
+            <path d=
+    "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
+      </g></g></svg><svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
+        <defs id="defs2"/><g id="layer1">
+    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
+    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
+    <ellipse style="fill:none;stroke:#545454;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
+      </g></svg></div><span onClick="myFunction" className="close">&times;</span>
+      <p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
+    <form class="container-fluid">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1"/>
+      </div>
+    </form>
+      </nav><Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
           <div id='scrw' style={{ width: '45vw' }}>
 
