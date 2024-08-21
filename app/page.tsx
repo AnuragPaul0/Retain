@@ -11,8 +11,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   co = 3 ,
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }}>
-    <Card style={{ width: 'inherit', height: '176px !important' }}isFooterBlurred radius="lg"
-      className="border-none"></Card>
+    <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
     <Button onClick={ () => myFunction(1) } id='b1' style={{ display: "none" }} className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
@@ -141,13 +140,16 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   onMouseEnter={ (e) => changeBackground(e, 'h') }
   onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
 
-<Col id="addc" xs lg="1" style={{ display: 'grid', borderLeft: '1px solid #ddd',
-  paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}>
-  <Button onClick={greeting} className="shadow-medium self-center" style={{
-      zoom: '2', fontFamily: 'Recoleta Medium',
-      paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
-  </Col></Row>)), p++ } }
+  <Col id="addc" xs lg="1" style={{ width: '20%', display: 'grid', borderLeft: '1px solid #ddd',
+          paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+            style={{ display: 'grid', alignSelf: 'center' }}>
+          <Button onClick={greeting} className="shadow-medium self-center" style={{
+              zoom: '2', fontFamily: 'Recoleta Medium',
+              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
+              borderRadius: '2px',
+              // transition: 'all 0.5s', cursor: 'pointer'
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
+</Col></Row>)), p++ } }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
@@ -212,7 +214,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
 
     <Button className="p-3 self-center absolute" variant="flat" color="default"
       style={{ padding: '.75rem !important', top: '2rem', right: '2rem', backgroundColor: '#04AE56',
-    color: '#FFFFFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
+    color: '#FFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
 
     <Container style={{ marginBottom: 'calc(var(--bs-gutter-x)* .5)', backgroundColor: '#f5f5f5',
       paddingTop: 'calc(var(--bs-gutter-x) * 2)',
@@ -529,7 +531,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             className="lucide lucide-ellipsis-vertical">
               <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-        </svg></Button></Col></Row>
+          </svg></Button></Col></Row>
 
       <Row id='r1' style={{ justifyContent: 'flex-start'}}
         onMouseEnter={ (e) => changeBackground(e, 'h') }
