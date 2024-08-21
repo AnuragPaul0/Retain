@@ -20,7 +20,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // console.log(c)
 
   // User clicks, open/x modal
-  let myFunction = (o) => { tr = 'imodal'
+  let myFunction = (o:any) => { tr = 'imodal'
     a = document.querySelector("#"+tr), a.style.display = o ? "block" : 'none'
     const controller = new AbortController
 
