@@ -20,7 +20,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // console.log(c)
 
   // User clicks, open/x modal
-  let myFunction = (o=0) => { tr = 'imodal'
+  let myFunction = (o) => { tr = 'imodal'
     a = document.querySelector("#"+tr), a.style.display = o ? "block" : 'none'
     const controller = new AbortController
 
@@ -1031,7 +1031,7 @@ paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
           id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
           <ellipse id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
           <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
-      </g></svg></div><span onClick={myFunction} className="close">&times;</span>
+      </g></svg></div><span onClick={ () => myFunction(0) } className="close">&times;</span>
       <p>Selecta design to link</p><nav class="navbar navbar-light bg-light">
     <form class="container-fluid">
       <div class="input-group">
