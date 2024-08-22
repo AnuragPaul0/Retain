@@ -153,10 +153,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               borderRadius: '2px',
               // transition: 'all 0.5s', cursor: 'pointer'
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
-  </Col></Row>)), p++ } }
+  </Col></Row>)), p++ } },
 
-  function changeBackground(e:any, h:any, o=0) {
-    console.log(e)
+  changeBackground = (e:any, h:any, o=0) => {
+    // console.log(e)
     parent = e.target
     while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
     // console.log(parent)
