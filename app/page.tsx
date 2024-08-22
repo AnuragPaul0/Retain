@@ -53,7 +53,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
     // console.log(parent) as HTMLElement
     pd = parent.id
-  if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
+  if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
   relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
