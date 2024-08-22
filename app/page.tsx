@@ -550,8 +550,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
-
-        <div onLoad={ oload } id='scrw' style={{ width: '45vw' }}>
+{/* onLoad={ oload }  */}
+        <div id='scrw' style={{ width: '45vw' }}>
           <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
             marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
