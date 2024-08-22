@@ -14,20 +14,30 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
     <Button onClick={ () => myFunction(1) } id='b1' className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-  variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+  variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>,
 
   // window.addEventListener("load", () => {
-  // .addEventListener("mouseenter",
-  //     (e) => changeBackground(e, 'h'))
-  //   document.querySelector('#scrw > #r1').addEventListener("mouseleave",
-  // (e) =>changeBackground(e, 'h', 1))
+  // document.
 // })
+  oload = () => {
+    a = document.querySelector("#scrw > #r1"),
+    a.addEventListener("mouseenter", (e) => changeBackground(e, 'h'))
+    a.addEventListener("mouseleave", (e) =>changeBackground(e, 'h', 1))
+  //   const controller = new AbortController
+
+  //   // User clicks anywhere outside of the modal, close it
+  //   if (!o) { window.addEventListener('click', (event) =>{
+  //     console.log(event.target, "clicked")
+  //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
+  //     { signal: controller.signal } ) }
+  // else controller.abort()
+},
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
 
   // User clicks, open/x modal
-  let myFunction = (o:any) => { tr = 'imodal'
+  myFunction = (o:any) => { tr = 'imodal'
     a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
     const controller = new AbortController
 
@@ -522,7 +532,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
-        <div id='scrw' style={{ width: '45vw' }}>
+        <div onLoad={ oload } id='scrw' style={{ width: '45vw' }}>
           <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
             marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
