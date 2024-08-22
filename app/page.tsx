@@ -1100,7 +1100,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
       </form></nav></div>
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
-          <div id='scrw' style={{ width: '45vw' }}>
+          <div id='scrw' style={{ width: '60vw' }}>
 
             <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
 
@@ -1182,7 +1182,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                     ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                       >Multi Image - on Sale</p></CardFooter></Card>
                   <Button id='b1' style={{ zIndex: 0 }} className=
-                  "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col>
 
               <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
@@ -1218,7 +1218,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                     ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                       >4 Images - On Sale - ...</p>
                     </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-                  "r2 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col></Row>
 
 
@@ -1251,7 +1251,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                   <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
                     >Multi Image - new arr...</p></CardFooter></Card>
                 <Button id='b1' style={{ zIndex: 0 }} className=
-                  "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col>
 
               <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
@@ -1287,7 +1287,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                     ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                       >4 Images - new arrival</p>
                 </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-                  "r3 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col>
 
               <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
@@ -1301,7 +1301,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                     <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                 >Single Image prduct...</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-                  "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col>
 
               <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
@@ -1337,7 +1337,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                     ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
                       >4 Images - 0 disco...</p>
                 </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-                  "r4 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                  "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col></Row>
 
 
@@ -1356,7 +1356,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                     <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
                       >Single Image prduct...</p></CardFooter></Card>
               <Button id='b1' style={{ zIndex: 0 }} className=
-                "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+                "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                 color="default" radius="lg" size="sm">Insert</Button></Col>
 
               <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
@@ -1372,6 +1372,6 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
                   ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
                     >Single Image prduct...</p></CardFooter></Card>
                 <Button id='b1' style={{ zIndex: 0 }} className=
-    "r5 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+    "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
     color="default" radius="lg" size="sm">Insert</Button></Col></Row></div>
 </Container></div></div></div> ) }
