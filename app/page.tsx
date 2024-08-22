@@ -17,8 +17,9 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
   
   window.onload = () => {
-    querySelector('#scrw > #r1').addEventListener("mouseenter", (e) => changeBackground(e, 'h'))
-  querySelector('#scrw > #r1').addEventListener("mouseleave", (e) => changeBackground(e, 'h', 1)) }
+    document.querySelector('#scrw > #r1').addEventListener("mouseenter", (e) => changeBackground(e, 'h'))
+    document.querySelector('#scrw > #r1').addEventListener("mouseleave", (e) =>
+  changeBackground(e, 'h', 1)) }
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
