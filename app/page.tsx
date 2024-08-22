@@ -499,12 +499,13 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
         color="default">empty</Button></Card></Card></Col></Row>
 
     <Row id="addr" className="c2w pb-9 sp">
-      <Col id="ar" xs lg="2" className="text-center" style={{zoom: '2', fontFamily: 'Recoleta Medium' }}>
+      <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
+        fontFamily: 'Recoleta Medium' }}>
       <Button id='btnr' onClick={greeting} className="shadow-medium self-center" style={{
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-      <Col style={{ width: '67%' }} xs lg="4"></Col></Row></Container>
+    <Col style={{ width: '67%' }} xs lg="4"></Col></Row></Container>
 
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
