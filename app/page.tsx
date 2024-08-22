@@ -21,11 +21,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 // })
   oload = () => {
     a = document.querySelector("#scrw > #r1"),
-    a.addEventListener("mouseenter", (e) => changeBackground(e, 'h'))
-    a.addEventListener("mouseleave", (e) =>changeBackground(e, 'h', 1))
+    a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
+    a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
   //   const controller = new AbortController
 
-  //   // User clicks anywhere outside of the modal, close it
   //   if (!o) { window.addEventListener('click', (event) =>{
   //     console.log(event.target, "clicked")
   //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
