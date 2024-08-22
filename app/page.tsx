@@ -79,7 +79,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+          <CiTrash height='20' style={{ color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
           style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}
@@ -251,7 +251,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             className="r1 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+          <CiTrash height='20' style={{ color: 'red', strokeWidth: .5}}/></Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
           style={{ blockSize: 'fit-content',
           display: 'flex' }}>
