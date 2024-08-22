@@ -10,7 +10,8 @@ import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
   co = 3 ,
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
-    position: 'relative', display: 'flex' }}>
+    position: 'relative', display: 'flex' }} onMouseEnter={ (e) => changeBackground(e, 'n') }
+    onMouseLeave={ (e) => changeBackground(e, 'n', 1) }>
     <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
     <Button onClick={ () => myFunction(1) } id='b1' className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
@@ -19,18 +20,18 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // window.addEventListener("load", () => {
   // document.
 // })
-  oload = () => { console.log("ol")
-    a = document.querySelector("#scrw > #r1"),
-    a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
-    a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
-  //   const controller = new AbortController
+//   oload = () => { console.log("ol")
+//     a = document.querySelector("#scrw > #r1"),
+//     a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
+//     a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
+//   //   const controller = new AbortController
 
-  //   if (!o) { window.addEventListener('click', (event) =>{
-  //     
-  //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-  //     { signal: controller.signal } ) }
-  // else controller.abort()
-},
+//   //   if (!o) { window.addEventListener('click', (event) =>{
+//   //     
+//   //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
+//   //     { signal: controller.signal } ) }
+//   // else controller.abort()
+// },
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
