@@ -15,6 +15,10 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     <Button onClick={ () => myFunction(1) } id='b1' className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+  
+  window.onload = () => {
+    querySelector('#scrw > #r1').addEventListener("mouseenter", (e) => changeBackground(e, 'h'))
+  querySelector('#scrw > #r1').addEventListener("mouseleave", (e) => changeBackground(e, 'h', 1)) }
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
   // console.log(c)
@@ -547,9 +551,9 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
           </svg></Button></Col></Row>
 
-      <Row id='r1' style={{ justifyContent: 'flex-start'}}
-        onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="rw pb-9">
+        {/* onMouseEnter={ (e) => changeBackground(e, 'h') }
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } */}
+      <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           position: 'relative',
