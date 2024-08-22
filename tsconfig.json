@@ -1,5 +1,5 @@
 {
-  "compilerOptions": { "lib": ["dom", "dom.iterable", "esnext"],
+  "compilerOptions": { "strictNullChecks":false, "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
