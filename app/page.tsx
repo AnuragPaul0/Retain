@@ -53,8 +53,9 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
       k = o ? "none" : 'block'
       tog.forEach((e:any) => {e.style.display = k})
-      // e.style.cssText += 'z-index: ' + (+e.style.zIndex ? 0 : 10) +' !important' } )
-  } else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
+  } else if (h =='n')
+    (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
+  else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
   let relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
@@ -68,8 +69,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
   greeting = (el:any) => { f = el.target.id == 'btnr'
     // console.log(el)
-    k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9 h21 sp">
+    k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
+      onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
 
       <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
         <Row style={{ height: '25%' }} className="justify-content-md-center">
