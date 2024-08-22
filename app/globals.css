@@ -4,7 +4,7 @@
 
 nav { width: 20vw }
 #fon { font-family: Recoleta Medium; width: fit-content}
-.wh { width: 150px; height: 176px !important }
+div.wh { width: 150px; height: 176px !important }
 .p5 { padding-right: 5% }
 .fd { flex-direction: column; justify-content: center }
 
