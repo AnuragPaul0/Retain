@@ -15,21 +15,12 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     <Button onClick={ () => myFunction(1) } id='b1' className=
       { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
-  
-  interface SelectProtected {
-    readonly wrapperElement: HTMLDivElement;
-    readonly inputElement: HTMLInputElement;
-}
 
-const selectProtected: SelectProtected = {
-    wrapperElement: document.querySelector('#scrw > #r1'),
-    inputElement: document.createElement("input")
-}
- window.addEventListener("load", () => {
-  selectProtected.wrapperElement.addEventListener("mouseenter",
-      (e) => changeBackground(e, 'h'))
-    document.querySelector('#scrw > #r1').addEventListener("mouseleave",
-  (e) =>changeBackground(e, 'h', 1))
+  window.addEventListener("load", () => { console.log('l')
+  // .addEventListener("mouseenter",
+  //     (e) => changeBackground(e, 'h'))
+  //   document.querySelector('#scrw > #r1').addEventListener("mouseleave",
+  // (e) =>changeBackground(e, 'h', 1))
 })
 
   // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
