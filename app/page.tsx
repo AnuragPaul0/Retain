@@ -616,7 +616,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
               src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
           <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-            borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+            borderBottomLeftRadius: 'var(--nextui-radius-large)', alignSelf: 'center' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
             ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
               >Single Image prduct...</p></CardFooter></Card>
