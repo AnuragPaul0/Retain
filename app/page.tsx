@@ -19,14 +19,14 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // window.addEventListener("load", () => {
   // document.
 // })
-  oload = () => {
+  oload = () => { console.log("ol")
     a = document.querySelector("#scrw > #r1"),
     a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
     a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
   //   const controller = new AbortController
 
   //   if (!o) { window.addEventListener('click', (event) =>{
-  //     console.log(event.target, "clicked")
+  //     
   //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
   //     { signal: controller.signal } ) }
   // else controller.abort()
@@ -330,7 +330,12 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             className="r2 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+        </Button></Col></Row>
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center"
           style={{ blockSize: 'fit-content',
           display: 'flex' }}><p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
@@ -378,7 +383,12 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             className="r3 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+        </Button></Col></Row>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
@@ -427,7 +437,12 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             className="r4 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+        </Button></Col></Row>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
@@ -477,7 +492,12 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
             className="r5 self-center" style={{ display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash style={{ height: '20', color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+        </Button></Col></Row>
 
         <Row style={{ flexGrow:.5 }}><Col className="justify-content-md-center" style={{ blockSize: 'fit-content',
           display: 'flex'}}>
