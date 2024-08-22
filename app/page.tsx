@@ -55,25 +55,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
     pd = parent.id
   if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } }
 
-  function changeBackground(e:any, h:any, o=0) {
-    // console.log(e)
-    parent = e.target
-    while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
-    // console.log(parent)
-    pd = parent.id
-    if (h == 'h') {
-      tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
-    // console.log(e , e.target, tog, co)
-    // () =>{ co = 'white'
-    // let tr = co ?  : co = !co
-    // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
-      k = o ? "none" : 'block'
-      tog.forEach((e:any) => {e.style.display = k})
-  } else if (h =='n')
-    (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
-  else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
-
-  let relm = (rel:any, c='') => { container = document.createElement('div')
+  relm = (rel:any, c='') => { container = document.createElement('div')
     if (c != '') container.className+=' '+c
   createRoot(container).render(rel)
   // console.log('c', container, Object.keys(container),
@@ -81,7 +63,6 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   // du = document.createElement('div').appendChild(container)
   // console.log(du, du.children)
   return container },
-
 
   greeting = (el:any) => { f = el.target.id == 'btnr'
     // console.log(el)
@@ -172,6 +153,24 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               // transition: 'all 0.5s', cursor: 'pointer'
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
   </Col></Row>)), p++ } }
+
+  function changeBackground(e:any, h:any, o=0) {
+    console.log(e)
+    parent = e.target
+    while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
+    // console.log(parent)
+    pd = parent.id
+    if (h == 'h') {
+      tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
+    // console.log(e , e.target, tog, co)
+    // () =>{ co = 'white'
+    // let tr = co ?  : co = !co
+    // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
+      k = o ? "none" : 'block'
+      tog.forEach((e:any) => {e.style.display = k})
+  } else if (h =='n')
+    (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
+  else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
   return ( <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className=
