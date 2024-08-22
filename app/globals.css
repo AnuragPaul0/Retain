@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+#sdel { color:red; stroke-width:0.5 }
 nav { width: 20vw }
 #fon { font-family: Recoleta Medium; width: fit-content}
 div.wh { width: 150px; height: 176px !important }
