@@ -17,7 +17,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
   
   window.addEventListener("load", () => {
-    document.querySelector('#scrw > #r1').addEventListener("mouseenter",
+    typeof document !== 'undefined' && document.querySelector('#scrw > #r1').addEventListener("mouseenter",
       (e) => changeBackground(e, 'h'))
     document.querySelector('#scrw > #r1').addEventListener("mouseleave",
   (e) =>changeBackground(e, 'h', 1)) })
