@@ -34,12 +34,13 @@ div.h10 { height: 100% !important }
   width: 80% }
 
 /* The Close Button */
-.close {
+.close { top: 0;
+  padding-top: .5%;
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
-  padding-right: 1%;
+  padding-right: 1.5%;
   width: fit-content;
   right: 0;
   position: absolute }
