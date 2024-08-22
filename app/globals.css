@@ -26,14 +26,12 @@ div.h10 { height: 100% !important }
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content 20px*/
 #imodal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
+  padding: 0; border: 1px solid #888;
+  width: 80% }
 
 /* The Close Button */
 .close {

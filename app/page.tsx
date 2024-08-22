@@ -1070,7 +1070,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
-      <div style={{ width: '50%' }} className=
+      <div style={{ height: unset, width: '50%' }} className=
   "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
         <Button onClick={ () => myFunction(1) } id='b1' className=
           { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large bg-white/20 '}
