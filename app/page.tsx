@@ -121,7 +121,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
 
       // tr.appendChild(clone)
       // }(f ? ' : 'after') + '
-      tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
+      tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'n') }
+        onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="justify-content-md-center"
         style={{ width: '100%', display: 'flex' }}>
           <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
         textAlign: 'center',
