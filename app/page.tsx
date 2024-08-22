@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
-  co = 3 ,
+  co = 3 , d = document
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }}>
     <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
@@ -17,7 +17,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
   
   window.onload = () => {
-    (document as HTMLElement).querySelector('#scrw > #r1').addEventListener("mouseenter",
+    d.querySelector('#scrw > #r1').addEventListener("mouseenter",
       (e) => changeBackground(e, 'h'))
     (document as HTMLElement).querySelector('#scrw > #r1').addEventListener("mouseleave",
   (e) =>changeBackground(e, 'h', 1)) }
