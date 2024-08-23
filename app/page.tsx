@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { const [inputValue, setInputValue] = React.useState("Input");
+export default function Home() { const [inputValue, setInputValue] = React.useState("Input")
   const [taValue, setTaValue] = React.useState("Textarea")
   const [selectValue, setSelectValue] = React.useState("Parrot")
   const [checkboxValue, setCheckboxValue] = React.useState(false)
@@ -38,7 +38,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
         {/* onClick={(e) => changeBackground(e, 'c')} */}
           <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-            margin: 0, padding: 0, width: "auto", overflow: "visible", cursor: "pointer",
+            margin: 0, padding: 0, width: "auto", overflow: "visible",
             background: "transparent", cursor: isDragged ? "grabbing" : "grab",
             marginRight: "3em",padding: 0,
             borderRadius: '2px' }} tabIndex={-1}>
