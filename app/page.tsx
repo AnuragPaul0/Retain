@@ -20,6 +20,15 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
+buttonStyles = {
+  border: "none",
+  margin: 0,
+  padding: 0,
+  width: "auto",
+  overflow: "visible",
+  cursor: "pointer",
+  background: "transparent",
+},
   [taValue, setTaValue] = React.useState("Textarea"),
   [selectValue, setSelectValue] = React.useState("Parrot"),
   [checkboxValue, setCheckboxValue] = React.useState(false),
@@ -1288,9 +1297,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
             }}
-          >
-            {elements[value]}
-          </li> )} }/>
+          >{elements[value]}</li> )} }/>
     </div>
 
     <div id="imodal" className="modal">
