@@ -9,17 +9,80 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { const [inputValue, setInputValue] = React.useState("Input");
-  const [taValue, setTaValue] = React.useState("Textarea");
-  const [selectValue, setSelectValue] = React.useState("Parrot");
-  const [checkboxValue, setCheckboxValue] = React.useState(false);
+  const [taValue, setTaValue] = React.useState("Textarea")
+  const [selectValue, setSelectValue] = React.useState("Parrot")
+  const [checkboxValue, setCheckboxValue] = React.useState(false)
   const elements = [
-    <input
-      key="input"
+  <Row id='r1' key="input"
       value={inputValue}
       onChange={(e) => {
         setInputValue(e.target.value);
-      }}
-    />,
+      }} onMouseEnter={ (e) => changeBackground(e, 'h') }
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+
+    <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+      <Row style={{ height: '25%' }} className="justify-content-md-center">
+        <Col className="justify-content-md-center" style={{ alignContent: 'end',
+          display: 'grid' }}>
+            {/* zoom: '2',  shadow-medium */}
+            <Button id='del' onClick={(e) => changeBackground(e, 'c')}
+          className="r1 self-center" style={{ display: "none",
+            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+        </Button></Col></Row>
+      <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+        style={{ blockSize: 'fit-content', display: 'flex' }}>
+        <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+        {/* onClick={(e) => changeBackground(e, 'c')} */}
+          <Button className="r1 self-center" style={{ padding: 0, cursor: 'grab',
+            borderRadius: '2px' }}>
+        <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+<path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+<path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+<path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+<path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+<path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+<path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+<path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+    </svg></Button></Col></Row></Col>
+
+    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+      <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
+        radius="lg"><Card className="justify-content-md-center"
+          style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
+        <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
+          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+            marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+            "shadow-medium p-1 text-black"
+            variant="flat" color="default">Image list Product Image 2</Button>
+            <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+              paddingRight: '.4rem !important', paddingLeft: '.4rem !important', color: '#052',
+              backgroundColor: '#04ae5620' }} className= "p-1 z-10" variant="flat"
+              color="default">is empty</Button></div>
+        <div style={{ alignSelf: 'center' }}>
+          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+            marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+            "p-1 shadow-medium text-black" variant="flat" color="default"
+            >and Discount %</Button>
+          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+            marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
+            backgroundColor: '#04ae5620' }} className=
+            "p-1" variant="flat" color="default">is</Button>
+          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+            paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
+            "p-1 shadow-medium text-black" variant="flat"
+            color="default">0</Button>
+  </div></Card></Card></Col></Row>,
     <textarea
       key="textarea"
       value={taValue}
@@ -335,7 +398,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
           style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           {/* onClick={(e) => changeBackground(e, 'c')} */}
-            <Button className="r1 self-center" style={{ cursor: 'grab', borderRadius: '2px' }}>
+            <Button className="r1 self-center" style={{ padding: 0, cursor: 'grab',
+              borderRadius: '2px' }}>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -1124,8 +1188,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
-<div
-      style={{
+    <div style={{
         maxWidth: "300px",
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
