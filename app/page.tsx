@@ -20,9 +20,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
   <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-</svg>,
+  </svg>,
 
-buttone = (isDragged) => <button
+  buttone = (isDragged: any) => <button
     data-movable-handle
     style={{
       ...buttonStyles,
@@ -32,42 +32,42 @@ buttone = (isDragged) => <button
     tabIndex={-1}
   >{ HandleIcon }</button>,
 
-relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
-    setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
-      (e) => changeBackground(e, 'h') }
-onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+//   relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
+//     setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
+//       (e) => changeBackground(e, 'h') }
+// onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-<Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
-  <Row style={{ height: '25%' }} className="justify-content-md-center">
-    <Col className="justify-content-md-center" style={{ alignContent: 'end',
-      display: 'grid' }}>
-        {/* zoom: '2',  shadow-medium */}
-        <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-      className={"r"+i+" self-center"} style={{ display: "none",
-        paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-    <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-      width="20"><g id="Trash"><g><path d=
-"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-      ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-    "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
-    </Button></Col></Row>
-  <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-    style={{ blockSize: 'fit-content', display: 'flex' }}>
-    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-    {/* onClick={(e) => changeBackground(e, 'c')} */}
-      <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-        margin: 0, width: "auto", overflow: "visible",
-        background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-        marginRight: "3em", padding: 0,
-        borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
-          </Button></Col></Row></Col>
+// <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+//   <Row style={{ height: '25%' }} className="justify-content-md-center">
+//     <Col className="justify-content-md-center" style={{ alignContent: 'end',
+//       display: 'grid' }}>
+//         {/* zoom: '2',  shadow-medium */}
+//         <Button id='del' onClick={(e) => changeBackground(e, 'c')}
+//       className={"r"+i+" self-center"} style={{ display: "none",
+//         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+//   paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+//     <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+//       width="20"><g id="Trash"><g><path d=
+// "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+//       ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+//     "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+//     </Button></Col></Row>
+//   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+//     style={{ blockSize: 'fit-content', display: 'flex' }}>
+//     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+//     {/* onClick={(e) => changeBackground(e, 'c')} */}
+//       <Button data-movable-handle className="r1 self-center" style={{ border: "none",
+//         margin: 0, width: "auto", overflow: "visible",
+//         background: "transparent", cursor: isDragged ? "grabbing" : "grab",
+//         marginRight: "3em", padding: 0,
+//         borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
+//           </Button></Col></Row></Col>
 
-<Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-  <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
-    radius="lg"><Card className="justify-content-md-center"
-      style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>{ ele }
-    </Card></Card></Col></Row>,
+// <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+//   <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
+//     radius="lg"><Card className="justify-content-md-center"
+//       style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>{ ele }
+//     </Card></Card></Col></Row>,
     
   buttonStyles = {
   border: "none",
