@@ -8,8 +8,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-let HandleIcon = 
-  <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
+let HandleIcon = <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
   <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
   <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
   <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
@@ -20,16 +19,6 @@ let HandleIcon =
   <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
-
-buttonStyles = {
-  border: "none",
-  margin: 0,
-  padding: 0,
-  width: "auto",
-  overflow: "visible",
-  cursor: "pointer",
-  background: "transparent",
-}
 
 export default function Home() { const [inputValue, setInputValue] = React.useState("Input");
   const [taValue, setTaValue] = React.useState("Textarea")
@@ -60,7 +49,13 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         style={{ blockSize: 'fit-content', display: 'flex' }}>
         <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
         {/* onClick={(e) => changeBackground(e, 'c')} */}
-          <Button data-movable-handle className="r1 self-center" style={{ ...buttonStyles,
+          <Button data-movable-handle className="r1 self-center" style={{ border: "none",
+            margin: 0,
+            padding: 0,
+            width: "auto",
+            overflow: "visible",
+            cursor: "pointer",
+            background: "transparent",
                   cursor: isDragged ? "grabbing" : "grab",
                   marginRight: "3em",padding: 0,
             borderRadius: '2px' }} tabIndex={-1}>{HandleIcon}</Button></Col></Row></Col>
