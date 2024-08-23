@@ -12,118 +12,6 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   const [taValue, setTaValue] = React.useState("Textarea")
   const [selectValue, setSelectValue] = React.useState("Parrot")
   const [checkboxValue, setCheckboxValue] = React.useState(false)
-  const elements = [
-  <Row id='r1' key="input" value={inputValue} onChange={(e) => {
-        setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
-          (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
-
-    <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
-      <Row style={{ height: '25%' }} className="justify-content-md-center">
-        <Col className="justify-content-md-center" style={{ alignContent: 'end',
-          display: 'grid' }}>
-            {/* zoom: '2',  shadow-medium */}
-            <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-          className="r1 self-center" style={{ display: "none",
-            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-        <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-          width="20"><g id="Trash"><g><path d=
-"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-        "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
-        </Button></Col></Row>
-      <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-        style={{ blockSize: 'fit-content', display: 'flex' }}>
-        <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-        {/* onClick={(e) => changeBackground(e, 'c')} */}
-          <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-            margin: 0, padding: 0, width: "auto", overflow: "visible",
-            background: "transparent", cursor: isDragging ? "grabbing" : "grab",
-            marginRight: "3em",padding: 0,
-            borderRadius: '2px' }} tabIndex={-1}>
-              <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
-              <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-              <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-              <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-              <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-              <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-              <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-              <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-              <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-              <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-    </svg></Button></Col></Row></Col>
-
-    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-      <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
-        radius="lg"><Card className="justify-content-md-center"
-          style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
-        <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
-          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-            marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-            "shadow-medium p-1 text-black"
-            variant="flat" color="default">Image list Product Image 2</Button>
-            <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-              paddingRight: '.4rem !important', paddingLeft: '.4rem !important', color: '#052',
-              backgroundColor: '#04ae5620' }} className= "p-1 z-10" variant="flat"
-              color="default">is empty</Button></div>
-        <div style={{ alignSelf: 'center' }}>
-          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-            marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-            "p-1 shadow-medium text-black" variant="flat" color="default"
-            >and Discount %</Button>
-          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-            paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-            marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
-            backgroundColor: '#04ae5620' }} className=
-            "p-1" variant="flat" color="default">is</Button>
-          <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-            paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
-            "p-1 shadow-medium text-black" variant="flat"
-            color="default">0</Button>
-  </div></Card></Card></Col></Row>,
-    <textarea
-      key="textarea"
-      value={taValue}
-      onChange={(e) => {
-        setTaValue(e.target.value);
-      }}
-    />,
-    <div key="button">
-      <button>Item 3</button>
-    </div>,
-    <div
-      key="div"
-      role="button"
-      style={{ padding: "8px", cursor: "default", border: "1px solid black" }}
-    >
-      Div with the button role
-    </div>,
-    <select
-      key="select"
-      name="pets"
-      id="pet-select"
-      value={selectValue}
-      onChange={(e) => setSelectValue(e.target.value)}
-    >
-      <option value="parrot">Parrot</option>
-      <option value="spider">Spider</option>
-      <option value="goldfish">Goldfish</option>
-    </select>,
-    <div key="input">
-      <input
-        id="checked"
-        name="checked"
-        type="checkbox"
-        checked={checkboxValue}
-        onChange={() => {
-          setCheckboxValue(!checkboxValue);
-        }}
-      />
-      <label htmlFor="checked">Checkbox</label>
-    </div> ]
 
   const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5])
   let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
@@ -1201,16 +1089,120 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex))
         }
-        renderList={({ children, props, isDragged }) => (
-          <ul
+        renderList={({ children, props, isDragged }) => ( <ul
             {...props}
             style={{ padding: 0, cursor: isDragged ? "grabbing" : undefined }}
           >
             {children}
-          </ul>
-        )}
-        renderItem={({ value, props, isDragged, isSelected }) => (
-          <li
+          </ul> ) }
+        renderItem={({ value, props, isDragged, isSelected }) => {
+          const elements = [
+          <Row id='r1' key="input" value={inputValue} onChange={(e) => {
+                setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
+                  (e) => changeBackground(e, 'h') }
+            onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+
+            <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+              <Row style={{ height: '25%' }} className="justify-content-md-center">
+                <Col className="justify-content-md-center" style={{ alignContent: 'end',
+                  display: 'grid' }}>
+                    {/* zoom: '2',  shadow-medium */}
+                    <Button id='del' onClick={(e) => changeBackground(e, 'c')}
+                  className="r1 self-center" style={{ display: "none",
+                    paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+              paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+                <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  width="20"><g id="Trash"><g><path d=
+        "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+                  ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+                "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+                </Button></Col></Row>
+              <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+                style={{ blockSize: 'fit-content', display: 'flex' }}>
+                <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+                {/* onClick={(e) => changeBackground(e, 'c')} */}
+                  <Button data-movable-handle className="r1 self-center" style={{ border: "none",
+                    margin: 0, padding: 0, width: "auto", overflow: "visible",
+                    background: "transparent", cursor: isDragged ? "grabbing" : "grab",
+                    marginRight: "3em",padding: 0,
+                    borderRadius: '2px' }} tabIndex={-1}>
+                      <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+                      <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+                      <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+                      <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+                      <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+                      <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+                      <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+                      <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+                      <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+            </svg></Button></Col></Row></Col>
+
+            <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+              <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
+                radius="lg"><Card className="justify-content-md-center"
+                  style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>
+                <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}>
+                  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+                    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+                    marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+                    "shadow-medium p-1 text-black"
+                    variant="flat" color="default">Image list Product Image 2</Button>
+                    <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+                      paddingRight: '.4rem !important', paddingLeft: '.4rem !important', color: '#052',
+                      backgroundColor: '#04ae5620' }} className= "p-1 z-10" variant="flat"
+                      color="default">is empty</Button></div>
+                <div style={{ alignSelf: 'center' }}>
+                  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+                    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+                    marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+                    "p-1 shadow-medium text-black" variant="flat" color="default"
+                    >and Discount %</Button>
+                  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+                    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+                    marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
+                    backgroundColor: '#04ae5620' }} className=
+                    "p-1" variant="flat" color="default">is</Button>
+                  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+                    paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
+                    "p-1 shadow-medium text-black" variant="flat"
+                    color="default">0</Button>
+          </div></Card></Card></Col></Row>, <textarea
+              key="textarea"
+              value={taValue}
+              onChange={(e) => {
+                setTaValue(e.target.value);
+              }}/>, <div key="button">
+              <button>Item 3</button>
+            </div>, <div
+              key="div"
+              role="button"
+              style={{ padding: "8px", cursor: "default", border: "1px solid black" }}
+            >
+              Div with the button role
+            </div>, <select
+              key="select"
+              name="pets"
+              id="pet-select"
+              value={selectValue}
+              onChange={(e) => setSelectValue(e.target.value)}
+            >
+              <option value="parrot">Parrot</option>
+              <option value="spider">Spider</option>
+              <option value="goldfish">Goldfish</option>
+            </select>, <div key="input">
+              <input id="checked"
+                name="checked"
+                type="checkbox"
+                checked={checkboxValue}
+                onChange={() => {
+                  setCheckboxValue(!checkboxValue);
+                }}
+              />
+              <label htmlFor="checked">Checkbox</label>
+            </div> ]
+
+          return ( <li
             {...props}
             key={props.key}
             style={{
@@ -1228,9 +1220,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
             }}
           >
             {elements[value]}
-          </li>
-        )}
-      />
+          </li> )} }/>
     </div>
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
