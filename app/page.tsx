@@ -1,4 +1,5 @@
 'use client'
+import { List, arrayMove } from "../src/index"
 import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
@@ -7,7 +8,62 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-export default function Home() { let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
+export default function Home() { const [inputValue, setInputValue] = React.useState("Input");
+  const [taValue, setTaValue] = React.useState("Textarea");
+  const [selectValue, setSelectValue] = React.useState("Parrot");
+  const [checkboxValue, setCheckboxValue] = React.useState(false);
+  const elements = [
+    <input
+      key="input"
+      value={inputValue}
+      onChange={(e) => {
+        setInputValue(e.target.value);
+      }}
+    />,
+    <textarea
+      key="textarea"
+      value={taValue}
+      onChange={(e) => {
+        setTaValue(e.target.value);
+      }}
+    />,
+    <div key="button">
+      <button>Item 3</button>
+    </div>,
+    <div
+      key="div"
+      role="button"
+      style={{ padding: "8px", cursor: "default", border: "1px solid black" }}
+    >
+      Div with the button role
+    </div>,
+    <select
+      key="select"
+      name="pets"
+      id="pet-select"
+      value={selectValue}
+      onChange={(e) => setSelectValue(e.target.value)}
+    >
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+    </select>,
+    <div key="input">
+      <input
+        id="checked"
+        name="checked"
+        type="checkbox"
+        checked={checkboxValue}
+        onChange={() => {
+          setCheckboxValue(!checkboxValue);
+        }}
+      />
+      <label htmlFor="checked">Checkbox</label>
+    </div>,
+  ];
+
+  const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5]);
+  let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
   co = 3 ,
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }} onMouseEnter={ (e) => changeBackground(e, 'n') }
@@ -279,9 +335,7 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
           style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           {/* onClick={(e) => changeBackground(e, 'c')} */}
-            <Button className="r1 self-center" style={{ cursor: 'grab', display: "none",
-              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+            <Button className="r1 self-center" style={{ cursor: 'grab', borderRadius: '2px' }}>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -1070,7 +1124,50 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
-
+<div
+      style={{
+        maxWidth: "300px",
+        margin: "0px auto",
+        backgroundColor: "#F7F7F7",
+        padding: "3em",
+      }}
+    >
+      <List
+        values={items}
+        onChange={({ oldIndex, newIndex }) =>
+          setItems(arrayMove(items, oldIndex, newIndex))
+        }
+        renderList={({ children, props, isDragged }) => (
+          <ul
+            {...props}
+            style={{ padding: 0, cursor: isDragged ? "grabbing" : undefined }}
+          >
+            {children}
+          </ul>
+        )}
+        renderItem={({ value, props, isDragged, isSelected }) => (
+          <li
+            {...props}
+            key={props.key}
+            style={{
+              ...props.style,
+              padding: "1.5em",
+              margin: "0.5em 0em",
+              listStyleType: "none",
+              cursor: isDragged ? "grabbing" : "grab",
+              border: "2px solid #CCC",
+              boxShadow: "3px 3px #AAA",
+              color: "#333",
+              borderRadius: "5px",
+              fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
+              backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
+            }}
+          >
+            {elements[value]}
+          </li>
+        )}
+      />
+    </div>
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
       <div style={{ height: 'unset', width: '50%' }} className=
