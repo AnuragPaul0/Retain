@@ -278,8 +278,8 @@ export default function Home() { let tog, parent, p = 6, container, a:any, k:any
         <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
           style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-          <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-            className="r1 self-center" style={{ cursor: 'grab', display: "none",
+          {/* onClick={(e) => changeBackground(e, 'c')} */}
+            <Button className="r1 self-center" style={{ cursor: 'grab', display: "none",
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
           <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
