@@ -1,5 +1,5 @@
 'use client'
-import { List, arrayMove } from "../src/index"
+import { List, arrayMove } from "react-movable"
 import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
@@ -60,9 +60,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
       />
       <label htmlFor="checked">Checkbox</label>
     </div>,
-  ];
+  ]
 
-  const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5]);
+  const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5])
   let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
   co = 3 ,
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
