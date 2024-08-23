@@ -1082,10 +1082,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
         padding: "3em",
-      }}
-    >
-      <List
-        values={items}
+      }}>
+      <List values={items}
         onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex))
         }
@@ -1122,9 +1120,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
                 <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
                 {/* onClick={(e) => changeBackground(e, 'c')} */}
                   <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-                    margin: 0, padding: 0, width: "auto", overflow: "visible",
+                    margin: 0, width: "auto", overflow: "visible",
                     background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-                    marginRight: "3em",padding: 0,
+                    marginRight: "3em", padding: 0,
                     borderRadius: '2px' }} tabIndex={-1}>
                       <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
                       <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
