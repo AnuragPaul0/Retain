@@ -36,8 +36,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   divcar = (e: any) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
-  >{ () => Array.prototype.forEach.call(e, child => child)
-    // e.forEach( (element) => element)
+  >{ () => e.forEach( (element) => element )
+    // Array.prototype.forEach.call(e, child => child)
      }</div>,
 // r el
   relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue}
