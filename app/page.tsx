@@ -1,5 +1,5 @@
 'use client'
-import { List, arrayMove } from "react-movable"
+import { List, arrayMove, arrayRemove } from "react-movable"
 import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
