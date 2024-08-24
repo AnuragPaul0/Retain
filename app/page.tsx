@@ -23,9 +23,16 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
   </svg>,
 
-  // buttone = (isDragged: any) => <button data-movable-handle style={{
-  //     ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
-  //     marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
+
+{/* <Button data-movable-handle  style={{ border: "none",
+  margin: 0, width: "auto", overflow: "visible",
+  background: "transparent", cursor: isDragged ? "grabbing" : "grab",
+  marginRight: "3em", padding: 0,
+  borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
+</Button> */}
+  buttone = (i, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
+    style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
+      marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
 
   buttonc = (t: any, stru = {}) => <Button style={{
     borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -65,21 +72,19 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
-    {/* onClick={(e) => changeBackground(e, 'c')} */}
-      <Button data-movable-handle className={"r"+i+" self-center"} style={{ border: "none",
-        margin: 0, width: "auto", overflow: "visible",
-        background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-        marginRight: "3em", padding: 0,
-        borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
-      </Button></Col></Row></Col>
+    {/* onClick={(e) => changeBackground(e, 'c')} */}{buttone(i, isDragged)}</Col></Row></Col>
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
   radius="lg">{ c }</Card></Col></Row> },
 
-  cele = (d: any) => { console.log(d); d.forEach((e: any, i: any) => {
+  cele = (d: any) => {
+    // console.log(d)
+    d.forEach((e: any, i: any) => {
     // console.log(i)
-  d[i/2] = <Card className="w90 justify-content-md-center">{e}</Card>}); console.log(d); return d },
+    d[i/2] = <Card className="w90 justify-content-md-center">{e}</Card>})
+  // console.log(d)
+  return d },
 
   el2 = [
     <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
@@ -98,14 +103,14 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   
     //  els.push(divcar([, ]))
 
-  // buttonStyles = { border: "none", margin: 0,
-  //   padding: 0,
-  //   width: "auto",
-  //   overflow: "visible",
-  //   cursor: "pointer",
-  //   background: "transparent"},
 
   const [taValue, setTaValue] = React.useState("Textarea"),
+
+  buttonStyles = { border: "none", margin: 0, padding: 0,
+    width: "auto",
+    overflow: "visible",
+    cursor: "pointer",
+    background: "transparent"},
   [selectValue, setSelectValue] = React.useState("Parrot"),
   [checkboxValue, setCheckboxValue] = React.useState(false),
 
@@ -1249,14 +1254,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
                 </Button></Col></Row>
               <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
                 style={{ blockSize: 'fit-content', display: 'flex' }}>
-                <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-                {/* onClick={(e) => changeBackground(e, 'c')} */}
-                  <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-                    margin: 0, width: "auto", overflow: "visible",
-                    background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-                    marginRight: "3em", padding: 0,
-                    borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
-                      </Button></Col></Row></Col>
+                <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
+                >1</p>
+                {/* onClick={(e) => changeBackground(e, 'c')} */}{buttone(1, isDragged)}</Col></Row></Col>
 
             <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
               <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
