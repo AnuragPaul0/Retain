@@ -36,7 +36,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   divcar = (e: any) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
-  >{ Array.prototype.forEach.call(e, child => child)
+  >{ () => Array.prototype.forEach.call(e, child => child)
     // e.forEach( (element) => element)
      }</div>,
 // r el
@@ -1200,7 +1200,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop. { buttone(isDragged) }
                 <div>{value}</div></div>*/}
-                </li>)}/></div>
+    </li>)}/></div>
     
     <div style={{ maxWidth: "1000px",
         margin: "0px auto",
