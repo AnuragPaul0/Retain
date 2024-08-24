@@ -8,6 +8,12 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
+const RemovableIcon = () => (
+  <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
+    stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+    ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+  "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>)
 {/* <Button data-movable-handle  style={{ border: "none",
   margin: 0, width: "auto", overflow: "visible",
   background: "transparent", cursor: isDragged ? "grabbing" : "grab",
@@ -31,8 +37,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
     style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
-      marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
+  marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
 
+// Card
   buttonc = (t: any, stru = {}) => <Button style={{
     borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
     paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
@@ -47,7 +54,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //   // Array.prototype.forEach.call(e, child => child)
   //    }</div>,
 // r el
-  relem = (i: any, isDragged: any, c: any) => { console.log(c)
+  relem = (i: any, isDragged: any, c: any) => {
+    // console.log(c)
     return <Row id={'r'+i} key="input" value={inputValue}
     onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
       (e) => changeBackground(e, 'h') }
@@ -57,17 +65,15 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <Row style={{ height: '25%' }} className="justify-content-md-center">
     <Col className="justify-content-md-center" style={{ alignContent: 'end',
       display: 'grid' }}>
-        {/* zoom: '2',  shadow-medium */}
-        <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-      className={"r"+i+" self-center"} style={{ display: "none",
-        paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-    <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-      width="20"><g id="Trash"><g><path d=
-"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-      ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-    "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
-    </Button></Col></Row>
+        {/* <button onClick={} style={buttonStyles}></button> */}
+        {/* zoom: '2',  shadow-medium changeBackground(e, 'c'){ RemovableIcon }*/}
+        <Button id='del' onClick={(e) => () => { setItems(
+          typeof index !== "undefined"
+            ? arrayRemove(items, index)
+            : items ) }}
+          className={"r"+i+" self-center"} style={{ display: "none",
+            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
