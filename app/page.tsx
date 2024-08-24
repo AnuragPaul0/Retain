@@ -41,7 +41,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //   // Array.prototype.forEach.call(e, child => child)
   //    }</div>,
 // r el
-  relem = (i: any, isDragged: any, c: any) => <Row id={'r'+i} key="input" value={inputValue}
+  relem = (i: any, isDragged: any, c: any) => { console.log(c)
+    return <Row id={'r'+i} key="input" value={inputValue}
     onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
       (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
@@ -74,7 +75,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
-  radius="lg">{ c }</Card></Col></Row>,
+  radius="lg">{ c }</Card></Col></Row> },
 
   cele = (d: any) => { console.log(d); d.forEach((e: any, i: any) => {
   d[i] = <Card className="w90 justify-content-md-center">{e}</Card>}); console.log(d); return d },
