@@ -90,7 +90,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
-     ...cele(el2)]
+     ...cele(el2)]; console.log(els)
     {/* // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
 
@@ -1194,12 +1194,11 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
             {children}
           </ul>
         )}
-        renderItem={({ value, props, isDragged, isSelected }) => ( <li
+        renderItem={({ value, props, isDragged, isSelected }) => { return ( <li
             {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
-              boxShadow: "3px 3px #AAA", color: "#333",
-              borderRadius: "5px",
+              boxShadow: "3px 3px #AAA", color: "#333", borderRadius: "5px",
               cursor: isDragged ? "grabbing" : "inherit",
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
@@ -1209,8 +1208,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop. { buttone(isDragged) }
                 <div>{value}</div></div>*/}
-    </li>)}/></div>
-    
+    </li>)}}/></div>
+
+
     <div style={{ maxWidth: "1000px",
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
