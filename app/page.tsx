@@ -63,7 +63,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     </Button></Col></Row>
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
-    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
     {/* onClick={(e) => changeBackground(e, 'c')} */}
       <Button data-movable-handle className={"r"+i+" self-center"} style={{ border: "none",
         margin: 0, width: "auto", overflow: "visible",
@@ -77,10 +77,11 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   radius="lg">{ c }</Card></Col></Row>,
 
   cele = (d: any) => { d.forEach((e: any, i: any) => {
-  d[i] = <Card className="w90 justify-content-md-center">{e}</Card>}); return d },
+  d[i] = <Card className="w90 justify-content-md-center">{e}</Card>}); console.log(d); return d },
 
-  el2 = [ <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
-     ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
+  el2 = [
+    <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
+  ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
      ,<div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
   {buttonc('empty')}</div> ],
@@ -1194,11 +1195,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         )}
         renderItem={({ value, props, isDragged, isSelected }) => ( <li
             {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
-              margin: "0.5em 0em",
-              listStyleType: "none",
+              margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
-              boxShadow: "3px 3px #AAA",
-              color: "#333",
+              boxShadow: "3px 3px #AAA", color: "#333",
               borderRadius: "5px",
               cursor: isDragged ? "grabbing" : "inherit",
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
