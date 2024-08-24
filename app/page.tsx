@@ -65,15 +65,15 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <Row style={{ height: '25%' }} className="justify-content-md-center">
     <Col className="justify-content-md-center" style={{ alignContent: 'end',
       display: 'grid' }}>
-        {/* <button onClick={} style={buttonStyles}></button> */}
+        {/* <Button onClick={} style={buttonStyles}></button> */}
         {/* zoom: '2',  shadow-medium changeBackground(e, 'c'){ RemovableIcon }*/}
-        <Button id='del' onClick={(e) => () => { setItems(
+        <button id='del' onClick={(e) => () => { setItems(
           typeof index !== "undefined"
             ? arrayRemove(items, index)
             : items ) }}
           className={"r"+i+" self-center"} style={{ display: "none",
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></button></Col></Row>
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
