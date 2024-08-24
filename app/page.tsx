@@ -36,7 +36,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   divcar = (e: any) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
-  >{ e.forEach((element: any) => element) }</div>,
+  >{ e.array.forEach((element: any) => element) }</div>,
 // r el
   relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue}
     onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
