@@ -36,10 +36,10 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   divcar = (e: any) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
-  >{ e.forEach(element => element) }</div>,
+  >{ e.forEach((element: any) => element) }</div>,
 // r el
-  relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
-    setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
+  relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue}
+    onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
       (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
@@ -73,7 +73,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
         radius="lg"><Card className="justify-content-md-center"
           style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}
-          >{ ele.forEach(element => element) }
+          >{ ele.forEach((element: any) => element) }
   </Card></Card></Col></Row>,
 
   els = [ divcar([buttonc('Image list Product Image 2'), buttonc('is empty', greens)]),
