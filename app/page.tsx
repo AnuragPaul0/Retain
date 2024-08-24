@@ -54,7 +54,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //   // Array.prototype.forEach.call(e, child => child)
   //    }</div>,
 // r el
-  relem = (i: any, isDragged: any, c: any) => {
+  relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c)
     return <Row id={'r'+i} key="input" value={inputValue}
     onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
@@ -1205,7 +1205,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
             {children}
           </ul>
         )}
-        renderItem={({ value, props, isDragged, isSelected }) => { console.log(value); return ( <li
+        renderItem={({ value, props, index, isDragged, isSelected }) => { console.log(value); return ( <li
             {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
@@ -1213,7 +1213,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
               cursor: isDragged ? "grabbing" : "inherit",
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-            }}>{ relem(value+1, isDragged, els[value]) }{/* <div style={{ display: "flex",
+            }}>{ relem(value+1, isDragged, els[value], index) }{/* <div style={{ display: "flex",
                 alignItems: "center",
               }}>Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
@@ -1260,9 +1260,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
               <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
                 style={{ blockSize: 'fit-content', display: 'flex' }}>
                 <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}}
-                >1</p>
-                {/* onClick={(e) => changeBackground(e, 'c')} */}{buttone(1, isDragged)}</Col></Row></Col>
-
+                >1</p>{buttone(1, isDragged)}</Col></Row></Col>
+                {/* onClick={(e) => changeBackground(e, 'c')} */}
             <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
               <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
                 radius="lg"><Card className="justify-content-md-center"
