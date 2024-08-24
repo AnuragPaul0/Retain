@@ -27,18 +27,18 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //     ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
   //     marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
 
-  buttonc = (t, stru = {}) => <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+  buttonc = (t: any, stru = {}) => <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
     paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
     marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
   "shadow-medium p-1 text-black" variant="flat" color="default">{ t }</Button>,
 
   greens = { color: '#052', backgroundColor: '#04ae5620' },
 
-  divcar = (e) => <div style={{ alignSelf: 'center',
+  divcar = (e: any) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
   >{ e.forEach(element => element) }</div>,
 // r el
-  relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
+  relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
     setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
       (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
