@@ -66,14 +66,13 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     <Col className="justify-content-md-center" style={{ alignContent: 'end',
       display: 'grid' }}>
         {/* <Button onClick={} style={buttonStyles}></button> */}
-        {/* zoom: '2',  shadow-medium changeBackground(e, 'c'){ RemovableIcon }*/}
-        <button id='del' onClick={(e) => () => { setItems(
+        {/* zoom: '2',  shadow-medium changeBackground(e, 'c'){ RemovableIcon }(e) => */}
+        <Button id='del' onClick={ () => { setItems(
           typeof index !== "undefined"
-            ? arrayRemove(items, index)
-            : items ) }}
+            ? arrayRemove(items, index) : items ) }}
           className={"r"+i+" self-center"} style={{ display: "none",
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></button></Col></Row>
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
@@ -1205,7 +1204,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
             {children}
           </ul>
         )}
-        renderItem={({ value, props, index, isDragged, isSelected }) => { console.log(value); return ( <li
+        renderItem={({ value, props, index, isDragged, isSelected }) => {
+          // console.log(value)
+          return ( <li
             {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
