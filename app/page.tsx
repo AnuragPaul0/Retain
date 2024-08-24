@@ -77,7 +77,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
   radius="lg">{ c }</Card></Col></Row> },
 
-  cele = (d: any) => { console.log(d); d.forEach((e: any, i: any) => {
+  cele = (d: any) => { console.log(d); d.forEach((e: any, i: any) => { console.log(i)
   d[i] = <Card className="w90 justify-content-md-center">{e}</Card>}); console.log(d); return d },
 
   el2 = [
@@ -1194,7 +1194,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
             {children}
           </ul>
         )}
-        renderItem={({ value, props, isDragged, isSelected }) => { return ( <li
+        renderItem={({ value, props, isDragged, isSelected }) => { console.log(value); return ( <li
             {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
