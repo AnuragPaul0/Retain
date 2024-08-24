@@ -83,13 +83,14 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     {/* // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
      </div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>].push(
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
+  els.push(
     //  divcar([, ])
      ...[<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
      ,<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
      ,<div id='alsc'>{buttonc('Image list Product Image 2') } {buttonc('is', greens)}
-     {buttonc('empty')}</div>].forEach(e => cele(e))),
+     {buttonc('empty')}</div>].forEach(e => cele(e)))
 
   // buttonStyles = { border: "none", margin: 0,
   //   padding: 0,
@@ -98,7 +99,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //   cursor: "pointer",
   //   background: "transparent"},
 
-  [taValue, setTaValue] = React.useState("Textarea"),
+  const [taValue, setTaValue] = React.useState("Textarea"),
   [selectValue, setSelectValue] = React.useState("Parrot"),
   [checkboxValue, setCheckboxValue] = React.useState(false),
 
