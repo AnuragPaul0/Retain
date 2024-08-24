@@ -78,19 +78,19 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   cele = d => <Card className="w90 justify-content-md-center">{d}</Card>,
 
-  els = [ <Card className="w90 justify-content-md-center"><div id='alsc'
-    >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }
+  els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
+    >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
     {/* // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
-     </div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
+
   els.push(
     //  divcar([, ])
-     ...[<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
-     ,<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
-     ,<div id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
-     ,<div id='alsc'>{buttonc('Image list Product Image 2') } {buttonc('is', greens)}
-     {buttonc('empty')}</div>].forEach(e => cele(e)))
+     ...[<div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
+     ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
+     ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
+     ,<div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
+  {buttonc('empty')}</div>].forEach(e => cele(e)))
 
   // buttonStyles = { border: "none", margin: 0,
   //   padding: 0,
@@ -1190,8 +1190,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
           </ul>
         )}
         renderItem={({ value, props, isDragged, isSelected }) => ( <li
-            {...props} key={props.key} style={{ ...props.style,
-              padding: "1.5em",
+            {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em",
               listStyleType: "none",
               border: "2px solid #CCC",
