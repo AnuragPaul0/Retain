@@ -8,6 +8,13 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
+{/* <Button data-movable-handle  style={{ border: "none",
+  margin: 0, width: "auto", overflow: "visible",
+  background: "transparent", cursor: isDragged ? "grabbing" : "grab",
+  marginRight: "3em", padding: 0,
+  borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
+</Button> */}
+
 export default function Home() { const [inputValue, setInputValue] = React.useState("Input"),
   
   HandleIcon = <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
@@ -23,13 +30,6 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
   </svg>,
 
-
-{/* <Button data-movable-handle  style={{ border: "none",
-  margin: 0, width: "auto", overflow: "visible",
-  background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-  marginRight: "3em", padding: 0,
-  borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
-</Button> */}
   buttone = (i, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
     style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
       marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
