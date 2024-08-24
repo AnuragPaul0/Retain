@@ -80,17 +80,17 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
   els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
-    {/* // [...e].forEach( (element:any) => element )
-    // Array.prototype.forEach.call(e, child => child) */}
-
-  els.push(
-    //  divcar([, ])
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
      ...[<div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
      ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
      ,<div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-  {buttonc('empty')}</div>].forEach(e => cele(e)))
+  {buttonc('empty')}</div>].forEach(e => cele(e)) ]
+    {/* // [...e].forEach( (element:any) => element )
+    // Array.prototype.forEach.call(e, child => child) */}
+
+  
+    //  els.push(divcar([, ]))
 
   // buttonStyles = { border: "none", margin: 0,
   //   padding: 0,
