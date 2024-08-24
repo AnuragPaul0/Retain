@@ -76,8 +76,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
   radius="lg">{ c }</Card></Col></Row>,
 
-  cele = (d: any) => { d.forEach((e, i) => { d[i] = <Card className="w90 justify-content-md-center"
-    >{e}</Card>}); return d },
+  cele = (d: any) => { d.forEach((e: any, i: any) => {
+  d[i] = <Card className="w90 justify-content-md-center">{e}</Card>}); return d },
+
   el2 = [ <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
      ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
