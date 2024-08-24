@@ -10,8 +10,9 @@ import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 export default function Home() { const [inputValue, setInputValue] = React.useState("Input"),
   
-  HandleIcon = <svg height="20px" className="feather feather-move" viewBox="0 0 24 24" fill="none">
-  <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+  HandleIcon = <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
+    fill="none"><path d=
+    "M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
   <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
   <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
   <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
@@ -22,15 +23,9 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
   </svg>,
 
-  buttone = (isDragged: any) => <button
-    data-movable-handle
-    style={{
-      ...buttonStyles,
-      cursor: isDragged ? "grabbing" : "grab",
-      marginRight: "3em",
-    }}
-    tabIndex={-1}
-  >{ HandleIcon }</button>,
+  // buttone = (isDragged: any) => <button data-movable-handle style={{
+  //     ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
+  //     marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
 
   buttonc = (t, stru = {}) => <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
     paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
@@ -42,22 +37,6 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   divcar = (e) => <div style={{ alignSelf: 'center',
     marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
   >{ e.forEach(element => element) }</div>,
-{/* <div style={{ alignSelf: 'center' }}>
-  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-    marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-    "p-1 shadow-medium text-black" variant="flat" color="default"
-    >and Discount %</Button>
-  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-    marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
-    backgroundColor: '#04ae5620' }} className=
-    "p-1" variant="flat" color="default">is</Button>
-  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-    paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
-    "p-1 shadow-medium text-black" variant="flat"
-    color="default">0</Button>
-</div>, */},
 // r el
   relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
     setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
@@ -101,16 +80,14 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     [buttonc('tags'), buttonc('contain', greens), buttonc('onsale')],
     [buttonc('tags'), buttonc('contain', greens), buttonc('__labelNew')] ,
     [buttonc('Discount %'), buttonc('is', greens), buttonc('0')],
-    [buttonc('Image list Product Image 2'), buttonc('is', greens), buttonc('empty')] ],
+  [buttonc('Image list Product Image 2'), buttonc('is', greens), buttonc('empty')] ],
 
-  buttonStyles = { border: "none",
-    margin: 0,
-    padding: 0,
-    width: "auto",
-    overflow: "visible",
-    cursor: "pointer",
-    background: "transparent",
-  },
+  // buttonStyles = { border: "none", margin: 0,
+  //   padding: 0,
+  //   width: "auto",
+  //   overflow: "visible",
+  //   cursor: "pointer",
+  //   background: "transparent"},
 
   [taValue, setTaValue] = React.useState("Textarea"),
   [selectValue, setSelectValue] = React.useState("Parrot"),
