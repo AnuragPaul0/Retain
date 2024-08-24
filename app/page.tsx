@@ -76,7 +76,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
   radius="lg">{ c }</Card></Col></Row>,
 
-  cele = d => <Card className="w90 justify-content-md-center">{d}</Card>,
+  cele = (d: any) => <Card className="w90 justify-content-md-center">{d}</Card>,
 
   els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
