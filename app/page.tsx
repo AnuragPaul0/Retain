@@ -27,20 +27,21 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
   //     ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
   //     marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
 
-  buttonc = (t: any, stru = {}) => <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+  buttonc = (t: any, stru = {}) => <Button style={{
+    borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
     paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
     marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
   "shadow-medium p-1 text-black" variant="flat" color="default">{ t }</Button>,
 
   greens = { color: '#052', backgroundColor: '#04ae5620' },
 
-  divcar = (e: any) => <div style={{ alignSelf: 'center',
-    marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
-  >{ [...e].forEach( (element) => element )
-    // Array.prototype.forEach.call(e, child => child)
-     }</div>,
+  // divcar = (e: any) => <div style={{ alignSelf: 'center',
+  //   marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
+  // >{ [...e].forEach( (element:any) => element )
+  //   // Array.prototype.forEach.call(e, child => child)
+  //    }</div>,
 // r el
-  relem = (i: any, isDragged: any, ele: any) => <Row id={'r'+i} key="input" value={inputValue}
+  relem = (i: any, isDragged: any, c: any) => <Row id={'r'+i} key="input" value={inputValue}
     onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
       (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
@@ -73,16 +74,22 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
       <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
-        radius="lg"><Card className="justify-content-md-center"
-          style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}
-          >{ ele.forEach((element) => element) }
-  </Card></Card></Col></Row>,
+  radius="lg">{ c }</Card></Col></Row>,
 
-  els = [ divcar([buttonc('Image list Product Image 2'), buttonc('is empty', greens)]),
-    [buttonc('tags'), buttonc('contain', greens), buttonc('onsale')],
-    [buttonc('tags'), buttonc('contain', greens), buttonc('__labelNew')] ,
-    [buttonc('Discount %'), buttonc('is', greens), buttonc('0')],
-  [buttonc('Image list Product Image 2'), buttonc('is', greens), buttonc('empty')] ],
+  cele = d => <Card className="w90 justify-content-md-center">{d}</Card>,
+
+  els = [ <Card className="w90 justify-content-md-center"><div id='alsc'
+    >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }
+    {/* // [...e].forEach( (element:any) => element )
+    // Array.prototype.forEach.call(e, child => child) */}
+     </div><div id='alsc'
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>].push(
+    //  divcar([, ])
+     ...[<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
+     ,<div id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
+     ,<div id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
+     ,<div id='alsc'>{buttonc('Image list Product Image 2') } {buttonc('is', greens)}
+     {buttonc('empty')}</div>].forEach(e => cele(e))),
 
   // buttonStyles = { border: "none", margin: 0,
   //   padding: 0,
@@ -376,7 +383,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
           style={{ blockSize: 'fit-content', display: 'flex' }}>
           <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
           {/* onClick={(e) => changeBackground(e, 'c')} */}
-            <Button className="r1 self-center" style={{ padding: 0, cursor: 'grab',
+            <Button className="r1 self-center" style={{ padding: '0 !important', cursor: 'grab',
               borderRadius: '2px' }}>
           <svg height="20px" viewBox="0 0 24 24" fill="none">
 <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
@@ -1171,8 +1178,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
         padding: "3em",
-        textAlign: "center",
-      }}><List values={items} onChange={({ oldIndex, newIndex }) =>
+        textAlign: "center" }}><List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
         renderList={({ children, props, isDragged }) => ( <ul
             {...props} style={{ padding: "0em 0em 1em 0em",
