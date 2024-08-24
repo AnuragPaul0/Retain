@@ -32,67 +32,101 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     tabIndex={-1}
   >{ HandleIcon }</button>,
 
-//   relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
-//     setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
-//       (e) => changeBackground(e, 'h') }
-// onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+  buttonc = (t, stru = {}) => <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+    marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
+  "shadow-medium p-1 text-black" variant="flat" color="default">{ t }</Button>,
 
-// <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
-//   <Row style={{ height: '25%' }} className="justify-content-md-center">
-//     <Col className="justify-content-md-center" style={{ alignContent: 'end',
-//       display: 'grid' }}>
-//         {/* zoom: '2',  shadow-medium */}
-//         <Button id='del' onClick={(e) => changeBackground(e, 'c')}
-//       className={"r"+i+" self-center"} style={{ display: "none",
-//         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-//   paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-//     <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-//       width="20"><g id="Trash"><g><path d=
-// "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-//       ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-//     "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
-//     </Button></Col></Row>
-//   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-//     style={{ blockSize: 'fit-content', display: 'flex' }}>
-//     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
-//     {/* onClick={(e) => changeBackground(e, 'c')} */}
-//       <Button data-movable-handle className="r1 self-center" style={{ border: "none",
-//         margin: 0, width: "auto", overflow: "visible",
-//         background: "transparent", cursor: isDragged ? "grabbing" : "grab",
-//         marginRight: "3em", padding: 0,
-//         borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
-//           </Button></Col></Row></Col>
+  greens = { color: '#052', backgroundColor: '#04ae5620' },
 
-// <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-//   <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
-//     radius="lg"><Card className="justify-content-md-center"
-//       style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}>{ ele }
-//     </Card></Card></Col></Row>,
-    
-  buttonStyles = {
-  border: "none",
-  margin: 0,
-  padding: 0,
-  width: "auto",
-  overflow: "visible",
-  cursor: "pointer",
-  background: "transparent",
-},
+  divcar = (e) => <div style={{ alignSelf: 'center',
+    marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}
+  >{ e.forEach(element => element) }</div>,
+{/* <div style={{ alignSelf: 'center' }}>
+  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+    marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+    "p-1 shadow-medium text-black" variant="flat" color="default"
+    >and Discount %</Button>
+  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+    paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
+    marginRight: 'calc(var(--nextui-radius-large) / 2)', color: '#052',
+    backgroundColor: '#04ae5620' }} className=
+    "p-1" variant="flat" color="default">is</Button>
+  <Button style={{ borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
+    paddingRight: '.4rem !important', paddingLeft: '.4rem !important' }} className=
+    "p-1 shadow-medium text-black" variant="flat"
+    color="default">0</Button>
+</div>, */},
+// r el
+  relem = (i, isDragged, ele) => <Row id={'r'+i} key="input" value={inputValue} onChange={(e) => {
+    setInputValue((e.target as HTMLInputElement).value) }} onMouseEnter={
+      (e) => changeBackground(e, 'h') }
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+
+    <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+  <Row style={{ height: '25%' }} className="justify-content-md-center">
+    <Col className="justify-content-md-center" style={{ alignContent: 'end',
+      display: 'grid' }}>
+        {/* zoom: '2',  shadow-medium */}
+        <Button id='del' onClick={(e) => changeBackground(e, 'c')}
+      className={"r"+i+" self-center"} style={{ display: "none",
+        paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+    <svg id='sdel' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+      width="20"><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+      ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+    "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
+    </Button></Col></Row>
+  <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+    style={{ blockSize: 'fit-content', display: 'flex' }}>
+    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >1</p>
+    {/* onClick={(e) => changeBackground(e, 'c')} */}
+      <Button data-movable-handle className={"r"+i+" self-center"} style={{ border: "none",
+        margin: 0, width: "auto", overflow: "visible",
+        background: "transparent", cursor: isDragged ? "grabbing" : "grab",
+        marginRight: "3em", padding: 0,
+        borderRadius: '2px' }} tabIndex={-1}>{ HandleIcon }
+      </Button></Col></Row></Col>
+
+    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+      <Card className="top justify-content-md-center" style={{ height: '100% !important' }}
+        radius="lg"><Card className="justify-content-md-center"
+          style={{ width: '90%', alignSelf: 'center', height: '70% !important' }}
+          >{ ele.forEach(element => element) }
+  </Card></Card></Col></Row>,
+
+  els = [ divcar([buttonc('Image list Product Image 2'), buttonc('is empty', greens)]),
+    [buttonc('tags'), buttonc('contain', greens), buttonc('onsale')],
+    [buttonc('tags'), buttonc('contain', greens), buttonc('__labelNew')] ,
+    [buttonc('Discount %'), buttonc('is', greens), buttonc('0')],
+    [buttonc('Image list Product Image 2'), buttonc('is', greens), buttonc('empty')] ],
+
+  buttonStyles = { border: "none",
+    margin: 0,
+    padding: 0,
+    width: "auto",
+    overflow: "visible",
+    cursor: "pointer",
+    background: "transparent",
+  },
+
   [taValue, setTaValue] = React.useState("Textarea"),
   [selectValue, setSelectValue] = React.useState("Parrot"),
   [checkboxValue, setCheckboxValue] = React.useState(false),
 
-  [items2, setItems2] = React.useState([
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-    "Item 5",
-    "Item 6",
-  ])
-  const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5])
-  let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any,
-  co = 3 ,
+  // [items2, setItems2] = React.useState([ "Item 1",
+  //   "Item 2",
+  //   "Item 3",
+  //   "Item 4",
+  //   "Item 5",
+  //   "Item 6",
+  // ])
+
+  [items, setItems] = React.useState([0, 1, 2, 3, 4])
+  let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
+
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
     position: 'relative', display: 'flex' }} onMouseEnter={ (e) => changeBackground(e, 'n') }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) }>
@@ -1154,37 +1188,23 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
 
-<div
-      style={{
-        maxWidth: "1000px",
+    <div style={{ maxWidth: "1000px",
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
         padding: "3em",
         textAlign: "center",
-      }}
-    >
-      <List
-        values={items2}
-        onChange={({ oldIndex, newIndex }) =>
-          setItems2(arrayMove(items2, oldIndex, newIndex))
-        }
-        renderList={({ children, props, isDragged }) => (
-          <ul
-            {...props}
-            style={{
-              padding: "0em 0em 1em 0em",
+      }}><List values={items} onChange={({ oldIndex, newIndex }) =>
+          setItems(arrayMove(items, oldIndex, newIndex)) }
+        renderList={({ children, props, isDragged }) => ( <ul
+            {...props} style={{ padding: "0em 0em 1em 0em",
               cursor: isDragged ? "grabbing" : "inherit",
             }}
           >
             {children}
           </ul>
         )}
-        renderItem={({ value, props, isDragged, isSelected }) => (
-          <li
-            {...props}
-            key={props.key}
-            style={{
-              ...props.style,
+        renderItem={({ value, props, isDragged, isSelected }) => ( <li
+            {...props} key={props.key} style={{ ...props.style,
               padding: "1.5em",
               margin: "0.5em 0em",
               listStyleType: "none",
@@ -1195,37 +1215,23 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
               cursor: isDragged ? "grabbing" : "inherit",
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
+            }}>{ relem(value+1, isDragged, els[value]) }{/* <div style={{ display: "flex",
                 alignItems: "center",
-              }}
-            >
-              {/* 
-                  Mark any node with the data-movable-handle attribute if you wish
+              }}>Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
-                  ignored and not start the drag and drop. 
-                */}{ buttone(isDragged) }<div>{value}</div>
-            </div>
-          </li>
-        )}
-      />
-    </div>
+                  ignored and not start the drag and drop. { buttone(isDragged) }
+                <div>{value}</div></div>*/}
+                </li>)}/></div>
     
-    <div style={{
-        maxWidth: "1000px",
+    <div style={{ maxWidth: "1000px",
         margin: "0px auto",
         backgroundColor: "#F7F7F7",
         padding: "3em",
       }}>
-      <List values={items}
-        onChange={({ oldIndex, newIndex }) =>
+      <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex))
         }
-        renderList={({ children, props, isDragged }) => ( <ul
-            {...props}
+        renderList={({ children, props, isDragged }) => ( <ul {...props}
             style={{ padding: 0, cursor: isDragged ? "grabbing" : undefined }}
           >
             {children}
