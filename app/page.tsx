@@ -101,7 +101,8 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
      ...cele(el2)]
-    {/* // ; console.log(els) [...e].forEach( (element:any) => element )
+    console.log(els)
+    // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
     //  els.push(divcar([, ]))
 
@@ -1194,34 +1195,24 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
         renderList={({ children, props, isDragged }) => ( <ul
             {...props} style={{ padding: "0em 0em 1em 0em",
               cursor: isDragged ? "grabbing" : "inherit",
-            }}>
-            {children}
-          </ul>
-        )}
+            }}>{children}
+          </ul>)}
         renderItem={({ value, props, index, isDragged, isSelected }) => {
           // console.log(value)
-          return ( <li
-            {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
+          return <li {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
               margin: "0.5em 0em", listStyleType: "none",
               border: "2px solid #CCC",
               boxShadow: "3px 3px #AAA", color: "#333", borderRadius: "5px",
               cursor: isDragged ? "grabbing" : "inherit",
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-            }}>{ relem(value+1, isDragged, els[value], index) }{/* <div style={{ display: "flex",
-                alignItems: "center",
-              }}>Mark any node with the data-movable-handle attribute if you wish
+            }}>{ relem(value+1, isDragged, els[value], index) }</li> }}/>
+            {/* Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
-                  ignored and not start the drag and drop. { buttone(isDragged) }
-                <div>{value}</div></div>*/}
-    </li>)}}/>
-      <button
-        onClick={() => console.log(items)
+                  ignored and not start the drag and drop.*/}
+      <button onClick={() => console.log(items)
           // setItems(["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"])
-        }
-      >
-        Reset
-      </button></Container>
+        }>Reset</button></Container>
     {/* </div> */}
 
 
