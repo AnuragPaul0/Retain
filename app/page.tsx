@@ -47,29 +47,6 @@ buttonc = (t: any, stru = {}) => <Button style={{
 greens = { color: '#052', backgroundColor: '#04ae5620' },
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
 
-// r el
-relem = (i: any, isDragged: any, c: any, index: any) => {
-    // console.log(c)
-    return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
-
-    <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
-  <Row style={{ height: '25%' }} className="justify-content-md-center">
-    <Col className="justify-content-md-center" style={{ alignContent: 'end',
-      display: 'grid' }}>
-        {/* <Button onClick={} style={buttonStyles}></button> */}
-        <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
-            ? arrayRemove(items, index) : items ) }}
-          className={"r"+i+" self-center"} style={{ display: "none",
-            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
-  <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-    style={{ blockSize: 'fit-content', display: 'flex' }}>
-    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
-    {buttone(i, isDragged)}</Col></Row></Col>
-
-    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-<Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
 
 cele = (d: any) => {
   // console.log(d)
@@ -252,8 +229,31 @@ changeBackground = (e:any, h:any, o=0) => {
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
 export default function Home() {
+  // r el
+  const relem = (i: any, isDragged: any, c: any, index: any) => {
+    // console.log(c)
+    return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
 
-  const [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
+    <Col xs lg="2" className='df fd' style={{ borderRight: '1px solid #eee' }}>
+  <Row style={{ height: '25%' }} className="justify-content-md-center">
+    <Col className="justify-content-md-center" style={{ alignContent: 'end',
+      display: 'grid' }}>
+        {/* <Button onClick={} style={buttonStyles}></button> */}
+        <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
+            ? arrayRemove(items, index) : items ) }}
+          className={"r"+i+" self-center"} style={{ display: "none",
+            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
+  <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+    style={{ blockSize: 'fit-content', display: 'flex' }}>
+    <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
+    {buttone(i, isDragged)}</Col></Row></Col>
+
+    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+  <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
+
+  [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
       <div id='alsc'
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
@@ -1189,12 +1189,14 @@ export default function Home() {
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
       <div style={{ height: 'unset', width: '50%' }} className=
-  "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
+        { "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group"+
+          " cursor-pointer hover:shadow-lg" }>
+        {/* 'r'+p.toString()+ */}
         <Button onClick={ () => myFunction(1) } id='b1' className=
-          { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large bg-white/20 '}
-          variant="flat" color="default" radius="lg" size="sm"><svg fill="#04AE56" width="40px"
-          version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
-          xmlSpace="preserve"><g><g><path d=
+          ' z-10 shadow-medium self-center p-2 radius-large bg-white/20 '
+          variant="flat" color="default" radius="lg" size="sm">
+            <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
+              xmlSpace="preserve"><g><g><path d=
   "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
             <path d=
   "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
