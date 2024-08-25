@@ -82,9 +82,9 @@ export default function Home() {
     // console.log(i)
     d[i/2] = <Card className="w90 justify-content-md-center">{e}</Card>})
   // console.log(d)
-  return d },
+  return d }
 
-  el2 = [
+  let el2 = [
     <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
   ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
