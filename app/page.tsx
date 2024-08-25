@@ -1182,10 +1182,10 @@ export default function Home() {
             {/* Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
-      <button onClick={() => { console.log(items)
-        els = [...els, <Card key={value+1} className="w90 justify-content-md-center"
+      <button onClick={() => { console.log(items); const il = items.length
+        els = [...els, <Card key={il} className="w90 justify-content-md-center"
         >{buttonc('+ Add Product Filters')}</Card>]
-    setItems([...items, items.length]) } }>Reset</button></Container>
+    setItems([...items, il]) } }>Reset</button></Container>
 
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
