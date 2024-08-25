@@ -79,16 +79,16 @@ export default function Home() {
   cele = (d: any) => {
     // console.log(d)
     d.forEach((e: any, i: any) => {
-    // console.log(i)
-    d[i/2] = <Card className="w90 justify-content-md-center">{e}</Card>})
+    // console.log(i)/2
+    d[i] = <Card className="w90 justify-content-md-center">{e}</Card>})
   // console.log(d)
   return d }
 
   let el2 = [
     <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
-  ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
-     ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
-     ,<div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
+  <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
+     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
+     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
   {buttonc('empty')}</div> ]; console.log(el2)
 
   let els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
