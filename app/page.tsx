@@ -1183,7 +1183,7 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
       <button onClick={() => { console.log(items)
-        els = [...els, <Card className="w90 justify-content-md-center"
+        els = [...els, <Card key={value+1} className="w90 justify-content-md-center"
         >{buttonc('+ Add Product Filters')}</Card>]
     setItems([...items, items.length]) } }>Reset</button></Container>
 
