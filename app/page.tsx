@@ -89,12 +89,15 @@ export default function Home() {
   <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
      <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-  {buttonc('empty')}</div> ]; console.log(el2)
+  {buttonc('empty')}</div> ]
+  // console.log(el2)let
 
-  let els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
+  els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
-  console.log(els); els = [els, ...cele(el2)]; console.log(els)
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ]
+  // console.log(els)
+  // els = [els]
+  // console.log(els)
     // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
     //  els.push(divcar([, ]))
@@ -282,7 +285,7 @@ export default function Home() {
     "M44.6895 22.8676H22.6367L32.2632 13.2487C32.7118 12.7956 33.2473 12.4378 33.8374 12.1966C34.4276 11.9554 35.0604 11.8358 35.6979 11.845H44.7367L44.6865 22.8676H44.6895Z" fill="#04AE56"/>
     <path d=
 "M22.6407 44.9112V22.866L32.255 32.497C32.7087 32.9455 33.067 33.4811 33.3082 34.0716C33.5495 34.6621 33.6687 35.2954 33.6587 35.9332V44.9736L22.6407 44.9112ZM0.601562 22.8675H22.6407L13.0248 32.4849C12.1266 33.3831 10.9086 33.8886 9.6404 33.8886H0.601562V22.866V22.8675Z" fill="#04AE56"/>
-        </g></svg></div> <div className=
+        </g></svg></div><div className=
   "flex  mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg">
               <svg fill="white" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4" xmlSpace="preserve">
             <g> <g> <path 
@@ -1182,7 +1185,7 @@ export default function Home() {
                   ignored and not start the drag and drop.*/}
       <button onClick={() => { console.log(items); const il = items.length
         els = [ ...els, <Card key={il} className="w90 justify-content-md-center"
-        >{buttonc('+ Add Product Filters')}</Card> ]; console.log(els)
+        >{ buttonc('+ Add Product Filters') }</Card> ]; console.log(els)
     setItems([...items, il]) } }>Reset</button></Container>
 
     <div id="imodal" className="modal">
