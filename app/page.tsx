@@ -1188,8 +1188,7 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
     ></path></g></g></svg></Button></Col></Row></Container>
 
     <Container id='le' style={{ maxWidth: '35vw' }} className="rounded-large">
-  {/* <div style={{ maxWidth: "1000px", margin: "0px auto", backgroundColor: "#F7F7F7", padding: "3em",
-        textAlign: "center" }}> */}
+  {/* <div style={{ margin: "0px auto" }}> */}
           <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
         renderList={({ children, props, isDragged }) => ( <ul
@@ -1215,7 +1214,14 @@ export default function Home() { const [inputValue, setInputValue] = React.useSt
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop. { buttone(isDragged) }
                 <div>{value}</div></div>*/}
-    </li>)}}/></Container>
+    </li>)}}/>
+      <button
+        onClick={() => console.log(items)
+          // setItems(["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"])
+        }
+      >
+        Reset
+      </button></Container>
     {/* </div> */}
 
 
