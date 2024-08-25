@@ -93,9 +93,8 @@ export default function Home() {
 
   els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
-     ...cele(el2) ]
-  console.log(els)
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
+  console.log(els); els = [els, ...cele(el2)]; console.log(els)
     // [...e].forEach( (element:any) => element )
     // Array.prototype.forEach.call(e, child => child) */}
     //  els.push(divcar([, ]))
@@ -1163,7 +1162,6 @@ export default function Home() {
     ></path></g></g></svg></Button></Col></Row></Container>
 
     <Container id='le' style={{ maxWidth: '35vw' }} className="rounded-large">
-  {/* <div style={{ margin: "0px auto" }}> */}
           <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
         renderList={({ children, props, isDragged }) => ( <ul
@@ -1183,8 +1181,8 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
       <button onClick={() => { console.log(items); const il = items.length
-        els = [...els, <Card key={il} className="w90 justify-content-md-center"
-        >{buttonc('+ Add Product Filters')}</Card>]
+        els = [ ...els, <Card key={il} className="w90 justify-content-md-center"
+        >{buttonc('+ Add Product Filters')}</Card> ]; console.log(els)
     setItems([...items, il]) } }>Reset</button></Container>
 
     <div id="imodal" className="modal">
