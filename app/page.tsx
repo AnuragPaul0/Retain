@@ -46,8 +46,8 @@ buttonc = (t: any, stru = {}) => <Button style={{
 
 greens = { color: '#052', backgroundColor: '#04ae5620' }
 
-  // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
-    // onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }}
+// divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
+  // onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }}
 
 
 export default function Home() { 
@@ -100,7 +100,7 @@ export default function Home() {
     // Array.prototype.forEach.call(e, child => child) */}
     //  els.push(divcar([, ]))
 
-  const [items, setItems] = React.useState([0, 1, 2, 3, 4, 5])
+  const [items, setItems] = React.useState([0, 1, 2, 3, 4])
   let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
