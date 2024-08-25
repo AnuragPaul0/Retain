@@ -66,7 +66,7 @@ relem = (i: any, isDragged: any, c: any, index: any) => {
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
-    {/* onClick={(e) => changeBackground(e, 'c')} */}{buttone(i, isDragged)}</Col></Row></Col>
+    {buttone(i, isDragged)}</Col></Row></Col>
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
 <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
@@ -84,11 +84,10 @@ el2 = [
 <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-{buttonc('empty')}</div> ]
+{buttonc('empty')}</div> ],
   // console.log(el2)
 
-export default function Home() {
-  const [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
+[els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
     <div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
   >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ]),
@@ -99,175 +98,174 @@ export default function Home() {
   // Array.prototype.forEach.call(e, child => child) */}
   //  els.push(divcar([, ]))
 
-  [items, setItems] = React.useState([0, 1, 2, 3, 4])
-  let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
+[items, setItems] = React.useState([0, 1, 2, 3, 4])
 
-  colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
-    position: 'relative', display: 'flex' }} onMouseEnter={ (e) => changeBackground(e, 'n') }
-    onMouseLeave={ (e) => changeBackground(e, 'n', 1) }>
-    <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
-    <Button onClick={ () => myFunction(1) } id='b1' className=
-      { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-  variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>,
+let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
+
+//  onMouseEnter={ (e) => changeBackground(e, 'n') }
+//     onMouseLeave={ (e) => changeBackground(e, 'n', 1) }
+colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
+  position: 'relative', display: 'flex' }}>
+  <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
+  <Button onClick={ () => myFunction(1) } id='b1' className=
+    { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>,
 
   // window.addEventListener("load", () => {
-  // document.
-// })
-//   oload = () => { console.log("ol")
 //     a = document.querySelector("#scrw > #r1"),
 //     a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
 //     a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
-//   //   const controller = new AbortController
+  //   const controller = new AbortController
 
-//   //   if (!o) { window.addEventListener('click', (event) =>{
-//   //     
-//   //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-//   //     { signal: controller.signal } ) }
-//   // else controller.abort()
-// },
+  //   if (!o) { window.addEventListener('click', (event) =>{
+  //     
+  //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
+  //     { signal: controller.signal } ) }
+  // else controller.abort()
 
-  // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
-  // console.log(c)
+// const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
+// console.log(c)
 
-  // User clicks, open/x modal
-  myFunction = (o:any) => { tr = 'imodal'
-    a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
-    const controller = new AbortController
+// User clicks, open/x modal
+myFunction = (o:any) => { tr = 'imodal'
+  a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
+  const controller = new AbortController
 
-    // User clicks anywhere outside of the modal, close it
-    if (!o) { window.addEventListener('click', (event) =>{
-      console.log(event.target, "clicked")
-      if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-      { signal: controller.signal } ) }
-  else controller.abort() },
+  // User clicks anywhere outside of the modal, close it
+  if (!o) { window.addEventListener('click', (event) =>{
+    console.log(event.target, "clicked")
+    if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
+    { signal: controller.signal } ) }
+else controller.abort() },
 
-  inim = (e:any, h:any, o=0) => {
-    // console.log(e)
-    parent = e.target
-    while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
-    // console.log(parent) as HTMLElement
-    pd = parent.id
-  if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
+inim = (e:any, h:any, o=0) => {
+  // console.log(e)
+  parent = e.target
+  while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
+  // console.log(parent) as HTMLElement
+  pd = parent.id
+if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
-  relm = (rel:any, c='') => { container = document.createElement('div')
-    if (c != '') container.className+=' '+c
-  createRoot(container).render(rel)
-  // console.log('c', container, Object.keys(container),
-  // Object.values(container), typeof(container), container.children, container.children[0])
-  // du = document.createElement('div').appendChild(container)
-  // console.log(du, du.children)
-  return container },
+relm = (rel:any, c='') => { container = document.createElement('div')
+  if (c != '') container.className+=' '+c
+createRoot(container).render(rel)
+// console.log('c', container, Object.keys(container),
+// Object.values(container), typeof(container), container.children, container.children[0])
+// du = document.createElement('div').appendChild(container)
+// console.log(du, du.children)
+return container },
 
-  greeting = (el:any) => { f = el.target.id == 'btnr'
-    // console.log(el)</div>
-    k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
-      onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
+greeting = (el:any) => { f = el.target.id == 'btnr'
+  // console.log(el)</div>
+  k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
+    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
 
-      <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
-        <Row style={{ height: '25%' }} className="justify-content-md-center">
-          <Col className="justify-content-md-center" style={{ alignContent: 'end',
-            display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
-            className={ 'r'+p.toString()+" shadow-medium self-center" }
-            style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
-              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-          <CiTrash height='20' style={{ color: 'red', strokeWidth: .5}}/></Button></Col></Row>
-        <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-          style={{ blockSize: 'fit-content', display: 'flex' }}>
-          <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}
-            >{p}</p>
-              <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
-    <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
-    <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
-    <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
-    <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
-    <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
-    <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
-    <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
-    <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
-    <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
-      </svg></Col></Row></Col>
+    <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
+      <Row style={{ height: '25%' }} className="justify-content-md-center">
+        <Col className="justify-content-md-center" style={{ alignContent: 'end',
+          display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+          className={ 'r'+p.toString()+" shadow-medium self-center" }
+          style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
+            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+        <CiTrash height='20' style={{ color: 'red', strokeWidth: .5}}/></Button></Col></Row>
+      <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
+        style={{ blockSize: 'fit-content', display: 'flex' }}>
+        <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium' }}
+          >{p}</p>
+            <svg style={{ alignSelf: 'center' }} height="20px" viewBox="0 0 24 24" fill="none">
+  <path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
+  <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
+  <path d="M19 7C20.1046 7 21 6.10457 21 5C21 3.89543 20.1046 3 19 3C17.8954 3 17 3.89543 17 5C17 6.10457 17.8954 7 19 7Z" fill="#000000"/>
+  <path d="M7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12Z" fill="#000000"/>
+  <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#000000"/>
+  <path d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z" fill="#000000"/>
+  <path d="M5 21C6.10457 21 7 20.1046 7 19C7 17.8954 6.10457 17 5 17C3.89543 17 3 17.8954 3 19C3 20.1046 3.89543 21 5 21Z" fill="#000000"/>
+  <path d="M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z" fill="#000000"/>
+  <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
+    </svg></Col></Row></Col>
 
-      <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-          <Card className="h10 top justify-content-md-center"
-            radius="lg"><Card className="w90 justify-content-md-center"
-            >{ buttonc('+ Add Product Filters') }</Card>
-  {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
-              {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-        </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-      </Card></Col></Row> : <Col xs lg="2" className="justify-content-md-center" style={{
-        width: '150px', position: 'relative', display: 'flex' }}>
-    <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
-    <Button onClick={ () => myFunction(1) } id='b1' className=
-      { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-      variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+    <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
+        <Card className="h10 top justify-content-md-center"
+          radius="lg"><Card className="w90 justify-content-md-center"
+          >{ buttonc('+ Add Product Filters') }</Card>
+{/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
+            {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
+      </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
+    </Card></Col></Row> : <Col xs lg="2" className="justify-content-md-center" style={{
+      width: '150px', position: 'relative', display: 'flex' }}>
+  <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
+  <Button onClick={ () => myFunction(1) } id='b1' className=
+    { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+    variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
-    b = 'beforebegin'
-    if (!f) { a = document.querySelector('#scrw') as HTMLElement
-      if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vw'
-      tr = document.querySelector('#rt.r')
-      // if (tr) { node = tr.lastChild
-      //   // console.log(node)
-      // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
-      // console.log(clone)
-      // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
+  b = 'beforebegin'
+  if (!f) { a = document.querySelector('#scrw') as HTMLElement
+    if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vw'
+    tr = document.querySelector('#rt.r')
+    // if (tr) { node = tr.lastChild
+    //   // console.log(node)
+    // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
+    // console.log(clone)
+    // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
-      // tr.appendChild(clone)
-      // }(f ? ' : 'after') + '
-      tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="justify-content-md-center"
-        style={{ width: '100%', display: 'flex' }}>
-          <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-        textAlign: 'center',
-        borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-        isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
-      <Button id='adb' className='atb cb'
-        ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-      stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      className="lucide lucide-ellipsis-vertical">
-        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col>, 'w3 df top' ) )
-      // console.log(b, relm(k))
-      document.querySelectorAll('#addc').forEach( (e) =>
-    e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
-    else { a = document.querySelector('#addr')
-      if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
-        a = document.querySelector('#scrw')
-      if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
-  onMouseEnter={ (e) => changeBackground(e, 'h') }
-  onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
+    // tr.appendChild(clone)
+    // }(f ? ' : 'after') + '
+    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="justify-content-md-center"
+      style={{ width: '100%', display: 'flex' }}>
+        <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+      textAlign: 'center',
+      borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
+    <Button id='adb' className='atb cb'
+      ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+    stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    className="lucide lucide-ellipsis-vertical">
+      <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+    </svg></Button></Col>, 'w3 df top' ) )
+    // console.log(b, relm(k))
+    document.querySelectorAll('#addc').forEach( (e) =>
+  e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
+  else { a = document.querySelector('#addr')
+    if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
+      a = document.querySelector('#scrw')
+    if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
+onMouseEnter={ (e) => changeBackground(e, 'h') }
+onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
 
-  <Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
-          paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
-            style={{ display: 'grid', alignSelf: 'center' }}>
-          <Button onClick={greeting} className="shadow-medium self-center" style={{
-              zoom: '2', fontFamily: 'Recoleta Medium',
-              paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
-              borderRadius: '2px',
-              // transition: 'all 0.5s', cursor: 'pointer'
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
-  </Col></Row>)), p++ } },
+<Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
+        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
+          style={{ display: 'grid', alignSelf: 'center' }}>
+        <Button onClick={greeting} className="shadow-medium self-center" style={{
+            zoom: '2', fontFamily: 'Recoleta Medium',
+            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
+            borderRadius: '2px',
+            // transition: 'all 0.5s', cursor: 'pointer'
+    paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
+</Col></Row>)), p++ } },
 
-  changeBackground = (e:any, h:any, o=0) => {
-    // console.log(e)
-    parent = e.target
-    while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
-    // console.log(parent)
-    pd = parent.id
-    if (h == 'h') {
-      tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
-    // console.log(e , e.target, tog, co)
-    // () =>{ co = 'white'
-    // let tr = co ?  : co = !co
-    // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
-      k = o ? "none" : 'block'
-      tog.forEach((e:any) => {e.style.display = k})
-  } else if (h =='n')
-    (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
-  else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
+changeBackground = (e:any, h:any, o=0) => {
+  // console.log(e)
+  parent = e.target
+  while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
+  // console.log(parent)
+  pd = parent.id
+  if (h == 'h') {
+    tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
+  // console.log(e , e.target, tog, co)
+  // () =>{ co = 'white'
+  // let tr = co ?  : co = !co
+  // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
+    k = o ? "none" : 'block'
+    tog.forEach((e:any) => {e.style.display = k})
+} else if (h =='n')
+  (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
+else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
-  return <div style={{ backgroundColor: 'white' }}><div style={{width: '4rem'}} className={
+export default function Home() { return <div style={{ backgroundColor: 'white' }}>
+    <div style={{width: '4rem'}} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
     " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
