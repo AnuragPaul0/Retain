@@ -92,9 +92,10 @@ export default function Home() {
   {buttonc('empty')}</div> ],
   // console.log(el2)let
 
-  els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
+  const [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
+    <div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ]
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ])
   // console.log(els)
   // els = [els]
   // console.log(els)
@@ -1184,8 +1185,8 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
       <button onClick={() => { console.log(items); const il = items.length
-        els = [ ...els, <Card key={il} className="w90 justify-content-md-center"
-        >{ buttonc('+ Add Product Filters') }</Card> ]; console.log(els)
+        setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
+        >{ buttonc('+ Add Product Filters') }</Card> ]); console.log(els)
     setItems([...items, il]) } }>Reset</button></Container>
 
     <div id="imodal" className="modal">
