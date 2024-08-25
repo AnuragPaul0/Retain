@@ -44,11 +44,8 @@ buttonc = (t: any, stru = {}) => <Button style={{
   marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
 "shadow-medium p-1 text-black" variant="flat" color="default">{ t }</Button>,
 
-greens = { color: '#052', backgroundColor: '#04ae5620' }
-
+greens = { color: '#052', backgroundColor: '#04ae5620' },
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
-  // onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }}
-
 
 // r el
 relem = (i: any, isDragged: any, c: any, index: any) => {
@@ -170,7 +167,7 @@ export default function Home() {
         <Row style={{ height: '25%' }} className="justify-content-md-center">
           <Col className="justify-content-md-center" style={{ alignContent: 'end',
             display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
-            className={ 'r'+p.toString()+"shadow-medium self-center" }
+            className={ 'r'+p.toString()+" shadow-medium self-center" }
             style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
