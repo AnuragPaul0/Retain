@@ -15,7 +15,7 @@ const RemovableIcon = () =>
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
 "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>,
 
-HandleIcon = <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
+HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
   "M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -35,7 +35,7 @@ background: "transparent"},
 
 buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
   style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
-marginRight: "3em" }} tabIndex={-1}>{ HandleIcon }</button>,
+marginRight: "3em" }} tabIndex={-1}><HandleIcon/></button>,
 
 // Card
 buttonc = (t: any, stru = {}) => <Button style={{
@@ -50,9 +50,8 @@ greens = { color: '#052', backgroundColor: '#04ae5620' }
   // onChange={(e) => { setInputValue((e.target as HTMLInputElement).value) }}
 
 
-export default function Home() { 
-  // r el
-  const relem = (i: any, isDragged: any, c: any, index: any) => {
+// r el
+relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c)
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
@@ -62,7 +61,6 @@ export default function Home() {
     <Col className="justify-content-md-center" style={{ alignContent: 'end',
       display: 'grid' }}>
         {/* <Button onClick={} style={buttonStyles}></button> */}
-        {/* zoom: '2',  shadow-medium changeBackground(e, 'c'){ RemovableIcon }(e) => */}
         <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
             ? arrayRemove(items, index) : items ) }}
           className={"r"+i+" self-center"} style={{ display: "none",
@@ -74,36 +72,37 @@ export default function Home() {
     {/* onClick={(e) => changeBackground(e, 'c')} */}{buttone(i, isDragged)}</Col></Row></Col>
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-  <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
+<Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
 
-  cele = (d: any) => {
-    // console.log(d)
-    d.forEach((e: any, i: any) => {
-    // console.log(i)/2
-    d[i] = <Card className="w90 justify-content-md-center">{e}</Card>})
+cele = (d: any) => {
   // console.log(d)
-  return d }
+  d.forEach((e: any, i: any) => {
+  // console.log(i)/2
+  d[i] = <Card className="w90 justify-content-md-center">{e}</Card>})
+// console.log(d)
+return d },
 
-  let el2 = [
-    <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
-  <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
-     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
-     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-  {buttonc('empty')}</div> ],
-  // console.log(el2)let
+el2 = [
+  <div key='1' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('onsale')}</div>,
+<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
+    <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
+    <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
+{buttonc('empty')}</div> ]
+  // console.log(el2)
 
+export default function Home() {
   const [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
     <div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ])
+  >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ]),
   // console.log(els)
   // els = [els]
   // console.log(els)
-    // [...e].forEach( (element:any) => element )
-    // Array.prototype.forEach.call(e, child => child) */}
-    //  els.push(divcar([, ]))
+  // [...e].forEach( (element:any) => element )
+  // Array.prototype.forEach.call(e, child => child) */}
+  //  els.push(divcar([, ]))
 
-  const [items, setItems] = React.useState([0, 1, 2, 3, 4])
+  [items, setItems] = React.useState([0, 1, 2, 3, 4])
   let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
   colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
