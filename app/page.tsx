@@ -37,12 +37,12 @@ buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"
   style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
 marginRight: "3em" }} tabIndex={-1}><HandleIcon/></button>,
 
-// Card
+// Card text-black
 buttonc = (t: any, stru = {}) => <Button style={{
   borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
   paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
   marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
-"shadow-medium p-1 text-black" variant="flat" color="default">{ t }</Button>,
+"shadow-medium p-1" variant="flat" color="default">{ t }</Button>,
 
 greens = { color: '#052', backgroundColor: '#04ae5620' },
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
@@ -84,21 +84,8 @@ el2 = [
 <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-{buttonc('empty')}</div> ],
+{buttonc('empty')}</div> ]
   // console.log(el2)
-
-[els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
-    <div id='alsc'
-    >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-  >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>, ...cele(el2) ]),
-  // console.log(els)
-  // els = [els]
-  // console.log(els)
-  // [...e].forEach( (element:any) => element )
-  // Array.prototype.forEach.call(e, child => child) */}
-  //  els.push(divcar([, ]))
-
-[items, setItems] = React.useState([0, 1, 2, 3, 4])
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
@@ -264,7 +251,23 @@ changeBackground = (e:any, h:any, o=0) => {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
 
-export default function Home() { return <div style={{ backgroundColor: 'white' }}>
+export default function Home() {
+
+  const [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
+      <div id='alsc'
+      >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
+   ...cele(el2) ]),
+    // console.log(els)
+    // els = [els]
+    // console.log(els)
+    // [...e].forEach( (element:any) => element )
+    // Array.prototype.forEach.call(e, child => child) */}
+    //  els.push(divcar([, ]))
+
+  [items, setItems] = React.useState([0, 1, 2, 3, 4])
+
+  return <div style={{ backgroundColor: 'white' }}>
     <div style={{width: '4rem'}} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
     " ease-out delay-150 duration-200"}>
