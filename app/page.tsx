@@ -89,9 +89,9 @@ export default function Home() {
   ,<div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
      ,<div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
      ,<div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-  {buttonc('empty')}</div> ],
+  {buttonc('empty')}</div> ]; console.log(el2)
 
-  els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
+  let els = [ <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
     >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card> ]
   console.log(els); els = [els, ...cele(el2)]; console.log(els)
