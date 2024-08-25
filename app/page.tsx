@@ -191,8 +191,8 @@ export default function Home() {
 
       <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
           <Card className="h10 top justify-content-md-center"
-            radius="lg">{ cele(buttonc('+ Add Product Filters')) }
-              {/* <Card className="w90 justify-content-md-center"></Card> */}
+            radius="lg"><Card className="w90 justify-content-md-center"
+            >{ buttonc('+ Add Product Filters') }</Card>
   {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
               {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
         </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
@@ -300,7 +300,7 @@ export default function Home() {
             <path id="Logo2" 
             d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72.95 0,10.98 2.41,19.41 5.56,24.51l-26.48,17.44c-6.8-11.31-10.14-26.15-10.14-43.06 0-30.75 8.44-62.8 24.49-87.55 14.24-21.95 34.79-37.3 58.36-37.3z"/>
             </g>
-            </svg> </div>
+            </svg></div>
 
               <div className=
               "flex justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto">
@@ -309,8 +309,7 @@ export default function Home() {
                 <path fill="white" d="M129.2 31.5c-.6-.1-12.6-.2-12.6-.2s-10.1-9.8-11.1-10.8c-.4-.4-.9-.6-1.4-.6v149.5l45.1-11.2S130.8 33.8 130.7 32.9c-.2-.9-.9-1.3-1.5-1.4z"></path>
                 <path fill="black" d="M79.1 54.7l-5.2 19.6s-5.8-2.7-12.8-2.2c-10.2.6-10.3 7-10.2 8.7.6 8.8 23.6 10.7 24.9 31.2 1 16.2-8.6 27.2-22.4 28.1-16.6 1-25.7-8.7-25.7-8.7l3.5-14.9s9.2 6.9 16.5 6.5c4.8-.3 6.5-4.2 6.3-7-.7-11.4-19.5-10.8-20.7-29.5-1-15.8 9.4-31.8 32.3-33.3 9-.8 13.5 1.5 13.5 1.5z"></path>
                 </svg>
-              </div>
-            </div>
+              </div></div>
 
             {/* setting  */}
             <div className="my-4 pb-4" style={{position: 'absolute', bottom: '0'}}>
@@ -1184,8 +1183,9 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
       <button onClick={() => { console.log(items)
-        els = [...els, cele(buttonc('+ Add Product Filters'))]
-          setItems([...items, items.length]) } }>Reset</button></Container>
+        els = [...els, <Card className="w90 justify-content-md-center"
+        >{buttonc('+ Add Product Filters')}</Card>]
+    setItems([...items, items.length]) } }>Reset</button></Container>
 
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
