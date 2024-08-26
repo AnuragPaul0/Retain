@@ -1182,7 +1182,7 @@ export default function Home() {
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
       <ul><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-        <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+        <Row id='rt' className='r' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
             display: 'flex' }}>
