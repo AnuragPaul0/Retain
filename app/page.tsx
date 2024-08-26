@@ -149,12 +149,13 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-    </Card></Col></Row> : <Col xs lg="2" className="justify-content-md-center" style={{
-      width: '150px', position: 'relative', display: 'flex' }}>
-  <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
-  <Button onClick={ () => myFunction(1) } id='b1' className=
-    { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-    variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+    </Card></Col></Row> : { colum(p) }
+  //   <Col xs lg="2" className="justify-content-md-center" style={{
+  //     width: '150px', position: 'relative', display: 'flex' }}>
+  // <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
+  // <Button onClick={ () => myFunction(1) } id='b1' className=
+  //   { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+  //   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
@@ -191,7 +192,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
     if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
-onMouseEnter={ (e) => changeBackground(e, 'h') }
+    onMouseEnter={ (e) => changeBackground(e, 'h') }
 onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
 
 <Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
@@ -1183,10 +1184,11 @@ export default function Home() {
 
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <ul style={{ padding: "0em 0em 1em 0em" }}><li id='lst'>
+      <ul><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
-          <Col xs lg="4" id='crd' style={{ justifyContent: 'center', display: 'flex' }}>
+          <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
+            display: 'flex' }}>
                   {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
               <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
                 borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
@@ -1239,7 +1241,7 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
 
-      <Row id="addr" className="c2w pb-9 sp">
+    <ul style={{ padding: "0em 0em 1em 0em" }}><li id='lst'><Row id="addr" className="c2w pb-9 sp">
       <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
         fontFamily: 'Recoleta Medium' }}>
       <Button id='btnr' onClick={() => { console.log(items); const il = items.length
@@ -1249,7 +1251,7 @@ export default function Home() {
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-    <Col style={{ width: '67%' }} xs lg="4"></Col></Row>
+    <Col style={{ width: '67%' }} xs lg="4"></Col></Row></li></ul>
 
     {/* greeting <button onClick={ }>Reset</button> */}
     </Container>
