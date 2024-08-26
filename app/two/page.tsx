@@ -669,8 +669,8 @@ export default function Home() {
 
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
-{/* id='scrw' onLoad={ oload }  */}
-        <div style={{ width: '45vw' }}>
+{/* onLoad={ oload }  */}
+        <div id='scrw' style={{ width: '45vw' }}>
           <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
             marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
