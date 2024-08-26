@@ -149,7 +149,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-    </Card></Col></Row> : { colum(p) }
+    </Card></Col></Row> : colum(p)
   //   <Col xs lg="2" className="justify-content-md-center" style={{
   //     width: '150px', position: 'relative', display: 'flex' }}>
   // <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
