@@ -4,7 +4,7 @@
 
 #crd { width: 25vw }
 #w8v { width: 8vw; padding-right: 4vw }
-#cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-left: calc(var(--bs-gutter-x) * 4);
+.cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-left: calc(var(--bs-gutter-x) * 4);
  margin-top: calc(var(--bs-gutter-x) * .5);  padding-top: calc(var(--bs-gutter-x) * 2); }
 
 #lis { background-color: #F7F7F7 }
@@ -16,7 +16,7 @@ div.w90 { width: 90%; align-self: center; height: 70% !important }
 #alsc { align-self: center; margin-bottom: calc(var(--nextui-radius-large) / 2) }
 #sdel { color:red; stroke-width:0.5 }
 nav { width: 20vw }
-.fon { width: fit-content}
+.fon { width: fit-content !important }
 div.wh { width: 150px; height: 176px !important }
 .p5 { padding-right: 5% }
 .fd { flex-direction: column; justify-content: center }
@@ -70,7 +70,8 @@ div.h10 { height: 100% !important }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
 .cb { background-color: #f0f0f0 }
-.h21 { height: 212px }
+/* 212 */
+.h21 { height: 176px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 

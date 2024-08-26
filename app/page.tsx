@@ -8,14 +8,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-const RemovableIcon = () =>
-  <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
-    stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
-"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-    ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-"M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>,
-
-HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
+const HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
   "M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -255,7 +248,7 @@ export default function Home() {
   const relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c)
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 sp pb-9">
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 pb-9">
 
     <Col id='w8v' xs lg="2" className='top df fd'>
   <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -266,15 +259,24 @@ export default function Home() {
             ? arrayRemove(items, index) : items ) }}
           className={"r"+i+" self-center"} style={{ display: "none",
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}><RemovableIcon/></Button></Col></Row>
+  paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+    <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
+  stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
+"M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+  ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+  "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col></Row>
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
     {buttone(i, isDragged)}</Col></Row></Col>
 
-    <Col id='crd' xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
-  <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
-  { imco(i) }{ imco(i) }<Btnco/></Row> },
+{/* id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
+        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } */}
+
+      <Col id='crd' xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
+      <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
+    <Row style={{ overflow: 'auto', justifyContent: 'flex-start'}} className="rw pb-9">
+  { imco(i) }{ imco(i) }<Btnco/></Row></Row> },
 
   [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
       <div id='alsc'
@@ -1191,7 +1193,7 @@ export default function Home() {
         renderItem={({ value, props, index, isDragged, isSelected }) => {
           // console.log(value)
           return <li {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
-              margin: "0.5em 0em", listStyleType: "none", border: "2px solid #CCC",
+              margin: "0.5em 0em 2vw", listStyleType: "none", border: "2px solid #CCC",
               boxShadow: "3px 3px #AAA", color: "#333", borderRadius: "5px",
               cursor: isDragged ? "grabbing" : "inherit",
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
