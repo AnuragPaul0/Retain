@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+#crd { width: 25vw }
+#w8v { width: 8vw; padding-right: 4vw }
+#cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-left: calc(var(--bs-gutter-x) * 4);
+ margin-top: calc(var(--bs-gutter-x) * .5);  padding-top: calc(var(--bs-gutter-x) * 2); }
+
+#lis { background-color: #F7F7F7 }
+
 #addc { zoom: 2; margin-left: 1vw; padding-left: calc(var(--bs-gutter-x) / 4) !important;
   border-radius: 2px; padding-right: calc(var(--bs-gutter-x) / 4) !important  }
 
@@ -9,7 +16,7 @@ div.w90 { width: 90%; align-self: center; height: 70% !important }
 #alsc { align-self: center; margin-bottom: calc(var(--nextui-radius-large) / 2) }
 #sdel { color:red; stroke-width:0.5 }
 nav { width: 20vw }
-#fon { font-family: Recoleta Medium; width: fit-content}
+.fon { width: fit-content}
 div.wh { width: 150px; height: 176px !important }
 .p5 { padding-right: 5% }
 .fd { flex-direction: column; justify-content: center }
@@ -56,7 +63,7 @@ div.h10 { height: 100% !important }
   text-decoration: none;
   cursor: pointer;
 }
-/* .rw { width: calc(var(--cw)*3) } */
+
 .c2w { width: 75% !important }
 .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
@@ -67,8 +74,7 @@ div.h10 { height: 100% !important }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 
-:root { --cw: 15vw;
-  --foreground-rgb: 0, 0, 0;
+:root { --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
