@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#addc { zoom: 2; margin-left: 1vw; padding-left: calc(var(--bs-gutter-x) / 4) !important;
+  border-radius: 2px; padding-right: calc(var(--bs-gutter-x) / 4) !important  }
+
 .w90 { width: 90%; align-self: center; height: 70% !important }
 #alsc { align-self: center; margin-bottom: calc(var(--nextui-radius-large) / 2) }
 #sdel { color:red; stroke-width:0.5 }

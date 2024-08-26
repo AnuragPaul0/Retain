@@ -28,14 +28,15 @@ HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
 
+// HandleIcon
+buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
+  style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
+marginRight: "3em" }} tabIndex={-1}><HandleIcon/></button>,
+
 buttonStyles = { border: "none", margin: 0, padding: 0, width: "auto",
   overflow: "visible",
   cursor: "pointer",
 background: "transparent"},
-
-buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
-  style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab",
-marginRight: "3em" }} tabIndex={-1}><HandleIcon/></button>,
 
 // Card text-black
 buttonc = (t: any, stru = {}) => <Button style={{
@@ -46,7 +47,6 @@ buttonc = (t: any, stru = {}) => <Button style={{
 
 greens = { color: '#052', backgroundColor: '#04ae5620' },
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
-
 
 cele = (d: any) => {
   // console.log(d)
@@ -226,7 +226,29 @@ changeBackground = (e:any, h:any, o=0) => {
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n')
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
-else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }
+else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
+
+imco = (i) => <Col xs lg="2" className="df top w3 justify-content-md-center">
+    <Card isFooterBlurred radius="lg" className="border-none">
+      <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
+        src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
+      <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
+        borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
+"justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+          <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+    >Single Image prduct...</p></CardFooter></Card>
+    <Button id='b1' style={{ display: "none" }} className=
+      {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
+      color="default" radius="lg" size="sm">
+        <svg fill="#000" width="20px" version="1.1"
+          id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier"> <g> <path d=
+      "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+></path></g></g></svg></Button></Col>,
+
+btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center">+</Button>
 
 export default function Home() {
   // r el
@@ -251,7 +273,8 @@ export default function Home() {
     {buttone(i, isDragged)}</Col></Row></Col>
 
     <Col xs lg="4" className='c2w' style={{ fontFamily: 'Recoleta Medium'}}>
-  <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col></Row> },
+  <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>{ imco(i) }
+  { imco(i) }<btnco/></Row> },
 
   [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
       <div id='alsc'
@@ -267,8 +290,7 @@ export default function Home() {
 
   [items, setItems] = React.useState([0, 1, 2, 3, 4])
 
-  return <div style={{ backgroundColor: 'white' }}>
-    <div style={{width: '4rem'}} className={
+  return <div style={{ backgroundColor: 'white' }}><div style={{width: '4rem'}} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
     " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
@@ -702,7 +724,7 @@ export default function Home() {
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier"> <g> <path d=
             "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-        ></path> </g> </g></svg></Button></Col>
+        ></path></g></g></svg></Button></Col>
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{borderLeft: '1px solid #ddd',
           position: 'relative', display: 'flex'}}>
@@ -724,14 +746,12 @@ export default function Home() {
                 <g id="SVGRepo_iconCarrier"> <g> <path d=
             "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
         ></path></g></g></svg></Button></Col>
-{/* paddingLeft: 'calc(var(--bs-gutter-x) * .8)' */}
+
         <Button id="addc" onClick={greeting} className="shadow-medium self-center" style={{
               zoom: '2', fontFamily: 'Recoleta Medium', width: 'fit-content', marginLeft: '1vw',
               paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
               // transition: 'all 0.5s', cursor: 'pointer'
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button>
-  {/* <Col xs lg="1" style={{ width: '5vw', display: 'flex', borderLeft: '1px solid #ddd' }}></Col> */}
-      </Row>
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
 
 
       <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
@@ -1210,7 +1230,7 @@ export default function Home() {
           <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
       </g></svg> */}
       </div><span onClick={ () => myFunction(0) } className="close">&times;</span><div>
-        <p id='fon'>Selecta design to link</p><nav className="navbar navbar-light bg-light">
+        <p>Selecta design to link</p><nav className="fon navbar navbar-light bg-light">
           <form className="container-fluid">
             <div className="input-group">
               <span className="input-group-text" id="basic-addon1">@</span>
