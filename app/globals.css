@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+#lst { padding: 1.5em; margin: 0.5em 0em 2vw; list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw; padding-right: 4vw }
 

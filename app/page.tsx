@@ -1183,56 +1183,55 @@ export default function Home() {
 
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <Row id='rt' className='top sp' style={{
-        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
-        <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
-        <Col xs lg="4" id='crd' style={{ justifyContent: 'center', display: 'flex' }}>
-                {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
-            <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
-              borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
-              paddingRight: '3% !important' }}
-      isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
+      <ul style={{ padding: "0em 0em 1em 0em" }}><li id='lst'>
+        <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+          <Col xs lg="2" id='w8v' className="top"></Col>
+          <Col xs lg="4" id='crd' style={{ justifyContent: 'center', display: 'flex' }}>
+                  {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
+              <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
+                borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
+                paddingRight: '3% !important' }}
+        isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
-      <div style={{ width: '50vw', overflow: 'auto' }}>
-          <Row id='scrw' style={{ width: '45vw', justifyContent: 'flex-start'}}>
-            <Col xs lg="2" className="w3 justify-content-md-center" style={{
-              display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
-                textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
-                borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
-                <Button className='cb' style={{ borderRadius: '4px',
-                paddingLeft: '7px !important', paddingRight: '7px !important' }}
-                ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-              stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              className="lucide lucide-ellipsis-vertical">
-                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-            </svg></Button></Col>
+        <div style={{ width: '50vw', overflow: 'auto' }}>
+            <Row id='scrw' style={{ width: '45vw', justifyContent: 'flex-start'}}>
+              <Col xs lg="2" className="w3 justify-content-md-center" style={{
+                display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
+                  textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
+                  borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                  isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+                  <Button className='cb' style={{ borderRadius: '4px',
+                  paddingLeft: '7px !important', paddingRight: '7px !important' }}
+                  ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                className="lucide lucide-ellipsis-vertical">
+                  <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+              </svg></Button></Col>
 
-            <Col xs lg="2" className="bl top df w3 justify-content-md-center">
-              <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-                textAlign: 'center',
-                borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
-              <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-                paddingRight: '7px !important' }}
-                ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-              stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              className="lucide lucide-ellipsis-vertical">
-                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col></Row></div></Row>
+              <Col xs lg="2" className="bl top df w3 justify-content-md-center">
+                <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+                  textAlign: 'center',
+                  borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                  isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
+                <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+                  paddingRight: '7px !important' }}
+                  ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                className="lucide lucide-ellipsis-vertical">
+                  <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+      </svg></Button></Col></Row></div></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
-        renderList={({ children, props, isDragged }) => ( <ul
+        renderList={({ children, props, isDragged }) => <ul
             {...props} style={{ padding: "0em 0em 1em 0em",
-              cursor: isDragged ? "grabbing" : "inherit",
-            }}>{children}</ul>)}
+              cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
+
         renderItem={({ value, props, index, isDragged, isSelected }) => {
           // console.log(value)
-          return <li {...props} key={props.key} style={{ ...props.style, padding: "1.5em",
-              margin: "0.5em 0em 2vw", listStyleType: "none", borderRadius: "5px",
+          return <li id='lst' {...props} key={props.key} style={{ ...props.style,
               cursor: isDragged ? "grabbing" : "inherit",
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
             }}>{ relem(value+1, isDragged, els[value], index) }</li> }}/>
