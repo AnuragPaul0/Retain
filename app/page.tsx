@@ -161,7 +161,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
   if (!f) { a = document.querySelectorAll('#scrw')
     //  as HTMLElement
     if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
-    tr = document.querySelector('#rt.r')
+    tr = document.querySelector('#scrw.r')
     // if (tr) { node = tr.lastChild
     //   // console.log(node)
     // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
@@ -357,8 +357,7 @@ export default function Home() {
 
       <Container id='le' style={{ maxWidth: '35vw' }} className="rounded-large">
 
-      <Row id='rt' className='sp' style={{ borderRight: '1px solid #eee',
-        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <Row id='rt' className='top sp' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
         <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex',
             fontFamily: 'Recoleta Medium' }}>
@@ -1095,7 +1094,7 @@ export default function Home() {
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-    <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
+      <Row id='r2' style={{ justifyContent: 'flex-start !important' }}
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
   
@@ -1181,8 +1180,8 @@ export default function Home() {
 
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <ul><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-        <Row id='rt' className='r' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+      <ul id='pl0'><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+        <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
             display: 'flex' }}>
@@ -1193,7 +1192,7 @@ export default function Home() {
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
         <div style={{ width: '50vw', overflow: 'auto' }}>
-            <Row id='scrw' style={{ width: '45vw', justifyContent: 'flex-start'}}>
+            <Row id='scrw' className='r' style={{ width: '45vw', justifyContent: 'flex-start'}}>
               <Col xs lg="2" className="w3 justify-content-md-center" style={{
                 display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                   textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
