@@ -159,7 +159,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
     //  as HTMLElement
-    if (a) a.forEach((e) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
+    if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
     tr = document.querySelector('#rt.r')
     // if (tr) { node = tr.lastChild
     //   // console.log(node)
@@ -170,7 +170,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     // tr.appendChild(clone)
     // }(f ? ' : 'after') + '
 
-    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e: any) => changeBackground(e, 'h') }
+    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="justify-content-md-center"
       style={{ width: '100%', display: 'flex' }}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
