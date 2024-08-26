@@ -169,7 +169,8 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 
     // tr.appendChild(clone)
     // }(f ? ' : 'after') + '
-    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'h') }
+
+    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e: any) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="justify-content-md-center"
       style={{ width: '100%', display: 'flex' }}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
@@ -1239,10 +1240,21 @@ export default function Home() {
             {/* Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
-      <button onClick={() => { console.log(items); const il = items.length
+
+      <Row id="addr" className="c2w pb-9 sp">
+      <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
+        fontFamily: 'Recoleta Medium' }}>
+      <Button id='btnr' onClick={() => { console.log(items); const il = items.length
         setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters') }</Card> ]); console.log(els)
-    setItems([...items, il]) } }>Reset</button></Container>
+    setItems([...items, il]) }} className="shadow-medium self-center" style={{
+          fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
+          borderRadius: '2px',
+          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
+    <Col style={{ width: '67%' }} xs lg="4"></Col></Row>
+
+    {/* greeting <button onClick={ }>Reset</button> */}
+    </Container>
 
     <div id="imodal" className="modal">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
