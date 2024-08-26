@@ -283,7 +283,7 @@ export default function Home() {
 
 {/* id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h', 1) } */}
-      <Col id='top crd' xs lg="4">
+      <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <div style={{ width: '50vw', overflow: 'auto' }}>
@@ -1186,8 +1186,7 @@ export default function Home() {
       <Row id='rt' className='top sp' style={{
         marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
-        <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex',
-            fontFamily: 'Recoleta Medium' }}>
+        <Col xs lg="4" id='crd' style={{ justifyContent: 'center', display: 'flex' }}>
                 {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
             <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
