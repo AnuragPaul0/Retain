@@ -59,10 +59,10 @@ el2 = [
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
-//  onMouseEnter={ (e) => changeBackground(e, 'n') }
-//     onMouseLeave={ (e) => changeBackground(e, 'n', 1) }
-colum = (o:any) => <Col xs lg="2" className="w3 bl justify-content-md-center" style={{
-  position: 'relative', display: 'flex' }}>
+
+colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'n') }
+    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="w3 top justify-content-md-center"
+    style={{ position: 'relative', display: 'flex' }}>
   <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
   <Button onClick={ () => myFunction(1) } id='b1' className=
     { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
@@ -157,8 +157,8 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
   b = 'beforebegin'
-  if (!f) { a = document.querySelector('#scrw') as HTMLElement
-    if (a) a.style.width = +a.style.width.slice(0, -2)+15+'vw'
+  if (!f) { a = document.querySelectorAll('#scrw') as HTMLElement
+    if (a) a.forEach((e) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
     tr = document.querySelector('#rt.r')
     // if (tr) { node = tr.lastChild
     //   // console.log(node)
@@ -221,7 +221,7 @@ changeBackground = (e:any, h:any, o=0) => {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 
-imco = (i: any) => <Col xs lg="2" className="df top w3 justify-content-md-center">
+imco = (i: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">
       <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
         src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
@@ -244,8 +244,17 @@ imco = (i: any) => <Col xs lg="2" className="df top w3 justify-content-md-center
 Btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center">+</Button>
 
 export default function Home() {
+  const [els, setels] = React.useState([
+    <Card key='0' className="w90 justify-content-md-center"><div id='alsc'
+      >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
+    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
+   ...cele(el2) ]),
+    // console.log(els); els = [els]; console.log(els)
+
+  [items, setItems] = React.useState([0, 1, 2, 3, 4]),
+
   // r el
-  const relem = (i: any, isDragged: any, c: any, index: any) => {
+  relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c)
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 pb-9">
@@ -272,26 +281,12 @@ export default function Home() {
 
 {/* id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
         onMouseLeave={ (e) => changeBackground(e, 'h', 1) } */}
-
-      <Col id='crd' xs lg="4" style={{ fontFamily: 'Recoleta Medium'}}>
+      <Col id='top crd' xs lg="4">
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
+
       <div style={{ width: '50vw', overflow: 'auto' }}>
-        <Row id='scrw' style={{ width: '45vw', justifyContent: 'flex-start'}}>
-  { imco(i) }{ imco(i) }<Btnco/></Row></div></Row> },
-
-  [els, setels] = React.useState([ <Card key='0' className="w90 justify-content-md-center">
-      <div id='alsc'
-      >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
-    >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
-   ...cele(el2) ]),
-    // console.log(els)
-    // els = [els]
-    // console.log(els)
-    // [...e].forEach( (element:any) => element )
-    // Array.prototype.forEach.call(e, child => child) */}
-    //  els.push(divcar([, ]))
-
-  [items, setItems] = React.useState([0, 1, 2, 3, 4])
+        <Row id='scrw' style={{ width: '37vw', justifyContent: 'flex-start'}}>
+  { imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{width: '4rem'}} className={
@@ -1185,7 +1180,49 @@ export default function Home() {
     ></path></g></g></svg></Button></Col></Row></Container>
 
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
-          <List values={items} onChange={({ oldIndex, newIndex }) =>
+
+      <Row id='rt' className='top sp' style={{
+        marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
+        <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
+        <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex',
+            fontFamily: 'Recoleta Medium' }}>
+                {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
+            <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
+              borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
+              paddingRight: '3% !important' }}
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
+
+      <div style={{ width: '50vw', overflow: 'auto' }}>
+          <Row id='scrw' style={{ width: '45vw', justifyContent: 'flex-start'}}>
+            <Col xs lg="2" className="w3 justify-content-md-center" style={{
+              display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
+                textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
+                borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+                <Button className='cb' style={{ borderRadius: '4px',
+                paddingLeft: '7px !important', paddingRight: '7px !important' }}
+                ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              className="lucide lucide-ellipsis-vertical">
+                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+            </svg></Button></Col>
+
+            <Col xs lg="2" className="bl top df w3 justify-content-md-center">
+              <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+                textAlign: 'center',
+                borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
+              <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+                paddingRight: '7px !important' }}
+                ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              className="lucide lucide-ellipsis-vertical">
+                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+      </svg></Button></Col></Row></div></Row>
+
+        <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
         renderList={({ children, props, isDragged }) => ( <ul
             {...props} style={{ padding: "0em 0em 1em 0em",
