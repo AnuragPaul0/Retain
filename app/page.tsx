@@ -157,7 +157,8 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
 
   b = 'beforebegin'
-  if (!f) { a = document.querySelectorAll('#scrw') as HTMLElement
+  if (!f) { a = document.querySelectorAll('#scrw')
+    //  as HTMLElement
     if (a) a.forEach((e) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
     tr = document.querySelector('#rt.r')
     // if (tr) { node = tr.lastChild
