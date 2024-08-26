@@ -170,9 +170,9 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 
     // tr.appendChild(clone)
     // }(f ? ' : 'after') + '
-
-    tr?.append(relm(<Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="justify-content-md-center"
+//  onMouseEnter={ (e) => changeBackground(e, 'h') }
+//       onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
+    tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
       style={{ width: '100%', display: 'flex' }}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
       textAlign: 'center',
@@ -282,14 +282,11 @@ export default function Home() {
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
     {buttone(i, isDragged)}</Col></Row></Col>
 
-{/* id='r1' onMouseEnter={ (e) => changeBackground(e, 'h') }
-        onMouseLeave={ (e) => changeBackground(e, 'h', 1) } */}
       <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <div style={{ width: '50vw', overflow: 'auto' }}>
-        <Row id='scrw' style={{ width: '37vw', justifyContent: 'flex-start'}}>
-  { imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
+  <Row id='scrw'>{ imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{width: '4rem'}} className={
@@ -667,9 +664,9 @@ export default function Home() {
 
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
-{/* id='scrw' onLoad={ oload }  */}
+{/* id='scrw' onLoad={ oload }  r */}
         <div style={{ width: '45vw' }}>
-          <Row id='rt' className='rw r' style={{ justifyContent: 'flex-start',
+          <Row id='rt' className='rw' style={{ justifyContent: 'flex-start',
             marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
 
           <Col xs lg="2" className="w3 justify-content-md-center" style={{
