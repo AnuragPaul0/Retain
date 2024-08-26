@@ -286,7 +286,7 @@ export default function Home() {
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <div style={{ width: '50vw', overflow: 'auto' }}>
-  <Row id='scrw'>{ imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
+  <Row id='scrw' style={{ width: '35vw' }}>{ imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{width: '4rem'}} className={
@@ -663,7 +663,7 @@ export default function Home() {
 
 
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
-{/* id='scrw' onLoad={ oload }  r */}
+{/* r */}
         <div style={{ width: '45vw' }}>
           <Row id='rt' className='rw' style={{ justifyContent: 'flex-start',
             marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
@@ -1192,7 +1192,7 @@ export default function Home() {
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
         <div style={{ width: '50vw', overflow: 'auto' }}>
-            <Row id='scrw' className='r' style={{ width: '45vw', justifyContent: 'flex-start'}}>
+            <Row id='scrw' className='r' style={{ width: '35vw' }}>
               <Col xs lg="2" className="w3 justify-content-md-center" style={{
                 display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                   textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
