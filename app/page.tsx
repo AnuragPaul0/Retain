@@ -30,7 +30,7 @@ buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"
 background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
 </button>,
 
-cnr = { width: '49vw', overflow: 'auto' },
+cnr = { width: '51vw', overflow: 'auto' },
 
 // Card text-black
 buttonc = (t: any, s = '') => <Button id='cbt' className=
@@ -1244,14 +1244,14 @@ export default function Home() {
                   ignored and not start the drag and drop.*/}
 
   <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-    <Row><Col id='w8v' xs lg="2" className='top df fd'><Button id='btnr' style={{ zoom: '2' }}
+    <Row><Col id='w8v' xs lg="2" className='top df fd'><Button id='btnr'
         onClick={() => { console.log(items); const il = items.length
           cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters') }</Card> ]); console.log(els)
     setItems([...items, il]) }} className="shadow-medium self-center" style={{
           paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
-          borderRadius: '2px',
+          borderRadius: '2px', zoom: '2',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
 
     <Col id='crd' xs lg="4" className='top'></Col><div style={{ ...cnr }}></div></Row></li></ul>
