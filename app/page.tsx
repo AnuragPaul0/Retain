@@ -49,13 +49,12 @@ el2 = [
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
-//  onMouseEnter={ (e) => changeBackground(e, 'n') }
-//     onMouseLeave={ (e) => changeBackground(e, 'n', 1) }
-colum = (o:any) => <Col xs lg="2" className="w3 top justify-content-md-center"
+colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { console.log('a'); changeBackground(e, 'n')} }
+    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="w3 top justify-content-md-center"
     style={{ position: 'relative', display: 'flex' }}>
   <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
   <Button onClick={ () => myFunction(1) } id='b1' className=
-    { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
+    { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
 variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>,
 
 // window.addEventListener("load", () => {
@@ -94,7 +93,7 @@ inim = (e:any, h:any, o=0) => {
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
 relm = (rel:any, c='') => { container = document.createElement('div')
-  if (c != '') container.className+=' '+c
+  if (c != '') container.classList.add(c)
 createRoot(container).render(rel)
 // console.log('c', container, Object.keys(container),
 // Object.values(container), typeof(container), container.children, container.children[0])
@@ -174,7 +173,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
     className="lucide lucide-ellipsis-vertical">
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button></Col>, 'pl0 w3 df top' ) )
+    </svg></Button></Col>, 'w3 df top' ) )
     // console.log(b, relm(k))
     document.querySelectorAll('#addc').forEach( (e) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, 'pl0 sp df w3') ) ) }
@@ -1183,7 +1182,8 @@ export default function Home() {
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <ul onLoad={() => console.log('l')} id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+      <ul onLoad={ () => console.log('l') } id='mb0' className="pl0">
+        <li style={{ padding: "0 1.5em", listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
@@ -1221,7 +1221,7 @@ export default function Home() {
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   className="lucide lucide-ellipsis-vertical">
                     <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-        </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
+      </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
