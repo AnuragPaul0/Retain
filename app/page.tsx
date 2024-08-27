@@ -92,8 +92,8 @@ inim = (e:any, h:any, o=0) => {
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
-relm = (rel:any, c=[]) => { container = document.createElement('div')
-  if (c) container.classList.add(...c)
+relm = (rel:any, c = ['']) => { container = document.createElement('div')
+  if (c[0] != '') container.classList.add(...c)
 createRoot(container).render(rel)
 // console.log('c', container, Object.keys(container),
 // Object.values(container), typeof(container), container.children, container.children[0])
