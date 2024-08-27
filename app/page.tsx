@@ -55,7 +55,7 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ]
-  // console.log(el2)
+// console.log(el2)
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
@@ -68,7 +68,7 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'n')
     { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
 variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>,
 
-  // window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
 //     a = document.querySelector("#scrw > #r1"),
 //     a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
 //     a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
@@ -275,69 +275,45 @@ iml = [ <Image key='0' alt="Woman" className="object-cover opacity-1" height={15
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
   </div>, <Image key='4' alt="Woman" className="object-cover opacity-1" height={150} width={150}
-    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ],
+src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ],
 
-dict = [ [<Image key='0' alt="Woman" className="object-cover opacity-1" height={150} width={150}
-  src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
-//  style={{ height: '150px', width: '150px',
-//     justifyContent: 'flex-start !important' }}
-  <div key='1' className='df'>
-      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-          borderTopRightRadius: 0
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
-        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
-    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
-  "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-  width={100} /></Col></div> ],
+d2 = (n: any) => <div key={ n } className='df'>
+  <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+      <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
+        }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+"https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
+        />
+      <Image style={{ borderRadius: 0
+        }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+        "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
+        />
+    <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
+        }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+      "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+<Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+  <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+        }} alt="Woman" className="object-cover opacity-1" height={150} src=
+    "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+width={100} /></Col></div>,
 
-  <div key='2' className='df'>
-      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-          borderTopRightRadius: 0
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg"/>
-        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "	https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
-    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
-  "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>,
+dict = [ iml[0], d2(1), d2(2), d2(3), iml[4] ],
+// console.log(dict, dict[0][0], dict[1], dict[2])let
 
-  <div key='3' className='df'>
-    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
-        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
-    width={100} /></Col>
-    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-          borderBottomRightRadius: 0
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
-      <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
-          borderTopRightRadius: 0,
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-        "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-  </div>, <Image key='4' alt="Woman" className="object-cover opacity-1" height={150} width={150}
-    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
-  ] as Element[][]
-console.log(dict, dict[0][0], dict[1], dict[2])
+sing = 'Single Image prduct',
 
-let imco = (i: any, s: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
-    <Card isFooterBlurred radius="lg" className="border-none">{ iml[i] }
+cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
+['Multi Image - new arr', '4 Images - new arrival'],
+['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
+
+imco = (i: any, im = iml, c=0) =>
+<Col xs lg="2" className="relative df top w3 justify-content-md-center">
+    <Card isFooterBlurred radius="lg" className="border-none">{ im[i] }
       <CardFooter id='cfo' className=
         { "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
           " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-          <p id='mb0' className="text-tiny">{s + '...'}</p></CardFooter></Card>
+          <p id='mb0' className="text-tiny">{cfo[i][c] + '...'}</p></CardFooter></Card>
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
       color="default" radius="lg" size="sm">
@@ -391,8 +367,7 @@ export default function Home() {
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div style={{ ...cnr }}>
-        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1, 'Single Image prduct') }
-          { imco(i-1, 'Single Image prduct') }<Btnco/></Row></div>
+        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }<Btnco/></Row></div>
   </ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
@@ -880,28 +855,7 @@ export default function Home() {
         ></path></g></g></svg></Button></Col>
 
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-          display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
-            <div style={{ display: 'flex', height: '150px', width: '150px',
-              justifyContent: 'flex-start !important' }}>
-              <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                  <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-                    borderTopRightRadius: 0,
-                    }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-    "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                    />
-                  <Image style={{ borderRadius: 0
-                    }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                    "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                    />
-                <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-                    borderTopRightRadius: 0,
-                    }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                  "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
-            <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-              <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                    }} alt="Woman" className="object-cover opacity-1" height={150} src=
-                "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-            width={100} /></Col></div>
+          display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">{ dict[1] }
             <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
               paddingLeft: '0 !important',
               paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
