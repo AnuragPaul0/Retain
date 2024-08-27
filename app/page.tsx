@@ -156,7 +156,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
   // <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
   // <Button onClick={ () => myFunction(1) } id='b1' className=
   //   { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-  //   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>
+  //   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>bl 
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
@@ -188,7 +188,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     </svg></Button></Col>, 'pl0 w3 df top' ) )
     // console.log(b, relm(k))
     document.querySelectorAll('#addc').forEach( (e) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
+  e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df w3') ) ) }
   else { a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
