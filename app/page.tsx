@@ -329,7 +329,7 @@ dict = [ [<Image key='0' alt="Woman" className="object-cover opacity-1" height={
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
   </div>, <Image key='4' alt="Woman" className="object-cover opacity-1" height={150} width={150}
     src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ]
-console.log(dict, dict[0], dict[1], dict[0][0], dict[2])
+console.log(dict, dict[0], dict[1], dict[2])
 
 let imco = (i: any, s: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ iml[i] }
