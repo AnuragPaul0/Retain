@@ -55,7 +55,6 @@ el2 = [
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
-
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'n') }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="w3 top justify-content-md-center"
     style={{ position: 'relative', display: 'flex' }}>
@@ -167,7 +166,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     // tr.appendChild(clone)
     // }(f ? ' : 'after') + '
 //  onMouseEnter={ (e) => changeBackground(e, 'h') }
-//       onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
+//   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
     tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
       style={{ width: '100%', display: 'flex' }}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
@@ -181,7 +180,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     className="lucide lucide-ellipsis-vertical">
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button></Col>, 'pl0 w3 df top' ) )
-    // console.log(b, relm(k))bl 
+    // console.log(b, relm(k))
     document.querySelectorAll('#addc').forEach( (e) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, 'pl0 sp df w3') ) ) }
   else { a = document.querySelector('#addr')
@@ -203,7 +202,7 @@ onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{
 </Col></Row>)), p++ } },
 
 changeBackground = (e:any, h:any, o=0) => {
-  // console.log(e)
+  console.log(e)
   parent = e.target
   while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
   // console.log(parent)
@@ -304,7 +303,7 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
 
 imco = (i: any, im = iml, c=0) =>
-<Col xs lg="2" className="relative df top w3 justify-content-md-center">
+  <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ im[i] }
       <CardFooter id='cfo' className=
         { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
@@ -321,7 +320,8 @@ imco = (i: any, im = iml, c=0) =>
       "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button></Col>,
 
-Btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center">+</Button>
+Btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center"
+>+</Button>
 
 export default function Home() {
   const [els, setels] = React.useState([
@@ -1242,7 +1242,7 @@ export default function Home() {
                   ignored and not start the drag and drop.*/}
 
   <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-    <Row><Col id='w8v' xs lg="2" className='top df fd'><Button id='btnr'
+    <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={() => { console.log(items); const il = items.length
           cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
@@ -1252,8 +1252,7 @@ export default function Home() {
           borderRadius: '2px', zoom: '2',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
 
-    <Col id='crd' xs lg="4" className='top'></Col><div style={{ ...cnr }}></div></Row></li></ul>
-
+    <Col id='crd' xs lg="4"></Col><div style={{ ...cnr }}></div></Row></li></ul>
     </Container></ScrollSync>
 
     <div id="imodal" className="modal">
