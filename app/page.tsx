@@ -32,6 +32,8 @@ buttonStyles = { border: "none", margin: 0, padding: 0, width: "auto",
   cursor: "pointer",
 background: "transparent"},
 
+cnr = { width: '49vw', overflow: 'auto' },
+
 // Card text-black
 buttonc = (t: any, stru = {}) => <Button style={{
   borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
@@ -259,9 +261,9 @@ export default function Home() {
 
   // r el
   relem = (i: any, isDragged: any, c: any, index: any) => {
-    // console.log(c)
+    // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21 pb-9">
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
 
     <Col id='w8v' xs lg="2" className='top df fd'>
   <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -286,7 +288,7 @@ export default function Home() {
       <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <ScrollSyncPane><div style={{ width: '50vw', overflow: 'auto' }}>
+      <ScrollSyncPane><div style={{ ...cnr }}>
         <Row id='scrw' style={{ width: '35vw' }}>{ imco(i) }{ imco(i) }<Btnco/></Row></div>
   </ScrollSyncPane></Row> }
 
@@ -361,9 +363,7 @@ export default function Home() {
 
       <Row id='rt' className='top sp' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
         <Col xs lg="2" style={{ borderRight: '1px solid #eee' }}></Col>
-        <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex',
-            fontFamily: 'Recoleta Medium' }}>
-                {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
+        <Col xs lg="4" className='c2w' style={{ justifyContent: 'center', display: 'flex' }}>
             <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
               borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
               paddingRight: '3% !important' }}
@@ -1187,41 +1187,40 @@ export default function Home() {
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
             display: 'flex' }}>
-                  {/* blockSize: 'fit-content', , width: 'fit-content' width: '50%',*/}
               <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
                 borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
                 paddingRight: '3% !important' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
-      <ScrollSyncPane><div style={{ width: '50vw', overflow: 'auto' }}>
-            <Row id='scrw' className='r' style={{ width: '35vw' }}>
-              <Col xs lg="2" className="w3 justify-content-md-center" style={{
-                display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
-                  textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
-                  borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                  isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
-                  <Button className='cb' style={{ borderRadius: '4px',
-                  paddingLeft: '7px !important', paddingRight: '7px !important' }}
-                  ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-                stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                className="lucide lucide-ellipsis-vertical">
-                  <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-              </svg></Button></Col>
+        <ScrollSyncPane><div style={{ ...cnr }}>
+              <Row id='scrw' className='r' style={{ width: '35vw' }}>
+                <Col xs lg="2" className="w3 justify-content-md-center" style={{
+                  display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
+                    textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
+                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                    isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+                    <Button className='cb' style={{ borderRadius: '4px',
+                    paddingLeft: '7px !important', paddingRight: '7px !important' }}
+                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  className="lucide lucide-ellipsis-vertical">
+                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                </svg></Button></Col>
 
-              <Col xs lg="2" className="bl top df w3 justify-content-md-center">
-                <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-                  textAlign: 'center',
-                  borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                  isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
-                <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-                  paddingRight: '7px !important' }}
-                  ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-                stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                className="lucide lucide-ellipsis-vertical">
-                  <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
+                <Col xs lg="2" className="bl top df w3 justify-content-md-center">
+                  <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+                    textAlign: 'center',
+                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                    isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
+                  <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+                    paddingRight: '7px !important' }}
+                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  className="lucide lucide-ellipsis-vertical">
+                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+        </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
@@ -1239,7 +1238,7 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
 
-  <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+  <ul id='mb0' className="pb-5 pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
     <Row id="addr" className="c2w pb-9 sp">
       <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
         fontFamily: 'Recoleta Medium' }}>
