@@ -186,7 +186,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     className="lucide lucide-ellipsis-vertical">
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button></Col>, 'pl0 w3 df top' ) )
-    // console.log(b, relm(k))
+    // console.log(b, relm(k))bl 
     document.querySelectorAll('#addc').forEach( (e) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df w3') ) ) }
   else { a = document.querySelector('#addr')
