@@ -1239,7 +1239,8 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
 
-    <ul style={{ padding: "0em 0em 1em 0em" }}><li id='lst'><Row id="addr" className="c2w pb-9 sp">
+  <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+    <Row id="addr" className="c2w pb-9 sp">
       <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
         fontFamily: 'Recoleta Medium' }}>
       <Button id='btnr' onClick={() => { console.log(items); const il = items.length
