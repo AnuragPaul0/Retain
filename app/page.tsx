@@ -49,8 +49,9 @@ el2 = [
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
-colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => changeBackground(e, 'n') }
-    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="w3 top justify-content-md-center"
+//  onMouseEnter={ (e) => changeBackground(e, 'n') }
+//     onMouseLeave={ (e) => changeBackground(e, 'n', 1) }
+colum = (o:any) => <Col xs lg="2" className="w3 top justify-content-md-center"
     style={{ position: 'relative', display: 'flex' }}>
   <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
   <Button onClick={ () => myFunction(1) } id='b1' className=
@@ -1182,7 +1183,7 @@ export default function Home() {
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+      <ul onLoad={() => console.log('l')} id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
