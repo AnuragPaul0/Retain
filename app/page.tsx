@@ -331,7 +331,7 @@ dict = [ [<Image key='0' alt="Woman" className="object-cover opacity-1" height={
     src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ]
 console.log(dict, dict[0], dict[1], dict[0][0], dict[2])
 
-imco = (i: any, s: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
+let imco = (i: any, s: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ iml[i] }
       <CardFooter id='cfo' className=
         { "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
