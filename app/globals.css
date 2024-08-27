@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#cbt { border-radius: calc(var(--nextui-radius-medium) / 3); padding-right: .4rem !important;
+  padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
+
+.grb { color: #052; background-color: #04ae5620 }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
   border-top-left-radius: var(--nextui-radius-large) }
 

@@ -35,13 +35,10 @@ background: "transparent"},
 cnr = { width: '49vw', overflow: 'auto' },
 
 // Card text-black
-buttonc = (t: any, stru = {}) => <Button style={{
-  borderRadius: 'calc(var(--nextui-radius-medium) / 3)',
-  paddingRight: '.4rem !important', paddingLeft: '.4rem !important',
-  marginRight: 'calc(var(--nextui-radius-large) / 2)', ...stru }} className=
-"shadow-medium p-1" variant="flat" color="default">{ t }</Button>,
+buttonc = (t: any, s = '') => <Button id='cbt' className=
+{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button>,
 
-greens = { color: '#052', backgroundColor: '#04ae5620' },
+greens = 'grb',
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
 
 cele = (d: any) => {
@@ -280,6 +277,60 @@ iml = [ <Image key='0' alt="Woman" className="object-cover opacity-1" height={15
   </div>, <Image key='4' alt="Woman" className="object-cover opacity-1" height={150} width={150}
     src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ],
 
+dict = [ [<Image key='0' alt="Woman" className="object-cover opacity-1" height={150} width={150}
+  src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
+//  style={{ height: '150px', width: '150px',
+//     justifyContent: 'flex-start !important' }}
+  <div key='1' className='df'>
+      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+          borderTopRightRadius: 0
+          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+          "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
+        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+            borderTopRightRadius: 0,
+            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+          "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+            }} alt="Woman" className="object-cover opacity-1" height={150} src=
+  "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+  width={100} /></Col></div> ],
+
+  <div key='2' className='df'>
+      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+          borderTopRightRadius: 0
+          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+          "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg"/>
+        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+            borderTopRightRadius: 0,
+            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+          "	https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
+    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+            }} alt="Woman" className="object-cover opacity-1" height={150} src=
+  "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>,
+
+  <div key='3' className='df'>
+    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+      <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
+            }} alt="Woman" className="object-cover opacity-1" height={150} src=
+        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
+    width={100} /></Col>
+    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+        <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+          borderBottomRightRadius: 0
+          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+          "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
+      <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
+          borderTopRightRadius: 0,
+          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+        "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
+  </div>, <Image key='4' alt="Woman" className="object-cover opacity-1" height={150} width={150}
+    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/> ]
+console.log(dict, dict[0], dict[1], dict[0][0], dict[2])
+
 imco = (i: any, s: any) => <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ iml[i] }
       <CardFooter id='cfo' className=
@@ -339,8 +390,8 @@ export default function Home() {
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div style={{ ...cnr }}>
-        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i, 'Single Image prduct') }
-          { imco(i, 'Single Image prduct') }<Btnco/></Row></div>
+        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1, 'Single Image prduct') }
+          { imco(i-1, 'Single Image prduct') }<Btnco/></Row></div>
   </ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
