@@ -1238,10 +1238,9 @@ export default function Home() {
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
 
-  <ul id='mb0' className="pb-5 pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-    <Row id="addr" className="c2w pb-9 sp">
-      <Col id="ar" xs lg="2" className="text-center" style={{ padding: 0, zoom: '2',
-        fontFamily: 'Recoleta Medium' }}>
+  <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+    {/* <Row id="addr" className="c2w pb-9 sp"> id="ar" */}
+      <Col id='w8v' xs lg="2" style={{ padding: 0, zoom: '2' }}>
       <Button id='btnr' onClick={() => { console.log(items); const il = items.length
         setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters') }</Card> ]); console.log(els)
@@ -1249,7 +1248,8 @@ export default function Home() {
           fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-    <Col style={{ width: '67%' }} xs lg="4"></Col></Row></li></ul>
+    {/* <Col style={{ width: '67%' }} xs lg="4"></Col></Row> */}
+    </li></ul>
 
     {/* greeting <button onClick={ }>Reset</button> */}
     </Container></ScrollSync>
