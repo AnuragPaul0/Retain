@@ -1,4 +1,5 @@
 'use client'
+import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
 import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
@@ -184,7 +185,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
     className="lucide lucide-ellipsis-vertical">
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button></Col>, 'w3 df top' ) )
+    </svg></Button></Col>, 'pl0 w3 df top' ) )
     // console.log(b, relm(k))
     document.querySelectorAll('#addc').forEach( (e) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df bl w3') ) ) }
@@ -285,8 +286,9 @@ export default function Home() {
       <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <div style={{ width: '50vw', overflow: 'auto' }}>
-  <Row id='scrw' style={{ width: '35vw' }}>{ imco(i) }{ imco(i) }<Btnco/></Row></div></Row> }
+      <ScrollSyncPane><div style={{ width: '50vw', overflow: 'auto' }}>
+        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i) }{ imco(i) }<Btnco/></Row></div>
+  </ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{width: '4rem'}} className={
@@ -1180,7 +1182,7 @@ export default function Home() {
 
     <Container id='lis' style={{ maxWidth: '88vw' }} className="cnr rounded-large">
 
-      <ul id='pl0'><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+      <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
@@ -1223,9 +1225,9 @@ export default function Home() {
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
-        renderList={({ children, props, isDragged }) => <ul
+        renderList={({ children, props, isDragged }) => <ScrollSync><ul
             {...props} style={{ padding: "0em 0em 1em 0em",
-              cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
+              cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul></ScrollSync> }
 
         renderItem={({ value, props, index, isDragged, isSelected }) => {
           // console.log(value)
