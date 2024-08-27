@@ -6,7 +6,7 @@
   padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
 
 .grb { color: #052; background-color: #04ae5620 }
-#cfo { border-bottom-right-radius: var(--nextui-radius-large);
+#cfo { padding-right: 0 !important; border-bottom-right-radius: var(--nextui-radius-large);
   border-top-left-radius: var(--nextui-radius-large) }
 
 #mb0 { margin-bottom: 0 }
@@ -15,7 +15,6 @@
 #lst { padding: 1.5em; margin: 0.5em 0em 2vw; list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
-/* ; padding-right: 4vw */
 .cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-top: calc(var(--bs-gutter-x) * .5); 
   margin-left: calc(var(--bs-gutter-x) * 4) !important; padding-top: calc(var(--bs-gutter-x) * 2) }
 

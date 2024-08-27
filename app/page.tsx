@@ -24,13 +24,11 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 
 // HandleIcon
 buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
-  style={{ ...buttonStyles, cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
-</button>,
-
-buttonStyles = { border: "none", margin: 0, padding: 0, width: "auto",
+  style={{ border: "none", margin: 0, padding: 0, width: "auto",
   overflow: "visible",
   cursor: "pointer",
-background: "transparent"},
+background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
+</button>,
 
 cnr = { width: '49vw', overflow: 'auto' },
 
@@ -311,7 +309,7 @@ imco = (i: any, im = iml, c=0) =>
 <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ im[i] }
       <CardFooter id='cfo' className=
-        { "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
+        { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
           " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
           <p id='mb0' className="text-tiny">{cfo[i][c] + '...'}</p></CardFooter></Card>
     <Button id='b1' style={{ display: "none" }} className=
@@ -347,7 +345,6 @@ export default function Home() {
   <Row style={{ height: '25%' }} className="justify-content-md-center">
     <Col className="justify-content-md-center" style={{ alignContent: 'end',
       display: 'grid' }}>
-        {/* <Button onClick={} style={buttonStyles}></button> */}
         <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
             ? arrayRemove(items, index) : items ) }}
           className={"r"+i+" self-center"} style={{ display: "none",
@@ -837,11 +834,10 @@ export default function Home() {
         <Col xs lg="2" className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
           display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >{ iml[1] }
             <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-              paddingLeft: '0 !important',
               paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-    "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-              ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
+    "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+              ><p className="text-tiny" style={{ marginBottom: 0 }}
           >Multi Image - on Sale</p></CardFooter></Card>
             <Button id='b1' style={{ display: "none" }} className=
             "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
@@ -1248,19 +1244,18 @@ export default function Home() {
                   ignored and not start the drag and drop.*/}
 
   <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
-    {/* <Row id="addr" className="c2w pb-9 sp"> id="ar" */}
-      <Col id='w8v' xs lg="2" style={{ padding: 0, zoom: '2' }}>
-      <Button id='btnr' onClick={() => { console.log(items); const il = items.length
-        setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
+    <Row><Col id='w8v' xs lg="2" className='top df fd'><Button id='btnr' style={{ zoom: '2' }}
+        onClick={() => { console.log(items); const il = items.length
+          cfo = [...cfo, ['+ Add design', '+ Add design']]
+          setels([ ...els, <Card key={il} className="w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters') }</Card> ]); console.log(els)
     setItems([...items, il]) }} className="shadow-medium self-center" style={{
-          fontFamily: 'Recoleta Medium', paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
+          paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
           borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-    {/* <Col style={{ width: '67%' }} xs lg="4"></Col></Row> */}
-    </li></ul>
 
-    {/* greeting <button onClick={ }>Reset</button> */}
+    <Col id='crd' xs lg="4" className='top'></Col><div style={{ ...cnr }}></div></Row></li></ul>
+
     </Container></ScrollSync>
 
     <div id="imodal" className="modal">
