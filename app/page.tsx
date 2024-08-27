@@ -24,10 +24,8 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 
 // HandleIcon
 buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
-  style={{ border: "none", margin: 0, padding: 0, width: "auto",
-  overflow: "visible",
-  cursor: "pointer",
-background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
+  style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
+  background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
 </button>,
 
 cnr = { width: '51vw', overflow: 'auto' },
