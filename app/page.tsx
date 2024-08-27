@@ -188,7 +188,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     </svg></Button></Col>, 'pl0 w3 df top' ) )
     // console.log(b, relm(k))bl 
     document.querySelectorAll('#addc').forEach( (e) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, 'sp df w3') ) ) }
+  e.insertAdjacentElement(b as InsertPosition, relm(k, 'pl0 sp df w3') ) ) }
   else { a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
