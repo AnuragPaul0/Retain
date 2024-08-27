@@ -22,17 +22,11 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
 
-// HandleIcon
-buttone = (i: any, isDragged: any) => <button data-movable-handle className={"r"+i+" self-center"}
-  style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
-  background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
-</button>,
-
 cnr = { width: '51vw', overflow: 'auto' },
 
 // Card text-black
 buttonc = (t: any, s = '') => <Button id='cbt' className=
-{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button>,
+{s+" shadow-medium p-1"} variant="flat" color="default">{ t }</Button>,
 
 greens = 'grb',
 // divcar = (e: any) => <div style={{ alignSelf: 'center', key="input"value={inputValue}
@@ -205,7 +199,7 @@ changeBackground = (e:any, h:any, o=0) => {
   console.log(e)
   parent = e.target
   while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
-  // console.log(parent)
+  console.log(parent)
   pd = parent.id
   if (h == 'h') {
     tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
@@ -356,7 +350,10 @@ export default function Home() {
   <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
     style={{ blockSize: 'fit-content', display: 'flex' }}>
     <p className='p5' style={{ marginBottom: 0, zoom: '2', fontFamily: 'Recoleta Medium'}} >{i}</p>
-    {buttone(i, isDragged)}</Col></Row></Col>
+    <button data-movable-handle className={"r"+i+" self-center"}
+  style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
+  background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
+</button></Col></Row></Col>
 
       <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
