@@ -105,8 +105,8 @@ relm = (rel:any, c = [''], m=0) => { container = document.createElement('div')
   // console.log('c', container, Object.keys(container),
   // Object.values(container), typeof(container), container.children, container.children[0])
   // du = document.createElement('div').appendChild(container)
-  // console.log(du, du.children)
-  if (m) container.addEventListener("mouseenter", (e) => { changeBackground(e, 'n')})
+  // console.log(du, du.children)ent
+  if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, 'n')})
 return container },
 
 greeting = (el:any) => { f = el.target.id == 'btnr'
