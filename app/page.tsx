@@ -22,7 +22,7 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
 
-cnr = { width: '51vw', overflow: 'auto' },
+cnr = { width: '51vw' },
 
 // Card text-black
 buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' className=
@@ -366,7 +366,7 @@ export default function Home() {
       <Col id='crd' xs lg="4" className='top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <ScrollSyncPane><div style={{ ...cnr }}>
+      <ScrollSyncPane><div className='example' style={{ ...cnr }}>
         <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }<Btnco/></Row></div>
   </ScrollSyncPane></Row> }
 
@@ -446,7 +446,7 @@ export default function Home() {
                 paddingRight: '3% !important' }}
         isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
-        <ScrollSyncPane><div style={{ ...cnr }}>
+        <ScrollSyncPane><div className='example' style={{ ...cnr }}>
               <Row id='scrw' className='r' style={{ width: '35vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
@@ -505,7 +505,7 @@ export default function Home() {
           borderRadius: '2px', zoom: '2',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
 
-    <Col id='crd' xs lg="4"></Col><div style={{ ...cnr }}></div></Row></li></ul>
+    <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
     </Container></ScrollSync>
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
@@ -609,7 +609,7 @@ export default function Home() {
         { "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group"+
           " cursor-pointer hover:shadow-lg" }>
         {/* 'r'+p.toString()+ */}
-        <Button onClick={ () => myFunction(1) } id='b1' className=
+        <div><div><div><Button onClick={ () => myFunction(1) } id='b1' className=
           ' z-10 shadow-medium self-center p-2 radius-large bg-white/20 '
           variant="flat" color="default" radius="lg" size="sm">
             <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
@@ -617,17 +617,9 @@ export default function Home() {
   "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
             <path d=
   "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
-        </g></g></svg></Button>
-      {/* <svg viewBox="0 0 100 100" version="1.1" id="svg5" width="10mm" height="10mm">
-        <defs id="defs2"/><g  style={{ fill:'none', stroke:'#545454',
-          strokeWidth:1, strokeMiterlimit:4, strokeDasharray:'none', strokeDashoffset:0 }}
-          id="layer1"><ellipse
-          id="path1961" cx="49.980141" cy="49.922749" rx="20.786863" ry="20.786861"/>
-          <ellipse id="path1963" cx="49.980141" cy="49.922749" rx="33.786863" ry="33.786863"/>
-          <ellipse id="path1965" cx="49.980141" cy="49.922749" rx="46.786863" ry="46.786863"/>
-      </g></svg> */}
+        </g></g></svg></Button></div></div><p>Selecta design to link</p></div>
       </div><span onClick={ () => myFunction(0) } className="close">&times;</span><div>
-        <p>Selecta design to link</p><nav className="fon navbar navbar-light bg-light">
+        <nav className="fon navbar navbar-light bg-light">
           <form className="container-fluid">
             <div className="input-group">
               <span className="input-group-text" id="basic-addon1">@</span>
