@@ -50,7 +50,7 @@ let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
 addes = (o:any) => <Button onClick={ () => myFunction(1) } id='b1' className=
     { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
-variant="flat" color="default" radius="lg" size="sm">+ Add design</Button>,
+variant="flat" color="default" radius="lg" size="sm"><div style="zoom: 2">+</div> Add design</Button>,
 
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => {
   // console.log('a')
@@ -98,13 +98,14 @@ inim = (e:any, h:any, o=0) => {
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
-relm = (rel:any, c = ['']) => { container = document.createElement('div')
+relm = (rel:any, c = [''], m=0) => { container = document.createElement('div')
   if (c[0] != '') container.classList.add(...c)
-createRoot(container).render(rel)
-// console.log('c', container, Object.keys(container),
-// Object.values(container), typeof(container), container.children, container.children[0])
-// du = document.createElement('div').appendChild(container)
-// console.log(du, du.children)
+  createRoot(container).render(rel)
+  // console.log('c', container, Object.keys(container),
+  // Object.values(container), typeof(container), container.children, container.children[0])
+  // du = document.createElement('div').appendChild(container)
+  // console.log(du, du.children)
+  if (m) container.addEventListener("mouseenter", (e) => { changeBackground(e, 'n')})
 return container },
 
 greeting = (el:any) => { f = el.target.id == 'btnr'
@@ -144,7 +145,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-    </Card></Col></Row> : colum(p)
+    </Card></Col></Row> : colmo(p)
   //   <Col xs lg="2" className="justify-content-md-center" style={{
   //     width: '150px', position: 'relative', display: 'flex' }}>
   // <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
@@ -181,7 +182,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     </svg></Button></Col>, ['w3', 'df', 'top'] ) )
     // console.log(b, relm(k))
     document.querySelectorAll('#addc').forEach( (e) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, ['pl0', 'sp', 'w3', 'df']) ) ) }
+  e.insertAdjacentElement(b as InsertPosition, relm(k, ['pl0', 'sp', 'w3', 'df'], 1) ) ) }
   else { a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
