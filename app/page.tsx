@@ -139,7 +139,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-    </Card></Col></Row> : colmo(p)
+  </Card></Col></Row> : colmo(p)
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
@@ -175,7 +175,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
       a = document.querySelector('#scrw')
     if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
     onMouseEnter={ (e) => changeBackground(e, 'h') }
-onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{colum(p)}
+onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{ colum(p) }{ colum(p) }
 
 <Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
@@ -307,9 +307,6 @@ imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
       "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button></Col>} else return colmo(i) },
 
-Btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center"
->+</Button>
-
 export default function Home() {
   const [els, setels] = React.useState([
     <Card key='0' className="alc w90 justify-content-md-center"><div id='alsc'
@@ -352,11 +349,12 @@ export default function Home() {
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }<Btnco/></Row></div>
-  </ScrollSyncPane></Row> }
+        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }
+    <Button id="addc" onClick={ greeting } className={'r'+i+
+  " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
-    <div style={{width: '4rem'}} className={
+    <div style={{ width: '4rem' }} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
     " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
@@ -590,14 +588,14 @@ export default function Home() {
 
     <div id="imodal" className="modal">
       <div className="df modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
-        <div style={{ width: '50%' }} className=
+         {/* style={{ width: '50%' }} */}
+         <div style={{ justifyContent: 'space-between' }} className=
           { "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group"+
             " cursor-pointer hover:shadow-lg" }>
-          <div className=
-            'relative'><div id='bo7' className=
+          <div className='relative'><div id='bo7' className=
             'border p-3 fon bg-white/20'><div id='bo5' className=
             'border p-3 fon bg-white/20'><Button onClick={ () => myFunction(1) } id='bor' className=
-            'h-auto border z-10 shadow-medium self-center p-2 radius-large bg-white/20'
+            'h-auto border z-10 shadow-medium self-center p-4 radius-large bg-white/20'
             variant="flat" color="default" radius="lg" size="sm">
               <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
                 xmlSpace="preserve"><g><g><path d=
@@ -609,7 +607,7 @@ export default function Home() {
         <nav className="fon navbar navbar-light bg-light">
           <form className="container-fluid">
             <div className="input-group">
-              <span className="input-group-text" id="basic-addon1"><svg fill="#000" height="80px"
+              <span className="input-group-text" id="basic-addon1"><svg fill="#000" height="20px"
               version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xmlSpace="preserve">
                 <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
               </svg></span>
