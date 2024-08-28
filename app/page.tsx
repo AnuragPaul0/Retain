@@ -31,7 +31,6 @@ buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' class
 greens = 'grb',
 
 cele = (d: any) => {
-  // console.log(d)
   d.forEach((e: any, i: any) => {
   // console.log(i)/2
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -44,7 +43,6 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ]
-// console.log(el2)
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
 
@@ -77,7 +75,6 @@ colmo = (o:any) => <Col xs lg="2" className="df w3 top justify-content-md-center
   // else controller.abort()
 
 // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
-// console.log(c)
 
 // User clicks, open/x modal
 myFunction = (o:any) => { tr = 'imodal'
@@ -85,17 +82,16 @@ myFunction = (o:any) => { tr = 'imodal'
   const controller = new AbortController
 
   // User clicks anywhere outside of the modal, close it
-  if (!o) { window.addEventListener('click', (event) =>{
-    console.log(event.target, "clicked")
+  if (o) { window.addEventListener('click', (event) => {
+    // console.log(event.target, "clicked")
     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-    { signal: controller.signal } ) }
+  { signal: controller.signal } ) }
 else controller.abort() },
 
 inim = (e:any, h:any, o=0) => {
   // console.log(e)
   parent = e.target
   while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
-  // console.log(parent) as HTMLElement
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
@@ -105,7 +101,6 @@ relm = (rel:any, c = [''], m=0) => { container = document.createElement('div')
   // console.log('c', container, Object.keys(container),
   // Object.values(container), typeof(container), container.children, container.children[0])
   // du = document.createElement('div').appendChild(container)
-  // console.log(du, du.children)ent
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, 'n')})
 return container },
 
@@ -147,12 +142,6 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
     </Card></Col></Row> : colmo(p)
-  //   <Col xs lg="2" className="justify-content-md-center" style={{
-  //     width: '150px', position: 'relative', display: 'flex' }}>
-  // <Card isFooterBlurred radius="lg" className="wh border-none"></Card>
-  // <Button onClick={ () => myFunction(1) } id='b1' className=
-  //   { 'r'+p.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20 '}
-  //   variant="flat" color="default" radius="lg" size="sm">+ Add design</Button></Col>bl 
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
@@ -161,7 +150,6 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
     // if (tr) { node = tr.lastChild
     //   // console.log(node)
     // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
-    // console.log(clone)
     // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
 
     // tr.appendChild(clone)
@@ -203,13 +191,12 @@ onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{colum(p)}{
 </Col></Row>)), p++ } },
 
 changeBackground = (e:any, h:any, o=0) => {
-  console.log('tt:', e)
+  // console.log('tt:', e)
   parent = e.target
   while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
-  console.log('parent:', parent)
+  // console.log('parent:', parent)
   pd = parent.id; if (h == 'h') {
     tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
-  // console.log(e , e.target, tog, co)
   // () =>{ co = 'white'
   // let tr = co ?  : co = !co
   // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
@@ -604,29 +591,34 @@ export default function Home() {
 
 
     <div id="imodal" className="modal">
-      <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }} >
-      <div style={{ height: 'unset', width: '50%' }} className=
-        { "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group"+
-          " cursor-pointer hover:shadow-lg" }>
-        {/* 'r'+p.toString()+ */}
-        <div><div><div><Button onClick={ () => myFunction(1) } id='b1' className=
-          ' z-10 shadow-medium self-center p-2 radius-large bg-white/20 '
-          variant="flat" color="default" radius="lg" size="sm">
-            <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
-              xmlSpace="preserve"><g><g><path d=
-  "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
-            <path d=
-  "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
-        </g></g></svg></Button></div></div><p>Selecta design to link</p></div>
-      </div><span onClick={ () => myFunction(0) } className="close">&times;</span><div>
+      <div className="df modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
+        <div style={{ width: '50%' }} className=
+          { "flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md group"+
+            " cursor-pointer hover:shadow-lg" }>
+          <div className=
+            'relative'><div id='bo7' className=
+            'border p-3 fon bg-white/20'><div id='bo5' className=
+            'border p-3 fon bg-white/20'><Button onClick={ () => myFunction(1) } id='bor' className=
+            'h-auto border z-10 shadow-medium self-center p-2 radius-large bg-white/20'
+            variant="flat" color="default" radius="lg" size="sm">
+              <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
+                xmlSpace="preserve"><g><g><path d=
+    "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
+              <path d=
+    "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
+          </g></g></svg></Button></div></div><p style={{ bottom: '1%', left: '20%' }}
+          >Selecta design to link</p></div>
         <nav className="fon navbar navbar-light bg-light">
           <form className="container-fluid">
             <div className="input-group">
-              <span className="input-group-text" id="basic-addon1">@</span>
-              <input type="text" className="form-control" placeholder="Username" aria-label="Username"
-                aria-describedby="basic-addon1"/>
-            </div>
-      </form></nav></div>
+              <span className="input-group-text" id="basic-addon1"><svg fill="#000" height="80px"
+              version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve">
+                <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
+              </svg></span>
+              <input type="text" className="form-control" placeholder="Search" aria-label="Search"
+        aria-describedby="basic-addon1"/></div></form></nav>
+        </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
+        {/* <div></div> */}
       <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
 
           <div id='scrw' style={{ width: '60vw' }}>
