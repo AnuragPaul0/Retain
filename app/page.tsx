@@ -213,7 +213,7 @@ changeBackground = (e:any, h:any, o=0) => {
   // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
     k = o ? "none" : 'block'
     tog.forEach((e:any) => {e.style.display = k})
-} else if (h =='n') { console.log('n')
+} else if (h =='n') { console.log(h)
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block' }
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 
