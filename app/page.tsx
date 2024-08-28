@@ -26,12 +26,11 @@ cnr = { width: '51vw' },
 
 // Card text-black
 buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' className=
-{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
+{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
-greens = 'grb',
+let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3, greens = 'grb',
 
-cele = (d: any) => {
-  d.forEach((e: any, i: any) => {
+cele = (d: any) => { d.forEach((e: any, i: any) => {
   // console.log(i)/2
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
 // console.log(d)
@@ -42,9 +41,7 @@ el2 = [
 <div key='2' id='alsc'>{buttonc('tags') } {buttonc('contain', greens)} {buttonc('__labelNew')}</div>,
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
-{buttonc('empty')}</div> ]
-
-let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3,
+{buttonc('empty')}</div> ],
 
 addes = (o:any) => <Button onClick={ () => myFunction(1) } id='b1' className=
     { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
@@ -89,9 +86,10 @@ myFunction = (o:any) => { tr = 'imodal'
 else controller.abort() },
 
 inim = (e:any, h:any, o=0) => {
-  // console.log(e)
+  console.log('el:', e)
   parent = e.target
   while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
+  console.log('par:', parent)
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
@@ -291,13 +289,13 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
 ['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
 
-imco = (i: any, im = iml, c=0) => i<5?
-  <Col xs lg="2" className="relative df top w3 justify-content-md-center">
+imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
+    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     <Card isFooterBlurred radius="lg" className="border-none">{ im[i] }
       <CardFooter id='cfo' className=
         { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
           " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-          <p id='mb0' className="text-tiny">{cfo[i][c] + '...'}</p></CardFooter></Card>
+          <p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card>
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
       color="default" radius="lg" size="sm">
@@ -307,7 +305,7 @@ imco = (i: any, im = iml, c=0) => i<5?
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier"><g><path d=
       "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-></path></g></g></svg></Button></Col> : colmo(i),
+></path></g></g></svg></Button></Col>} else return colmo(i) },
 
 Btnco = () => <Button id="addc" onClick={greeting} className="fon shadow-medium self-center"
 >+</Button>
@@ -612,7 +610,7 @@ export default function Home() {
           <form className="container-fluid">
             <div className="input-group">
               <span className="input-group-text" id="basic-addon1"><svg fill="#000" height="80px"
-              version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve">
+              version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xmlSpace="preserve">
                 <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
               </svg></span>
               <input type="text" className="form-control" placeholder="Search" aria-label="Search"
@@ -624,6 +622,8 @@ export default function Home() {
           <div id='scrw' style={{ width: '60vw' }}>
 
             <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
+              {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
+              { imco(i-1, dict, 1) } */}
 
               <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
@@ -653,7 +653,7 @@ export default function Home() {
                   borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
             "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
                   ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                    >Single Images - Left - ...</p>
+                    >Single Images - Left - No Discount</p>
               </CardFooter></Card>
                 <Button id='b1' style={{ display: "none" }} className=
                   "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
@@ -670,7 +670,7 @@ export default function Home() {
                   borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
               "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
                   ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                    >Single Image prduct...</p></CardFooter></Card>
+                    >Single Image prduct no discount</p></CardFooter></Card>
                 <Button id='b1' style={{ display: "none" }} className=
                   "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col>
@@ -737,7 +737,7 @@ export default function Home() {
                     borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
               "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
                     ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                      >4 Images - On Sale - ...</p>
+                      >4 imagen - 0 discount</p>
                     </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
                   "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
                   color="default" radius="lg" size="sm">Insert</Button></Col></Row>
