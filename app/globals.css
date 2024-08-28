@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.alc { align-self: center }
 #cbt { border-radius: calc(var(--nextui-radius-medium) / 3); padding-right: .4rem !important;
   padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
 
@@ -23,7 +24,7 @@
 #addc { zoom: 2; margin-left: 1vw; padding-left: calc(var(--bs-gutter-x) / 4) !important;
   border-radius: 2px; padding-right: calc(var(--bs-gutter-x) / 4) !important  }
 
-div.w90 { width: 90%; align-self: center; height: 70% !important }
+div.w90 { width: 90%; height: 70% !important }
 #alsc { align-self: center; margin-bottom: calc(var(--nextui-radius-large) / 2) }
 #sdel { color:red; stroke-width:0.5 }
 nav { width: 20vw }
