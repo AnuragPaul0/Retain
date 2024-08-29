@@ -22,16 +22,14 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 <path d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21Z" fill="#000000"/>
 </svg>,
 
-cnr = { width: '51vw' },
-
 // Card text-black
 buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' className=
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
 let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3, greens = 'grb',
+cnr = { width: '51vw' },
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
-  // console.log(i)/2
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
 // console.log(d)
 return d },
@@ -49,7 +47,6 @@ addes = (r=0, c=2) => <Button onClick={ () => myFunction(1) } id='b1' className=
 > Add design</Button>,
 
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => {
-  // console.log('a')
   changeBackground(e, 'n')} }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
     style={{ position: 'relative' }}>
@@ -86,10 +83,10 @@ myFunction = (o:any) => { tr = 'imodal'
 else controller.abort() },
 
 inim = (e:any, h:any, o=0) => {
-  console.log('el:', e)
+  // console.log('el:', e)
   parent = e.target
   while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
-  console.log('par:', parent)
+  // console.log('par:', parent)
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
@@ -102,7 +99,7 @@ relm = (rel:any, c = [''], m=0) => { container = document.createElement('div')
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, 'n')})
 return container },
 
-greeting = (el:any) => { f = el.target.id == 'btnr'
+greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
   // console.log(el)</div>
   if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
@@ -139,7 +136,7 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-  </Card></Col></Row> } else { let c = el.classList
+  </Card></Col></Row> } else { let c = tt.classList
 for (let i = 0; i < c.length; i++) {
     if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
 
@@ -204,7 +201,8 @@ changeBackground = (e:any, h:any, o=0) => {
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
-  console.log(h, (document.querySelector('#del.' + pd) as HTMLElement)) }
+  // console.log(h, (document.querySelector('#del.' + pd) as HTMLElement))
+}
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
@@ -480,7 +478,6 @@ export default function Home() {
   <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
     <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={() => { const il = items.length
-          // console.log(items)
           // cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
