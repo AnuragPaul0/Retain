@@ -312,10 +312,10 @@ btn = () => <Button id='b1' style={{ display: "none" }} className=
     "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>,
 
-modc = (i: any, m=sing, w = '') => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+modc = (i: any, m=sing) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
   onMouseLeave={ (e) => inim(e, 'h', 1) }
   className="df w3 justify-content-md-center" style={{ position: 'relative' }}>
-{ card(i, m, w) }{ btn() }</Col>
+{ card(i, m) }{ btn() }</Col>
 
 export default function Home(){
   const [els, setels] = React.useState([
