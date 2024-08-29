@@ -326,7 +326,7 @@ export default function Home() {
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
 
-    <Col id='w8v' xs lg="2" className='top df fd'>
+    <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
       <Row style={{ height: '25%' }} className="justify-content-md-center">
         <Col className="justify-content-md-center" style={{ alignContent: 'end',
           display: 'grid' }}>
@@ -348,10 +348,10 @@ export default function Home() {
     background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
     </button></Col></Row></Col>
 
-      <Col id='crd' xs lg="4" className='top'>
+      <Col id='crd' xs lg="4" className='h17 alc top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <ScrollSyncPane><div className='example' style={{ ...cnr }}>
+      <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
         <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }
     <Button id="addc" onClick={ greeting } className={'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
@@ -592,9 +592,9 @@ export default function Home() {
       <div className="df modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
          {/* style={{ width: '50%' }} */}
          <div style={{ justifyContent: 'space-between' }} className=
-          { "border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
+          { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
             " group cursor-pointer hover:shadow-lg" }>
-          <div className='relative'><div id='bo7' className=
+          <div className='overflow-auto w-50 relative'><div id='bo7' className=
             'border p-3 fon bg-white/20'><div id='bo5' className=
             'border p-3 fon bg-white/20'><Button onClick={ () => myFunction(1) } id='bor' className=
             'h-auto border z-10 shadow-medium self-center p-4 radius-large bg-white/20'
@@ -604,20 +604,19 @@ export default function Home() {
     "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
               <path d=
     "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
-          </g></g></svg></Button></div></div><p style={{ bottom: '1%', left: '20%' }}
+          </g></g></svg></Button></div></div><p id='fon' className='absolute'
           >Selecta design to link</p></div>
-        <nav className="fon navbar navbar-light bg-light">
-          <form className="container-fluid">
-            <div className="input-group">
-              <span className="input-group-text" id="basic-addon1"><svg fill="#000" height="20px"
-              version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xmlSpace="preserve">
-                <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
+        <nav className="fon navbar navbar-light"><form className="container-fluid">
+            <div id='inp' className="input-group">
+              <span className="bun input-group-text" id="basic-addon1"><svg fill="#000" height="20px"
+              version="1.1" id="Capa_1" viewBox="0 0 450.4 450.4" xmlSpace="preserve"><path d=
+ "M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
               </svg></span>
-              <input type="text" className="form-control" placeholder="Search" aria-label="Search"
-        aria-describedby="basic-addon1"/></div></form></nav>
+              <input id='bl0' type="text" className="form-control" placeholder="Search"
+                aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
         {/* <div></div> */}
-      <Container style={{ overflow: 'auto', display: 'inline-block' }} className="rounded-large">
+      <Container id='h40' className="rounded-large">
 
           <div id='scrw' style={{ width: '60vw' }}>
 
