@@ -41,7 +41,7 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 // (e) => e.target
-addes = (r=0, c=2) => <Button onClick={ myFunction(this, 1) } id='b1' className=
+addes = (r=0, c=2) => <Button onClick={ (e) => myFunction(e.target, 1) } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
   variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
 > Add design</Button>,
