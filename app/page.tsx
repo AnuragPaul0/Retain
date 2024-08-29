@@ -280,7 +280,7 @@ d2 = (n: any) => <div key={ n } className='df'>
     "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
 width={100} /></Col></div>,
 
-dict = [ imk(0), d2(1), d2(2), d2(3), imk(4) ],
+dict = { c: 1, imc: [ imk(0), d2(1), d2(2), d2(3), imk(4) ]},
 
 sing = 'Single Image prduct - no discount',
 
@@ -295,7 +295,7 @@ card = (i: any, m=sing) => {
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
 
-imco = (i: any, im = iml.imc, c=0, m=cfo[i][c]) => { if (i<5) {
+imco = (i: any, im = iml, m=cfo[i][im.imc]) => { if (i<5) {
     return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
@@ -312,10 +312,9 @@ btn = () => <Button id='b1' style={{ display: "none" }} className=
     "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>,
 
-modc = (i: any, m=sing) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-  onMouseLeave={ (e) => inim(e, 'h', 1) }
-  className="df w3 justify-content-md-center" style={{ position: 'relative' }}>
-{ card(i, m) }{ btn() }</Col>
+modc = (i=iml, r=0) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+  onMouseLeave={ (e) => inim(e, 'h', 1) } className="relative df w3 justify-content-md-center">
+{ card(i.imc[r], cfo[r][i.c]) }{ btn() }</Col>
 
 export default function Home(){
   const [els, setels] = React.useState([
@@ -628,40 +627,9 @@ export default function Home(){
             <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
               {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
               { imco(i-1, dict, 1) } */}
-              { modc(iml.imc[3]) }
-              { modc(iml.imc[0]) }
-              { modc(dict[1]) }
-
-              <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-                onMouseLeave={ (e) => inim(e, 'h', 1) }
-                className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-                display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
-                  <div style={{ display: 'flex', height: '150px', width: '150px',
-                    justifyContent: 'flex-start !important' }}>
-                    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                      <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-                        borderTopRightRadius: 0
-                        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                        "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
-                      <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-                          borderTopRightRadius: 0,
-                          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                        "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
-                  <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                    <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                          }} alt="Woman" className="object-cover opacity-1" height={150} src=
-              "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-                  width={100} /></Col></div>
-                  <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                    paddingLeft: '0 !important',
-                    paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-                    borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-                    ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                      >Multi Image - on Sale</p></CardFooter></Card>
-                  <Button id='b1' style={{ zIndex: 0 }} className=
-                  "r2 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-                  color="default" radius="lg" size="sm">Insert</Button></Col>
+              { modc(iml, 3) }
+              { modc(iml) }
+              { modc(dict, 1) }
 
               <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
