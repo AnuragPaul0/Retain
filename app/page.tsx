@@ -40,7 +40,7 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
-// (e) => e.target
+
 addes = (r=0, c=2) => <Button onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) }
 id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
@@ -286,7 +286,7 @@ width={100} /></Col></div>,
 dict = [ imk(0), d2(1), d2(2), d2(3), imk(4) ],
 // console.log(dict, dict[0][0], dict[1], dict[2])let
 
-sing = 'Single Image prduct',
+sing = 'Single Image prduct - no discount',
 
 cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
@@ -633,7 +633,8 @@ export default function Home(){
               {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
               { imco(i-1, dict, 1) } */}
               { modc(iml[3], 'Single Image - Left - No Discount', 'w15') }
-              { modc(iml[0], 'Single Image prduct no discount', 'w15') }
+              { modc(iml[0], 'Single Image prduct - no discount', 'w15') }
+              { modc(dict[1], 'Single Image prduct no discount', 'w15') }
 
               <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
