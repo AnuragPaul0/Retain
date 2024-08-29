@@ -211,10 +211,7 @@ else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
 width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
 
-iml = [ imk(0),
-  //  style={{ height: '150px', width: '150px',
-  //     justifyContent: 'flex-start !important' }}
-  <div key='1' className='df'>
+iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
       <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
         <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
           borderTopRightRadius: 0
@@ -260,7 +257,7 @@ iml = [ imk(0),
           borderTopRightRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-  </div>, imk(4) ],
+</div>, imk(4) ]},
 
 d2 = (n: any) => <div key={ n } className='df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
@@ -284,22 +281,21 @@ d2 = (n: any) => <div key={ n } className='df'>
 width={100} /></Col></div>,
 
 dict = [ imk(0), d2(1), d2(2), d2(3), imk(4) ],
-// console.log(dict, dict[0][0], dict[1], dict[2])let
 
 sing = 'Single Image prduct - no discount',
 
 cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
-['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
+['Single Image - Left - No Discount', '4 Images - 0 discount'], [sing, sing]],
 
-card = (i: any, m=sing, w = '', p=0) => { if (w) { w+=' '; p=7}
-  return <Card isFooterBlurred radius="lg" className={ w+"border-none" }>{ i }
+card = (i: any, m=sing) => {
+  return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
   <CardFooter id='cfo' className=
-        { "pl"+p+" justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
-          " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card> },
+    { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
+      " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
+<p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
 
-imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
+imco = (i: any, im = iml.imc, c=0, m=cfo[i][c]) => { if (i<5) {
     return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
@@ -433,7 +429,7 @@ export default function Home(){
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="pb-5 cnr rounded-large">
 
-      <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+      <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
@@ -481,7 +477,7 @@ export default function Home(){
 
         renderItem={({ value, props, index, isDragged, isSelected }) => {
           // console.log(value)
-          return <li id='lst' {...props} key={props.key} style={{ ...props.style,
+          return <li id='lst' className="par" {...props} key={props.key} style={{ ...props.style,
               cursor: isDragged ? "grabbing" : "inherit",
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
             }}>{ relem(value+1, isDragged, els[value], index) }</li> }}/>
@@ -489,7 +485,7 @@ export default function Home(){
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
 
-  <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
+  <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
     <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={() => { const il = items.length
           cfo = [...cfo, ['+ Add design', '+ Add design']]
@@ -632,9 +628,9 @@ export default function Home(){
             <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
               {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
               { imco(i-1, dict, 1) } */}
-              { modc(iml[3], 'Single Image - Left - No Discount', 'w15') }
-              { modc(iml[0], 'Single Image prduct - no discount', 'w15') }
-              { modc(dict[1], 'Single Image prduct no discount', 'w15') }
+              { modc(iml.imc[3]) }
+              { modc(iml.imc[0]) }
+              { modc(dict[1]) }
 
               <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }

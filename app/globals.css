@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.cut-text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; --wi: 1vw;
+padding-left: var(--wi); padding-right: var(--wi) }
+
+.par { padding: 0 1.5em } 
 .pl7 { padding-left: 7% !important }
 .w15 { width: 150px }
 #h40 { height: 40vw; overflow: auto }
