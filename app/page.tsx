@@ -41,7 +41,7 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 // (e) => e.target
-addes = (r=0, c=2) => <Button onClick={ (e) => myFunction(e.target, 1) } id='b1' className=
+addes = (r=0, c=2) => <Button onClick={ (e) => myFunction(e.target.classList, 1) } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
   variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
 > Add design</Button>,
@@ -70,7 +70,10 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-cen
 // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
 
 // User clicks, open/x modal
-myFunction = (e:any, o=0) => { tr = 'imodal'; console.log(e)
+myFunction = (c:any, o=0) => { tr = 'imodal'
+  // console.log(e)
+  for (let i = 0; i < c.length; i++) {
+    if (c[i].match(/a\d/)) { k = c[i]; break } }
   a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
   const controller = new AbortController
 
@@ -477,7 +480,7 @@ export default function Home() {
   <ul id='mb0' className="pl0"><li style={{ padding: "0 1.5em", listStyleType: "none" }}>
     <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={() => { const il = items.length
-          // cfo = [...cfo, ['+ Add design', '+ Add design']]
+          cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
         // console.log(els)
