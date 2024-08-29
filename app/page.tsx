@@ -43,8 +43,8 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (o:any) => <Button onClick={ () => myFunction(1) } id='b1' className=
-    { 'r'+o.toString()+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
+addes = (r=0, c=2) => <Button onClick={ () => myFunction(1) } id='b1' className=
+    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
   variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
 > Add design</Button>,
 
@@ -55,9 +55,9 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => {
     style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
-colmo = (o:any) => <Col xs lg="2" className="df w3 top justify-content-md-center"
+colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-center"
     style={{ position: 'relative' }}>
-<Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
+<Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
 // window.addEventListener("load", () => {
 //     a = document.querySelector("#scrw > #r1"),
@@ -104,7 +104,7 @@ return container },
 
 greeting = (el:any) => { f = el.target.id == 'btnr'
   // console.log(el)</div>
-  k = f ? <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
+  if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
 
     <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
@@ -139,7 +139,9 @@ greeting = (el:any) => { f = el.target.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-  </Card></Col></Row> : colmo(p)
+  </Card></Col></Row> } else { let c = el.classList
+for (let i = 0; i < c.length; i++) {
+    if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('#scrw')
