@@ -295,7 +295,7 @@ card = (i: any, m=sing) => {
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
 
-imco = (i: any, im = iml, m=cfo[i][im.imc]) => { if (i<5) {
+imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
     return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
