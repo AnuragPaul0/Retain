@@ -40,14 +40,13 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
-
-addes = (r=0, c=2) => <Button onClick={ () => myFunction(1) } id='b1' className=
+// (e) => e.target
+addes = (r=0, c=2) => <Button onClick={ myFunction(this, 1) } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
   variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
 > Add design</Button>,
 
-colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => {
-  changeBackground(e, 'n')} }
+colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n')} }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
     style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
@@ -71,7 +70,7 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-cen
 // const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
 
 // User clicks, open/x modal
-myFunction = (o:any) => { tr = 'imodal'
+myFunction = (e:any, o=0) => { tr = 'imodal'; console.log(e)
   a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
   const controller = new AbortController
 
