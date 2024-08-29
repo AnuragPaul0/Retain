@@ -315,7 +315,7 @@ btn = () => <Button id='b1' style={{ display: "none" }} className=
     "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>
 
-export default Home = () => {
+export default function Home(){
   const [els, setels] = React.useState([
     <Card key='0' className="alc w90 justify-content-md-center"><div id='alsc'
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
