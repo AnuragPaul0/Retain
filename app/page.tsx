@@ -292,11 +292,12 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
 ['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
 
-card = (i: any, m=sing) => <Card isFooterBlurred radius="lg" className="border-none">{ i }
+card = (i: any, m=sing, w = '', p=0) => { if (w) { w+=' '; p=7}
+  return <Card isFooterBlurred radius="lg" className={ w+"border-none" }>{ i }
   <CardFooter id='cfo' className=
-        { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
+        { "pl"+p+" justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
           " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card>,
+<p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card> },
 
 imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
     return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
@@ -313,7 +314,12 @@ imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
 
 btn = () => <Button id='b1' style={{ display: "none" }} className=
     "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-color="default" radius="lg" size="sm">Insert</Button>
+color="default" radius="lg" size="sm">Insert</Button>,
+
+modc = (i: any, m=sing, w = '') => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+  onMouseLeave={ (e) => inim(e, 'h', 1) }
+  className="df w3 justify-content-md-center" style={{ position: 'relative' }}>
+{ card(i, m, w) }{ btn() }</Col>
 
 export default function Home(){
   const [els, setels] = React.useState([
@@ -621,52 +627,13 @@ export default function Home(){
         </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
 
       <Container id='h40' className="rounded-large">
-
-          <div id='scrw' style={{ width: '60vw' }}>
+        <div id='scrw' style={{ width: '60vw' }}>
 
             <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
               {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
               { imco(i-1, dict, 1) } */}
-
-              <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-                onMouseLeave={ (e) => inim(e, 'h', 1) }
-                className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-                position: 'relative', display: 'flex' }}>
-                  { card(iml[3], 'Single Image - Left - No Discount') }{ btn() }
-                {/* <Card isFooterBlurred radius="lg" className="border-none"> */}
-                {/* <div style={{ display: 'flex', height: '150px', width: '150px',
-                  justifyContent: 'flex-start !important' }}>
-                  <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                    <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
-                          }} alt="Woman" className="object-cover opacity-1" height={150} src=
-                      "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
-                  width={100} /></Col>
-                  <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                        borderBottomRightRadius: 0
-                        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                        "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
-                    <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
-                        borderTopRightRadius: 0,
-                        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                      "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-                </div> */}</Col>
-
-              <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-                onMouseLeave={ (e) => inim(e, 'h', 1) }
-                className="w3 justify-content-md-center"
-                style={{borderLeft: '1px solid #ddd', position: 'relative', display: 'flex' }}>
-                <Card isFooterBlurred radius="lg" className="border-none">
-                  <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
-                    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
-                <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
-                  ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                    >Single Image prduct no discount</p></CardFooter></Card>
-                <Button id='b1' style={{ display: "none" }} className=
-                  "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-                  color="default" radius="lg" size="sm">Insert</Button></Col>
+              { modc(iml[3], 'Single Image - Left - No Discount', 'w15') }
+              { modc(iml[0], 'Single Image prduct no discount', 'w15') }
 
               <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
