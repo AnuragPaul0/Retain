@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#h40 { height: 40vw; overflow: 'auto' }
+#h40 { height: 40vw; overflow: auto }
 #bl0 { border-left: 0 }
 .bun { background-color: unset }
 #inp { height: 4vw } nav { margin-right: 2vw; align-self: end }

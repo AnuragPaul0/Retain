@@ -292,13 +292,14 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
 ['Single Images - Left - ', '4 Images - 0 disco'], [sing, sing]],
 
-imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
-    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
-    <Card isFooterBlurred radius="lg" className="border-none">{ im[i] }
-      <CardFooter id='cfo' className=
+card = (i: any, m=sing) => <Card isFooterBlurred radius="lg" className="border-none">{ i }
+  <CardFooter id='cfo' className=
         { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
           " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-          <p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card>
+<p id='mb0' className="text-tiny">{ m }</p></CardFooter></Card>,
+
+imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
+    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
       color="default" radius="lg" size="sm">
@@ -308,9 +309,13 @@ imco = (i: any, im = iml, c=0, m=cfo[i][c] + '...') => { if (i<5) {
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier"><g><path d=
       "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-></path></g></g></svg></Button></Col>} else return colmo(i) }
+></path></g></g></svg></Button></Col>} else return colmo(i) },
 
-export default function Home() {
+btn = () => <Button id='b1' style={{ display: "none" }} className=
+    "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+color="default" radius="lg" size="sm">Insert</Button>
+
+export default Home = () => {
   const [els, setels] = React.useState([
     <Card key='0' className="alc w90 justify-content-md-center"><div id='alsc'
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
@@ -590,13 +595,12 @@ export default function Home() {
 
     <div id="imodal" className="modal">
       <div className="df modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
-         {/* style={{ width: '50%' }} */}
          <div style={{ justifyContent: 'space-between' }} className=
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
             " group cursor-pointer hover:shadow-lg" }>
           <div className='overflow-auto w-50 relative'><div id='bo7' className=
             'border p-3 fon bg-white/20'><div id='bo5' className=
-            'border p-3 fon bg-white/20'><Button onClick={ () => myFunction(1) } id='bor' className=
+            'border p-3 fon bg-white/20'><Button id='bor' className=
             'h-auto border z-10 shadow-medium self-center p-4 radius-large bg-white/20'
             variant="flat" color="default" radius="lg" size="sm">
               <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
@@ -615,7 +619,7 @@ export default function Home() {
               <input id='bl0' type="text" className="form-control" placeholder="Search"
                 aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
-        {/* <div></div> */}
+
       <Container id='h40' className="rounded-large">
 
           <div id='scrw' style={{ width: '60vw' }}>
@@ -627,9 +631,10 @@ export default function Home() {
               <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
                 className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-                position: 'relative',
-                display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
-                <div style={{ display: 'flex', height: '150px', width: '150px',
+                position: 'relative', display: 'flex' }}>
+                  { card(iml[3], 'Single Image - Left - No Discount') }{ btn() }
+                {/* <Card isFooterBlurred radius="lg" className="border-none"> */}
+                {/* <div style={{ display: 'flex', height: '150px', width: '150px',
                   justifyContent: 'flex-start !important' }}>
                   <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
                     <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
@@ -645,18 +650,7 @@ export default function Home() {
                         borderTopRightRadius: 0,
                         }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
                       "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-                </div>
-            <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                  paddingLeft: '0 !important',
-                  paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-            "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-                  ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                    >Single Images - Left - No Discount</p>
-              </CardFooter></Card>
-                <Button id='b1' style={{ display: "none" }} className=
-                  "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-                  color="default" radius="lg" size="sm">Insert</Button></Col>
+                </div> */}</Col>
 
               <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
