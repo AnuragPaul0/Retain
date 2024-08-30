@@ -288,18 +288,18 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
 ['Single Image - Left - No Discount', '4 Images - 0 discount'], [sing, sing]],
 
-card = (i: any, m=sing) => {
+card = (i: any, m=sing, t: any) => {
   return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
   <CardFooter id='cfo' className=
     { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
+<p id='mb0' className={"cut-text"+t }>{ m }</p></CardFooter></Card> },
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
-    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
-      { card(im.imc[i], m) }<Button id='b1' style={{ display: "none" }} className=
-      {"r"+(i+1)+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
-      color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
+  return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
+    { card(im.imc[i], m) }<Button id='b1' style={{ display: "none" }} className=
+    {"r"+(i+1)+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
+    color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
           id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -311,9 +311,9 @@ btn = () => <Button id='b1' style={{ display: "none" }} className=
     "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>,
 
-modc = (i=iml, r=0) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-  onMouseLeave={ (e) => inim(e, 'h', 1) } className="relative df w3 justify-content-md-center">
-{ card(i.imc[r], cfo[r][i.c]) }{ btn() }</Col>
+modc = (i=iml, r=0, w=3) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+  onMouseLeave={ (e) => inim(e, 'h', 1) } className={ "relative df w"+w+" justify-content-md-center" }>
+{ card(i.imc[r], cfo[r][i.c], w==3?' text-tiny':'') }{ btn() }</Col>
 
 export default function Home(){
   const [els, setels] = React.useState([
@@ -358,7 +358,7 @@ export default function Home(){
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
         <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict) }
-    <Button id="addc" onClick={ greeting } className={'r'+i+
+    <Button id="addc" onClick={ greeting } className={ 'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
@@ -504,7 +504,7 @@ export default function Home(){
         >Design for remaining SKU's</span><Switch color="success" defaultSelected 
     aria-label="Automatic updates"/></p>
 
-    <Container style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
+    <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
@@ -512,7 +512,7 @@ export default function Home(){
       onMouseEnter={ (e) => changeBackground(e, 'h') }
       onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
   
-      <Col xs lg="7" style={{ fontFamily: 'Recoleta Medium', borderRight: '1px solid #ddd' }}>
+      <Col xs lg="7" className="top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
             backgroundColor: '#fafafa', height: '100% !important' }}
         radius="lg">N/A</Card></Col>
@@ -551,7 +551,7 @@ export default function Home(){
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
       ></path></g></g></svg></Button></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+      <Col xs lg="2" className="bl justify-content-md-center" style={{
         display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
           <div style={{ display: 'flex', height: '150px', width: '150px',
             justifyContent: 'flex-start !important' }}>
@@ -609,7 +609,7 @@ export default function Home(){
               <path d=
     "M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
           </g></g></svg></Button></div></div><p id='fon' className='absolute'
-          >Selecta design to link</p></div>
+          >Select a design to link</p></div>
         <nav className="fon navbar navbar-light"><form className="container-fluid">
             <div id='inp' className="input-group">
               <span className="bun input-group-text" id="basic-addon1"><svg fill="#000" height="20px"
@@ -623,8 +623,8 @@ export default function Home(){
       <Container id='h40' className="rounded-large">
         <div id='scrw' style={{ width: '60vw' }}>
 
-            <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">{ modc(iml, 3) }
-              { modc(iml) }{ modc(dict, 1) }
+            <Row id='r1' style={{ justifyContent: 'flex-start' }} className="rw pb-9">{ modc(iml, 3, 2) }
+              { modc(iml, 0, 2) }{ modc(dict, 1, 2) }
 
               <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
