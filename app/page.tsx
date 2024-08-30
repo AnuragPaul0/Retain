@@ -295,7 +295,7 @@ card = (i: any, m=sing) => {
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
 
-imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
+imco = (i=0, im = iml, m=cfo[i][im.c]) => { if (i<5) {
     return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
     <Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
@@ -624,12 +624,8 @@ export default function Home(){
       <Container id='h40' className="rounded-large">
         <div id='scrw' style={{ width: '60vw' }}>
 
-            <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">
-              {/* { imco(3, iml, 0, 'Single Images - Left - No Discount') }
-              { imco(i-1, dict, 1) } */}
-              { modc(iml, 3) }
-              { modc(iml) }
-              { modc(dict, 1) }
+            <Row id='r1' style={{ justifyContent: 'flex-start'}} className="rw pb-9">{ modc(iml, 3) }
+              { modc(iml) }{ modc(dict, 1) }
 
               <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
