@@ -93,13 +93,13 @@ inim = (e:any, h:any, o=0) => {
   pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
-relm = (rel:any, c = [''], m=0) => { container = document.createElement('div')
+relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('div')
   if (c[0] != '') container.classList.add(...c)
   createRoot(container).render(rel)
   // console.log('c', container, Object.keys(container),
   // Object.values(container), typeof(container), container.children, container.children[0])
   // du = document.createElement('div').appendChild(container)
-  if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, 'n')})
+  if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, h)})
 return container },
 
 greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
@@ -139,8 +139,7 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-  </Card></Col></Row> } else { let c = tt.classList
-for (let i = 0; i < c.length; i++) {
+  </Card></Col></Row> } else { let c = tt.classList; for (let i = 0; i < c.length; i++) {
     if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
 
   b = 'beforebegin'
@@ -169,7 +168,7 @@ for (let i = 0; i < c.length; i++) {
     className="lucide lucide-ellipsis-vertical">
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button></Col>, ['w3', 'df', 'top'] ) )
-    // console.log(b, relm(k))
+    // console.log(b, relm(k))['']
     document.querySelectorAll('#addc').forEach( (e) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, ['pl0', 'sp', 'w3', 'df'], 1) ) ) }
   else { a = document.querySelector('#addr')
