@@ -357,7 +357,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict, 1) }
+        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict) }
     <Button id="addc" onClick={ greeting } className={'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
