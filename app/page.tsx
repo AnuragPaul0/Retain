@@ -295,12 +295,11 @@ card = (i: any, m=sing) => {
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className="cut-text text-tiny">{ m }</p></CardFooter></Card> },
 
-imco = (i=0, im = iml, m=cfo[i][im.c]) => { if (i<5) {
-    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">{ card(im[i], m) }
-    <Button id='b1' style={{ display: "none" }} className=
+imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
+    return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
+      { card(im.imc[i], m) }<Button id='b1' style={{ display: "none" }} className=
       {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
-      color="default" radius="lg" size="sm">
-        <svg fill="#000" width="20px" version="1.1"
+      color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
           id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
