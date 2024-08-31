@@ -153,8 +153,8 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button></Col>, ['w3', 'df', 'top'] ) )
     // console.log(b, relm(k))['']
-    document.querySelectorAll('#addc').forEach( (e) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, ['pl0', 'sp', 'w3', 'df'], 1) ) ) }
+    document.querySelectorAll('#addc').forEach( (e, id) =>
+  e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) ) }
   else { a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
@@ -192,11 +192,13 @@ else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 os='On sale', ab = '-[calc(100%_-_8px)]',
 
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
-width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
+width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg">
+  <p>hello!</p>
+</Image>,
 
 // l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
-  {( w==ab? '':'bgy absolute ' )+"px-"+(t!=''?0:2)+
+  {( w==ab? '':'bdf fon bgy absolute ' )+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
     " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-'+(+(w==ab))))+" w"+w+
 " ml-1 z-10" }><p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
@@ -267,7 +269,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={150} src=
       "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-    width={100} /></Col>{ cfr('', m, '50 top') }</div>,
+    width={100} /></Col>{ cfr('', m, '50 top-0') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
@@ -296,7 +298,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
 ></path></g></g></svg></Button></Col>} else return colmo(i) },
 
 btn = () => <Button id='b1' style={{ display: "none" }} className=
-    "r1 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+  "r1 z-10 self-center p-2 radius-large absolute bg-white/50" variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>,
 
 modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
@@ -604,9 +606,9 @@ export default function Home(){
               </svg></span>
               <input id='bl0' type="text" className="form-control" placeholder="Search"
                 aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><span onClick={ () => myFunction(0) } className="close">&times;</span>
+        </div><span onClick={ () => myFunction(0) } className="top-0 close">&times;</span>
 
-      <Container id='h40' className="rounded-large"><div id='scrw' style={{ width: '60vw' }}>
+      <Container id='h40' className="rounded-large"><div id='scrw'>
 
         <Row id='scrw' className="rw pb-2">{ modc(iml, 3, 2) }
         { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
@@ -614,22 +616,6 @@ export default function Home(){
         <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
         { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }</Row>
 
-        <Row id='scrw' className="rw pb-2">
-
-          <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-            onMouseLeave={ (e) => inim(e, 'h', 1) } className="w3 justify-content-md-center"
-            style={{ borderLeft: '1px solid #ddd', position: 'relative',
-            display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
-            <Image alt="Woman" className="object-cover opacity-1" height={150}
-              src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
-              width={150}/>
-            <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
-              borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-        "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-                <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                  >Single Image prduct...</p></CardFooter></Card>
-          <Button id='b1' style={{ zIndex: 0 }} className=
-            "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-          color="default" radius="lg" size="sm">Insert</Button></Col>{ modc(iml, 1, 2) }
+        <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2) }{ modc(iml, 1, 2) }
         { modc(dict, 1, 2) }{ modc(iml, 1, 2) }</Row></div>
 </Container></div></div></div> }

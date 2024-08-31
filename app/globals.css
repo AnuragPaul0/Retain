@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.w50 { width: 50%; right: 0 }
-.bgy { background-color: yellow }
+.bdf { backdrop-filter: unset }
+.w50 { right: 0 }
+.bgy { background-color: orange; color: white }
 div.pr0 { padding-right: 0 !important }
 .w2 { width: 12vw !important }
 .cut-text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; --wi: 1vw;
