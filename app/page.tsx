@@ -69,7 +69,6 @@ myFunction = (c:any, o=0) => { tr = 'imodal'
   if (o) { window.addEventListener('click', (event) => {
     // console.log(event.target, "clicked")
     if ((event.target as HTMLElement).id == tr) { a.classList.remove('df')
-      // style.display = "none"
 } }, { signal: controller.signal } ) } else controller.abort() },
 
 inim = (e:any, h:any, o=0) => {
@@ -197,10 +196,10 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 
 // l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
-  { w==ab? '':'bgy absolute '+"px-"+(t!=''?0:2)+
+  {( w==ab? '':'bgy absolute ' )+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
-    " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":'bottom-1')+" w"+w+" ml-1 z-10" }>
-<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
+    " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-+'+(+w==ab)))+" w"+w+
+" ml-1 z-10" }><p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
 
 iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
@@ -268,7 +267,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={150} src=
       "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-    width={100} /></Col>{ cfr('', os, '50 top') }</div>,
+    width={100} /></Col>{ cfr('', m, '50 top') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
