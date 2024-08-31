@@ -290,7 +290,7 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 card = (i: any, m=sing, t='cut-text ') => {
   return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
     <CardFooter id='cfo' className=
-      { "p"+t!=''?'l0':"x-2"+" justify-center before:bg-white/10 border-white/20 border-1"+
+      { "p"+(t!=''?'l0':"x-2")+" justify-center before:bg-white/10 border-white/20 border-1"+
         " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Card> },
 
@@ -623,11 +623,12 @@ export default function Home(){
         <Row id='scrw' className="rw pb-2">{ modc(iml, 3, 2) }
           { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
           
-        <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }{ modc(iml, 3, 2) }
+        <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
+          { modc(iml, 1, 2, 'Multi Image - fallback') }
           { modc(iml, 0, 2) }{ modc(dict, 1, 2) }</Row>
 
 
-        <Row id='scrw' style={{ justifyContent: 'flex-start !important' }} className="rw pb-9">
+        <Row id='scrw' className="rw pb-9">
 
           <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
             onMouseLeave={ (e) => inim(e, 'h', 1) }
