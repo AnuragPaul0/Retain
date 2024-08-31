@@ -241,7 +241,7 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
 </div>, imk(4) ]},
 
-d2 = (n: any) => <div key={ n } className='df'>
+d2 = (n: any, m='On Sale') => <div key={ n } className='df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
       <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
         borderTopRightRadius: 0,
@@ -263,9 +263,9 @@ d2 = (n: any) => <div key={ n } className='df'>
     width={100} /><CardFooter id='cfo' className=
     { "pl0 pr0 justify-center bgy border-white/20 border-1"+
       " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Col></div>,
+<p id='mb0' className={ "text-tiny" }>{ m }</p></CardFooter></Col></div>,
 
-dict = { c: 1, imc: [ imk(0), d2(1), d2(2), d2(3), imk(4) ]},
+dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
 sing = 'Single Image prduct - no discount',
 
@@ -630,20 +630,5 @@ export default function Home(){
           <Button id='b1' style={{ zIndex: 0 }} className=
             "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">Insert</Button></Col>{ modc(iml, 1, 2) }
-
-          <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-                onMouseLeave={ (e) => inim(e, 'h', 1) }
-                className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-                position: 'relative', display: 'flex'}}>
-                <Card isFooterBlurred radius="lg" className="border-none">
-                  <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
-                    src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
-                <CardFooter style={{borderBottomRightRadius: 'var(--nextui-radius-large)',
-                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-              "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] z-10"
-                  ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                    >Single Image prduct...</p></CardFooter></Card>
-                <Button id='b1' style={{ zIndex: 0 }} className=
-    "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-    color="default" radius="lg" size="sm">Insert</Button></Col>{ modc(iml, 1, 2) }</Row></div>
+        { modc(dict, 1, 2) }{ modc(iml, 1, 2) }</Row></div>
 </Container></div></div></div> }
