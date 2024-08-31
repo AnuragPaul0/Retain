@@ -189,7 +189,9 @@ changeBackground = (e:any, h:any, o=0) => {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
   // console.log(h, (document.querySelector('#del.' + pd) as HTMLElement))
 }
-else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }, os='On sale',
+else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
+
+os='On sale', ab = '-[calc(100%_-_8px)]',
 
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
 width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
@@ -279,7 +281,7 @@ sing = 'Single Image prduct - no discount',
 cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Multi Image - new arr', '4 Image - new arrival'],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
-['Single Image prduct', 'Single Image prduct']], ab = '-[calc(100%_-_8px)]',
+['Single Image prduct', 'Single Image prduct']],
 
 
 card = (i: any, m=sing, t='cut-text ') =>
