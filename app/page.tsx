@@ -61,15 +61,16 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
   for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { k = c[i].substring(1); break } }
-  a = document.querySelector("#"+tr), a.classList.add('df')
+  a = document.querySelector("#"+tr)
   // style.display = o ? "flex" : 'none'
-  const controller = new AbortController
+  
 
   // User clicks anywhere outside of the modal, close it
-  if (o) { window.addEventListener('click', (event) => {
+  if (o) { a.classList.add('df'); const controller = new AbortController
+    window.addEventListener('click', (event) => {
     // console.log(event.target, "clicked")
-    if ((event.target as HTMLElement).id == tr) { a.classList.remove('df')
-} }, { signal: controller.signal } ) } else controller.abort() },
+    if ((event.target as HTMLElement).id == tr) { a.classList.remove('df'); controller.abort()
+} }, { signal: controller.signal } ) } else a.classList.remove('df') },
 
 inim = (e:any, h:any, o=0) => {
   // console.log('el:', e)
@@ -610,7 +611,7 @@ export default function Home(){
               </svg></span>
               <input id='bl0' type="text" className="form-control" placeholder="Search"
                 aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><span onClick={ () => myFunction(0) } className="top-0 close">&times;</span>
+        </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
 
       <Container id='h40' className="rounded-large"><div id='scrw'>
 
