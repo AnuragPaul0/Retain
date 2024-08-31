@@ -52,8 +52,7 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n
     style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
-colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-center"
-    style={{ position: 'relative' }}>
+colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
 // window.addEventListener("load", () => {
@@ -200,19 +199,19 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
   { w==ab? '':'absolute '+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
-    " overflow-hidden py-1 before:rounded-xl bottom-1 w"+w+" ml-1 z-10" }>
+    " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":'bottom-1')+" w"+w+" ml-1 z-10" }>
 <p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
 
-iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
-      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-          borderTopRightRadius: 0
+iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
+    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+      <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+        borderTopRightRadius: 0
+        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+        "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
+      <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+          borderTopRightRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
-        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+    "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
       <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
             }} alt="Woman" className="object-cover opacity-1" height={150} src=
@@ -272,7 +271,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     width={100} /><CardFooter id='cfo' className=
     { "pl0 pr0 justify-center bgy border-white/20 border-1"+
       " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={ "text-tiny" }>{ m }</p></CardFooter></Col></div>,
+<p id='mb0' className={ "text-tiny" }>{ m }</p></CardFooter></Col>{ cfr('', os, '50 top') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.w50 { width: 50%; right: 0; top: 0 }
+.w50 { width: 50%; right: 0 }
 .bgy { background-color: yellow }
 div.pr0 { padding-right: 0 !important }
 .w2 { width: 12vw !important }
@@ -73,16 +73,14 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 width: 51% }
 
 /* The Close Button */
-.close { top: 0;
-  padding-top: .5%;
+.close { padding-top: .5%;
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
   padding-right: 1.5%;
   width: fit-content;
-  right: 0;
-  position: absolute }
+  right: 0; position: absolute }
 
 .close:hover,
 .close:focus {
@@ -112,8 +110,7 @@ width: 51% }
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
-}
+  } }
 
 body { color: rgb(var(--foreground-rgb)) }
 
