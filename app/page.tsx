@@ -292,7 +292,7 @@ card = (i: any, m=sing, t='cut-text ') => {
   <CardFooter id='cfo' className=
     { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={"text-tiny"+t }>{ m }</p></CardFooter></Card> },
+<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Card> },
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
