@@ -281,7 +281,7 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 
 card = (i: any, m=sing, t='', b=btn()) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
-{ i }{ cfr(t, m) }{ b }</Card>,
+<div>{ i }{ b }</div>{ cfr(t, m) }</Card>,
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
