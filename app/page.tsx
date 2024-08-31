@@ -318,7 +318,7 @@ export default function Home(){
   // r el
   relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
-    return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
+    return <Row id={'r'+(i+1)}  onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
 
     <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
