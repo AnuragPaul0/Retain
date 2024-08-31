@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.pr0 { padding-right: 0 }
 .w2 { width: 12vw !important }
 .cut-text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; --wi: 1vw;
 padding-left: var(--wi); padding-right: var(--wi) }
