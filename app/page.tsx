@@ -353,7 +353,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-        <Row id='scrw' className='ac' style={{ width: '35vw' }}>{ imco(i) }{ imco(i, dict) }
+        <Row id='scrw' className='ac' style={{ width: '35.5vw' }}>{ imco(i) }{ imco(i, dict) }
     <Button id="addc" onClick={ greeting } className={ 'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
@@ -433,7 +433,7 @@ export default function Home(){
           isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-              <Row id='scrw' className='ac r' style={{ width: '35vw' }}>
+              <Row id='scrw' className='ac r' style={{ width: '35.5vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
