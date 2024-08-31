@@ -287,12 +287,12 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
 ['Single Image - Left - No Discount', '4 Images - 0 discount'], [sing, sing]],
 
-card = (i: any, m=sing, t: any) => {
+card = (i: any, m=sing, t='cut-text ') => {
   return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
   <CardFooter id='cfo' className=
     { "pl0 justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1"+
       " before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={"cut-text"+t }>{ m }</p></CardFooter></Card> },
+<p id='mb0' className={"text-tiny"+t }>{ m }</p></CardFooter></Card> },
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
@@ -312,7 +312,7 @@ color="default" radius="lg" size="sm">Insert</Button>,
 
 modc = (i=iml, r=0, w=3) => <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
   onMouseLeave={ (e) => inim(e, 'h', 1) } className={ "relative df w"+w+" justify-content-md-center" }>
-{ card(i.imc[r], cfo[r][i.c], w==3?' text-tiny':'') }{ btn() }</Col>
+{ card(i.imc[r], cfo[r][i.c], w==3?'cut-text ':'') }{ btn() }</Col>
 
 export default function Home(){
   const [els, setels] = React.useState([
