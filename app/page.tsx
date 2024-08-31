@@ -197,7 +197,7 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 
 // l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
-  { w==ab? '':'absolute '+"px-"+(t!=''?0:2)+
+  { w==ab? '':'bgy absolute '+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
     " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":'bottom-1')+" w"+w+" ml-1 z-10" }>
 <p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
@@ -268,10 +268,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={150} src=
       "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-    width={100} /><CardFooter id='cfo' className=
-    { "pl0 pr0 justify-center bgy border-white/20 border-1"+
-      " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={ "text-tiny" }>{ m }</p></CardFooter></Col>{ cfr('', os, '50 top') }</div>,
+    width={100} /></Col>{ cfr('', os, '50 top') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
