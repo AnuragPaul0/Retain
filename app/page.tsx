@@ -80,7 +80,7 @@ inim = (e:any, h:any, o=0) => {
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
 relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('div')
-  if (!c[0]) container.classList.add(...c)
+  if (c[0]) container.classList.add(...c)
   createRoot(container).render(rel)
   // console.log('c', container, Object.keys(container),
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, h)})
@@ -139,12 +139,12 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
     // }(f ? ' : 'after') + '
 //  onMouseEnter={ (e) => changeBackground(e, 'h') }
 //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
-    tr?.append(relm(<Col xs lg="2" className="justify-content-md-center"
-      style={{ width: '100%', display: 'flex' }}>
+    tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
+      style={{ width: '100%' }}>
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
       textAlign: 'center',
       borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant { co }</Card>
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant { co+1 }</Card>
     <Button id='adb' className='atb cb'
       ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
     stroke="currentColor"
