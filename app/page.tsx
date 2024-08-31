@@ -144,7 +144,7 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
         <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
       textAlign: 'center',
       borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant {co++}</Card>
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant { co }</Card>
     <Button id='adb' className='atb cb'
       ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
     stroke="currentColor"
@@ -154,7 +154,8 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
     </svg></Button></Col>, ['w3', 'df', 'top'] ) )
     // console.log(b, relm(k))['']
     document.querySelectorAll('#addc').forEach( (e, id) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) ) }
+  e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) )
+  co++ }
   else { a = document.querySelector('#addr')
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
@@ -180,7 +181,6 @@ changeBackground = (e:any, h:any, o=0) => {
   // console.log('parent:', parent)
   pd = parent.id; if (h == 'h') {
     tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
-  // () =>{ co = 'white'
     k = o ? "none" : 'block'
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
@@ -267,7 +267,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={150} src=
       "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-    width={100} /></Col>{ cfr('', m, '50 top-0') }</div>,
+width={100} /></Col>{ cfr('', m, '50 top-0') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
@@ -281,7 +281,7 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 
 card = (i: any, m=sing, t='', b=btn()) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
-<div>{ i }{ b }</div>{ cfr(t, m) }</Card>,
+<div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
@@ -347,7 +347,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-        <Row id='scrw' className='ac' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict) }
+        <Row id='scrw' className='ac' style={{ width: '35vw' }}>{ imco(i) }{ imco(i, dict) }
     <Button id="addc" onClick={ greeting } className={ 'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
@@ -467,7 +467,7 @@ export default function Home(){
           return <li id='lst' className="par" {...props} key={props.key} style={{ ...props.style,
               cursor: isDragged ? "grabbing" : "inherit",
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-            }}>{ relem(value+1, isDragged, els[value], index) }</li> }}/>
+            }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
             {/* Mark any node with the data-movable-handle attribute if you wish
                   to use is it as a DnD handle. The rest of renderItem will be then
                   ignored and not start the drag and drop.*/}
