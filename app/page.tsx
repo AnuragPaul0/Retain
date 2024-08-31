@@ -208,7 +208,7 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
       <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
             }} alt="Woman" className="object-cover opacity-1" height={150} src=
 "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-  width={100} /></Col></div>,
+  width={100} /></Col>{ cfr('', os, '50') }</div>,
 
   <div key='2' className='df'>
       <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
@@ -239,9 +239,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
           borderTopRightRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-</div>, imk(4) ]},
+</div>, imk(4) ]}, os='On sale',
 
-d2 = (n: any, m='On Sale') => <div key={ n } className='df'>
+d2 = (n: any, m=os) => <div key={ n } className='df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
       <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
         borderTopRightRadius: 0,
@@ -269,17 +269,20 @@ dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
 sing = 'Single Image prduct - no discount',
 
-cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
+cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Multi Image - new arr', '4 Image - new arrival'],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
-['Single Image prduct', 'Single Image prduct']],
+['Single Image prduct', 'Single Image prduct']], ab = '-[calc(100%_-_8px)]',
 
-card = (i: any, m=sing, t='cut-text ') => {
-  return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
-    <CardFooter id='cfo' className=
-      { "p"+(t!=''?'l0 pr0':"x-2")+" justify-center before:bg-white/10 border-white/20 border-1"+
-        " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
-<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Card> },
+// l0 pr
+cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
+  { w==ab? '':'absolute '+"px-"+(t!=''?0:2)+
+    " justify-center before:bg-white/10 border-white/20 border-1"+
+    " overflow-hidden py-1 before:rounded-xl bottom-1 w"+w+" ml-1 z-10" }>
+<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
+
+card = (i: any, m=sing, t='cut-text ') =>
+<Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>{ i }{ cfr(t, m) }</Card>,
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
