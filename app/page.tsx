@@ -189,7 +189,7 @@ changeBackground = (e:any, h:any, o=0) => {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
   // console.log(h, (document.querySelector('#del.' + pd) as HTMLElement))
 }
-else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
+else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) }, os='On sale',
 
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
 width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
@@ -246,7 +246,7 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
           borderTopRightRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
         "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
-</div>, imk(4) ]}, os='On sale',
+</div>, imk(4) ]},
 
 d2 = (n: any, m=os) => <div key={ n } className='df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
