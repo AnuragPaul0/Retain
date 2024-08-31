@@ -416,15 +416,14 @@ export default function Home(){
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
-          <Col xs lg="4" id='crd' className="top" style={{ justifyContent: 'center',
-            display: 'flex' }}>
+          <Col xs lg="4" id='crd' className="df top" style={{ justifyContent: 'center' }}>
               <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
                 borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
                 paddingRight: '3% !important' }}
-        isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
+          isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
-        <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-              <Row id='scrw' className='r' style={{ width: '35vw' }}>
+          <ScrollSyncPane><div className='example' style={{ ...cnr }}>
+              <Row id='scrw' className='ac r' style={{ width: '35vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
@@ -610,9 +609,9 @@ export default function Home(){
         { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
           
         <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
-        { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(iml, 2, 2) }</Row>
+        { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }</Row>
 
-        <Row id='scrw' className="rw pb-9">
+        <Row id='scrw' className="rw pb-2">
 
           <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
             onMouseLeave={ (e) => inim(e, 'h', 1) } className="w3 justify-content-md-center"
