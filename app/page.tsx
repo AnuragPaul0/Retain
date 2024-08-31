@@ -278,8 +278,12 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
 ['Single Image prduct', 'Single Image prduct']],
 
+btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) } style={{ display: "none" }} className=
+  { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+color="default" radius="lg" size="sm">Insert</Button>,
 
-card = (i: any, m=sing, t='', b=btn()) =>
+
+card = (i: any, m=sing, t='', b: any) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
 
@@ -296,14 +300,10 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-btn = () => <Button id='b1' style={{ display: "none" }} className=
-  "r1 z-10 self-center p-2 radius-large absolute bg-white/50" variant="flat"
-color="default" radius="lg" size="sm">Insert</Button>,
-
 modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
   return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-  onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
-" justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'') }</Col> }
+    onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
+" justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> }
 
 export default function Home(){
   const [els, setels] = React.useState([
