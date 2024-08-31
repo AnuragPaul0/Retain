@@ -73,14 +73,9 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 width: 51% }
 
 /* The Close Button */
-.close { padding-top: .5%;
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.close { padding-top: .5%; color: #aaa; float: right; font-size: 28px; font-weight: bold;
   padding-right: 1.5%;
-  width: fit-content;
-  right: 0; position: absolute }
+  width: fit-content; right: 0; position: absolute }
 
 .close:hover,
 .close:focus {
@@ -90,7 +85,7 @@ width: 51% }
 }
 
 .c2w { width: 75% !important }
-.df { display: flex }
+div.df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
