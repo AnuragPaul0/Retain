@@ -27,7 +27,7 @@ buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' },
+cnr = { width: '51vw' }, inp='',
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -61,10 +61,8 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
   for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { console.log(c[i])
-    k = c[i].substring(1); break } }
+    inp = c[i].substring(1); break } }
   a = document.querySelector("#"+tr)
-  // style.display = o ? "flex" : 'none'
-  
 
   // User clicks anywhere outside of the modal, close it
   if (o) { a.classList.add('df'); const controller = new AbortController
@@ -281,9 +279,9 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Single Image prduct', 'Single Image prduct']],
 
 btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
-  console.log(cl, k)
+  console.log(cl, inp)
   for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    document.querySelector('.'+k)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict))
+    document.querySelector('.'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict))
     // '.'+cl[i].substring(1))
   ); break } } } } style={{ display: "none" }} className=
   { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
