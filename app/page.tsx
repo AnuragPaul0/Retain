@@ -198,7 +198,7 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
   {( w==ab? '':'bgy absolute ' )+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
-    " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-+'+(+w==ab)))+" w"+w+
+    " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-+'+(+(w==ab))))+" w"+w+
 " ml-1 z-10" }><p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
 
 iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
