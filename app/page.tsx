@@ -43,9 +43,9 @@ el2 = [
 
 addes = (r=0, c=2) => <Button onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) }
   id='b1' className=
-    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
-  variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
-> Add design</Button>,
+    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
+  variant="flat" color="default" radius="lg" size="sm">
+<div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n')} }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
@@ -60,7 +60,7 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { k = c[i]; break } }
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { k = c[i].substring(1); break } }
   a = document.querySelector("#"+tr), a.classList.add('df')
   // style.display = o ? "flex" : 'none'
   const controller = new AbortController
@@ -80,7 +80,7 @@ inim = (e:any, h:any, o=0) => {
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
 relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('div')
-  if (c[0] != '') container.classList.add(...c)
+  if (!c[0]) container.classList.add(...c)
   createRoot(container).render(rel)
   // console.log('c', container, Object.keys(container),
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, h)})
@@ -123,8 +123,8 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
 {/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
             {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
       </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-  </Card></Col></Row> } else { let c = tt.classList; for (let i = 0; i < c.length; i++) {
-    if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
+    </Card></Col></Row> } else { let c = tt.classList; for (let i = 0; i < c.length; i++) {
+  if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
 
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('.ac')
@@ -267,7 +267,7 @@ d2 = (n: any, m=os) => <div key={ n } className='df'>
     <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           }} alt="Woman" className="object-cover opacity-1" height={150} src=
       "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-width={100} /></Col>{ cfr('', m, '50 top-0') }</div>,
+width={100}/></Col>{ cfr('', m, '50 top-0') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
@@ -278,7 +278,12 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
 ['Single Image prduct', 'Single Image prduct']],
 
-btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) } style={{ display: "none" }} className=
+btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
+  for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+    document.querySelector('.'+k).replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict))
+    // '.'+cl[i].substring(1))
+  ); break } }
+} } style={{ display: "none" }} className=
   { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
 color="default" radius="lg" size="sm">Insert</Button>,
 
