@@ -286,7 +286,7 @@ card = (i: any, m=sing, t='', b=btn()) =>
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
-    {"r"+(i+1)+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
+    {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
           id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
