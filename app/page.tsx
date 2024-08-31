@@ -285,7 +285,8 @@ sing = 'Single Image prduct - no discount',
 
 cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 ['Multi Image - new arr', '4 Images - new arrival'],
-['Single Image - Left - No Discount', '4 Image - 0 discount'], [sing, sing]],
+['Single Image - Left - No Discount', '4 Image - 0 discount'],
+['Single Image prduct', 'Single Image prduct']],
 
 card = (i: any, m=sing, t='cut-text ') => {
   return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
@@ -747,7 +748,7 @@ export default function Home(){
               color="default" radius="lg" size="sm">Insert</Button></Col></Row>
 
 
-        <Row id='r5' style={{ justifyContent: 'flex-start !important' }} className="rw pb-9">
+        <Row id='scrw' className="rw pb-9">
 
               <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) } className="w3 justify-content-md-center"
