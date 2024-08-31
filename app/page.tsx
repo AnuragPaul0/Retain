@@ -57,18 +57,6 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-cen
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
 // window.addEventListener("load", () => {
-//     a = document.querySelector("#scrw > #r1"),
-//     a.addEventListener("mouseenter", (e:any) => changeBackground(e, 'h'))
-//     a.addEventListener("mouseleave", (e:any) =>changeBackground(e, 'h', 1))
-  //   const controller = new AbortController
-
-  //   if (!o) { window.addEventListener('click', (event) =>{
-  //     
-  //     if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-  //     { signal: controller.signal } ) }
-  // else controller.abort()
-
-// const [isShown, setIsShown] = useState(false), co = true,clone:any, cl, node:any, du
 
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
@@ -97,13 +85,11 @@ relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('
   if (c[0] != '') container.classList.add(...c)
   createRoot(container).render(rel)
   // console.log('c', container, Object.keys(container),
-  // Object.values(container), typeof(container), container.children, container.children[0])
-  // du = document.createElement('div').appendChild(container)
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, h)})
 return container },
 
 greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
-  // console.log(el)</div>
+  // console.log(el)
   if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
     onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
 
@@ -143,7 +129,7 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
     if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
 
   b = 'beforebegin'
-  if (!f) { a = document.querySelectorAll('#scrw')
+  if (!f) { a = document.querySelectorAll('.ac')
     if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
     tr = document.querySelector('#scrw.r')
     // if (tr) { node = tr.lastChild
@@ -197,8 +183,6 @@ changeBackground = (e:any, h:any, o=0) => {
   pd = parent.id; if (h == 'h') {
     tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
   // () =>{ co = 'white'
-  // let tr = co ?  : co = !co
-  // if (tog) createRoot(tog).render(tr) tog[0].style.display === "none"
     k = o ? "none" : 'block'
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
@@ -284,7 +268,7 @@ dict = { c: 1, imc: [ imk(0), d2(1), d2(2), d2(3), imk(4) ]},
 sing = 'Single Image prduct - no discount',
 
 cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
-['Multi Image - new arr', '4 Images - new arrival'],
+['Multi Image - new arr', '4 Image - new arrival'],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
 ['Single Image prduct', 'Single Image prduct']],
 
@@ -304,7 +288,8 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier"><g><path d=
-      "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
+      "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"
+      ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button></Col>} else return colmo(i) },
 
 btn = () => <Button id='b1' style={{ display: "none" }} className=
@@ -358,7 +343,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-        <Row id='scrw' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict) }
+        <Row id='scrw' className='ac' style={{ width: '35vw' }}>{ imco(i-1) }{ imco(i-1, dict) }
     <Button id="addc" onClick={ greeting } className={ 'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
@@ -622,151 +607,30 @@ export default function Home(){
       <Container id='h40' className="rounded-large"><div id='scrw' style={{ width: '60vw' }}>
 
         <Row id='scrw' className="rw pb-2">{ modc(iml, 3, 2) }
-          { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
+        { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
           
         <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
-          { modc(iml, 1, 2, 'Multi Image - fallback') }
-          { modc(iml, 0, 2) }{ modc(dict, 1, 2) }</Row>
-
+        { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(iml, 2, 2) }</Row>
 
         <Row id='scrw' className="rw pb-9">
 
           <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-            onMouseLeave={ (e) => inim(e, 'h', 1) }
-            className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-            display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
-            <div style={{ display: 'flex', height: '150px', width: '150px',
-                justifyContent: 'flex-start !important' }}>
-                <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                  <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-                    borderTopRightRadius: 0
-                    }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                    "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg"/>
-                  <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-                      borderTopRightRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                    "	https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
-              <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={150} src=
-            "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>
-            <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                paddingLeft: '0 !important',
-                paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-              borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-          "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-              <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                >Multi Image - new arr...</p></CardFooter></Card>
-            <Button id='b1' style={{ zIndex: 0 }} className=
-              "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-              color="default" radius="lg" size="sm">Insert</Button></Col>
-
-          <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-            onMouseLeave={ (e) => inim(e, 'h', 1) }
-            className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-            display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none">
-            <div style={{ display: 'flex', height: '150px', width: '150px',
-                justifyContent: 'flex-start !important' }}>
-                <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                    <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-                      borderTopRightRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-          "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                      />
-                    <Image style={{ borderRadius: 0
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                      "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                      />
-                  <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-                      borderTopRightRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                    "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
-              <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={150} src=
-                  "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-              width={100} /></Col></div>
-            <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                paddingLeft: '0 !important',
-                paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-                borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-          "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-                ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                  >4 Images - new arrival</p>
-            </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-              "r3 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-              color="default" radius="lg" size="sm">Insert</Button></Col>
-
-          <Col id='c3' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-            onMouseLeave={ (e) => inim(e, 'h', 1) }
-            className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
+            onMouseLeave={ (e) => inim(e, 'h', 1) } className="w3 justify-content-md-center"
+            style={{ borderLeft: '1px solid #ddd', position: 'relative',
             display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
-            <Image alt="Woman" className="object-cover opacity-1" height={150} width={150}
-              src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>
+            <Image alt="Woman" className="object-cover opacity-1" height={150}
+              src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
+              width={150}/>
             <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
               borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
         "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-                <p className="text-tiny" style={{marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-            >Single Image prduct...</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-              "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-              color="default" radius="lg" size="sm">Insert</Button></Col>
+                <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+                  >Single Image prduct...</p></CardFooter></Card>
+          <Button id='b1' style={{ zIndex: 0 }} className=
+            "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
+          color="default" radius="lg" size="sm">Insert</Button></Col>
 
-          <Col id='c4' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-            onMouseLeave={ (e) => inim(e, 'h', 1) }
-            className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
-              display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
-          <div style={{ display: 'flex', height: '150px', width: '150px',
-                justifyContent: 'flex-start !important' }}>
-                <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-                    <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-                      borderTopRightRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-          "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                      />
-                    <Image style={{ borderRadius: 0
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                      "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                      />
-                  <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-                      borderTopRightRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-                    "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
-              <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-                <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                      }} alt="Woman" className="object-cover opacity-1" height={150} src=
-                  "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-              width={100} /></Col></div>
-            <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '4px !important',
-                paddingLeft: '0 !important',
-                paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
-                borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-          "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
-                ><p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium'}}
-                  >4 Images - 0 disco...</p>
-            </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-              "r4 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-              color="default" radius="lg" size="sm">Insert</Button></Col></Row>
-
-
-        <Row id='scrw' className="rw pb-9">
-
-              <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-                onMouseLeave={ (e) => inim(e, 'h', 1) } className="w3 justify-content-md-center"
-                style={{ borderLeft: '1px solid #ddd', position: 'relative',
-                display: 'flex'}}><Card isFooterBlurred radius="lg" className="border-none">
-                <Image alt="Woman" className="object-cover opacity-1" height={150}
-                  src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"
-                  width={150}/>
-                <CardFooter style={{ borderBottomRightRadius: 'var(--nextui-radius-large)',
-                  borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-            "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-                    <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
-                      >Single Image prduct...</p></CardFooter></Card>
-              <Button id='b1' style={{ zIndex: 0 }} className=
-                "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-                color="default" radius="lg" size="sm">Insert</Button></Col>
-
-              <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+          <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
                 className="w3 justify-content-md-center" style={{ borderLeft: '1px solid #ddd',
                 position: 'relative', display: 'flex'}}>
