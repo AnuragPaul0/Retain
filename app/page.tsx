@@ -194,6 +194,13 @@ else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
 width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
 
+// l0 pr
+cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
+  { w==ab? '':'absolute '+"px-"+(t!=''?0:2)+
+    " justify-center before:bg-white/10 border-white/20 border-1"+
+    " overflow-hidden py-1 before:rounded-xl bottom-1 w"+w+" ml-1 z-10" }>
+<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
+
 iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
       <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
         <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
@@ -274,12 +281,6 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
 ['Single Image prduct', 'Single Image prduct']], ab = '-[calc(100%_-_8px)]',
 
-// l0 pr
-cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
-  { w==ab? '':'absolute '+"px-"+(t!=''?0:2)+
-    " justify-center before:bg-white/10 border-white/20 border-1"+
-    " overflow-hidden py-1 before:rounded-xl bottom-1 w"+w+" ml-1 z-10" }>
-<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
 
 card = (i: any, m=sing, t='cut-text ') =>
 <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>{ i }{ cfr(t, m) }</Card>,
