@@ -26,7 +26,7 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' className=
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
-let tog, parent, p = 6, container, a:any, k:any, b:any, f, pd, tr:any, co = 3, greens = 'grb',
+let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' },
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
