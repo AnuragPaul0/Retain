@@ -23,7 +23,7 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 </svg>,
 
 // Card text-black
-buttonc = (t: any, s = '') => { if (s!='') s+=' '; return <Button id='cbt' className=
+buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className=
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
@@ -60,7 +60,8 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { k = c[i].substring(1); break } }
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { console.log(c[i])
+    k = c[i].substring(1); break } }
   a = document.querySelector("#"+tr)
   // style.display = o ? "flex" : 'none'
   
