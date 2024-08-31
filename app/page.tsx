@@ -280,7 +280,7 @@ cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 
 btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
   for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    document.querySelector('.'+k).replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict))
+    document.querySelector('.'+k)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict))
     // '.'+cl[i].substring(1))
   ); break } }
 } } style={{ display: "none" }} className=
