@@ -42,7 +42,7 @@ el2 = [
 {buttonc('empty')}</div> ],
 
 addes = (r=0, c=2) => <Button onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) }
-id='b1' className=
+  id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20'}
   variant="flat" color="default" radius="lg" size="sm"><div style={{ zoom: 2 }}>+</div
 > Add design</Button>,
@@ -61,17 +61,17 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="df w3 top justify-content-md-cen
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) {
-    if (c[i].match(/a\d/)) { k = c[i]; break } }
-  a = document.querySelector("#"+tr), a.style.display = o ? "flex" : 'none'
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { k = c[i]; break } }
+  a = document.querySelector("#"+tr), a.classList.add('df')
+  // style.display = o ? "flex" : 'none'
   const controller = new AbortController
 
   // User clicks anywhere outside of the modal, close it
   if (o) { window.addEventListener('click', (event) => {
     // console.log(event.target, "clicked")
-    if ((event.target as HTMLElement).id == tr) { a.style.display = "none" } },
-  { signal: controller.signal } ) }
-else controller.abort() },
+    if ((event.target as HTMLElement).id == tr) { a.classList.remove('df')
+      // style.display = "none"
+} }, { signal: controller.signal } ) } else controller.abort() },
 
 inim = (e:any, h:any, o=0) => {
   // console.log('el:', e)
@@ -228,10 +228,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='df'>
   <div key='3' className='df'>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
       <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
-        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
-    width={100} /></Col>
-    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+        }} alt="Woman" className="object-cover opacity-1" height={150} src=
+        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg" width={100}/>
+    </Col><Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
         <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
           borderBottomRightRadius: 0
           }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
@@ -256,12 +255,15 @@ d2 = (n: any) => <div key={ n } className='df'>
     <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
         borderTopRightRadius: 0,
         }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
-      "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
-<Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-  <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-        }} alt="Woman" className="object-cover opacity-1" height={150} src=
-    "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
-width={100} /></Col></div>,
+  "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+  <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+    <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+          }} alt="Woman" className="object-cover opacity-1" height={150} src=
+      "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
+    width={100} /><CardFooter id='cfo' className=
+    { "pl0 pr0 justify-center bgy border-white/20 border-1"+
+      " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
+<p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Col></div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2), d2(3), imk(4) ]},
 
@@ -275,7 +277,7 @@ cfo = [[sing, sing], ['Multi Image - on Sale', '4 Images - On Sale'],
 card = (i: any, m=sing, t='cut-text ') => {
   return <Card isFooterBlurred radius="lg" className={ "w15 border-none" }>{ i }
     <CardFooter id='cfo' className=
-      { "p"+(t!=''?'l0':"x-2")+" justify-center before:bg-white/10 border-white/20 border-1"+
+      { "p"+(t!=''?'l0 pr0':"x-2")+" justify-center before:bg-white/10 border-white/20 border-1"+
         " overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10" }>
 <p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter></Card> },
 
@@ -607,7 +609,7 @@ export default function Home(){
 
         <Row id='scrw' className="rw pb-2">{ modc(iml, 3, 2) }
         { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
-          
+
         <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
         { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }</Row>
 
@@ -627,7 +629,7 @@ export default function Home(){
                   >Single Image prduct...</p></CardFooter></Card>
           <Button id='b1' style={{ zIndex: 0 }} className=
             "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-          color="default" radius="lg" size="sm">Insert</Button></Col>
+          color="default" radius="lg" size="sm">Insert</Button></Col>{ modc(iml, 1, 2) }
 
           <Col id='c2' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
                 onMouseLeave={ (e) => inim(e, 'h', 1) }
@@ -643,5 +645,5 @@ export default function Home(){
                     >Single Image prduct...</p></CardFooter></Card>
                 <Button id='b1' style={{ zIndex: 0 }} className=
     "r5 z-10 self-center p-2 radius-large absolute bg-white/20" variant="flat"
-    color="default" radius="lg" size="sm">Insert</Button></Col></Row></div>
+    color="default" radius="lg" size="sm">Insert</Button></Col>{ modc(iml, 1, 2) }</Row></div>
 </Container></div></div></div> }

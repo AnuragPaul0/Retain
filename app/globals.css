@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.pr0 { padding-right: 0 }
+.bgy { background-color: yellow }
+.pr0 { padding-right: 0 !important }
 .w2 { width: 12vw !important }
 .cut-text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; --wi: 1vw;
 padding-left: var(--wi); padding-right: var(--wi) }
@@ -33,7 +34,7 @@ scrollbar-width: none } /* Firefox */
 padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
 
 .grb { color: #052; background-color: #04ae5620 }
-#cfo { padding-right: 0 !important; border-bottom-right-radius: var(--nextui-radius-large);
+#cfo { border-bottom-right-radius: var(--nextui-radius-large);
   border-top-left-radius: var(--nextui-radius-large) }
 
 #mb0 { margin-bottom: 0 }
@@ -61,21 +62,14 @@ div.wh { width: 150px; height: 176px !important }
 
 div.h10 { height: 100% !important }
 
-/* background */
-.modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+/* z-index: 1; /* Sit on top  overflow: auto; /* Enable scroll if needed */
+.modal { padding-top: 100px; /* Location of the box */
   background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 
 /* 20px */
 #imodal-content { background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888;
-width: 50% }
+width: 51% }
 
 /* The Close Button */
 .close { top: 0;
