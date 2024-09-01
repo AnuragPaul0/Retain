@@ -323,13 +323,13 @@ export default function Home(){
    ...cele(el2) ]),
     // console.log(els); els = [els]; console.log(els)
 
-  [items, setItems] = React.useState([0, 1, 2, 3, 4]),
-  [inputValue, setInputValue] = React.useState(items)
+  [items, setItems] = React.useState([0, 1, 2, 3, 4])
+
+  let tem = els; items.forEach((e: any) => { tem[e] = rows(e) })
+// setInputValue(tem),
+  const [inputValue, setInputValue] = React.useState(tem)
 
   // r el
-  let tem = els
-  items.forEach((e: any) => { tem[e] = rows(e) })
-// setInputValue(tem)
   let relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
@@ -363,7 +363,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-  {/* { inputValue[i] } */}
+  { inputValue[i] }
   </div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
