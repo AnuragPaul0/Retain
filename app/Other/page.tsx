@@ -1,7 +1,7 @@
-import * as React from "react";
-import { List, arrayMove } from "react-movable";
+import * as React from "react"
+import { List, arrayMove } from "react-movable"
 
-export default SuperSimple = () => {
+export default function SuperSimple () {
   const [items, setItems] = React.useState(["Item 1", "Item 2", "Item 3"]);
   return (
     <List
