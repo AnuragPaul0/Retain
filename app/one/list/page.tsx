@@ -1,8 +1,8 @@
 import React from "react"
 import { List, arrayMove } from "react-movable"
 
-export default function SuperSimple () {
-  const [items, setItems] = React.useState(["Item 1", "Item 2", "Item 3"]);
+export default function Home() {
+  const [items, setItems] = React.useState(["Item 1", "Item 2", "Item 3"])
   return (
     <List
       values={items}
