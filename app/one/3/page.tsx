@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import React from "react"; import { CiTrash } from "react-icons/ci"
+import { useState, React } from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -297,19 +297,19 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) }
 
 export default function Home(){
-  const [els, setels] = React.useState([
+  const [els, setels] = useState([
     <Card key='0' className="alc w90 justify-content-md-center"><div id='alsc'
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
    ...cele(el2) ]),
 
-  [items, setItems] = React.useState([0, 1, 2, 3, 4])
+  [items, setItems] = useState([0, 1, 2, 3, 4])
 //   console.log(els)
 
   let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) })
 // setInputValue(tem),
 // console.log(els)
-  const [inputValue, setInputValue] = React.useState(tem)
+  const [inputValue, setInputValue] = useState(tem)
   const [artists, setArtists] = useState([]),
 
 // greeting
