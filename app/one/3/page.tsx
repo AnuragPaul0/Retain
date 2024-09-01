@@ -317,7 +317,7 @@ export default function Home(){
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
         for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-        console.log(cl[i], inp)
+        console.log(cl[i], 'inp: ', inp)
             document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
             ['pl0', 'w3', 'df'])
             // '.'+cl[i].substring(1))
