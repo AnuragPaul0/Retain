@@ -320,12 +320,15 @@ export default function Home(){
     // console.log(els); els = [els]; console.log(els)
 
   [items, setItems] = React.useState([0, 1, 2, 3, 4]),
+  // [inputValue, setInputValue] = React.useState([0, 1, 2, 3, 4]),
 
   // r el
   relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
+    // key={ i } value={ inputValue[i] } onChange={(e) => { setInputValue(e.target.value) }}
+    className="h21">
 
     <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
       <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -433,7 +436,7 @@ export default function Home(){
           isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-              <Row id='scrw' className='ac r' style={{ width: '35.2vw' }}>
+            <Row id='scrw' className='ac r' style={{ width: '35.2vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
