@@ -325,7 +325,6 @@ export default function Home(){
 
   [items, setItems] = React.useState([0, 1, 2, 3, 4]),
   [inputValue, setInputValue] = React.useState(items)
-  inputValue = setInputValue()
 
   // r el
   let tem = items
