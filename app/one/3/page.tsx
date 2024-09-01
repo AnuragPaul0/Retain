@@ -306,22 +306,22 @@ export default function Home(){
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
    ...cele(el2) ]),
 
-  [items, setItems] = useState([0, 1, 2, 3, 4])
+  [items, setItems] = useState([0, 1, 2, 3, 4]),
 //   console.log(els)
 // setInputValue(tem)
 
 //   const [inputValue, setInputValue] = useState(tem)
-  const [artists, setArtists] = useState(arr),
+  [artists, setArtists] = useState(arr),
 
     // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }
     rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
         <ul>
             { artists[i].map( artist => <li key={artist.id}>{artist.name}</li>) }</ul>
-        <Button id="addc" onClick={ () => {
-            setArtists([ ...artists,
-            { id: co++, name: colmo(i, co) }
-            ]) } } className={ 'r'+i+
+        <Button id="addc" onClick={ () => { let art = artists
+        artists.forEach((e:any, idx:any) => { art[idx] = [...e[idx],
+            { id: co, name: colmo(idx, co) }]}); co++
+        setArtists(art) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
