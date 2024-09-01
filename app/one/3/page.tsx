@@ -328,7 +328,7 @@ export default function Home(){
 
   // r el
   let tem = els
-  items.forEach((e: any) => { tem[e] = rows(e) }), setInputValue([ ...tem ])
+  items.forEach((e: any) => { tem[e] = rows(e) }), setInputValue(tem)
   let relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
@@ -362,7 +362,8 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-  { inputValue[i] }</div></ScrollSyncPane></Row> }
+  {/* { inputValue[i] } */}
+  </div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{ width: '4rem' }} className={
