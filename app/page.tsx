@@ -282,7 +282,7 @@ btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLE
   console.log(cl, inp)
   for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
     document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?iml:dict),
-      ['w3', 'df'])
+      ['pl0', 'w3', 'df'])
     // '.'+cl[i].substring(1))
   ); myFunction([''], 0); break } } } } style={{ display: "none" }} className=
   { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
@@ -353,7 +353,7 @@ export default function Home(){
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-        <Row id='scrw' className='ac' style={{ width: '35.1vw' }}>{ imco(i) }{ imco(i, dict) }
+        <Row id='scrw' className='ac' style={{ width: '35.2vw' }}>{ imco(i) }{ imco(i, dict) }
     <Button id="addc" onClick={ greeting } className={ 'r'+i+
   " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
@@ -433,7 +433,7 @@ export default function Home(){
           isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-              <Row id='scrw' className='ac r' style={{ width: '35.1vw' }}>
+              <Row id='scrw' className='ac r' style={{ width: '35.2vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
