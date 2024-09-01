@@ -298,6 +298,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
 
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
+console.log(arr)
 
 export default function Home(){
   const [els, setels] = useState([
