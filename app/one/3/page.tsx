@@ -296,7 +296,6 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 
@@ -311,9 +310,10 @@ export default function Home(){
 //   console.log(els)
 // setInputValue(tem)
 
-  const [inputValue, setInputValue] = useState(tem)
-  const [artists, setArtists] = useState(arr),
+//   const [inputValue, setInputValue] = useState(tem)
+  const [artists, setArtists] = useState(arr)
 
+    // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }
     rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
         <ul>
@@ -330,9 +330,10 @@ export default function Home(){
             document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
             ['pl0', 'w3', 'df'])
             // '.'+cl[i].substring(1))
-        ); let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
-        setInputValue(inv)
-        console.log('inv:', inv)
+        )
+        // let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
+        // setInputValue(inv)
+        // console.log('inv:', inv)
         myFunction([''], 0); break } } } } style={{ display: "none" }} className=
         { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
     color="default" radius="lg" size="sm">Insert</Button>,
@@ -340,10 +341,10 @@ export default function Home(){
     modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
     return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
         onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
-    " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> }
+    " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
   // r el
-  let relem = (i=0, isDragged: any, c: any, index: any) => {
+  relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
     onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
@@ -375,8 +376,8 @@ export default function Home(){
       <Col id='crd' xs lg="4" className='h17 alc top'>
       <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
-  { inputValue[i] }
+      <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
+  {/* { inputValue[i] } */}
   </div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
