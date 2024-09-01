@@ -327,8 +327,8 @@ export default function Home(){
   [inputValue, setInputValue] = React.useState(items)
 
   // r el
-  let tem = items
-  items.forEach((e: any, i: any) => { tem[i] = rows(e) }), setInputValue(tem)
+  let tem = els
+  items.forEach((e: any) => { tem[e] = rows(e) }), setInputValue(tem)
   let relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
