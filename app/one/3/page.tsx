@@ -323,6 +323,7 @@ export default function Home(){
             // '.'+cl[i].substring(1))
         ); let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
         setInputValue(inv)
+        console.log(inv)
         myFunction([''], 0); break } } } } style={{ display: "none" }} className=
         { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
     color="default" radius="lg" size="sm">Insert</Button>,
