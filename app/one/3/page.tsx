@@ -311,7 +311,7 @@ export default function Home(){
 // setInputValue(tem)
 
 //   const [inputValue, setInputValue] = useState(tem)
-  const [artists, setArtists] = useState(arr)
+  const [artists, setArtists] = useState(arr),
 
     // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }
