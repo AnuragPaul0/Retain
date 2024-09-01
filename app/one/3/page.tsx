@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import { useState, React } from "react"; import { CiTrash } from "react-icons/ci"
+import useState from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
