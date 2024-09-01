@@ -325,7 +325,7 @@ export default function Home(){
   [items, setItems] = React.useState([0, 1, 2, 3, 4])
   console.log(els)
 
-  let tem = els; items.forEach((e: any) => { tem[e] = rows(e) })
+  let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) })
 // setInputValue(tem),
 console.log(els)
   const [inputValue, setInputValue] = React.useState(tem)
