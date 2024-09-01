@@ -309,7 +309,7 @@ export default function Home(){
   let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) })
 // setInputValue(tem),
 // console.log(els)
-  const [inputValue, setInputValue] = React.useState(tem),
+  const [inputValue, setInputValue] = React.useState(tem)
   const [artists, setArtists] = useState([]),
 
 // greeting
