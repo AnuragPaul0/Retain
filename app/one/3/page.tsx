@@ -316,16 +316,16 @@ export default function Home(){
   const [inputValue, setInputValue] = React.useState(tem),
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
-    for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    console.log(cl[i], inp)
-        document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-        ['pl0', 'w3', 'df'])
-        // '.'+cl[i].substring(1))
-    ); let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
-    // setInputValue(inv)
-    myFunction([''], 0); break } } } } style={{ display: "none" }} className=
-    { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
-    color="default" radius="lg" size="sm">Insert</Button>
+        for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+        console.log(cl[i], inp)
+            document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+            ['pl0', 'w3', 'df'])
+            // '.'+cl[i].substring(1))
+        ); let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
+        // setInputValue(inv)
+        myFunction([''], 0); break } } } } style={{ display: "none" }} className=
+        { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+    color="default" radius="lg" size="sm">Insert</Button>,
 
     modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
     return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
