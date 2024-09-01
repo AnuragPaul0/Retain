@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { List, arrayMove } from "react-movable"
 
 export default function SuperSimple () {
