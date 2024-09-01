@@ -321,12 +321,13 @@ export default function Home(){
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
    ...cele(el2) ]),
-    // console.log(els); els = [els]; console.log(els)
 
   [items, setItems] = React.useState([0, 1, 2, 3, 4])
+  console.log(els)
 
   let tem = els; items.forEach((e: any) => { tem[e] = rows(e) })
 // setInputValue(tem),
+console.log(els)
   const [inputValue, setInputValue] = React.useState(tem)
 
   // r el
