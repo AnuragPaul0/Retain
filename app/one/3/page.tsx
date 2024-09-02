@@ -316,7 +316,7 @@ export default function Home(){
 
 //   const [inputValue, setInputValue] = useState(tem)
   [artists, setArtists] = useState(arr),
-  [name, setName] = useState([{ id: 1 }])
+  [name, setName] = useState([{ id: 1 }]),
 //  
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
