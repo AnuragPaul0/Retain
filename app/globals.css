@@ -86,7 +86,7 @@ width: 51% }
 }
 
 .c2w { width: 75% !important }
-div.df { display: flex }
+div.df, .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
