@@ -41,7 +41,7 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c
+addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c-1
   myFunction((e.target as HTMLElement).classList, 1)} }
   id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
@@ -274,10 +274,10 @@ dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
 sing = 'Single Image prduct - no discount',
 
-cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
+cfo = [ [ sing, sing ], [ 'Multi Image - '+os, '4 Images - '+os ],
 ['Multi Image - new arr', '4 Image - new arrival'],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
-['Single Image prduct', 'Single Image prduct']],
+[ 'Single Image prduct', 'Single Image prduct' ] ],
 
 
 card = (i: any, m=sing, t='', b: any) =>
@@ -332,18 +332,14 @@ export default function Home(){
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
-      arr[ri][ci].name=artists[r][c].name
-      setArtists(arr)
+      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr)
       let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
       console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
-        document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+      document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
           ['pl0', 'w3', 'df'])
           // '.'+cl[i].substring(1))
       )
-      // let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
-      // setInputValue(inv)
-      // console.log('inv:', inv)
       myFunction([''], 0); break } } } } style={{ display: "none" }} className=
       { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
     color="default" radius="lg" size="sm">Insert</Button>,
