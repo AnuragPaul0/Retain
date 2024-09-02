@@ -296,11 +296,11 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-arr = [ { 0:[ { id: 1, name: imco(0, dict) } ] } ]
-for (let i = 1; i < 5; i++) { arr[0][i] = [ { id: 1, name: imco(i, dict) } ] }
-// console.log(arr)
+arr = [ { 0:[ { id: 1, name: imco(0, dict) } ] } as object ]
+console.log(arr)
+// for (let i = 1; i < 5; i++) { arr[0][i] = [ { id: 1, name: imco(i, dict) } ] }
 
-let lii = (arts=arr, i=0) => arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )
+// let lii = (arts=arr, i=0) => arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )
 
 export default function Home(){
   const [els, setels] = useState([
@@ -321,10 +321,10 @@ export default function Home(){
     rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
         <ul>{ artists.map(artist => artist[i].map(art => (
           <li key={art.id}>{art.name}</li> ) ) ) }</ul>
-        <Button id="addc" onClick={ () => { let art = artists
-            artists.forEach((e:any, idx:any) => { art[idx] = [...e,
+        <Button id="addc" onClick={ () => { let arts = artists
+            artists[0].forEach((e:any, idx:any) => { arts[0][idx] = [...e,
             { id: co, name: colmo(idx, co) }]}); co++
-        setArtists(art); console.log(artists) } } className={ 'r'+i+
+        setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
