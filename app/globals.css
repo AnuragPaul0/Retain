@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .br2 { border-radius: var(--r2) }
 #fg1 { flex-grow: 1; box-shadow: none; text-align: center }
 .bdf { backdrop-filter: unset }

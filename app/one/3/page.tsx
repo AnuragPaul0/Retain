@@ -305,54 +305,54 @@ export default function Home(){
 
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
-    rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
-      <ul className='df fon px-0'>
-      { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
-      <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
-        artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
-          { id: co, name: colmo(idx, co) }]})
-        tr = document.querySelector('#scrw.r')
-          //   // console.log(node)
-      //  onMouseEnter={ (e) => changeBackground(e, 'h') }
-      //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
-        tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
-          style={{ width: '100%' }}>
-            <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-            >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
-        // console.log(b, relm(k))['']
-        setName([...name, {id: co}]); co++
-        setArtists(arts); console.log(artists) } } className={ 'r'+i+
-    " fon shadow-medium self-center" }>+</Button></Row>,
+  rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
+    <ul className='df fon px-0'>
+    { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
+    <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
+      artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
+        { id: co, name: colmo(idx, co) }]})
+      tr = document.querySelector('#scrw.r')
+        //   // console.log(node)
+    //  onMouseEnter={ (e) => changeBackground(e, 'h') }
+    //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
+      tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
+        style={{ width: '100%' }}>
+          <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
+          >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
+      // console.log(b, relm(k))['']
+      setName([...name, {id: co}]); co++
+      setArtists(arts); console.log(artists) } } className={ 'r'+i+
+  " fon shadow-medium self-center" }>+</Button></Row>,
 
-    btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
-      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
-        if (shape.id === ci) {
-          // No change
-          return shape;
-        } else {
-          // Return a new circle 50px below + 50
-          return {
-            ...shape,
-            id: shape.id,
-          };
-        }
-      })
-      console.log(nextShapes)
-      // Re-render with the new array
-      setName(nextShapes)
-      let cl=(e.target as HTMLElement).classList
-      for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-      console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
-      // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-      //     ['pl0', 'w3', 'df']) )
-      myFunction([''], 0); break } } } } style={{ display: "none" }} className=
-      { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
-    color="default" radius="lg" size="sm">Insert</Button>,
+  btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
+    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
+      if (shape.id === ci) {
+        // No change
+        return shape;
+      } else {
+        // Return a new circle 50px below + 50
+        return {
+          ...shape,
+          id: shape.id,
+        };
+      }
+    })
+    console.log(nextShapes)
+    // Re-render with the new array
+    setName(nextShapes)
+    let cl=(e.target as HTMLElement).classList
+    for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+    console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
+    // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+    //     ['pl0', 'w3', 'df']) )
+    myFunction([''], 0); break } } } } style={{ display: "none" }} className=
+    { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+  color="default" radius="lg" size="sm">Insert</Button>,
 
-    modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
-    return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-        onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
-    " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
+  modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
+  return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+      onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
+  " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
   // r el
   relem = (i=0, isDragged: any, c: any, index: any) => {
@@ -465,19 +465,15 @@ export default function Home(){
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
-                <Col xs lg="2" className="w3 justify-content-md-center" style={{
-                  display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
-                    textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
-                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                    isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+                <Col xs lg="2" className="df w3 justify-content-md-center">
+                  <Card id='fg1' style={{ paddingLeft: '3%', paddingRight: '3%' }}
+                  isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Primary Variant</Card>
                 <Btn/></Col>
 
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
-                  <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-                    textAlign: 'center',
-                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                    isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card></Col>
-      <Btn/></Row></div></ScrollSyncPane></Row></li></ul>
+                  <Card id='fg1'
+                  isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
+      </Col></Row></div></ScrollSyncPane></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
