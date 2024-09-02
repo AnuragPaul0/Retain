@@ -335,7 +335,7 @@ export default function Home(){
       setArtists(arr)
       let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-      console.log(cl[i], 'inp: ', inp, r, c)
+      console.log(cl[i], 'inp: ', inp, ri, ci)
         document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
           ['pl0', 'w3', 'df'])
           // '.'+cl[i].substring(1))
