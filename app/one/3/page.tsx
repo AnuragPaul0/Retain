@@ -320,8 +320,8 @@ export default function Home(){
   [name, setName] = useState([{ id: 1 }]),
 //  
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
-// greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
-    rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
+// greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i) style={{ width: '35.2vw' }}
+    rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' }>{ imco(i) }
         <ul className='df fon px-0'>
         { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
         <Button id="addc" onClick={ () => { let arts = artists
@@ -528,10 +528,7 @@ export default function Home(){
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-      <Row id='scrw' onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
-  
-      <Col xs lg="7" className="top">
+      <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
             backgroundColor: '#fafafa', height: '100% !important' }}
         radius="lg">N/A</Card></Col>
