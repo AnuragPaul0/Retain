@@ -299,6 +299,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 console.log(arr)
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
+arr[i] = [ { id: 1, name: colmo(5, 1) } ]
 // 0:[ { id: 1, name: imco(0, dict) } ] } as object ][0]
 // let lii = (arts=arr, i=0) => { console.log()
 //   return arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )}
@@ -352,34 +353,32 @@ export default function Home(){
   relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
-    // key={ i } value={ inputValue[i] } onChange={(e) => { setInputValue(e.target.value) }}
-    className="h21">
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
 
-    <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
-      <Row style={{ height: '25%' }} className="justify-content-md-center">
-        <Col className="justify-content-md-center" style={{ alignContent: 'end',
-          display: 'grid' }}>
-            <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
-                ? arrayRemove(items, index) : items ) }}
-              className={"r"+i+" self-center"} style={{ display: "none",
-                paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
-      stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
-    "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-      ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-      "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
-      </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
-    style={{ blockSize: 'fit-content' }}>
-    <p className='p5' style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
-    <button data-movable-handle className={"r"+i+" self-center"}
-    style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
-    background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
-    </button></Col></Row></Col>
+        <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
+          <Row style={{ height: '25%' }} className="justify-content-md-center">
+            <Col className="justify-content-md-center" style={{ alignContent: 'end',
+              display: 'grid' }}>
+                <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
+                    ? arrayRemove(items, index) : items ) }}
+                  className={"r"+i+" self-center"} style={{ display: "none",
+                    paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+            <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
+          stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
+        "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+          "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
+          </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
+        style={{ blockSize: 'fit-content' }}>
+        <p className='p5' style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
+        <button data-movable-handle className={"r"+i+" self-center"}
+        style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
+        background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
+        </button></Col></Row></Col>
 
-      <Col id='crd' xs lg="4" className='h17 alc top'>
-      <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
+        <Col id='crd' xs lg="4" className='h17 alc top'>
+        <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
   {/* { inputValue[i] } */}
@@ -508,15 +507,13 @@ export default function Home(){
 
   <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
     <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={() => { const il = items.length
-          cfo = [...cfo, ['+ Add design', '+ Add design']]
+        onClick={ () => { const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
         >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
         // console.log(els)
-    setItems([...items, il]) }} className="shadow-medium self-center" style={{
-          paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
-          borderRadius: '2px', zoom: '2',
-          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
+    setItems([...items, il]) } } className="shadow-medium self-center" style={{
+      paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
 
     <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
     </Container></ScrollSync>
