@@ -319,7 +319,7 @@ export default function Home(){
     // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }lii(artists, i)
     rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
-        <ul>{ artists.map(artist => artist[i].map(art => (
+        <ul>{ artists.map((artist: object) => artist[i].map(art => (
           <li key={art.id}>{art.name}</li> ) ) ) }</ul>
         <Button id="addc" onClick={ () => { let arts = artists
             artists[0].forEach((e:any, idx:any) => { arts[0][idx] = [...e,
