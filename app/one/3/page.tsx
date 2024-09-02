@@ -324,8 +324,8 @@ export default function Home(){
         <ul>{ name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
         <Button id="addc" onClick={ () => { let arts = artists
             artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
-            { id: co, name: colmo(idx, co) }]}); co++
-        setArtists(arts); console.log(artists); setName([...name, {id: co}]) } } className={ 'r'+i+
+            { id: co, name: colmo(idx, co) }]}); setName([...name, {id: co}]); co++
+        setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
