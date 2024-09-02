@@ -300,8 +300,7 @@ export default function Home(){
 // setInputValue(tem)
 
 //   const [inputValue, setInputValue] = useState(tem)
-  [artists, setArtists] = useState(arr),
-  [name, setName] = useState([{ id: 1 }]),
+  [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
 
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
@@ -309,10 +308,10 @@ export default function Home(){
     <ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
     <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
-      artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
-        { id: co, name: colmo(idx, co) }]})
+      artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
+        { id: co, name: colmo(idx, co) } ] } )
       tr = document.querySelector('#scrw.r')
-        //   // console.log(node)
+      // console.log(node)
     //  onMouseEnter={ (e) => changeBackground(e, 'h') }
     //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
