@@ -27,7 +27,7 @@ buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, inp='',
+cnr = { width: '51vw' }, nextId = 35.2, inp='',
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -318,30 +318,30 @@ export default function Home(){
 //   const [inputValue, setInputValue] = useState(tem)
   [artists, setArtists] = useState(arr),
   [name, setName] = useState([{ id: 1 }]),
-//  
+
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
-// greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i) style={{ width: '35.2vw' }}
-    rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' }>{ imco(i) }
-        <ul className='df fon px-0'>
-        { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
-        <Button id="addc" onClick={ () => { let arts = artists
-            artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
-            { id: co, name: colmo(idx, co) }]}); setName([...name, {id: co}]); co++
-        setArtists(arts); console.log(artists) } } className={ 'r'+i+
+// greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
+    rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
+      <ul className='df fon px-0'>
+      { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
+      <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
+          artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
+          { id: co, name: colmo(idx, co) }]}); setName([...name, {id: co}]); co++
+      setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
-        for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-        console.log(cl[i], 'inp: ', inp)
-            document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-            ['pl0', 'w3', 'df'])
-            // '.'+cl[i].substring(1))
-        )
-        // let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
-        // setInputValue(inv)
-        // console.log('inv:', inv)
-        myFunction([''], 0); break } } } } style={{ display: "none" }} className=
-        { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+      for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+      console.log(cl[i], 'inp: ', inp)
+        document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+          ['pl0', 'w3', 'df'])
+          // '.'+cl[i].substring(1))
+      )
+      // let inv = inputValue; inv[inp[0]] = document.querySelector('#scrw.r'+inp[0])
+      // setInputValue(inv)
+      // console.log('inv:', inv)
+      myFunction([''], 0); break } } } } style={{ display: "none" }} className=
+      { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
     color="default" radius="lg" size="sm">Insert</Button>,
 
     modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
@@ -460,7 +460,7 @@ export default function Home(){
           isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-            <Row id='scrw' className='ac r' style={{ width: '35.2vw' }}>
+            <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
                 <Col xs lg="2" className="w3 justify-content-md-center" style={{
                   display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
