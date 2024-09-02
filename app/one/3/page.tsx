@@ -316,7 +316,7 @@ export default function Home(){
 
 //   const [inputValue, setInputValue] = useState(tem)
   [artists, setArtists] = useState(arr),
-  [name, setName] = useState([{ id: 1, nam: name }])
+  [name, setName] = useState([{ id: 1 }])
 //  
   // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
@@ -325,7 +325,7 @@ export default function Home(){
         <Button id="addc" onClick={ () => { let arts = artists
             artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
             { id: co, name: colmo(idx, co) }]}); co++
-        setArtists(arts); console.log(artists) } } className={ 'r'+i+
+        setArtists(arts); console.log(artists); setName([...name, {id: co}]) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
