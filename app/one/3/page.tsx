@@ -331,11 +331,12 @@ export default function Home(){
       setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
-    btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists; arr[ri][ci]=artists[r][c]
+    btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
+      arr[ri][ci].name=artists[r][c].name
       setArtists(arr)
       let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-      console.log(cl[i], 'inp: ', inp, ri, ci)
+      console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
         document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
           ['pl0', 'w3', 'df'])
           // '.'+cl[i].substring(1))
