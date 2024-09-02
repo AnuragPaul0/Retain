@@ -336,10 +336,8 @@ export default function Home(){
       let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
       console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
-      document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-          ['pl0', 'w3', 'df'])
-          // '.'+cl[i].substring(1))
-      )
+      // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+      //     ['pl0', 'w3', 'df']) )
       myFunction([''], 0); break } } } } style={{ display: "none" }} className=
       { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
     color="default" radius="lg" size="sm">Insert</Button>,
