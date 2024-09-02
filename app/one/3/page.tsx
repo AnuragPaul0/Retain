@@ -27,7 +27,7 @@ buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className
 {s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -41,7 +41,8 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0, c=2) => <Button onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) }
+addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c
+  myFunction((e.target as HTMLElement).classList, 1)} }
   id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
   variant="flat" color="default" radius="lg" size="sm">
@@ -330,7 +331,9 @@ export default function Home(){
       setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
-    btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
+    btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists; arr[ri][ci]=artists[r][c]
+      setArtists(arr)
+      let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
       console.log(cl[i], 'inp: ', inp)
         document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
