@@ -298,7 +298,9 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
 
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
-console.log(arr)
+// console.log(arr)
+
+let lii = (arts=arr, i=0) => arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )
 
 export default function Home(){
   const [els, setels] = useState([
@@ -317,10 +319,9 @@ export default function Home(){
     // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }
     rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: '35.2vw' }}>{ imco(i) }
-        <ul>
-            { artists[i].map( artist => <li key={artist.id}>{artist.name}</li>) }</ul>
+        <ul>{ lii(artists, i) }</ul>
         <Button id="addc" onClick={ () => { let art = artists
-        artists.forEach((e:any, idx:any) => { art[idx] = [...e,
+            artists.forEach((e:any, idx:any) => { art[idx] = [...e,
             { id: co, name: colmo(idx, co) }]}); co++
         setArtists(art); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
