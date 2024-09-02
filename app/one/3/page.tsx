@@ -332,7 +332,7 @@ export default function Home(){
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
-      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr)
+      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); setName(name)
       let cl=(e.target as HTMLElement).classList
       for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
       console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
