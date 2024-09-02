@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.br2 { border-radius: var(--r2) }
+#fg1 { flex-grow: 1; box-shadow: none; text-align: center }
 .bdf { backdrop-filter: unset }
 .w50 { right: 0 }
 .bgy { background-color: orange; color: white }
@@ -54,7 +55,7 @@ margin-left: calc(var(--bs-gutter-x) * 4) !important; padding-top: calc(var(--bs
 border-radius: 2px; padding-right: calc(var(--bs-gutter-x) / 4) !important  }
 
 div.w90 { width: 90%; height: 70% !important }
-#alsc { align-self: center; margin-bottom: calc(var(--nextui-radius-large) / 2) }
+#alsc { align-self: center; margin-bottom: var(--r2) }
 #sdel { color:red; stroke-width:0.5 }
 nav { width: 20vw }
 .fon { width: fit-content !important }
@@ -96,18 +97,13 @@ div.df, .df { display: flex }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 
-:root { --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+:root { --foreground-rgb: 0, 0, 0; --background-start-rgb: 214, 219, 220;
+--background-end-rgb: 255, 255, 255; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
+@media (prefers-color-scheme: dark) { :root { --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  } }
+    --background-end-rgb: 0, 0, 0 } }
 
-body { color: rgb(var(--foreground-rgb)) }
+body { --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
 @layer utilities { .text-balance { text-wrap: balance } }

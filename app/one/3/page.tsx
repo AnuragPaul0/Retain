@@ -9,7 +9,10 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-const HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
+let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
+
+HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
   "M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -24,10 +27,7 @@ const HandleIcon = () => <svg height="20px" className="feather feather-move" vie
 
 // Card text-black
 buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className=
-{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
-
-let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
+{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -130,30 +130,6 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('.ac')
     if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
-    tr = document.querySelector('#scrw.r')
-    // if (tr) { node = tr.lastChild
-    //   // console.log(node)
-    // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
-    // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
-
-    // tr.appendChild(clone)
-    // }(f ? ' : 'after') + '
-//  onMouseEnter={ (e) => changeBackground(e, 'h') }
-//   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
-    tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
-      style={{ width: '100%' }}>
-        <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
-      textAlign: 'center',
-      borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant { co+1 }</Card>
-    <Button id='adb' className='atb cb'
-      ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-    stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    className="lucide lucide-ellipsis-vertical">
-      <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button></Col>, ['w3', 'df', 'top'] ) )
-    // console.log(b, relm(k))['']
     document.querySelectorAll('#addc').forEach( (e, id) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) )
   co++ }
@@ -297,10 +273,17 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
+Btn = () =>  <Button id='adb' className='atb cb'
+  ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    className="lucide lucide-ellipsis-vertical">
+      <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+</svg></Button>,
+
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 arr[5] = [ { id: 1, name: colmo(5, 1) } ]
-console.log(arr)
+// console.log(arr)
 // 0:[ { id: 1, name: imco(0, dict) } ] } as object ][0]
 // let lii = (arts=arr, i=0) => { console.log()
 //   return arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )}
@@ -326,9 +309,19 @@ export default function Home(){
       <ul className='df fon px-0'>
       { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
       <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
-          artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
-          { id: co, name: colmo(idx, co) }]}); setName([...name, {id: co}]); co++
-      setArtists(arts); console.log(artists) } } className={ 'r'+i+
+        artists.forEach((e:any, idx:any) => { arts[idx] = [...e,
+          { id: co, name: colmo(idx, co) }]})
+        tr = document.querySelector('#scrw.r')
+          //   // console.log(node)
+      //  onMouseEnter={ (e) => changeBackground(e, 'h') }
+      //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
+        tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
+          style={{ width: '100%' }}>
+            <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
+            >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
+        // console.log(b, relm(k))['']
+        setName([...name, {id: co}]); co++
+        setArtists(arts); console.log(artists) } } className={ 'r'+i+
     " fon shadow-medium self-center" }>+</Button></Row>,
 
     btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
@@ -461,15 +454,14 @@ export default function Home(){
     color: '#FFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="pb-5 cnr rounded-large">
-
+{/* textAlign: 'center', , alignSelf: 'center' */}
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="df top" style={{ justifyContent: 'center' }}>
-              <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
-                borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
-                paddingRight: '3% !important' }}
-          isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
+            <Card style={ { boxShadow: 'none', paddingLeft: '3% !important',
+              paddingRight: '3% !important' } }
+          isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
@@ -478,28 +470,14 @@ export default function Home(){
                     textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
                     borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
                     isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
-                    <Button className='cb' style={{ borderRadius: '4px',
-                    paddingLeft: '7px !important', paddingRight: '7px !important' }}
-                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-                  stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  className="lucide lucide-ellipsis-vertical">
-                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-                </svg></Button></Col>
+                <Btn/></Col>
 
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
                   <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
                     textAlign: 'center',
                     borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
-                    isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
-                  <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
-                    paddingRight: '7px !important' }}
-                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
-                  stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  className="lucide lucide-ellipsis-vertical">
-                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-      </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
+                    isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card></Col>
+      <Btn/></Row></div></ScrollSyncPane></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
