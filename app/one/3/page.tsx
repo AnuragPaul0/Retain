@@ -280,7 +280,7 @@ Btn = () =>  <Button id='adb' className='atb cb'
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
 </svg></Button>,
 
-arr = [ [ { id: 1, name: imco(0, dict) } ] ], divElem = document.querySelector(".bun.pt-4")
+arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 
 // showHide = () => {
 //   if (divElem.classList[0] === "fade-in") {
@@ -326,8 +326,9 @@ export default function Home(){
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
       // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++; setArtists(arts); divElem?.classList.add('df', 'modal-cont')
-      setTimeout(() => { divElem?.classList.remove('df', 'modal-cont') }, 1000)
+      setName([...name, {id: co}]); co++; setArtists(arts); tr = document.querySelector(".bun.pt-4")
+      tr?.classList.add('df', 'modal-cont')
+      setTimeout(() => { tr?.classList.remove('df', 'modal-cont') }, 1000)
       // console.log(artists)
     } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
