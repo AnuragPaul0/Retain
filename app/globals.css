@@ -42,7 +42,7 @@ padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 
 
 .grb { color: #052; background-color: #04ae5620 }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
-  border-top-left-radius: var(--nextui-radius-large) }
+border-top-left-radius: var(--nextui-radius-large) }
 
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
@@ -69,26 +69,18 @@ div.wh { width: 150px; height: 176px !important }
 
 div.h10 { height: 100% !important }
 
-/* z-index: 1; /* Sit on top  overflow: auto; /* Enable scroll if needed */
 .modal { padding-top: 100px; /* Location of the box */
   background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 
-/* 20px */
 #imodal-content { background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888;
 width: 51% }
 
-/* The Close Button */
 .close { padding-top: .5%; color: #aaa; float: right; font-size: 28px; font-weight: bold;
   padding-right: 1.5%;
   width: fit-content; right: 0; position: absolute }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer }
 
 .c2w { width: 75% !important }
 div.df, .df { display: flex }
