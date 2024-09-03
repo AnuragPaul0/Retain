@@ -282,11 +282,10 @@ Btn = () =>  <Button id='adb' className='atb cb'
 
 arr = [ [ { id: 1, name: imco(0, dict) } ] ]
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
-arr[5] = [ { id: 1, name: colmo(5, 1) } ]
+// arr[5] = [ { id: 1, name: colmo(p, 1) } ]
 // console.log(arr)
 // 0:[ { id: 1, name: imco(0, dict) } ] } as object ][0]
 // let lii = (arts=arr, i=0) => { console.log()
-//   return arts[i].map( artist => <li key={artist.id}>{artist.name}</li> )}
 
 export default function Home(){
   const [els, setels] = useState([
@@ -317,8 +316,8 @@ export default function Home(){
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-          >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
-      // console.log(b, relm(k))['']
+      >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
+      // console.log(b, relm(k))
       setName([...name, {id: co}]); co++
       setArtists(arts); console.log(artists) } } className={ 'r'+i+
   " fon shadow-medium self-center" }>+</Button></Row>,
@@ -487,20 +486,22 @@ export default function Home(){
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
             }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
             {/* Mark any node with the data-movable-handle attribute if you wish
-                  to use is it as a DnD handle. The rest of renderItem will be then
-                  ignored and not start the drag and drop.*/}
+              to use is it as a DnD handle. The rest of renderItem will be then
+              ignored and not start the drag and drop.*/}
 
-  <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
-    <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
+      <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
+      <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
-        >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
-        // console.log(els)
-    setItems([...items, il]) } } className="shadow-medium self-center" style={{
-      paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
+          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]); let tem = artists[0]
+          // console.log(els)
+          for (let i = 1; i < co; i++) { tem[i] = { id: i, name: colmo(p, i) } }
+          setArtists([...artists, tem])
+          setItems([...items, il]) } } className="shadow-medium self-center" style={{
+        paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
 
-    <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
+      <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
     </Container></ScrollSync>
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.w90:hover { width: 150%; align-self:auto; z-index:100; flex-direction: unset }
+/*this is the new approach height: 50% !important*/
+.h10:has(.w90:hover) { overflow: unset !important }
 .br2 { border-radius: var(--r2) }
 #fg1 { flex-grow: 1; box-shadow: none; text-align: center }
 .bdf { backdrop-filter: unset }
