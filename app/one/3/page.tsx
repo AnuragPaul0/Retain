@@ -49,8 +49,8 @@ addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c-1
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n')} }
-    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
-    style={{ position: 'relative' }}>
+  onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
+  style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
 colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
@@ -61,12 +61,12 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { console.log(c[i])
-    inp = c[i].substring(1); break } }
-  a = document.querySelector("#"+tr)
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
+    // console.log(c[i])
+  inp = c[i].substring(1); break } } a = document.querySelector("#"+tr)
 
-  // User clicks anywhere outside of the modal, close it
   if (o) { a.classList.add('df'); const controller = new AbortController
+  // User clicks anywhere outside of the modal, close
     window.addEventListener('click', (event) => {
     // console.log(event.target, "clicked")
     if ((event.target as HTMLElement).id == tr) { a.classList.remove('df'); controller.abort()
@@ -301,7 +301,6 @@ export default function Home(){
 //   const [inputValue, setInputValue] = useState(tem)
   [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
 
-  // let tem = cele(el2); items.forEach((e: any) => { tem[e] = rows(e) }),
 // greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
     <ul className='df fon px-0'>
@@ -310,16 +309,18 @@ export default function Home(){
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
         { id: co, name: colmo(idx, co) } ] } )
       tr = document.querySelector('#scrw.r')
-      // console.log(node)
-    //  onMouseEnter={ (e) => changeBackground(e, 'h') }
+
     //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
       // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++
-      setArtists(arts); console.log(artists) } } className={ 'r'+i+
+      setName([...name, {id: co}]); co++; setArtists(arts)
+      tr = document.querySelector(".bun.pt-4"); tr.classList.add('df')
+      setTimeout(tr.classList.remove('df'), 1000)
+      // console.log(artists)
+    } } className={ 'r'+i+
   " fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
@@ -595,7 +596,7 @@ export default function Home(){
 
     <div className="bun pt-4 modal">
       <div id="imodal-content" className="fon p-1 modal-content" style={{ justifyContent: 'center' }}
-    ><svg className='mr-2' fill="#000" version="1.1" id="Capa_1" width="80px"
+    ><svg className='mr-2' fill="#000" version="1.1" id="Capa_1" width="25px"
       viewBox="0 0 305.002 305.002" xmlSpace="preserve"><g><g>
         <circle r="150" cx="150" cy="150" fill="green"/>
         <path d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"/>
@@ -603,7 +604,6 @@ export default function Home(){
         <path d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"/>
     </g></g></svg>added</div></div>
 
-{/* df  */}
     <div id="imodal" className="modal modalp">
       <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
          <div style={{ justifyContent: 'space-between' }} className=
