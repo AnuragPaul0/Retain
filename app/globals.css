@@ -69,7 +69,7 @@ div.wh { width: 150px; height: 176px !important }
 
 div.h10 { height: 100% !important }
 
-.modal { padding-top: 100px; /* Location of the box */
+.modalp { padding-top: 100px; /* Location of the box */
   background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 
