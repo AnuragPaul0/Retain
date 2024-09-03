@@ -318,7 +318,7 @@ export default function Home(){
       // console.log(b, relm(k))
       setName([...name, {id: co}]); co++; setArtists(arts)
       tr = document.querySelector(".bun.pt-4"); tr.classList.add('df')
-      setTimeout(tr.classList.remove('df'), 1000)
+      setTimeout(() => { tr.classList.remove('df') }, 1000)
       // console.log(artists)
     } } className={ 'r'+i+
   " fon shadow-medium self-center" }>+</Button></Row>,
