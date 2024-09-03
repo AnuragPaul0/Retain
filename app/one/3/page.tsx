@@ -280,7 +280,7 @@ Btn = () =>  <Button id='adb' className='atb cb'
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
 </svg></Button>,
 
-arr = [ [ { id: 1, name: imco(0, dict) } ] ], divElem = document.querySelector(".bun.pt-4"),
+arr = [ [ { id: 1, name: imco(0, dict) } ] ], divElem = document.querySelector(".bun.pt-4")
 
 // showHide = () => {
 //   if (divElem.classList[0] === "fade-in") {
