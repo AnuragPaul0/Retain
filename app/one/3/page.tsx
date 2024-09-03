@@ -495,7 +495,7 @@ export default function Home(){
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
           >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]); let tem = artists[0]
           // console.log(els)
-          for (let i = 1; i < co; i++) { tem[i] = { id: i, name: colmo(p, i) } }
+          for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
           setArtists([...artists, tem])
           setItems([...items, il]) } } className="shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
