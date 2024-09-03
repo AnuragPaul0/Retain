@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes exampl {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes exampl {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* The modal's content */
+.bun .modal-cont {
+  margin: auto;
+  background-color: #f3f3f3;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Add animation */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 0.5s;
+}
+
 .w90:hover { width: 150%; align-self:auto; z-index:100; flex-direction: unset }
 /*this is the new approach height: 50% !important*/
 .h10:has(.w90:hover) { overflow: unset !important }

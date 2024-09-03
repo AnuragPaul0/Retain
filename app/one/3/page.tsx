@@ -280,7 +280,18 @@ Btn = () =>  <Button id='adb' className='atb cb'
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
 </svg></Button>,
 
-arr = [ [ { id: 1, name: imco(0, dict) } ] ]
+arr = [ [ { id: 1, name: imco(0, dict) } ] ], divElem = document.querySelector(".bun.pt-4"),
+
+showHide = () => {
+  if (divElem.classList[0] === "fade-in") {
+    divElem.classList.remove("fade-in");
+    divElem.classList.add("fade-out");
+  } else {
+    divElem.classList.remove("fade-out");
+    divElem.classList.add("fade-in");
+  }
+}
+
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // arr[5] = [ { id: 1, name: colmo(p, 1) } ]
 // console.log(arr)
@@ -307,21 +318,18 @@ export default function Home(){
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
     <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
-        { id: co, name: colmo(idx, co) } ] } )
-      tr = document.querySelector('#scrw.r')
+      { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
 
-    //   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }alignSelf: 'center', 
+      // Variant
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
       // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++; setArtists(arts)
-      tr = document.querySelector(".bun.pt-4"); tr.classList.add('df')
-      setTimeout(() => { tr.classList.remove('df') }, 1000)
+      setName([...name, {id: co}]); co++; setArtists(arts); divElem.classList.add('df', 'modal-cont')
+      setTimeout(() => { divElem.classList.remove('df', 'modal-cont') }, 1000)
       // console.log(artists)
-    } } className={ 'r'+i+
-  " fon shadow-medium self-center" }>+</Button></Row>,
+    } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
@@ -594,8 +602,9 @@ export default function Home(){
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
 
-    <div className="bun pt-4 modal">
-      <div id="imodal-content" className="fon p-1 modal-content" style={{ justifyContent: 'center' }}
+    <div className="h-auto bun pt-4 modal">
+      <div id="imodal-content" className="flex-row fon p-2 modal-content"
+        style={{ justifyContent: 'center' }}
     ><svg className='mr-2' fill="#000" version="1.1" id="Capa_1" width="25px"
       viewBox="0 0 305.002 305.002" xmlSpace="preserve"><g><g>
         <circle r="150" cx="150" cy="150" fill="green"/>
@@ -605,7 +614,7 @@ export default function Home(){
     </g></g></svg>added</div></div>
 
     <div id="imodal" className="modal modalp">
-      <div className="modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
+      <div id="imodal-content" className="modal-content" style={{ justifyContent: 'center' }}>
          <div style={{ justifyContent: 'space-between' }} className=
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
             " group cursor-pointer hover:shadow-lg" }>
