@@ -282,15 +282,15 @@ Btn = () =>  <Button id='adb' className='atb cb'
 
 arr = [ [ { id: 1, name: imco(0, dict) } ] ], divElem = document.querySelector(".bun.pt-4"),
 
-showHide = () => {
-  if (divElem.classList[0] === "fade-in") {
-    divElem.classList.remove("fade-in");
-    divElem.classList.add("fade-out");
-  } else {
-    divElem.classList.remove("fade-out");
-    divElem.classList.add("fade-in");
-  }
-}
+// showHide = () => {
+//   if (divElem.classList[0] === "fade-in") {
+//     divElem.classList.remove("fade-in");
+//     divElem.classList.add("fade-out");
+//   } else {
+//     divElem.classList.remove("fade-out");
+//     divElem.classList.add("fade-in");
+//   }
+// }
 
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // arr[5] = [ { id: 1, name: colmo(p, 1) } ]
@@ -326,8 +326,8 @@ export default function Home(){
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
       // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++; setArtists(arts); divElem.classList.add('df', 'modal-cont')
-      setTimeout(() => { divElem.classList.remove('df', 'modal-cont') }, 1000)
+      setName([...name, {id: co}]); co++; setArtists(arts); divElem?.classList.add('df', 'modal-cont')
+      setTimeout(() => { divElem?.classList.remove('df', 'modal-cont') }, 1000)
       // console.log(artists)
     } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
