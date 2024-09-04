@@ -10,14 +10,14 @@
 @keyframes exampl { from { top:-100px; opacity: 0 } to { top:0px; opacity:1 } }
 @keyframes wid { from { width:200px; x:50px } to { width:1px; x:249px } }
 
-.bun .modal-cont { margin: auto; background-color: #f3f3f3; position: relative; padding: 0;
+.bun .modal-content { margin: auto; background-color: #f3f3f3; position: relative; padding: 0;
   outline: 0; border: 1px #777 solid; text-align: justify; width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   -webkit-animation-name: exampl; /* Chrome, Safari, Opera */ -webkit-animation-duration: .5s;
 animation-name: exampl; animation-duration: .5s }
+
 #wid { -webkit-animation-name: wid; -webkit-animation-duration: 1.5s;
-animation-name: wid; animation-duration: 1.5s }
+animation-name: wid; animation-duration: .5s }
 
 .w90:hover { width: 150%; align-self:auto; z-index:100; flex-direction: unset }
 .h10:has(.w90:hover) { overflow: unset !important }/* new approach */
