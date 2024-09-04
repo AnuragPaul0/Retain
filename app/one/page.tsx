@@ -495,7 +495,7 @@ export default function Home(){
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={ (tr = document.querySelector(".ar")) => {
+        onClick={ () => { tr = document.querySelector(".ar")
           tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000)
           const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
