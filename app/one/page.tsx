@@ -497,7 +497,8 @@ export default function Home(){
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
-          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]); let tem = artists[0]
+          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]);
+          let tem = [ { id: 1, name: colmo(p, 1) } ]
           // console.log(els)
           for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
           setArtists([...artists, tem])
@@ -606,7 +607,7 @@ export default function Home(){
         <path d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"/>
         <path d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"/>
         <rect id='wid' height="150" y="80" rx="20" ry="20" fill="green"/>
-    </svg>added</div></div>
+    </svg>State added</div></div>
 
     <div id="imodal" className="modal modalp">
       <div id="imodal-content" className="modal-content" style={{ justifyContent: 'center' }}>
