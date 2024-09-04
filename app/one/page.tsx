@@ -495,11 +495,11 @@ export default function Home(){
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={ () => { pl=''; tr = document.querySelector(".ar")
-          tr?.classList.remove('d-none'); setTimeout(() => { tr?.classList.add('d-none'); pl='+' }, 1000)
+        onClick={ () => { tr = document.querySelector(".ar")
+          tr?.classList.remove('d-none'); setTimeout(() => { tr?.classList.add('d-none') }, 1000)
           const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
-          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]);
+          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
           let tem = [ { id: 1, name: colmo(p, 1) } ]
           // console.log(els)
           for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
