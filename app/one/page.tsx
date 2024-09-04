@@ -10,7 +10,7 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', pl='+'
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
@@ -495,8 +495,8 @@ export default function Home(){
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={ () => { tr = document.querySelector(".ar")
-          tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000)
+        onClick={ () => { pl=''; tr = document.querySelector(".ar")
+          tr?.classList.remove('d-none'); setTimeout(() => { tr?.classList.add('d-none'); pl='+' }, 1000)
           const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
           >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]);
@@ -506,7 +506,7 @@ export default function Home(){
           setArtists([...artists, tem])
           setItems([...items, il]); todo() } } className="shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
-        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>{ pl }
         <svg id='star' className='ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
           <circle id="c" r="40" stroke-width="20" fill="none" stroke-dasharray="62.75 188.25"></circle>
         </defs><use xlinkHref="#c" stroke="orange" stroke-dashoffset="219.625"></use></svg></Button>
