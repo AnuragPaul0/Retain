@@ -307,8 +307,8 @@ export default function Home(){
 
 //   const [inputValue, setInputValue] = useState(tem)
   [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
+  [isSelected, setIsSelected] = useState(true),
 
-// greeting{ imco(i, dict) }artist[i].map(art => () )[0][0]lii(artists, i)
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
     <ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
@@ -515,13 +515,13 @@ export default function Home(){
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
-      // #04AE56
-        >Design for remaining SKU's</span><Switch color="success" defaultSelected 
-    aria-label="Automatic updates"/></p>
+        >Design for remaining SKU's</span><Switch color="success" defaultSelected
+    onValueChange={setIsSelected} aria-label="Automatic updates"/></p>
 
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
-      marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
+      marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
+      className={ ( isSelected ? 'd-none' : '') + "rounded-large"}>
 
       <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
