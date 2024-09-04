@@ -600,7 +600,7 @@ export default function Home(){
     <div id="topdo" className="h-auto bun pt-4 modal">
       <div id="imodal-content" className="flex-row fon p-2 modal-content"
         style={{ justifyContent: 'center' }}
-    ><svg className='mr-2' fill="#000" version="1.1" id="Capa_1" width="25px"
+    ><svg className='mr-2' version="1.1" id="Capa_1" width="25px"
       viewBox="0 0 305.002 305.002" xmlSpace="preserve">
         <circle r="150" cx="150" cy="150" fill="green"/>
         <path d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"/>
