@@ -521,7 +521,7 @@ export default function Home(){
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
-      className={ ( isSelected ? 'd-none' : '') + "rounded-large"}>
+      className={ ( isSelected ? '' : 'd-none ') + "rounded-large"}>
 
       <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
