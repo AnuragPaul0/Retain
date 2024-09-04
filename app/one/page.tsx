@@ -10,7 +10,7 @@ import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, adde = 'added',
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
@@ -280,7 +280,14 @@ Btn = () =>  <Button id='adb' className='atb cb'
       <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
 </svg></Button>,
 
-arr = [ [ { id: 1, name: imco(0, dict) } ] ]
+arr = [ [ { id: 1, name: imco(0, dict) } ] ],
+
+todo = (tr = document.querySelector("#topdo") ) => { tr?.classList.add('df')
+  // let tem = [document.querySelector(".fon.p-2"), document.querySelector("rect")]
+  // tem[0]?.classList.add('modal-cont'), tem[1]?.setAttribute('id', 'wed')
+  setTimeout(() => { tr?.classList.remove('df')
+    // tem[0]?.classList.remove('modal-cont') tem[1]?.removeAttribute("id");
+}, 1000) }
 
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // arr[5] = [ { id: 1, name: colmo(p, 1) } ]
@@ -316,13 +323,7 @@ export default function Home(){
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
       // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++; setArtists(arts); tr = document.querySelector("#topdo")
-      tr?.classList.add('df')
-      // let tem = [document.querySelector(".fon.p-2"), document.querySelector("rect")]
-      // tem[0]?.classList.add('modal-cont'), tem[1]?.setAttribute('id', 'wed')
-      setTimeout(() => { tr?.classList.remove('df')
-        // tem[0]?.classList.remove('modal-cont') tem[1]?.removeAttribute("id");
-       }, 1000)
+      setName([...name, {id: co}]); co++; setArtists(arts); todo()
       // console.log(artists)
     } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
@@ -367,7 +368,7 @@ export default function Home(){
             <Col className="justify-content-md-center" style={{ alignContent: 'end',
               display: 'grid' }}>
                 <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
-                    ? arrayRemove(items, index) : items ) }}
+                    ? arrayRemove(items, index) : items ); adde = 'removed!'; todo() } }
                   className={"r"+i+" self-center"} style={{ display: "none",
                     paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
