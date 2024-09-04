@@ -16,8 +16,8 @@
   -webkit-animation-name: exampl; /* Chrome, Safari, Opera */ -webkit-animation-duration: .5s;
 animation-name: exampl; animation-duration: .5s }
 
-#wid { -webkit-animation-name: wid; -webkit-animation-duration: 1.5s;
-animation-name: wid; animation-duration: .5s }
+#wid { -webkit-animation-name: wid; -webkit-animation-duration: .7s;
+animation-name: wid; animation-duration: .7s }
 
 .w90:hover { width: 150%; align-self:auto; z-index:100; flex-direction: unset }
 .h10:has(.w90:hover) { overflow: unset !important }/* new approach */

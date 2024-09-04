@@ -327,28 +327,28 @@ export default function Home(){
     } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
-    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
-      if (shape.id === ci) {
-        // No change
-        return shape;
-      } else {
-        // Return a new circle 50px below + 50
-        return {
-          ...shape,
-          id: shape.id,
-        };
-      }
-    })
-    console.log(nextShapes)
-    // Re-render with the new array
-    setName(nextShapes)
-    let cl=(e.target as HTMLElement).classList
-    for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
+        if (shape.id === ci) {
+          // No change
+          return shape;
+        } else {
+          // Return a new circle 50px below + 50
+          return {
+            ...shape,
+            id: shape.id,
+          };
+        }
+      })
+      // console.log(nextShapes)
+      // Re-render with the new array
+      setName(nextShapes)
+      let cl=(e.target as HTMLElement).classList
+      for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
     console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
     // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
     //     ['pl0', 'w3', 'df']) )
-    myFunction([''], 0); break } } } } style={{ display: "none" }} className=
-    { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+    myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
+    className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
   color="default" radius="lg" size="sm">Insert</Button>,
 
   modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
