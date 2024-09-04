@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+#star { animation: spin 2s linear }
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes exampl { from { top:-100px; opacity: 0 } to { top:0px; opacity:1 } }
 @-webkit-keyframes wid { from { width:200px; x:50px } to { width:1px; x:249px } }

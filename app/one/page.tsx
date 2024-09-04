@@ -495,7 +495,9 @@ export default function Home(){
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={ () => { const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
+        onClick={ (tr = document.querySelector(".ar")) => {
+          tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000)
+          const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
           >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ]);
           let tem = [ { id: 1, name: colmo(p, 1) } ]
@@ -504,10 +506,12 @@ export default function Home(){
           setArtists([...artists, tem])
           setItems([...items, il]); todo() } } className="shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
-        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
-
-      <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
-    </Container></ScrollSync>
+        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+
+        <svg id='star' className='ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
+          <circle id="c" r="40" stroke-width="20" fill="none" stroke-dasharray="62.75 188.25"></circle>
+        </defs><use xlink:href="#c" stroke="orange" stroke-dashoffset="219.625"></use></svg></Button>
+      </Col><Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li>
+    </ul></Container></ScrollSync>
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
