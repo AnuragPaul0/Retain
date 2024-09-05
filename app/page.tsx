@@ -660,7 +660,7 @@ export default function Home(){
         fill="currentColor" transform="translate(2.25, 2.25)"></path></svg></label></span></fieldset>
     </div></nav></footer>
 
-    <footer className="footer" data-version="v1" data-variant="elevated">
+    {/* <footer className="footer" data-version="v1" data-variant="elevated">
       <nav aria-label="Vercel Directory"><div className="statusRow">
         <fieldset className="tailwind root" data-small="">
           <legend className="sr-only">Select a display theme:</legend><span>
@@ -725,7 +725,7 @@ export default function Home(){
       <label htmlFor="off">2</label>
 
       <input id="na" name="state-d" type="radio" defaultChecked={true}/>
-    <label htmlFor="na" className="disabled">3</label></div>
+    <label htmlFor="na" className="disabled">3</label></div> */}
 
     <div className="switch-toggle switch-3 switch-candy">
       <input id="on" name="state-d" type="radio"/>
