@@ -106,7 +106,7 @@ div label {
   width: 24px;
 }
 
-.switch-toggle { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); float: right;
+.switch-toggle { float: right;
   background: black; height: 24px;
   display: flex;
   box-shadow: var(--ds-shadow-border);
@@ -237,6 +237,7 @@ div.df, .df { display: flex }
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0 } }
 
-body { --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
+body { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145);
+--r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
 @layer utilities { .text-balance { text-wrap: balance } }
