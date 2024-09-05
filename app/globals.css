@@ -10,82 +10,10 @@ padding: 0 32px 90px !important }
   flex-direction: column;
 }
 
-.statusRow { display: flex;
-  align-items: center;
+.statusRow { display: flex; align-items: center;
   justify-content: space-between;
   margin-top: 32px;
   min-height: 34px;
-}
-
-.root { display: flex;
-  box-shadow: var(--ds-shadow-border);
-  border-radius: 9999px;
-  height: 32px;
-  width: fit-content;
-  padding: 0;
-  border: 0;
-  margin: 0;
-
-  input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    position: absolute;
-
-    &:checked ~ label {
-      box-shadow: 0 0 0 1px var(--ds-gray-400);
-      color: var(--ds-gray-1000);
-      background: var(--ds-background-100);
-
-      svg {
-        color: var(--accents-8) !important }
-    }
-
-    &:focus-visible + label {
-      box-shadow: var(--ds-focus-ring);
-      color: var(--ds-gray-1000);
-
-      svg {
-        color: var(--accents-8) !important;
-      }
-    }
-  }
-
-  label { border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    height: 32px;
-    width: 32px;
-    margin: 0;
-    cursor: pointer;
-    position: relative;
-    transition: background 100ms ease;
-    color: var(--ds-gray-700);
-
-    &:hover {
-      color: var(--ds-gray-1000) !important;
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      position: relative;
-      z-index: 1;
-      transition: color 100ms ease;
-    }
-  }
-  &[data-small=''] { height: 24px;
-    label {
-      height: 24px; width: 24px }
-
-    svg {
-      /* weird svg misalignment fix */
-      -webkit-transform: translate(-0.5px, -0.5px); transform: translate(-0.5px, -0.5px)
-    }
-  }
 }
 
 .tailwind { margin-left: auto }
