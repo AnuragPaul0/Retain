@@ -598,7 +598,7 @@ export default function Home(){
 
     <footer className="footer" data-version="v1" data-variant="elevated">
       <nav aria-label="Vercel Directory"><div className="statusRow">
-        <fieldset className="tailwind theme-switcher_root__DrzBE ml-auto" data-small="">
+        <fieldset className="tailwind root ml-auto" data-small="">
           <legend className="sr-only">Select a display theme:</legend><span>
             <input aria-label="system" id="theme-switch-system-:R2jcj9am:" type="radio" value="system"
               checked/><label htmlFor="theme-switch-system-:R2jcj9am:">
