@@ -6,8 +6,7 @@
 padding: 0 32px 90px !important }
 
 .footer nav { --page-width: 1080px; max-width: var(--page-width); margin: 0 auto; display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: nowrap; justify-content: space-between;
   flex-direction: column;
 }
 
@@ -40,8 +39,7 @@ padding: 0 32px 90px !important }
       background: var(--ds-background-100);
 
       svg {
-        color: var(--accents-8) !important;
-      }
+        color: var(--accents-8) !important }
     }
 
     &:focus-visible + label {
@@ -84,13 +82,11 @@ padding: 0 32px 90px !important }
     height: 24px;
     width: 24px;
     label {
-      height: 24px;
-      width: 24px;
-    }
+      height: 24px }
 
     svg {
       /* weird svg misalignment fix */
-      -webkit-transform: translate(-0.5px, -0.5px);transform: translate(-0.5px, -0.5px);
+      -webkit-transform: translate(-0.5px, -0.5px); transform: translate(-0.5px, -0.5px)
     }
   }
 }
@@ -229,7 +225,9 @@ div.df, .df { display: flex }
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0 } }
 
-body { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145);
+body { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
+  --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
+  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
 @layer utilities { .text-balance { text-wrap: balance } }
