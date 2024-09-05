@@ -627,13 +627,13 @@ export default function Home(){
 
     <div className="switch-toggle switch-3 switch-candy">
       <input id="on" name="state-d" type="radio"/>
-      <label htmlFor="on" onclick="">1</label>
+      <label htmlFor="on">1</label>
 
       <input id="off" name="state-d" type="radio"/>
-      <label htmlFor="off" onclick="">2</label>
+      <label htmlFor="off">2</label>
 
       <input id="na" name="state-d" type="radio" checked="checked"/>
-      <label htmlFor="na" className="disabled" onclick="">3</label></div>
+      <label htmlFor="na" className="disabled">3</label></div>
 
     <div id="topdo" className="h-auto bun pt-4 modal">
       <div id="imodal-content" className="flex-row fon p-2 modal-content"
