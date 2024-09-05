@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+div label {
+  width: 24px;
+}
+
+.switch-toggle { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); float: right;
+  background: black; height: 24px;
+  display: flex;
+  box-shadow: var(--ds-shadow-border);
+  border-radius: 9999px;
+  width: -moz-fit-content;
+  width: 72px;
+  border: 0;
+  margin-right: 90px;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% {  transform: rotate(359deg); }
