@@ -2,29 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer { --ds-background-200: #000;
-  background: var(--ds-background-200);
-  border-top: none;
-padding: 0 32px 90px !important}
+.footer { --ds-background-200: #000; background: var(--ds-background-200); border-top: none;
+padding: 0 32px 90px !important }
 
-.footer nav { --page-width: 1080px; max-width: var(--page-width);
-  margin: 0 auto;
-  display: flex;
+.footer nav { --page-width: 1080px; max-width: var(--page-width); margin: 0 auto; display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.statusRow {
-  display: flex;
+.statusRow { display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 32px;
   min-height: 34px;
 }
 
-.root {
-  display: flex;
+.root { display: flex;
   box-shadow: var(--ds-shadow-border);
   border-radius: 9999px;
   height: 32px;
@@ -101,13 +95,11 @@ padding: 0 32px 90px !important}
   }
 }
 
+.tailwind { margin-left: auto }
 
-div label {
-  width: 24px;
-}
+div label { width: 24px }
 
-.switch-toggle { float: right;
-  background: black; height: 24px;
+.switch-toggle { float: right; background: black; height: 24px;
   display: flex;
   box-shadow: var(--ds-shadow-border);
   border-radius: 9999px;
