@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import { useState } from "react"; import { CiTrash } from "react-icons/ci"
+import React from "react"; import { CiTrash } from "react-icons/ci"
 import {  MdOutlineSettings } from "react-icons/md"; import { HiArrowLeft } from "react-icons/hi"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,10 +9,7 @@ import Col from 'react-bootstrap/Col'; import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
 import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
 
-let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', pl='+',
-
-HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
+const HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="none"><path d=
   "M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z" fill="#000000"/>
 <path d="M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z" fill="#000000"/>
@@ -27,7 +24,10 @@ HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="
 
 // Card text-black
 buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className=
-{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
+{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> }
+
+let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
+cnr = { width: '51vw' }, inp='',
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -41,16 +41,15 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c-1
-  myFunction((e.target as HTMLElement).classList, 1)} }
+addes = (r=0, c=2) => <Button onClick={ (e) => myFunction((e.target as HTMLElement).classList, 1) }
   id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
 colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n')} }
-  onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
-  style={{ position: 'relative' }}>
+    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
+    style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
 colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
@@ -61,12 +60,12 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 // User clicks, open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
-    // console.log(c[i])
-  inp = c[i].substring(1); break } } a = document.querySelector("#"+tr)
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) { console.log(c[i])
+    inp = c[i].substring(1); break } }
+  a = document.querySelector("#"+tr)
 
+  // User clicks anywhere outside of the modal, close it
   if (o) { a.classList.add('df'); const controller = new AbortController
-  // User clicks anywhere outside of the modal, close
     window.addEventListener('click', (event) => {
     // console.log(event.target, "clicked")
     if ((event.target as HTMLElement).id == tr) { a.classList.remove('df'); controller.abort()
@@ -130,6 +129,30 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
   b = 'beforebegin'
   if (!f) { a = document.querySelectorAll('.ac')
     if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
+    tr = document.querySelector('#scrw.r')
+    // if (tr) { node = tr.lastChild
+    //   // console.log(node)
+    // clone = node.cloneNode(true); cl = clone.children[0].innerHTML
+    // clone.children[0].innerHTML = cl.replace(/.$/, +cl.slice(-1)+1)
+
+    // tr.appendChild(clone)
+    // }(f ? ' : 'after') + '
+//  onMouseEnter={ (e) => changeBackground(e, 'h') }
+//   Variant    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
+    tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
+      style={{ width: '100%' }}>
+        <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+      textAlign: 'center',
+      borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+      isFooterBlurred radius="lg" className="cb p-1 border-none">Variant { co+1 }</Card>
+    <Button id='adb' className='atb cb'
+      ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+    stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    className="lucide lucide-ellipsis-vertical">
+      <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+    </svg></Button></Col>, ['w3', 'df', 'top'] ) )
+    // console.log(b, relm(k))['']
     document.querySelectorAll('#addc').forEach( (e, id) =>
   e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) )
   co++ }
@@ -250,10 +273,20 @@ dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
 sing = 'Single Image prduct - no discount',
 
-cfo = [ [ sing, sing ], [ 'Multi Image - '+os, '4 Images - '+os ],
+cfo = [[sing, sing], ['Multi Image - '+os, '4 Images - '+os],
 ['Multi Image - new arr', '4 Image - new arrival'],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
-[ 'Single Image prduct', 'Single Image prduct' ] ],
+['Single Image prduct', 'Single Image prduct']],
+
+btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { let cl=(e.target as HTMLElement).classList
+  for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
+  console.log(cl[i], inp)
+    document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
+      ['pl0', 'w3', 'df'])
+    // '.'+cl[i].substring(1))
+  ); myFunction([''], 0); break } } } } style={{ display: "none" }} className=
+  { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
+color="default" radius="lg" size="sm">Insert</Button>,
 
 
 card = (i: any, m=sing, t='', b: any) =>
@@ -273,123 +306,60 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-Btn = () =>  <Button id='adb' className='atb cb'
-  ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    className="lucide lucide-ellipsis-vertical">
-      <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-</svg></Button>,
-
-arr = [ [ { id: 1, name: imco(0, dict) } ] ],
-
-todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
-tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000) }
-  // let tem = [document.querySelector(".fon.p-2"), document.querySelector("rect")]
-  // tem[0]?.classList.add('modal-cont'), tem[1]?.setAttribute('id', 'wed')
-  // tem[0]?.classList.remove('modal-cont') tem[1]?.removeAttribute("id")
-
-for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
-// arr[5] = [ { id: 1, name: colmo(p, 1) } ]
-// console.log(arr)
-// 0:[ { id: 1, name: imco(0, dict) } ] } as object ][0]
-// let lii = (arts=arr, i=0) => { console.log()
+modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
+  return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
+    onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
+" justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> }
 
 export default function Home(){
-  const [els, setels] = useState([
+  const [els, setels] = React.useState([
     <Card key='0' className="alc w90 justify-content-md-center"><div id='alsc'
       >{ buttonc('Image list Product Image 2') } { buttonc('is empty', greens) }</div><div id='alsc'
     >{ buttonc('and Discount %') }{ buttonc('is', greens) }{ buttonc(0) }</div></Card>,
    ...cele(el2) ]),
+    // console.log(els); els = [els]; console.log(els)
 
-  [items, setItems] = useState([0, 1, 2, 3, 4]),
-//   console.log(els)
-// setInputValue(tem)
+  [items, setItems] = React.useState([0, 1, 2, 3, 4]),
 
-//   const [inputValue, setInputValue] = useState(tem)
-  [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
-  [isSelected, setIsSelected] = useState(true),
-
-  rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
-    <ul className='df fon px-0'>
-    { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
-    <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
-      artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
-      { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-
-      // Variant
-      tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
-        style={{ width: '100%' }}>
-          <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { co+1 }</Card><Btn/></Col>, ['w3', 'df', 'top'] ) )
-      // console.log(b, relm(k))
-      setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
-      // console.log(artists)
-    } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
-
-  btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
-      arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
-        if (shape.id === ci) {
-          // No change
-          return shape;
-        } else {
-          // Return a new circle 50px below + 50
-          return {
-            ...shape,
-            id: shape.id,
-          };
-        }
-      })
-      // console.log(nextShapes)
-      // Re-render with the new array
-      setName(nextShapes)
-      let cl=(e.target as HTMLElement).classList
-      for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
-    // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-    //     ['pl0', 'w3', 'df']) )
-    myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
-    className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute bg-white/50" } variant="flat"
-  color="default" radius="lg" size="sm">Insert</Button>,
-
-  modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
-  return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-      onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
-  " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
+  // [inputValue, setInputValue] = React.useState([0, 1, 2, 3, 4]),
 
   // r el
-  relem = (i=0, isDragged: any, c: any, index: any) => {
+  relem = (i: any, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
     return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
+    onMouseLeave={ (e) => changeBackground(e, 'h', 1) }
+    // key={ i } value={ inputValue[i] } onChange={(e) => { setInputValue(e.target.value) }}
+    className="h21">
 
-        <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
-          <Row style={{ height: '25%' }} className="justify-content-md-center">
-            <Col className="justify-content-md-center" style={{ alignContent: 'end',
-              display: 'grid' }}>
-                <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
-                    ? arrayRemove(items, index) : items ); todo('State', 'removed!') } }
-                  className={"r"+i+" self-center"} style={{ display: "none",
-                    paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-            <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
-          stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
-        "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-          ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-          "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
-          </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
-        style={{ blockSize: 'fit-content' }}>
-        <p className='p5' style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
-        <button data-movable-handle className={"r"+i+" self-center"}
-        style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
-        background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
-        </button></Col></Row></Col>
+    <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
+      <Row style={{ height: '25%' }} className="justify-content-md-center">
+        <Col className="justify-content-md-center" style={{ alignContent: 'end',
+          display: 'grid' }}>
+            <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
+                ? arrayRemove(items, index) : items ) }}
+              className={"r"+i+" self-center"} style={{ display: "none",
+                paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
+      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
+      stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
+    "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+      ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+      "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
+      </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
+    style={{ blockSize: 'fit-content' }}>
+    <p className='p5' style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
+    <button data-movable-handle className={"r"+i+" self-center"}
+    style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
+    background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
+    </button></Col></Row></Col>
 
-        <Col id='crd' xs lg="4" className='h17 alc top'>
-        <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
+      <Col id='crd' xs lg="4" className='h17 alc top'>
+      <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
-      <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
-  {/* { inputValue[i] } */}
-  </div></ScrollSyncPane></Row> }
+      <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>
+        <Row id='scrw' className='ac' style={{ width: '35.2vw' }}>{ imco(i) }{ imco(i, dict) }
+    <Button id="addc" onClick={ greeting } className={ 'r'+i+
+  " fon shadow-medium self-center"}>+</Button></Row></div></ScrollSyncPane></Row> }
 
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{ width: '4rem' }} className={
@@ -456,26 +426,45 @@ export default function Home(){
     color: '#FFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="pb-5 cnr rounded-large">
-{/* textAlign: 'center', , alignSelf: 'center' */}
+
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="df top" style={{ justifyContent: 'center' }}>
-            <Card style={ { boxShadow: 'none', paddingLeft: '3% !important',
-              paddingRight: '3% !important' } }
-          isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Product Filter</Card></Col>
+              <Card style={{ textAlign: 'center', boxShadow: 'none', alignSelf: 'center',
+                borderRadius: 'calc(var(--nextui-radius-large)/2)', paddingLeft: '3% !important',
+                paddingRight: '3% !important' }}
+          isFooterBlurred radius="lg" className="cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
-            <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
-                <Col xs lg="2" className="df w3 justify-content-md-center">
-                  <Card id='fg1' style={{ paddingLeft: '3%', paddingRight: '3%' }}
-                  isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Primary Variant</Card>
-                <Btn/></Col>
+            <Row id='scrw' className='ac r' style={{ width: '35.2vw' }}>
+                <Col xs lg="2" className="w3 justify-content-md-center" style={{
+                  display: 'flex' }}><Card style={{ flexGrow: 1, boxShadow: 'none',
+                    textAlign: 'center', alignSelf: 'center', paddingLeft: '3%', paddingRight: '3%', 
+                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                    isFooterBlurred radius="lg" className="cb p-1 border-none">Primary Variant</Card>
+                    <Button className='cb' style={{ borderRadius: '4px',
+                    paddingLeft: '7px !important', paddingRight: '7px !important' }}
+                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  className="lucide lucide-ellipsis-vertical">
+                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                </svg></Button></Col>
 
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
-                  <Card id='fg1'
-                  isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
-      </Col></Row></div></ScrollSyncPane></Row></li></ul>
+                  <Card style={{ alignSelf: 'center', flexGrow: 1, boxShadow: 'none',
+                    textAlign: 'center',
+                    borderRadius: 'calc(var(--nextui-radius-large)/2)', fontFamily: 'Recoleta Medium' }}
+                    isFooterBlurred radius="lg" className="cb p-1 border-none">Variant 2</Card>
+                  <Button className='cb' style={{ borderRadius: '4px', paddingLeft: '7px !important',
+                    paddingRight: '7px !important' }}
+                    ><svg style={{ alignSelf: 'center' }} height="22" viewBox="8 0 8 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  className="lucide lucide-ellipsis-vertical">
+                    <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+      </svg></Button></Col></Row></div></ScrollSyncPane></Row></li></ul>
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
@@ -490,40 +479,38 @@ export default function Home(){
               backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
             }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
             {/* Mark any node with the data-movable-handle attribute if you wish
-              to use is it as a DnD handle. The rest of renderItem will be then
-              ignored and not start the drag and drop.*/}
+                  to use is it as a DnD handle. The rest of renderItem will be then
+                  ignored and not start the drag and drop.*/}
 
-      <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
-      <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
-        onClick={ () => { tr = document.querySelector(".ar")
-          tr?.classList.remove('d-none'); setTimeout(() => { tr?.classList.add('d-none') }, 1000)
-          const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
+  <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
+    <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
+        onClick={() => { const il = items.length
+          cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
-          >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
-          let tem = [ { id: 1, name: colmo(p, 1) } ]
-          // console.log(els)
-          for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
-          setArtists([...artists, tem])
-          setItems([...items, il]); todo() } } className="shadow-medium self-center" style={{
-        paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
-        paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>{ pl }
-        <svg id='star' className='cb ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
-          <circle id="c" r="40" stroke-width="20" fill="none" stroke-dasharray="62.75 188.25"></circle>
-        </defs><use xlinkHref="#c" stroke="#04AE56" stroke-dashoffset="219.625"></use></svg></Button>
-      </Col><Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li>
-    </ul></Container></ScrollSync>
+        >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
+        // console.log(els)
+    setItems([...items, il]) }} className="shadow-medium self-center" style={{
+          paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
+          borderRadius: '2px', zoom: '2',
+          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Col>
+
+    <Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li></ul>
+    </Container></ScrollSync>
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
-        >Design for remaining SKU's</span><Switch color="success" defaultSelected
-    onValueChange={setIsSelected} aria-label="Automatic updates"/></p>
+      // #04AE56
+        >Design for remaining SKU's</span><Switch color="success" defaultSelected 
+    aria-label="Automatic updates"/></p>
 
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
       marginLeft: 'calc(var(--bs-gutter-x) * 4)', maxWidth: '1200px', paddingRight: '60px',
-      marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
-      className={ ( isSelected ? '' : 'd-none ') + "rounded-large"}>
+      marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }} className="rounded-large">
 
-      <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
+      <Row id='scrw' onMouseEnter={ (e) => changeBackground(e, 'h') }
+      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">
+  
+      <Col xs lg="7" className="top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
             backgroundColor: '#fafafa', height: '100% !important' }}
         radius="lg">N/A</Card></Col>
@@ -602,19 +589,9 @@ export default function Home(){
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
 
-    <div id="topdo" className="h-auto bun pt-4 modal">
-      <div id="imodal-content" className="flex-row fon p-2 modal-content"
-        style={{ justifyContent: 'center' }}
-    ><svg className='mr-2' version="1.1" id="Capa_1" width="25px"
-      viewBox="0 0 305.002 305.002" xmlSpace="preserve">
-        <circle r="150" cx="150" cy="150" fill="green"/>
-        <path d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"/>
-        <path d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"/>
-        <rect id='wid' height="150" y="80" rx="20" ry="20" fill="green"/>
-    </svg>{ sta } { adde }</div></div>
 
-    <div id="imodal" className="modal modalp">
-      <div id="imodal-content" className="modal-content" style={{ justifyContent: 'center' }}>
+    <div id="imodal" className="modal">
+      <div className="df modal-content" id="imodal-content" style={{ justifyContent: 'center' }}>
          <div style={{ justifyContent: 'space-between' }} className=
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
             " group cursor-pointer hover:shadow-lg" }>
