@@ -52,8 +52,7 @@ padding: 0 32px 90px !important }
     }
   }
 
-  label {
-    border-radius: 9999px;
+  label { border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,11 +77,9 @@ padding: 0 32px 90px !important }
       transition: color 100ms ease;
     }
   }
-  &[data-small=''] {
-    height: 24px;
-    width: 24px;
+  &[data-small=''] { height: 24px;
     label {
-      height: 24px }
+      height: 24px; width: 24px }
 
     svg {
       /* weird svg misalignment fix */
