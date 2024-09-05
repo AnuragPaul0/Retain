@@ -601,8 +601,7 @@ export default function Home(){
         <fieldset className="tailwind root" data-small="">
           <legend className="sr-only">Select a display theme:</legend><span>
             <input aria-label="system" id="theme-switch-system" type="radio" value="system"
-            name="the"
-            checked/><label htmlFor="theme-switch-system">
+            name="the" defaultChecked={true}/><label htmlFor="theme-switch-system">
               <span className="sr-only">system</span>
               <svg data-testid="geist-icon" height="16" stroke-linejoin="round"
                 viewBox="0 0 16 16" width="16">
@@ -628,7 +627,7 @@ export default function Home(){
         fill="currentColor" transform="translate(2.25, 2.25)"></path></svg></label>
             <input aria-label="system" id="theme-switch-system-:R2jcj9am:" type="radio" value="system"
             name="state"
-            checked/><label htmlFor="theme-switch-system-:R2jcj9am:">
+            defaultChecked={true}/><label htmlFor="theme-switch-system-:R2jcj9am:">
               <span className="sr-only">system</span>
               <svg data-testid="geist-icon" height="16" stroke-linejoin="round"
                 viewBox="0 0 16 16" width="16">
