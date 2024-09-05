@@ -80,7 +80,7 @@ padding-left: var(--wi); padding-right: var(--wi) }
 #h40 { height: 40vw; overflow: auto }
 #bl0 { border-left: 0 }
 .bun { background-color: unset }
-#inp { height: 4vw } nav { margin-right: 2vw; align-self: end }
+#inp { height: 4vw }
 #fon { bottom: 1%; left: 2vw; font-size: 1.5vw; margin-bottom: 0 }
 .h17 { height: 176px }
 #bo7 { --w: -1.8vw; margin: var(--w) 0 0 var(--w); border-radius: calc(var(--nextui-radius-large)* 7) }
@@ -120,7 +120,7 @@ border-radius: 2px; padding-right: calc(var(--bs-gutter-x) / 4) !important  }
 div.w90 { width: 90%; height: 70% !important }
 #alsc { align-self: center; margin-bottom: var(--r2) }
 #sdel { color:red; stroke-width:0.5 }
-nav { width: 20vw }
+.navbar {  margin-right: 2vw; align-self: end; width: 20vw }
 .fon { width: fit-content !important }
 div.wh { width: 150px; height: 176px !important }
 .p5 { padding-right: 5% }
