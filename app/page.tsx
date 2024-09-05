@@ -632,7 +632,7 @@ export default function Home(){
       <input id="off" name="state-d" type="radio"/>
       <label htmlFor="off">2</label>
 
-      <input id="na" name="state-d" type="radio" checked="checked"/>
+      <input id="na" name="state-d" type="radio" defaultChecked={true}/>
       <label htmlFor="na" className="disabled">3</label></div>
 
     <div id="topdo" className="h-auto bun pt-4 modal">
