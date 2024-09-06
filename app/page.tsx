@@ -479,7 +479,7 @@ export default function Home(){
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
                   <Card id='fg1'
                   isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
-      </Col></Row></div></ScrollSyncPane></Row></li></ul>
+      </Col></Row></div></ScrollSyncPane></Row></li></ul
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
