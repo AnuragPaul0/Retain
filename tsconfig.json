@@ -1,6 +1,5 @@
-{
-  "compilerOptions": { "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+{ "compilerOptions": { "lib": ["dom", "dom.iterable", "esnext"],
+    "traceResolution":true, "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,

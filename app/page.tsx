@@ -483,7 +483,7 @@ export default function Home(){
 
         <List values={items} onChange={({ oldIndex, newIndex }) =>
           setItems(arrayMove(items, oldIndex, newIndex)) }
-        renderList={({ children, props, isDragged }) => <ul
+          renderList={({ children, props, isDragged }) => <ul
             {...props} style={{ padding: "0em 0em 1em 0em",
               cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
 
