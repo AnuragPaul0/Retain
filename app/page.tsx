@@ -2,8 +2,6 @@
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
 import { useState } from "react"
-// import { CiTrash } from "react-icons/ci"
-import {  MdOutlineSettings } from "react-icons/md"
 import { HiArrowLeft } from "react-icons/hi"
 import { Row, Col, Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -99,9 +97,9 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
     <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
       <Row style={{ height: '25%' }} className="justify-content-md-center">
         <Col className="justify-content-md-center" style={{ alignContent: 'end',
-          display: 'grid' }}><Button id='del' onClick={(e) => changeBackground(e, 'c')}
+          display: 'grid' }}><Button id='del' onClick={(e: any) => changeBackground(e, 'c')}
           className={ 'r'+p.toString()+" shadow-medium self-center" }
-          style={{ display: "none", zoom: '2', fontFamily: 'Recoleta Medium',
+          style={{ display: "none", zoom: '2',
             paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
       paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
         {/* <CiTrash height='20' style={{ color: '', strokeWidth: .5}}/> */}
@@ -439,10 +437,12 @@ export default function Home(){
                 </svg>
               </div></div>
             <div className="my-4 pb-4" style={{position: 'absolute', bottom: '0'}}>
-              <div
-              className=
+              <div className=
               "flex mb-2 justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <MdOutlineSettings className="text-2xl fill-white" />
+                <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  height="200px" width="200px"><path fill="none" d="M0 0h24v24H0V0z"></path><path d=
+                    "M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                ></path></svg>
     </div></div></div></div>
 
     <div style={{ marginBottom: '4%', marginLeft: '6rem', marginTop: '2rem' }} className="framer"
