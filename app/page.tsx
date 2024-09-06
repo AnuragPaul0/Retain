@@ -42,15 +42,15 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0, c=2) => <Button onClick={ (e) => { ri=r, ci=c-1
+addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
   myFunction((e.target as HTMLElement).classList, 1)} }
   id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
-colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n')} }
-  onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
+colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e: any) => { changeBackground(e, 'n')} }
+  onMouseLeave={ (e: any) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
   style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
@@ -90,8 +90,8 @@ return container },
 
 greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
   // console.log(el)
-  if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e) => changeBackground(e, 'n') }
-    onMouseLeave={ (e) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
+  if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e: any) => changeBackground(e, 'n') }
+    onMouseLeave={ (e: any) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
 
     <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
       <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -138,8 +138,8 @@ greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
     if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
       a = document.querySelector('#scrw')
     if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
-    onMouseEnter={ (e) => changeBackground(e, 'h') }
-onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="pb-9">{ colum(p) }{ colum(p) }
+    onMouseEnter={ (e: any) => changeBackground(e, 'h') }
+onMouseLeave={ (e: any) => changeBackground(e, 'h', 1) } className="pb-9">{ colum(p) }{ colum(p) }
 
 <Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
         paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
@@ -321,7 +321,7 @@ export default function Home(){
       // console.log(artists)
     } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
 
-  btn = (r=0, c=0) => <Button id='b1' onClick={ (e) => { arr=artists
+  btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
       arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
         if (shape.id === ci) {
           // No change
@@ -347,15 +347,15 @@ export default function Home(){
   color="default" radius="lg" size="sm">Insert</Button>,
 
   modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
-  return <Col id='c1' xs lg="2" onMouseEnter={ (e) => inim(e, 'h') }
-      onMouseLeave={ (e) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
+  return <Col id='c1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
+      onMouseLeave={ (e: any) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
   " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
   // r el
   relem = (i=0, isDragged: any, c: any, index: any) => {
     // console.log(c) pb-9
-    return <Row id={'r'+i}  onMouseEnter={ (e) => changeBackground(e, 'h') }
-      onMouseLeave={ (e) => changeBackground(e, 'h', 1) } className="h21">
+    return <Row id={'r'+i}  onMouseEnter={ (e: any) => changeBackground(e, 'h') }
+      onMouseLeave={ (e: any) => changeBackground(e, 'h', 1) } className="h21">
 
         <Col id='w8v' xs lg="2" className='h17 alc top df fd'>
           <Row style={{ height: '25%' }} className="justify-content-md-center">
@@ -429,8 +429,6 @@ export default function Home(){
                 <path fill="black" d="M79.1 54.7l-5.2 19.6s-5.8-2.7-12.8-2.2c-10.2.6-10.3 7-10.2 8.7.6 8.8 23.6 10.7 24.9 31.2 1 16.2-8.6 27.2-22.4 28.1-16.6 1-25.7-8.7-25.7-8.7l3.5-14.9s9.2 6.9 16.5 6.5c4.8-.3 6.5-4.2 6.3-7-.7-11.4-19.5-10.8-20.7-29.5-1-15.8 9.4-31.8 32.3-33.3 9-.8 13.5 1.5 13.5 1.5z"></path>
                 </svg>
               </div></div>
-
-            {/* setting  */}
             <div className="my-4 pb-4" style={{position: 'absolute', bottom: '0'}}>
               <div
               className=
