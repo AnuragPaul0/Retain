@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.mwu { min-width: unset }
 .dark-mode { background-color: black;
   color: white;
 }
@@ -130,7 +131,7 @@ animation-name: wid; animation-duration: .7s }
 .w90:hover { width: 150%; align-self:auto; z-index:100; flex-direction: unset }
 .h10:has(.w90:hover) { overflow: unset !important }/* new approach */
 .br2 { border-radius: var(--r2) }
-#fg1 { flex-grow: 1; box-shadow: none; text-align: center }
+#fg1 { justify-content: center; flex-grow: 1; box-shadow: none; text-align: center }
 .bdf { backdrop-filter: unset }
 .w50 { right: 0 }
 .bgy { background-color: orange; color: white }

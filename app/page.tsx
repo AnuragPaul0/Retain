@@ -270,7 +270,7 @@ card = (i: any, m=sing, t='', b: any) =>
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
     { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
-    {"r"+i+" z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
+    {"r"+i+" mwu z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
           id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -280,7 +280,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-Btn = () =>  <Button id='adb' className='atb cb'
+Btn = () =>  <Button id='adb' className='mwu atb cb'
   ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
     className="lucide lucide-ellipsis-vertical">
@@ -325,7 +325,7 @@ export default function Home(){
       // console.log(b, relm(k))
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
       // console.log(artists)
-    } } className={ 'r'+i+" fon shadow-medium self-center" }>+</Button></Row>,
+    } } className={ 'r'+i+" mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
       arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
@@ -367,9 +367,9 @@ export default function Home(){
           <Row style={{ height: '25%' }} className="justify-content-md-center">
             <Col className="justify-content-md-center" style={{ alignContent: 'end',
               display: 'grid' }}>
-                <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
+              <Button id='del' onClick={ () => { setItems( typeof index !== "undefined"
                     ? arrayRemove(items, index) : items ); todo('State', 'removed!') } }
-                  className={"r"+i+" self-center"} style={{ display: "none",
+                  className={"r"+i+" mwu self-center"} style={{ display: "none",
                     paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
           paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
             <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
@@ -471,10 +471,10 @@ export default function Home(){
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
-                <Col xs lg="2" className="df w3 justify-content-md-center">
-                  <Card id='fg1' style={{ paddingLeft: '3%', paddingRight: '3%' }}
-                  isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Primary Variant</Card>
-                <Btn/></Col>
+              <Col xs lg="2" className="df w3 justify-content-md-center">
+                <Card id='fg1'
+                isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Primary Variant</Card>
+              <Btn/></Col>
 
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
                   <Card id='fg1'
