@@ -448,9 +448,9 @@ export default function Home(){
     data-framer-name="Fuel your Brand's Growth with Personalized Dynamic Creatives"
     data-framer-component-type="RichTextContainer">
     <p className="framer-text" style={{ zoom: '2' }}>
-      <svg style={{ display: 'inline-block', marginRight: '1rem', verticalAlign: '-.17rem' }}
+      <svg style={{ display: 'inline-block', marginRight: '1rem' }}
         stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-        aria-hidden="true" height="200px" width="200px"><path fill-rule="evenodd" d=
+        aria-hidden="true" height="20px"><path fill-rule="evenodd" d=
           "M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
       clip-rule="evenodd"></path></svg>
         <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}

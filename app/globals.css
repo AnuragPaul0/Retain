@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 .footer { --ds-background-200: #000; background: var(--ds-background-200); border-top: none;
 padding: 0 32px 90px !important }
 
