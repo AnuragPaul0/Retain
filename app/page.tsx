@@ -8,7 +8,10 @@ import { HiArrowLeft } from "react-icons/hi"
 import { Row, Col, Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
-import {Card, CardFooter, Image, Button, Switch} from "@nextui-org/react"
+import { Card, CardFooter } from "@nextui-org/card"
+import { Image } from "@nextui-org/image"
+import { Button } from "@nextui-org/button"
+import { Switch } from "@nextui-org/switch"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
