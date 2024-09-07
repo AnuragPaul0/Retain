@@ -429,7 +429,7 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
+  return <div>
     <div style={{ width: '4rem' }} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
     " ease-out delay-150 duration-200"}>

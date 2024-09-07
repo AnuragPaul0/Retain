@@ -217,14 +217,14 @@ div.df, .df { display: flex }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 
-:root { --foreground-rgb: 0, 0, 0; --background-start-rgb: 214, 219, 220;
---background-end-rgb: 255, 255, 255; }
+:root { --mode: light; --foreground-rgb: 0, 0, 0; --background-start-rgb: 214, 219, 220;
+--background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
 
-@media (prefers-color-scheme: dark) { :root { --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0 } }
+@media (prefers-color-scheme: dark) { :root { color-scheme: dark; --foreground-rgb: 255, 255, 255;
+background-color: black; --background-start-rgb: 0, 0, 0; --background-end-rgb: 0, 0, 0 } }
 
-body { --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
+body { font-family: 'Recoleta Medium'; --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145);
+  --ds-gray-400-value: 0, 0%, 18%;
   --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
   --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
   --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
