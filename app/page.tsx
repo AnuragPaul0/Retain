@@ -10,6 +10,11 @@ import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 import { Switch } from "@nextui-org/switch"
 
+interface Props {
+  children: any, props: any, isDragged: any, value: any, index: any, isSelected: any
+  // any props that come into the component
+}
+
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
 
@@ -389,8 +394,22 @@ export default function Home(){
         <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
-  </div></ScrollSyncPane></Row> }
+  </div></ScrollSyncPane></Row> },
+  
+  List2 = () => // @ts-ignore
+    <List values={items} onChange={({ oldIndex, newIndex }) =>
+      setItems(arrayMove(items, oldIndex, newIndex)) }
+      renderList={({ children, props, isDragged }: Props) => <ul
+        {...props} style={{ padding: "0em 0em 1em 0em",
+          cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
 
+      renderItem={({ value, props, index, isDragged, isSelected }: Props) => {
+        // console.log(value)
+        return <li id='lst' className="par" {...props} key={props.key} style={{ ...props.style,
+          cursor: isDragged ? "grabbing" : "inherit",
+          backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
+  }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
+  
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{ width: '4rem' }} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
@@ -481,18 +500,7 @@ export default function Home(){
                   isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
       </Col></Row></div></ScrollSyncPane></Row></li></ul>
 
-        <List values={items} onChange={({ oldIndex, newIndex }) =>
-          setItems(arrayMove(items, oldIndex, newIndex)) }
-          renderList={({ children, props, isDragged }) => <ul
-            {...props} style={{ padding: "0em 0em 1em 0em",
-              cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
-
-        renderItem={({ value, props, index, isDragged, isSelected }) => {
-          // console.log(value)
-          return <li id='lst' className="par" {...props} key={props.key} style={{ ...props.style,
-              cursor: isDragged ? "grabbing" : "inherit",
-              backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-        }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
+        { List2() }
         {/* Mark any node with the data-movable-handle attribute if you wish
           to use is it as a DnD handle. The rest of renderItem will be then
           ignored and not start the drag and drop.*/}
