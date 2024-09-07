@@ -9,8 +9,8 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 import { Switch } from "@nextui-org/switch"
-
-let initialValue = localStorage.getItem("mode"), tog, parent, p = 5, container, a:any, k:any, b:any,
+// initialValue = localStorage.getItem("mode"), 
+let tog, parent, p = 5, container, a:any, k:any, b:any,
 f, pd, tr:any, co = 2, greens = 'grb', cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
 sta = 'State', adde = 'added',
 
@@ -293,9 +293,9 @@ arr = [ [ { id: 1, name: imco(0, dict) } ] ],
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
 tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000) }
 
-if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
-  boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
-"html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
+// if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
+//   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
+// "html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
 
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // console.log(arr)
