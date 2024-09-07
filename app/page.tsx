@@ -399,9 +399,15 @@ export default function Home(){
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
       setItems(arrayMove(items, oldIndex, newIndex)) }
-      renderList={({ children, props, isDragged }: Props) => <ul
+      renderList={(props: {
+        children: React.ReactNode;
+        isDragged: boolean;
+        props: {
+          ref: React.RefObject<any>;
+        };
+      }) => <ul
         {...props} style={{ padding: "0em 0em 1em 0em",
-          cursor: isDragged ? "grabbing" : "inherit" }}>{children}</ul> }
+          cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 
       renderItem={({ value, props, index, isDragged, isSelected }: Props) => {
         // console.log(value)
