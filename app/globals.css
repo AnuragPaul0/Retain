@@ -171,7 +171,7 @@ border-top-left-radius: var(--nextui-radius-large) }
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-#lst { background-color: unset; list-style-type: none; border-radius: 5px }
+#lst { background-color: unset !important; list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
 .cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-top: calc(var(--bs-gutter-x) * .5); 
@@ -211,17 +211,17 @@ div.df, .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
-.cb { background-color: #f0f0f0 }
+.cb { background-color: --cb }
 /* 212 176*/
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 
-:root { --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
+:root { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
 --background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
 
-@media (prefers-color-scheme: dark) { :root { --lis: #111;
+@media (prefers-color-scheme: dark) { :root { --cb: #0f0f0f; --lis: #111;
   color-scheme: dark; --foreground-rgb: 255, 255, 255;
 background-color: black; --background-start-rgb: 0, 0, 0; --background-end-rgb: 0, 0, 0 } }
 
