@@ -28,7 +28,7 @@ HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="
 
 // Card text-black
 buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className=
-{s+"shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
+{s+"mwu h-auto shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
   d[i] = <Card className="alc w90 justify-content-md-center">{e}</Card>})
@@ -466,7 +466,7 @@ export default function Home(){
           <Col xs lg="2" id='w8v' className="top"></Col>
           <Col xs lg="4" id='crd' className="df top" style={{ justifyContent: 'center' }}>
             <Card style={ { boxShadow: 'none', paddingLeft: '3% !important',
-              paddingRight: '3% !important' } }
+              paddingRight: '3% !important', justifyContent: 'center' } }
           isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Product Filter</Card></Col>
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
@@ -508,7 +508,7 @@ export default function Home(){
           // console.log(els)
           for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
           setArtists([...artists, tem])
-          setItems([...items, il]); todo() } } className="shadow-medium self-center" style={{
+          setItems([...items, il]); todo() } } className="h-auto shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+
         <svg id='star' className='cb ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>

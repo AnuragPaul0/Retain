@@ -7,8 +7,7 @@
   color: white;
 }
 
-.footer { --ds-background-200: #000; background: var(--ds-background-200); border-top: none;
-padding: 0 32px 90px !important }
+.footer { border-top: none; padding: 0 32px 90px !important }
 
 .footer nav { --page-width: 1080px; max-width: var(--page-width); margin: 0 auto; display: flex;
   flex-wrap: nowrap; justify-content: space-between;
