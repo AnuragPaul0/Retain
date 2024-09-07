@@ -10,11 +10,6 @@ import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 import { Switch } from "@nextui-org/switch"
 
-interface Props {
-  children?: ReactNode, props: any, isDragged: any, value: any, index: any, isSelected: any
-  // any props that come into the component
-}
-
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
 
@@ -409,12 +404,27 @@ export default function Home(){
         {...props} style={{ padding: "0em 0em 1em 0em",
           cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 
-      renderItem={({ value, props, index, isDragged, isSelected }: Props) => {
+      renderItem={(params: {
+        value: any;
+        index?: number;
+        isDragged: boolean;
+        isSelected: boolean;
+        props: {
+          key?: number;
+          tabIndex?: number;
+          "aria-roledescription"?: string;
+          onKeyDown?: (e: React.KeyboardEvent) => void;
+          onWheel?: (e: React.WheelEvent) => void;
+          style?: React.CSSProperties;
+          ref?: React.RefObject<any>;
+        };
+      }) => {
         // console.log(value)
-        return <li id='lst' className="par" {...props} key={props.key} style={{ ...props.style,
-          cursor: isDragged ? "grabbing" : "inherit",
-          backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
-  }}>{ relem(value, isDragged, els[value], index) }</li> }}/>
+        return <li id='lst' className="par" {...params.props} key={params.props.key}
+          style={{ ...params.props.style,
+          cursor: params.isDragged ? "grabbing" : "inherit",
+          backgroundColor: params.isDragged || isSelected ? "#EEE" : "#FFF",
+  }}>{ relem(params.value, params.isDragged, els[params.value], params.index) }</li> }}/>
   
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{ width: '4rem' }} className={
