@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import { useState } from "react"
+import { useState, ReactNode } from "react"
 import { Row, Col, Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
@@ -11,7 +11,7 @@ import { Button } from "@nextui-org/button"
 import { Switch } from "@nextui-org/switch"
 
 interface Props {
-  children: any, props: any, isDragged: any, value: any, index: any, isSelected: any
+  children?: ReactNode, props: any, isDragged: any, value: any, index: any, isSelected: any
   // any props that come into the component
 }
 
