@@ -10,6 +10,4 @@ export default function Home() {
     setItems(arrayMove(items, oldIndex, newIndex))
   }
   renderList={({ children, props }) => <ul {...props}>{children}</ul>}
-  renderItem={({ value, props }) => <li {...props}>{value}</li> }
-/>
-}
+  renderItem={({ value, props }) => <li {...props}>{value}</li> }/> }
