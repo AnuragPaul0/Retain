@@ -401,7 +401,7 @@ export default function Home(){
           ref: React.RefObject<any>;
         };
       }) => <ul
-        {...props} style={{ padding: "0em 0em 1em 0em",
+        {...props.props} style={{ padding: "0em 0em 1em 0em",
           cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 
       renderItem={(params: {
