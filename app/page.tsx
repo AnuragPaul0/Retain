@@ -330,7 +330,7 @@ export default function Home(){
       // console.log(b, relm(k))
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
       // console.log(artists)
-    } } className={ 'r'+i+" mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
+  } } className={ 'r'+i+" mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
       arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
@@ -398,19 +398,15 @@ export default function Home(){
   
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
-      setItems(arrayMove(items, oldIndex, newIndex)) }
-      renderList={(props: {
-        children: React.ReactNode;
+      setItems(arrayMove(items, oldIndex, newIndex)) } renderList={(props: { children: React.ReactNode;
         isDragged: boolean;
         props: {
-          ref: React.RefObject<any>;
-        };
+          ref: React.RefObject<any> }
       }) => <ul
         {...props.props} style={{ padding: "0em 0em 1em 0em",
           cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 
-      renderItem={(params: {
-        value: any;
+      renderItem={(params: { value: any;
         index?: number;
         isDragged: boolean;
         isSelected: boolean;
@@ -421,8 +417,7 @@ export default function Home(){
           onKeyDown?: (e: React.KeyboardEvent) => void;
           onWheel?: (e: React.WheelEvent) => void;
           style?: React.CSSProperties;
-          ref?: React.RefObject<any>;
-        };
+          ref?: React.RefObject<any> }
       }) => {
         // console.log(value)
         return <li id='lst' className="par" {...params.props} key={params.props.key}

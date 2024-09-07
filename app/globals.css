@@ -171,7 +171,7 @@ border-top-left-radius: var(--nextui-radius-large) }
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-#lst { list-style-type: none; border-radius: 5px }
+#lst { background-color: unset; list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
 .cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-top: calc(var(--bs-gutter-x) * .5); 
