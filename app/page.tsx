@@ -425,7 +425,10 @@ export default function Home(){
           cursor: params.isDragged ? "grabbing" : "inherit",
           backgroundColor: params.isDragged || isSelected ? "#EEE" : "#FFF",
   }}>{ relem(params.value, params.isDragged, els[params.value], params.index) }</li> }}/>
-  
+  {/* Mark any node with the data-movable-handle attribute if you wish
+    to use is it as a DnD handle. The rest of renderItem will be then
+    ignored and not start the drag and drop.*/}
+
   return <div style={{ backgroundColor: 'white', fontFamily: 'Recoleta Medium' }}>
     <div style={{ width: '4rem' }} className={
     "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
@@ -514,12 +517,7 @@ export default function Home(){
                 <Col xs lg="2" className="bl top df w3 justify-content-md-center">
                   <Card id='fg1'
                   isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
-      </Col></Row></div></ScrollSyncPane></Row></li></ul>
-
-        { List2() }
-        {/* Mark any node with the data-movable-handle attribute if you wish
-          to use is it as a DnD handle. The rest of renderItem will be then
-          ignored and not start the drag and drop.*/}
+      </Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
@@ -532,7 +530,7 @@ export default function Home(){
           // console.log(els)
           for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
           setArtists([...artists, tem])
-          setItems([...items, il]); todo() } } className="h-auto shadow-medium self-center" style={{
+          setItems([...items, il]); todo() } } className="mwu h-auto shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+
         <svg id='star' className='cb ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
