@@ -542,7 +542,7 @@ export default function Home(){
       if (el.tagName == 'INPUT') el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat,
         "true") } }
       style={{  marginLeft: '6rem' }} aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
-      data-selected="true"><span id='spa'>
+      ><span id='spa'>
         <input aria-labelledby=":R4mfja:" type="checkbox" role="switch" defaultChecked={true}/>
       </span>
       <span aria-hidden="true" className="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-success group-data-[selected=true]:text-success-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background">
