@@ -215,7 +215,7 @@ div.df, .df { display: flex }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 
-:root { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
+html { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
 --background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
 
