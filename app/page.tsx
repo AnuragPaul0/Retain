@@ -536,6 +536,7 @@ export default function Home(){
         >Design for remaining SKU's</span><Switch color="success" defaultSelected
     onValueChange={setIsSelected} aria-label="Automatic updates"/>
     <label onClick={ (e) => { let el = e.currentTarget as HTMLElement, dat = 'data-selected'
+      console.log(el)
       el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat, "true") } }
       style={{  marginLeft: '6rem' }} aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
       data-selected="true"><span id='spa'>
