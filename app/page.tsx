@@ -28,7 +28,7 @@ HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="
 </svg>,
 
 // Card text-black
-buttonc = (t: any, s = '') => { if (s) s+=' '; return <Button id='cbt' className=
+buttonc = (t: any, s = 'whi') => { if (s) s+=' '; return <Button id='cbt' className=
 {s+"mwu h-auto shadow-medium p-1"} variant="flat" color="default">{ t }</Button> },
 
 cele = (d: any) => { d.forEach((e: any, i: any) => {
