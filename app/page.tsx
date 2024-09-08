@@ -263,7 +263,6 @@ cfo = [ [ sing, sing ], [ 'Multi Image - '+os, '4 Images - '+os ],
 ['Single Image - Left - No Discount', '4 Image - 0 discount'],
 [ 'Single Image prduct', 'Single Image prduct' ] ],
 
-
 card = (i: any, m=sing, t='', b: any) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
@@ -291,7 +290,7 @@ Btn = () =>  <Button id='adb' className='mwu atb cb'
 arr = [ [ { id: 1, name: imco(0, dict) } ] ],
 
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
-tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000) }
+tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) }
 
 // if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
 //   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
@@ -399,10 +398,7 @@ export default function Home(){
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
       setItems(arrayMove(items, oldIndex, newIndex)) } renderList={(props: { children: React.ReactNode;
-        isDragged: boolean;
-        props: {
-          ref: React.RefObject<any> }
-      }) => <ul
+        isDragged: boolean; props: { ref: React.RefObject<any> } }) => <ul
         {...props.props} style={{ padding: "0em 0em 1em 0em",
           cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 

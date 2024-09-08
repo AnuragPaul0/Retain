@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#gre { padding: .75rem !important;  top: '2rem'; right: '2rem'; background-color: #04AE56;
+#gre { padding: .75rem !important;  top: 2rem; right: 2rem; background-color: #04AE56;
 font-size: 18px; border-radius: 4px }
 
 .mwu { min-width: unset }
@@ -15,8 +15,7 @@ font-size: 18px; border-radius: 4px }
   flex-direction: column;
 }
 
-.statusRow { display: flex; align-items: center;
-  justify-content: space-between;
+.statusRow { display: flex; align-items: center; justify-content: space-between;
   margin-top: 32px;
   min-height: 34px;
 }
@@ -212,7 +211,7 @@ div.df, .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
-.cb { background-color: var(--cb) }
+.cb { color: unset; background-color: var(--cb) }
 /* 212 176*/
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
