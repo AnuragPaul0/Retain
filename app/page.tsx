@@ -549,7 +549,7 @@ export default function Home(){
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
       className={ ( isSelected ? '' : 'd-none ') + "rounded-large"}>
 
-      <Row id='scrw' className="pb-9"><Col xs lg="7" className="ht0 top">
+      <Row id='scrw' className="pb-9"><Col xs lg="7" className="h10 top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
         }} radius="lg">N/A</Card></Col>
 
