@@ -211,7 +211,7 @@ div.df, .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid #eee }
-.cb { background-color: --cb }
+.cb { background-color: var(--cb) }
 /* 212 176*/
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
