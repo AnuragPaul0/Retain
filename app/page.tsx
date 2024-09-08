@@ -506,8 +506,7 @@ export default function Home(){
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="top br2 cb p-1 border-none">Primary Variant</Card>
               <Btn/></Col>
-{/* bl  */}
-                <Col xs lg="2" className="top df w3 justify-content-md-center">
+              <Col xs lg="2" className="top df w3 justify-content-md-center">
                   <Card id='fg1'
                   isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card><Btn/>
       </Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
@@ -541,7 +540,7 @@ export default function Home(){
         <input aria-labelledby=":R4mfja:" type="checkbox" role="switch" defaultChecked={true} value=""/>
       </span>
       <span aria-hidden="true" className="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-success group-data-[selected=true]:text-success-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background">
-        <span className="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
+        <span className="z-10 flex items-center justify-center bg-black shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
     </span></span></label></p>
 
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
@@ -550,12 +549,12 @@ export default function Home(){
       className={ ( isSelected ? '' : 'd-none ') + "rounded-large"}>
 
       <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
-          <Card className="h10 justify-content-md-center" style={{ textAlign: 'center',
+        <Card className="h10 justify-content-md-center" style={{ textAlign: 'center',
         }} radius="lg">N/A</Card></Col>
 
-      <Col xs lg="2" className="justify-content-md-center" style={{
-        display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
-          <div style={{ display: 'flex', height: '150px', width: '150px',
+      <Col xs lg="2" className="df justify-content-md-center">
+        <Card isFooterBlurred radius="lg" className="border-none">
+          <div className="df" style={{ height: '150px', width: '150px',
             justifyContent: 'flex-start !important' }}>
             <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
               <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
@@ -565,7 +564,7 @@ export default function Home(){
               <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
                   borderTopRightRadius: 0,
                   }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-                "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+            "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
             <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
                   }} alt="Woman" className="object-cover opacity-1" height={150} src=
@@ -575,7 +574,7 @@ export default function Home(){
             paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
-      <p className="text-tiny" style={{ marginBottom: 0, fontFamily: 'Recoleta Medium' }}
+      <p className="text-tiny" style={{ marginBottom: 0 }}
         >Multi Image - fallback</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
