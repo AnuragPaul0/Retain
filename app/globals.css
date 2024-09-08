@@ -212,12 +212,12 @@ div.df, .df { display: flex }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
+:root { scroll-behavior: unset }
 
-html { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
---background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
+html { --mode: light; --background-start-rgb: 214, 219, 220; --background-end-rgb: 255, 255, 255 }
 
-@media (prefers-color-scheme: light) { body { --e: #eee; --w: #FFF; --bgr: #04ae5620 }
+@media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
+  --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; color-scheme: --mode }
 #gre, .grb { color: var(--w) } }
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
