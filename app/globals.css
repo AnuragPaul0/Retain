@@ -223,7 +223,7 @@ div.df, .df { display: flex }
 
 @media (prefers-color-scheme: dark) { html { --lis: #111; --e: var(--lis); --cb: #0f0f0f;
   color-scheme: dark; --foreground-rgb: 255, 255, 255; --background-start-rgb: 0, 0, 0;
---background-end-rgb: 0, 0, 0 } html, .h10 { background-color: black } }
+--background-end-rgb: 0, 0, 0 } :root, .h10 { background-color: black } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
