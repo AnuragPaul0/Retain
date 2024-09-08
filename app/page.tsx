@@ -182,7 +182,7 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 // l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
   {( w==ab? '':'bdf fon bgy absolute ' )+"px-"+(t!=''?0:2)+
-    " justify-center before:bg-white/10 border-white/20 border-1"+
+    " justify-center before:bg-white/10 border-white/20"+
     " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-'+(+(w==ab))))+" w"+w+
 " ml-1 z-10" }><p id='mb0' className={t+( w==ab? '':'ort ' )+"text-tiny" }>{ m }</p></CardFooter>,
 

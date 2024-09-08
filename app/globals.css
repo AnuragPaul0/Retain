@@ -227,7 +227,8 @@ html { --mode: light; --background-start-rgb: 214, 219, 220; --background-end-rg
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: 255, 255, 255;
   --bgr: #04ae56  } :root, .h10, .w90, .w15 { background-color: black }
-#del, #btnr { background-color: unset } .whi { color: initial } .w15, #btnr, .grb { color: unset } }
+  #del, #btnr, #cfo { background-color: unset } .whi { color: initial }
+.w15, #btnr, .grb { color: unset } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
