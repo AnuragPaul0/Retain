@@ -326,7 +326,7 @@ export default function Home(){
       // console.log(b, relm(k))
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
       // console.log(artists)
-  } } className={ 'r'+i+" mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
+  } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
       arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
@@ -372,8 +372,9 @@ export default function Home(){
                 ? arrayRemove(items, index) : items ); todo('State', 'removed!') } }
                 className={"r"+i+" mwu self-center"} style={{ display: "none",
                 paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-          paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-            <svg id='sdel' className="feather feather-x-circle" stroke="currentColor" fill="currentColor"
+                paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
+            <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
+              fill="currentColor"
           stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
         "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
           ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=

@@ -221,7 +221,8 @@ html { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: 255, 255, 255;
---background-end-rgb: 0, 0, 0 } :root, .h10, .w90 { background-color: black } }
+  --background-end-rgb: 0, 0, 0 } :root, .h10, .w90 { background-color: black }
+#del, .w15 { background-color: unset } .w15 { color: unset } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
