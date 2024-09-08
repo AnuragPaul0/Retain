@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client'
 import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
-// import { Switch } from "@nextui-org/switch"
+import { Switch } from "@nextui-org/switch"
 
 // initialValue = localStorage.getItem("mode"), 
 let tog, parent, p = 5, container, a:any, k:any, b:any,
@@ -534,9 +534,9 @@ export default function Home(){
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
         >Design for remaining SKU's</span>
-        {/* <Switch color="success" defaultSelected
-    onValueChange={setIsSelected} aria-label="Automatic updates"/> */}
-    <label onClick={ (e) => { console.log('el')
+        <Switch color="success" defaultSelected
+    onValueChange={setIsSelected} aria-label="Automatic updates"/>
+    <label onClick={ (e) => { console.log('el', e.target)
       let el = e.currentTarget as HTMLElement, dat = 'data-selected'
       console.log(el)
       el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat, "true") } }
