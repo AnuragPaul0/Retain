@@ -11,9 +11,7 @@ font-size: 18px; border-radius: 4px }
 .footer { border-top: none; padding: 0 32px 90px !important }
 
 .footer nav { --page-width: 1080px; max-width: var(--page-width); margin: 0 auto; display: flex;
-  flex-wrap: nowrap; justify-content: space-between;
-  flex-direction: column;
-}
+flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
 
 .statusRow { display: flex; align-items: center; justify-content: space-between;
   margin-top: 32px;
@@ -210,7 +208,7 @@ width: 51% }
 div.df, .df { display: flex }
 .bl { border-left: 1px solid rgb(221, 221, 221) }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
-.top { border-right: 1px solid #eee }
+.top { border-right: 1px solid var(--e) }
 .cb { color: unset; background-color: var(--cb) }
 /* 212 176*/
 .h21 { height: 250px }
@@ -221,11 +219,11 @@ div.df, .df { display: flex }
   --background-start-rgb: 214, 219, 220;
 --background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
 
-@media (prefers-color-scheme: light) { #gre { color: #FFF } }
+@media (prefers-color-scheme: light) { body { --e: #eee } #gre { color: #FFF } }
 
-@media (prefers-color-scheme: dark) { :root { --cb: #0f0f0f; --lis: #111;
-  color-scheme: dark; --foreground-rgb: 255, 255, 255;
-background-color: black; --background-start-rgb: 0, 0, 0; --background-end-rgb: 0, 0, 0 } }
+@media (prefers-color-scheme: dark) { html { --lis: #111; --e: var(--lis); --cb: #0f0f0f;
+  color-scheme: dark; --foreground-rgb: 255, 255, 255; --background-start-rgb: 0, 0, 0;
+--background-end-rgb: 0, 0, 0 } html, .h10 { background-color: black } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
