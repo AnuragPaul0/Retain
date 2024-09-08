@@ -184,7 +184,7 @@ cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
   {( w==ab? '':'bdf fon bgy absolute ' )+"px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20 border-1"+
     " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-'+(+(w==ab))))+" w"+w+
-" ml-1 z-10" }><p id='mb0' className={t+"text-tiny" }>{ m }</p></CardFooter>,
+" ml-1 z-10" }><p id='mb0' className={t+( w==ab? '':'ort ' )+"text-tiny" }>{ m }</p></CardFooter>,
 
 iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">

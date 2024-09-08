@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+.ort { color: #222 }
+
 #gre { padding: .75rem !important;  top: 2rem; right: 2rem; background-color: #04AE56;
 font-size: 18px; border-radius: 4px }
 
@@ -223,7 +225,7 @@ html { --mode: light; --background-start-rgb: 214, 219, 220; --background-end-rg
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: 255, 255, 255;
   --bgr: #04ae56  } :root, .h10, .w90, .w15 { background-color: black }
-.mwu { background-color: unset } .w15, #cbt { color: unset } }
+#del, #btnr { background-color: unset } #cbt { color: initial } .w15, #btnr { color: unset } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
@@ -231,5 +233,7 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
   --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
+
+@media (prefers-reduced-motion: no-preference) { :root { scroll-behavior: unset } }
 
 @layer utilities { .text-balance { text-wrap: balance } }
