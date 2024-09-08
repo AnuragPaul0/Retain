@@ -216,7 +216,7 @@ div.df, .df { display: flex }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
-:root { scroll-behavior: unset }
+:root { scroll-behavior: unset !important }
 
 html { --mode: light; --background-start-rgb: 214, 219, 220; --background-end-rgb: 255, 255, 255 }
 
