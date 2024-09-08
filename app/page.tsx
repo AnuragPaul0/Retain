@@ -181,7 +181,7 @@ width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-66
 
 // l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
-  {( w==ab? '':'bdf fon bgy absolute ' )+"px-"+(t!=''?0:2)+
+  {( w==ab? 'foo':'bdf fon bgy absolute' )+" px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20"+
     " overflow-hidden py-1 before:rounded-xl "+(w.match('top')?"":('bottom-'+(+(w==ab))))+" w"+w+
 " ml-1 z-10" }><p id='mb0' className={t+( w==ab? '':'ort ' )+"text-tiny" }>{ m }</p></CardFooter>,
@@ -535,12 +535,14 @@ export default function Home(){
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
         >Design for remaining SKU's</span><Switch color="success" defaultSelected
     onValueChange={setIsSelected} aria-label="Automatic updates"/>
-    <label style={{  marginLeft: '6rem' }} aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+    <label onClick={ (e) => { let el = e.target as HTMLElement, dat = 'data-selected'
+      el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat, "true") } }
+      style={{  marginLeft: '6rem' }} aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
       data-selected="true"><span id='spa'>
         <input aria-labelledby=":R4mfja:" type="checkbox" role="switch" defaultChecked={true} value=""/>
       </span>
       <span aria-hidden="true" className="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-success group-data-[selected=true]:text-success-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background">
-        <span className="z-10 flex items-center justify-center bg-black shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
+        <span id='swi' className="z-10 flex items-center justify-center bg-black shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
     </span></span></label></p>
 
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
