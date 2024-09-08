@@ -210,7 +210,6 @@ div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid var(--e) }
 .cb { color: unset; background-color: var(--cb) }
-/* 212 176*/
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
@@ -221,8 +220,8 @@ html { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
 
 @media (prefers-color-scheme: light) { body { --e: #eee } #gre { color: #FFF } }
 
-@media (prefers-color-scheme: dark) { html { --lis: #111; --e: var(--lis); --cb: #0f0f0f;
-  color-scheme: dark; --foreground-rgb: 255, 255, 255; --background-start-rgb: 0, 0, 0;
+@media (prefers-color-scheme: dark) { :root { color-scheme: dark }
+  html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: 255, 255, 255;
 --background-end-rgb: 0, 0, 0 } :root, .h10 { background-color: black } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
