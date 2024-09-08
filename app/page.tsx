@@ -494,9 +494,8 @@ export default function Home(){
         <span style={{ width: '30%', display: 'inline-block', borderBottom: '1px solid #eee' }}
     >Rules space</span></p></div>
 
-    <Button className="p-3 self-center absolute" variant="flat" color="default"
-      style={{ padding: '.75rem !important', top: '2rem', right: '2rem', backgroundColor: '#04AE56',
-    color: '#FFF', fontSize: '18px', borderRadius: '4px' }}>Publish Feed</Button>
+    <Button id='gre' className="p-3 self-center absolute" variant="flat" color="default"
+    >Publish Feed</Button>
 
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="pb-5 cnr rounded-large">
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>

@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+#gre { padding: .75rem !important;  top: '2rem'; right: '2rem'; background-color: #04AE56;
+font-size: 18px; border-radius: 4px }
+
 .mwu { min-width: unset }
-.dark-mode { background-color: black;
-  color: white;
-}
+.dark-mode { background-color: black; color: white }
 
 .footer { border-top: none; padding: 0 32px 90px !important }
 
@@ -220,6 +221,8 @@ div.df, .df { display: flex }
 :root { --cb: #f0f0f0; --lis: #F7F7F7;--mode: light; --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
 --background-end-rgb: 255, 255, 255; color-scheme: --mode; scroll-behavior: unset }
+
+@media (prefers-color-scheme: light) { #gre { color: #FFF } }
 
 @media (prefers-color-scheme: dark) { :root { --cb: #0f0f0f; --lis: #111;
   color-scheme: dark; --foreground-rgb: 255, 255, 255;
