@@ -549,10 +549,9 @@ export default function Home(){
       marginTop: 'calc(var(--bs-gutter-x) * .5)', display: 'inline-block' }}
       className={ ( isSelected ? '' : 'd-none ') + "rounded-large"}>
 
-      <Row id='scrw' className="pb-9"><Col xs lg="7" className="top">
+      <Row id='scrw' className="pb-9"><Col xs lg="7" className="ht0 top">
           <Card className="justify-content-md-center" style={{ textAlign: 'center',
-            backgroundColor: '#fafafa', height: '100% !important' }}
-        radius="lg">N/A</Card></Col>
+        }} radius="lg">N/A</Card></Col>
 
       <Col xs lg="2" className="justify-content-md-center" style={{
         display: 'flex' }}><Card isFooterBlurred radius="lg" className="border-none" >
