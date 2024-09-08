@@ -535,9 +535,8 @@ export default function Home(){
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
         >Design for remaining SKU's</span><Switch color="success" defaultSelected
     onValueChange={setIsSelected} aria-label="Automatic updates"/>
-    <label onClick={ (e) => { let el = e.target as HTMLElement, dat = 'data-selected'
-      if (el == e.currentTarget) el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat,
-        "true") } }
+    <label onClick={ (e) => { let el = e.currentTarget as HTMLElement, dat = 'data-selected'
+      el.hasAttribute(dat) ? el.removeAttribute(dat) : el.setAttribute(dat, "true") } }
       style={{  marginLeft: '6rem' }} aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
       data-selected="true"><span id='spa'>
         <input aria-labelledby=":R4mfja:" type="checkbox" role="switch" defaultChecked={true} value=""/>
