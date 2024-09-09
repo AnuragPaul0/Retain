@@ -23,16 +23,13 @@ flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
   min-height: 34px;
 }
 
-.root { display: flex; box-shadow: var(--ds-shadow-border); border-radius: 9999px;
-  height: 32px;
+.root { display: flex; box-shadow: var(--ds-shadow-border); border-radius: 9999px; height: 32px;
   width: fit-content;
   padding: 0;
   border: 0;
   margin: 0;
 
-  input { appearance: none; padding: 0;
-    margin: 0;
-    outline: none;
+  input { appearance: none; padding: 0; margin: 0; outline: none;
     position: absolute;
 
     &:checked ~ label { box-shadow: 0 0 0 1px var(--ds-gray-400);
@@ -48,8 +45,7 @@ flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
       svg {
         color: var(--accents-8) !important;
       }
-    }
-  }
+  } }
 
   label { border-radius: 9999px;
     display: flex;
@@ -75,8 +71,7 @@ flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
       z-index: 1;
       transition: color 100ms ease;
     }
-  }
-  &[data-small=''] { height: 24px;
+  } &[data-small=''] { height: 24px;
     label {
       height: 24px; width: 24px }
 
@@ -84,8 +79,7 @@ flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
       /* weird svg misalignment fix */
       -webkit-transform: translate(-0.5px, -0.5px); transform: translate(-0.5px, -0.5px)
     }
-  }
-}
+} }
 
 .tailwind { margin-left: auto }
 
@@ -216,13 +210,13 @@ html { --mode: light; --background-start-rgb: 214, 219, 220; --background-end-rg
 
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
   --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; color-scheme: --mode }
-#gre, .grb { color: var(--w) } }
+#gre, .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: 255, 255, 255;
-  --bgr: #04ae56  } :root, .h10, .w90, .w15 { background-color: black }
+  --bgr: #04ae56  } :root, .h10, .w90, .w15, #swi { background-color: black }
   #del, #btnr, .foo { background-color: unset } .whi { color: initial }
-.w15, #btnr, .grb { color: unset } }
+.w15, #btnr, .grb { color: unset } span:has(+#swi) { background-color: var(--foreground-rgb) } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
