@@ -205,9 +205,8 @@ div.df, .df { display: flex }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
-:root { scroll-behavior: unset !important }
+:root { color-scheme: --mode; scroll-behavior: unset !important }
 
-html { color-scheme: --mode }
 .light { --mode: light }
 
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
