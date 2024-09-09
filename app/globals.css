@@ -214,15 +214,18 @@ html { --mode: light }
 .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark;
-  --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
+    --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
   rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3) }
 
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: #fff; --bgr: #04ae56  }
   :root, .h10, .w90, .w15, #swi, #fbk, .wh { background-color: black }
   #del, #btnr, .foo, #imodal-content  { background-color: unset } .whi { color: initial }
   :root { color: var(--foreground-rgb) } .w15, #btnr, .grb, .h10 { color: unset }
-  span:has(+#swi) { background-color: var(--foreground-rgb) }
-.whi, #addc { background-color: var(--lis) } }
+  span:has(#swi) { background-color: var(--foreground-rgb) }
+  .whi, #addc { background-color: var(--lis) }
+
+  .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
+background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
