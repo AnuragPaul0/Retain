@@ -536,7 +536,8 @@ export default function Home(){
         >Design for remaining SKU's</span>
         <Switch color="success" defaultSelected
     onValueChange={setIsSelected} aria-label="Automatic updates"/>
-    <label onMouseUp={ (e) => { console.log('el', e.target)
+
+    <label data-selected='true' onMouseUp={ (e) => { console.log('el', e.target)
         let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat)
          }} onMouseDown={ (e) => { console.log('el', e.target)
         let el = e.currentTarget as HTMLElement, dat = 'data-pressed'
