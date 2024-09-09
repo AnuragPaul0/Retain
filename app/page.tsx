@@ -54,7 +54,7 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e: any) => { changeBackground(
   style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
-colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
+colmo = (r=0, c=2) => <Col id='fbk' xs lg="2" className="relative df w3 top justify-content-md-center">
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
 // window.addEventListener("load", () => {
