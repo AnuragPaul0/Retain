@@ -222,7 +222,7 @@ html { --mode: light }
   #del, #btnr, .foo, #imodal-content  { background-color: unset } .whi { color: initial }
   :root { color: var(--foreground-rgb) } .w15, #btnr, .grb, .h10 { color: unset }
   span:has(+#swi) { background-color: var(--foreground-rgb) }
-.whi { background-color: var(--lis) } }
+.whi, #addc { background-color: var(--lis) } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;

@@ -314,6 +314,7 @@ export default function Home(){
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
     <ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
+
     <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
