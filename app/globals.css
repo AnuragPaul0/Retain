@@ -211,14 +211,15 @@ html { --mode: light }
 
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
   --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; color-scheme: --mode }
-#gre, .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
+.grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: #fff;
   --bgr: #04ae56  } :root, .h10, .w90, .w15, #swi, #fbk, .wh { background-color: black }
   #del, #btnr, .foo, #imodal-content  { background-color: unset } .whi { color: initial }
   :root { color: var(--foreground-rgb) } .w15, #btnr, .grb, .h10 { color: unset }
-span:has(+#swi) { background-color: var(--foreground-rgb) } }
+  span:has(+#swi) { background-color: var(--foreground-rgb) }
+.whi { background-color: var(--lis) } }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
