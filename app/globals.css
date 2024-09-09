@@ -207,13 +207,14 @@ div.df, .df { display: flex }
 .w3 { width: 15vw !important }
 :root { scroll-behavior: unset !important }
 
-html { --mode: light }
+html { color-scheme: --mode }
+.light { --mode: light }
 
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
   --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; color-scheme: --mode }
 .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
-@media (prefers-color-scheme: dark) { :root { color-scheme: dark;
+@media (prefers-color-scheme: dark) { :root { --mode: dark;
     --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
   rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3) }
 
