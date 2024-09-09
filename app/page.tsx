@@ -587,7 +587,7 @@ export default function Home(){
           <CardFooter style={{ paddingLeft: '0 !important',
             paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-  "foo justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+  "foo justify-center before:bg-white/10 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{ marginBottom: 0 }}
         >Multi Image - fallback</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
@@ -627,7 +627,7 @@ export default function Home(){
             paddingLeft: '0 !important',
             paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
-  "foo justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
+  "foo justify-center before:bg-white/10 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0 }}>4 Image - fallback</p>
             </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
