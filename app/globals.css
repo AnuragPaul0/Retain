@@ -215,7 +215,10 @@ html { --mode: light }
 
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark }
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: #fff;
-  --bgr: #04ae56  } :root, .h10, .w90, .w15, #swi, #fbk, .wh { background-color: black }
+  --bgr: #04ae56; --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
+  rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3)  }
+
+  :root, .h10, .w90, .w15, #swi, #fbk, .wh { background-color: black }
   #del, #btnr, .foo, #imodal-content  { background-color: unset } .whi { color: initial }
   :root { color: var(--foreground-rgb) } .w15, #btnr, .grb, .h10 { color: unset }
   span:has(+#swi) { background-color: var(--foreground-rgb) }
