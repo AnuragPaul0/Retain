@@ -584,7 +584,7 @@ export default function Home(){
                   }} alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
           width={100} /></Col></div>
-          <CardFooter style={{ paddingLeft: '0 !important',
+          <CardFooter id='foo' style={{ paddingLeft: '0 !important',
             paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
@@ -623,7 +623,7 @@ export default function Home(){
                   }} alt="Woman" className="object-cover opacity-1" height={150} src=
               "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
           width={100} /></Col></div>
-          <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
+          <CardFooter id='foo' style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
             paddingLeft: '0 !important',
             paddingRight: '0 !important', borderBottomRightRadius: 'var(--nextui-radius-large)',
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
