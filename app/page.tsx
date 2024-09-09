@@ -393,6 +393,9 @@ export default function Home(){
 
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
   </div></ScrollSyncPane></Row> },
+
+  rem = (e: any) => { console.log('el', e.target)
+  let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat) },
   
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
@@ -537,9 +540,8 @@ export default function Home(){
         <Switch color="success" defaultSelected
     onValueChange={setIsSelected} aria-label="Automatic updates"/>
 
-    <label data-selected='true' onMouseUp={ (e) => { console.log('el', e.target)
-        let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat)
-         }} onMouseDown={ (e) => { console.log('el', e.target)
+    <label data-selected='true' onMouseLeave={ rem } onMouseUp={ rem } onMouseDown={ (e) => {
+      console.log('el', e.target)
         let el = e.currentTarget as HTMLElement, dat = 'data-pressed'
         el.setAttribute(dat, "true") }} onClick={ (e) => { console.log('el', e.target)
         let el = e.currentTarget as HTMLElement, dat = 'data-selected'
@@ -551,7 +553,7 @@ export default function Home(){
         <input aria-labelledby=":R4mfja:" type="checkbox" role="switch"/>
       </span>
       <span aria-hidden="true" className="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-success group-data-[selected=true]:text-success-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background">
-        <span id='swi' className="z-10 flex items-center justify-center bg-black shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
+        <span id='swi' className="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
     </span></span></label>
     </p>
     
