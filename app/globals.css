@@ -205,12 +205,20 @@ div.df, .df { display: flex }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
-:root { color-scheme: --mode; scroll-behavior: unset !important }
+:root { color-scheme: var(--mode); scroll-behavior: unset !important }
 
 .light { --mode: light }
 
+html body { font-family: 'Recoleta Medium'; background-color: unset;
+  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
+  --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
+  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
+  --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
+--r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
+
+ /* color-scheme: --mode */
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
-  --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; color-scheme: --mode }
+  --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; }
 .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
 @media (prefers-color-scheme: dark) { :root { --mode: dark;
@@ -219,20 +227,13 @@ div.df, .df { display: flex }
 
   html { --lis: #111; --e: var(--lis); --cb: #0f0f0f; --foreground-rgb: #fff; --bgr: #04ae56  }
   :root, .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: black }
-  #del, .foo, #imodal-content  { background-color: unset } .whi { color: initial }
+  #del, .foo, #imodal-content  { background-color: unset }
   :root { color: var(--foreground-rgb) } .w15, #btnr, .grb, .h10, #fbk { color: unset }
-  span:has(#swi) { background-color: var(--foreground-rgb) }
+  span:has(#swi), .whi { background-color: var(--foreground-rgb) }
   .whi { background-color: var(--lis) }
 
   .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
 background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important } }
-
-html body { font-family: 'Recoleta Medium'; background-color: unset;
-  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
-  --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
-  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
-  --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
---r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
 @media (prefers-reduced-motion: no-preference) { :root { scroll-behavior: unset } }
 
