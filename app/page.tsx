@@ -430,8 +430,10 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater; console.log(darkMode)
-  document.documentElement.classList.toggle("dark") }, [] ) // ✅ no dependency
+  useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater;
+    console.log(darkMode, document.readyState)
+  document.documentElement.classList.toggle("dark")
+  console.log(document.readyState) }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
