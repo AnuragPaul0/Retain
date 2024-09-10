@@ -9,8 +9,18 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-// initialValue = localStorage.getItem("mode"), 
-let tog, parent, p = 5, container, a:any, k:any, b:any,
+
+let getInitialState = () => {
+  const initialValue = localStorage.getItem("darkMode");
+
+  if(initialValue === null){
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  return initialValue == "true";
+},
+
+darkMode = getInitialState(), tog, parent, p = 5, container, a:any, k:any, b:any,
 f, pd, tr:any, co = 2, greens = 'grb', cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
 sta = 'State', adde = 'added',
 
@@ -291,6 +301,7 @@ arr = [ [ { id: 1, name: imco(0, dict) } ] ],
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
 tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) }
 
+console.log(darkMode)
 // if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
 //   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
 // "html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
