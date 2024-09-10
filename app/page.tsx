@@ -431,7 +431,7 @@ export default function Home(){
     ignored and not start the drag and drop.*/}
 
   useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater; console.log(darkMode)
-  document.documentElement.classList.toggle("dark-mode") }, [] ) // ✅ no dependency
+  document.documentElement.classList.toggle("dark") }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
