@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react';
 let getInitialState = () => {
   const initialValue = localStorage.getItem("darkMode");
