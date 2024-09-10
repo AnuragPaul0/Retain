@@ -208,7 +208,7 @@ div.df, .df { display: flex }
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
-html { --lis: #f7f7f7 }
+html { --lis: #f7f7f7; --bg: #fff }
 html body { font-family: 'Recoleta Medium'; background-color: unset; 
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
   --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
