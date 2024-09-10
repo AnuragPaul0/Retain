@@ -211,12 +211,12 @@ span:has(#swi) { background-color: var(--foreground-rgb) }
 scroll-behavior: unset !important }
 
 html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
---ds-shadow-border: rgba(0, 0, 0, .08) }
+--ds-shadow-border: rgba(0, 0, 0, .08); --ds-background-100: #fff }
 
 html body { font-family: 'Recoleta Medium'; background-color: unset; 
   --ds-gray-400-value: 0, 0%, 18%;
   --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
-  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
+  --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1);
   --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
@@ -226,7 +226,7 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
 .dark { --bg: black; --foreground-rgb: #fff; --lis: #111; --cb: #0f0f0f; --bgr: #04ae56;
   --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
   rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3); scrollbar-color: #424242 #000;
---ds-shadow-border: hsla(0, 0%, 100%, .145);  }
+--ds-shadow-border: hsla(0, 0%, 100%, .145); --ds-background-100: #0a0a0a  }
 
 @media (prefers-color-scheme: dark) { html { --e: var(--lis)  }
   .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
