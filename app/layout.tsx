@@ -18,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);
       if(m.media!==t||m.matches){
       // d.style.colorScheme = 'dark';
+
       c.add('dark')}else{
         d.style.colorScheme = 'light';c.add('light-theme')}}else if(e){
           var x={"light":"light-theme","dark":"dark-theme"};c.add(x[e]|| '')}
