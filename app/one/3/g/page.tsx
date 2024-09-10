@@ -8,8 +8,9 @@ let getInitialState = () => {
   }
 
   return initialValue == "true";
-}, darkMode = getInitialState()
-  console.log(darkMode)
+}
+// , darkMode = getInitialState(); console.log(darkMode)
+
 export default function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
