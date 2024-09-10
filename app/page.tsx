@@ -10,15 +10,11 @@ import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
 let getInitialState = () => { const initialValue = localStorage.getItem("darkMode");
+  if(initialValue === null){ return window.matchMedia('(prefers-color-scheme: dark)').matches }
+return initialValue == "true" },
 
-  if(initialValue === null){
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-
-  return initialValue == "true";
-}, tog, parent, p = 5, container, a:any, k:any, b:any,
-f, pd, tr:any, co = 2, greens = 'grb', cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
-sta = 'State', adde = 'added',
+tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
