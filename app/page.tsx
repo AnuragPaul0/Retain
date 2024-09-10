@@ -9,18 +9,14 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-
-let getInitialState = () => {
-  const initialValue = localStorage.getItem("darkMode");
+let getInitialState = () => { const initialValue = localStorage.getItem("darkMode");
 
   if(initialValue === null){
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
   return initialValue == "true";
-},
-
-tog, parent, p = 5, container, a:any, k:any, b:any,
+}, tog, parent, p = 5, container, a:any, k:any, b:any,
 f, pd, tr:any, co = 2, greens = 'grb', cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
 sta = 'State', adde = 'added',
 
@@ -438,8 +434,8 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  useEffect(() => { let darkMode = getInitialState(); console.log(darkMode) // ✅ Pass a state updater
-  }, [] ) // ✅ no dependency
+  useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater; console.log(darkMode)
+  document.documentElement.classList.toggle("dark-mode") }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
