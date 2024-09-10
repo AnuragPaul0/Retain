@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Row, Col, Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
@@ -9,12 +9,12 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-let getInitialState = () => { const initialValue = localStorage.getItem("darkMode");
-  if(initialValue === null){ return window.matchMedia('(prefers-color-scheme: dark)').matches }
-return initialValue == "true" },
-
-tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
+let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
+// getInitialState = () => { const initialValue = localStorage.getItem("darkMode");
+//   if(initialValue === null){ return window.matchMedia('(prefers-color-scheme: dark)').matches }
+// return initialValue == "true" },
+
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
@@ -430,10 +430,10 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater;
-    console.log(darkMode, document.readyState)
-  document.documentElement.classList.toggle("dark")
-  console.log(document.readyState) }, [] ) // ✅ no dependency
+  // useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater;
+  //   console.log(darkMode, document.readyState)
+  // document.documentElement.classList.toggle("dark")
+  // console.log(document.readyState) }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
