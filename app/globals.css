@@ -155,7 +155,7 @@ scrollbar-width: none } /* Firefox */
 #cbt { border-radius: calc(var(--nextui-radius-medium) / 3); padding-right: .4rem !important;
 padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
 
-.grb { background-color: var(--bgr) }
+.grb { background-color: var(--bgr); color: var(--bg) }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
 border-top-left-radius: var(--nextui-radius-large) }
 
