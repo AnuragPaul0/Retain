@@ -20,7 +20,7 @@ let getInitialState = () => {
   return initialValue == "true";
 },
 
-darkMode = getInitialState(), tog, parent, p = 5, container, a:any, k:any, b:any,
+tog, parent, p = 5, container, a:any, k:any, b:any,
 f, pd, tr:any, co = 2, greens = 'grb', cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2,
 sta = 'State', adde = 'added',
 
@@ -301,7 +301,6 @@ arr = [ [ { id: 1, name: imco(0, dict) } ] ],
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
 tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) }
 
-console.log(darkMode)
 // if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
 //   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
 // "html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
@@ -407,6 +406,8 @@ export default function Home(){
 
   rem = (e: any) => { console.log('el', e.target)
   let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat) },
+  
+  darkMode = getInitialState(),
 
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
@@ -436,6 +437,8 @@ export default function Home(){
   {/* Mark any node with the data-movable-handle attribute if you wish
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
+
+  console.log(darkMode)
 
   return <div>
     <div style={{ width: '4rem' }} className={
