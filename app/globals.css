@@ -209,7 +209,7 @@ span:has(#swi) { background-color: var(--foreground-rgb) }
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
-html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000 }
+html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620 }
 html body { font-family: 'Recoleta Medium'; background-color: unset; 
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
   --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
@@ -217,8 +217,7 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
   --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
-@media (prefers-color-scheme: light) { body { --e: #eee;
-  --w: #FFF; --bgr: #04ae5620; }
+@media (prefers-color-scheme: light) { body { --e: #eee; --w: #FFF }
 .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
 .dark { --bg: black; --foreground-rgb: #fff; --lis: #111; --cb: #0f0f0f; --bgr: #04ae56;
