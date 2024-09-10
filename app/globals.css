@@ -9,7 +9,7 @@ padding:0;position:absolute;width:1px;white-space:nowrap }
 
 .ort { color: #222 }
 
-#gre { padding: .75rem !important;  top: 2rem; right: 2rem; background-color: #04AE56;
+#gre { padding: .75rem !important;  top: 2rem; right: 2rem; background-color: #04AE56; color:#000;
 font-size: 18px; border-radius: 4px }
 
 .mwu { min-width: unset }
