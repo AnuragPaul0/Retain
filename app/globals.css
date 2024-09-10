@@ -220,14 +220,14 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
   --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; }
 .grb, #swi { color: var(--w) } span:has(+#swi) { background-color: var(--bgr) } }
 
-.dark { --bg: black; --foreground-rgb: #fff; --lis: #111; --cb: #0f0f0f;
+.dark { --bg: black; --foreground-rgb: #fff; --lis: #111; --cb: #0f0f0f; --bgr: #04ae56;
   --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
 rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3); scrollbar-color: #424242 #000 }
 
-@media (prefers-color-scheme: dark) { html { --e: var(--lis); --bgr: #04ae56  }
+@media (prefers-color-scheme: dark) { html { --e: var(--lis)  }
   .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
   #del, .foo, #imodal-content  { background-color: unset }
-  .w15, #btnr, .grb, .h10, #fbk { color: unset }
+  .w15, #btnr, .h10, #fbk { color: unset }
   span:has(#swi), .whi { background-color: var(--foreground-rgb) }
   .whi { background-color: var(--lis) }
 
