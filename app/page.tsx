@@ -1,7 +1,7 @@
 'use client'
 import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync'
 import { List, arrayMove, arrayRemove } from "react-movable"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Row, Col, Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import { createRoot } from 'react-dom/client'
@@ -438,7 +438,8 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  // console.log(darkMode)
+  useEffect(() => { let darkMode = getInitialState(); console.log(darkMode) // ✅ Pass a state updater
+  }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
