@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 let getInitialState = () => {
   const initialValue = localStorage.getItem("darkMode");
 
@@ -9,10 +9,16 @@ let getInitialState = () => {
 
   return initialValue == "true";
 }
-// , darkMode = getInitialState(); console.log(darkMode)
+// , 
 
 export default function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        let darkMode = getInitialState(); console.log(darkMode) // ✅ Pass a state updater
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []); // ✅ Now count is not a dependency
 
   
   return (
