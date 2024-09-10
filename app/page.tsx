@@ -503,6 +503,14 @@ export default function Home(){
     <Button id='gre' className="p-3 self-center absolute" variant="flat" color="default"
     >Publish Feed</Button>
 
+    <button className={"[&amp;>svg]:max-w-[theme(spacing.8)] absolute appearance-none box-border"+
+      " data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus"+
+      " data-[focus-visible=true]:outline-offset-2 data-[focus-visible=true]:z-10"+
+      " data-[hover=true]:opacity-hover data-[pressed=true]:scale-[0.97] font-normal gap-2 group"+
+      " h-10 inline-flex items-center justify-center min-w-20 motion-reduce:transition-none"+
+      " outline-none overflow-hidden p-3 rounded-medium select-none self-center subpixel-antialiased"+
+      " tap-highlight-transparent text-small transition-transform-colors-opacity whitespace-nowrap z-0"}
+    type="button" id="gre">Publish Feed</button>
     <ScrollSync><Container id='lis' style={{ maxWidth: '88vw' }} className="pb-5 cnr rounded-large">
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
         <Row id='rt' style={{ marginBottom: 'calc(2 * var(--bs-gutter-x))' }}>
