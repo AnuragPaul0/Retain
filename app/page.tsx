@@ -297,6 +297,8 @@ tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) 
 //   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
 // "html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
 
+document.documentElement.classList.toggle("dark")
+
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // console.log(arr)
 
@@ -432,7 +434,7 @@ export default function Home(){
 
   useEffect(() => { let darkMode = getInitialState() // ✅ Pass a state updater;
     console.log(darkMode, document.readyState)
-  document.documentElement.classList.toggle("dark")
+  
   console.log(document.readyState) }, [] ) // ✅ no dependency
 
   return <div>
