@@ -207,14 +207,12 @@ div.df, .df { display: flex }
 .w3 { width: 15vw !important }
 :root { background-color: var(--bg); color-scheme: var(--mode); scroll-behavior: unset !important }
 
-html body { font-family: 'Recoleta Medium'; background-color: unset;
+html body { --mode: light; font-family: 'Recoleta Medium'; background-color: unset;
   --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145); --ds-gray-400-value: 0, 0%, 18%;
   --ds-gray-400: hsla(var(--ds-gray-400-value), 1); --ds-gray-1000-value: 0, 0%, 93%;
   --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --ds-background-100: #0a0a0a;
   --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
-
-.light { --mode: light }
 
 @media (prefers-color-scheme: light) { body { --cb: #f0f0f0; --lis: #F7F7F7; --e: #eee;
   --w: #FFF; --foreground-rgb: 0, 0, 0; --bgr: #04ae5620; }
