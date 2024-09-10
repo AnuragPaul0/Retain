@@ -407,7 +407,7 @@ export default function Home(){
   rem = (e: any) => { console.log('el', e.target)
   let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat) },
   
-  darkMode = getInitialState(),
+  // darkMode = getInitialState(),
 
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
@@ -438,7 +438,7 @@ export default function Home(){
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
 
-  console.log(darkMode)
+  // console.log(darkMode)
 
   return <div>
     <div style={{ width: '4rem' }} className={
