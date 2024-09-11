@@ -42,9 +42,8 @@ el2 = [
 {buttonc('empty')}</div> ],
 
 addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
-  myFunction((e.target as HTMLElement).classList, 1)} }
-  id='b1' className=
-    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute bg-white/20' }
+  myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
+    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 

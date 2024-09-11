@@ -206,6 +206,7 @@ div.df, .df { display: flex }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 span:has(#swi) { background-color: var(--foreground-rgb) }
+.whi { background-color: var(--lis) }
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
@@ -236,8 +237,7 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
   .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
   #del, .foo, #imodal-content  { background-color: unset }
   .w15, #btnr, .h10, #fbk { color: unset }
-  span:has(#swi), .whi { background-color: var(--foreground-rgb) }
-  .whi { background-color: var(--lis) }
+  span:has(#swi) { background-color: var(--foreground-rgb) }
 
   .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
 background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important } }
