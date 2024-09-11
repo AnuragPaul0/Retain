@@ -353,7 +353,7 @@ export default function Home() {
   modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
   return <Col id='c1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
       onMouseLeave={ (e: any) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
-  " justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
+  " pb-2 justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
   // r el
   relem = (i=0, isDragged: any, c: any, index: any) => {
@@ -709,11 +709,11 @@ export default function Home() {
 
       <Container id='h40' className="rounded-large"><div id='scrw'>
 
-        <Row id='scrw' className="rw pb-2">{ modc(iml, 3, 2) }
-        { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }</Row>
-
-        <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2, '4 image - fallback') }
-        { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }</Row>
+        {/* <Row id='scrw' className="rw pb-2"></Row><Row id='scrw' className="rw pb-2"></Row> */}
+        { modc(iml, 3, 2) }
+        { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }
+        { modc(iml, 2, 2, '4 image - fallback') }
+        { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }
 
         <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2) }{ modc(iml, 1, 2) }
         { modc(dict, 1, 2) }{ modc(iml, 1, 2) }</Row></div>
