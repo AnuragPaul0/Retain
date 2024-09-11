@@ -189,7 +189,7 @@ div.h10 { height: 100% !important }
   background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 
-#imodal-content { background-color: var(--lis); margin: auto; padding: 0; border: 1px solid #888;
+#imodal-content { background-color: var(--bg); margin: auto; padding: 0; border: 1px solid #888;
 width: 51% }
 
 .close { padding-top: .5%; color: #aaa; float: right; font-size: 28px; font-weight: bold;
@@ -241,7 +241,5 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
 
   .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
 background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important } }
-
-@media (prefers-reduced-motion: no-preference) { :root { scroll-behavior: unset } }
 
 @layer utilities { .text-balance { text-wrap: balance } }

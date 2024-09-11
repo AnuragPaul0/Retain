@@ -708,13 +708,11 @@ export default function Home() {
         </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
 
       <Container id='h40' className="rounded-large"><div id='scrw'>
-
+{/* <Row id='scrw' className="rw pb-2"></Row> */}
         {/* <Row id='scrw' className="rw pb-2"></Row><Row id='scrw' className="rw pb-2"></Row> */}
         { modc(iml, 3, 2) }
         { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }
         { modc(iml, 2, 2, '4 image - fallback') }
         { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }
-
-        <Row id='scrw' className="rw pb-2">{ modc(iml, 2, 2) }{ modc(iml, 1, 2) }
-        { modc(dict, 1, 2) }{ modc(iml, 1, 2) }</Row></div>
+        { modc(iml, 2, 2) }{ modc(iml, 1, 2) }{ modc(dict, 1, 2) }{ modc(iml, 1, 2) }</div>
 </Container></div></div></div> }
