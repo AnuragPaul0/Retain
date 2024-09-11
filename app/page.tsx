@@ -313,7 +313,7 @@ export default function Home() {
     >{ imco(i) }<ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
 
-    <div className='h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
+    <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
       // Variant
