@@ -263,7 +263,7 @@ card = (i: any, m=sing, t='', b: any) =>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
 
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
-  return <Col xs lg="2" className="relative df top w3 justify-content-md-center">
+  return <Col xs lg="2" className="h17 relative df top w3 justify-content-md-center">
     { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
     {"r"+i+" mwu z-10 self-center p-2 radius-large absolute bg-white/20"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="#000" width="20px" version="1.1"
@@ -309,8 +309,8 @@ export default function Home() {
   [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
   [isSelected, setIsSelected] = useState(true),
 
-  rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}>{ imco(i) }
-    <ul className='df fon px-0'>
+  rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
+    >{ imco(i) }<ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
 
     <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
