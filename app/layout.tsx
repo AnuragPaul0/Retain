@@ -16,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     d=document.documentElement,c=d.classList;
     c.remove('light-theme','dark-theme');var e=localStorage.getItem('mode')
     if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t)
-      if(m.media!==t||m.matches) c.add('dark') else {
+      if(m.media!==t||m.matches) { c.add('dark') } else {
       d.style.colorScheme = 'light';c.add('light-theme')}}else if(e){
     var x={"light":"light-theme","dark":"dark-theme"};c.add(x[e]|| '')}
           if(e==='light'||e==='dark')d.style.colorScheme=e`,
