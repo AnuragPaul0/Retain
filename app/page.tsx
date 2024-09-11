@@ -293,7 +293,7 @@ arr = [ [ { id: 1, name: imco(0, dict) } ] ],
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
 tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) },
 
-updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); if(m!==e){
+updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.log(e); if(m!==e){
   let d=document.documentElement, c=d.classList
   c.toggle('dark', (m==='light')||(e==='light')) // update styles!
 localStorage.setItem("mode", m) } } //save it in local storage
