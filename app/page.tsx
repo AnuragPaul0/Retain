@@ -674,16 +674,6 @@ export default function Home() {
         fill="currentColor" transform="translate(2.25, 2.25)"></path></svg></label></span></fieldset>
     </div></nav></footer>
 
-    <div className="switch-toggle switch-3 switch-candy">
-      <input id="on" name="state-d" type="radio"/>
-      <label htmlFor="on">1</label>
-
-      <input id="off" name="state-d" type="radio"/>
-      <label htmlFor="off">2</label>
-
-      <input id="na" name="state-d" type="radio" defaultChecked={true}/>
-    <label htmlFor="na" className="disabled">3</label></div>
-
     <div id="topdo" className="h-auto bun pt-4 modal">
       <div id="imodal-content" className="flex-row fon p-2 modal-content"
         style={{ justifyContent: 'center' }}
