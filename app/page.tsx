@@ -11,7 +11,7 @@ import { Button } from "@nextui-org/button"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added',
-check:{[key:string]:any} = { dark:0, system:0, light:0 },
+// check:{[key:string]:any} = { dark:0, system:0, light:0 },
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
@@ -296,10 +296,6 @@ updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.lo
   c.toggle('dark') // update styles!
 localStorage.setItem("mode", m) } } //save it in local storage
 
-// if(initialValue === 'dark'){ const stylesheet = document.styleSheets[1],
-//   boxParaRule = Array.from(stylesheet.cssRules).find( (r) => (r as CSSStyleRule).selectorText ===
-// "html") as CSSStyleRule; boxParaRule.style.setProperty("--mode", 'dark') }
-
 for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
 // console.log(arr)
 
@@ -432,9 +428,10 @@ export default function Home() {
   {/* Mark any node with the data-movable-handle attribute if you wish
     to use is it as a DnD handle. The rest of renderItem will be then
     ignored and not start the drag and drop.*/}
-
-  useEffect(() => { let e = localStorage.getItem('mode'); if (e) check[e] = 1
-  console.log(e, check) }, [] ) // ✅ no dependency
+    // if (e) check[e] = 1
+  useEffect(() => { let e = localStorage.getItem('mode'),
+    q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
+  console.log(e) }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
@@ -647,14 +644,14 @@ export default function Home() {
               <g id="SVGRepo_iconCarrier"> <g> <path d=
           "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
     ></path></g></g></svg></Button></Col></Row></Container>
-
+{/* defaultChecked={check.system} */}
     <footer className="footer" data-version="v1" data-variant="elevated">
       <nav aria-label="Vercel Directory"><div className="statusRow">
         <fieldset className="tailwind root" data-small="">
           <legend className="sr-only">Select a display theme:</legend><span>
             <input aria-label="system" id="theme-switch-system-:R2jcj9am:" type="radio" value="system"
             name="state"
-            defaultChecked={check.system}/>
+            />
               <label onClick={ () => updateDarkMode('system') } htmlFor="theme-switch-system-:R2jcj9am:">
                 <span className="sr-only">system</span>
                 <svg data-testid="geist-icon" height="16" stroke-linejoin="round"
@@ -662,7 +659,7 @@ export default function Home() {
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 3.25C0.5 1.45507 1.95507 0 3.75 0H8.25C10.0449 0 11.5 1.45507 11.5 3.25V11.25V12H10.75H1.25H0.5V11.25V3.25ZM3.75 1.5C2.7835 1.5 2 2.2835 2 3.25V10.5H10V3.25C10 2.2835 9.2165 1.5 8.25 1.5H3.75ZM3 3.5C3 2.94772 3.44772 2.5 4 2.5H8C8.55228 2.5 9 2.94772 9 3.5V7H3V3.5ZM6.5 9.5H9V8H6.5V9.5Z"
                 fill="currentColor" transform="translate(2.5, 2)"></path></svg></label></span><span>
 
-            <input defaultChecked={check.light} name="state" aria-label="light"
+            <input name="state" aria-label="light"
               id="theme-switch-light-:R2jcj9am:" type="radio" value="light"/>
             <label onClick={ () => updateDarkMode() } htmlFor="theme-switch-light-:R2jcj9am:">
               <span className="sr-only">light</span>
@@ -671,7 +668,7 @@ export default function Home() {
               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 1V0.25H6.25V1V1.25V2H7.75V1.25V1ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9ZM7 10.5C8.933 10.5 10.5 8.933 10.5 7C10.5 5.067 8.933 3.5 7 3.5C5.067 3.5 3.5 5.067 3.5 7C3.5 8.933 5.067 10.5 7 10.5ZM7.75 12V12.75V13V13.75H6.25V13V12.75V12H7.75ZM12 6.25H12.75H13H13.75V7.75H13H12.75H12V6.25ZM1 6.25H0.25V7.75H1H1.25H2V6.25H1.25H1ZM10.0052 2.93414L10.5355 2.40381L10.7123 2.22703L11.2426 1.6967L12.3033 2.75736L11.773 3.28769L11.5962 3.46447L11.0659 3.9948L10.0052 2.93414ZM2.22703 10.7123L1.6967 11.2426L2.75736 12.3033L3.28769 11.773L3.46447 11.5962L3.9948 11.0659L2.93414 10.0052L2.40381 10.5355L2.22703 10.7123ZM2.93414 3.9948L2.40381 3.46447L2.22703 3.28769L1.6967 2.75736L2.75736 1.6967L3.28769 2.22703L3.46447 2.40381L3.9948 2.93414L2.93414 3.9948ZM10.7123 11.773L11.2426 12.3033L12.3033 11.2426L11.773 10.7123L11.5962 10.5355L11.0659 10.0052L10.0052 11.0659L10.5355 11.5962L10.7123 11.773Z"
             fill="currentColor" transform="translate(1.25, 1.25)"></path></svg></label></span><span>
 
-            <input defaultChecked={check.dark} name="state" aria-label="dark"
+            <input name="state" aria-label="dark"
             id="theme-switch-dark-:R2jcj9am:" type="radio" value="dark"/>
             <label onClick={ () => updateDarkMode('dark') } htmlFor="theme-switch-dark-:R2jcj9am:">
               <span className="sr-only">dark</span>
