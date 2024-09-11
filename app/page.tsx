@@ -56,9 +56,7 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e: any) => { changeBackground(
 colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
-// window.addEventListener("load", () => {
-
-// User clicks, open/x modal
+// open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
   for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
@@ -177,7 +175,6 @@ os='On sale', ab = '-[calc(100%_-_8px)]',
 imk = (k:any) => <Image key={k} alt="Woman" className="object-cover opacity-1" height={150}
 width={150} src="https://cdn.pixabay.com/photo/2021/09/13/08/16/purple-flower-6620617_640.jpg"/>,
 
-// l0 pr
 cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
   {( w==ab? 'foo':'bdf fon bgy absolute' )+" px-"+(t!=''?0:2)+
     " justify-center before:bg-white/10 border-white/20"+
@@ -395,10 +392,9 @@ export default function Home() {
       <ScrollSyncPane><div className='df fd example' style={{ ...cnr }}>{ rows(i) }
   </div></ScrollSyncPane></Row> },
 
-  rem = (e: any) => { console.log('el', e.target)
+  rem = (e: any) => {
+    // console.log('el', e.target)
   let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat) },
-  
-  // darkMode = getInitialState(),
 
   List2 = () => // @ts-ignore
     <List values={items} onChange={({ oldIndex, newIndex }) =>
