@@ -686,7 +686,7 @@ export default function Home() {
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
             " group cursor-pointer hover:shadow-lg" }>
           <div className='overflow-auto w-50 relative'><div id='bo7' className=
-            'border p-3 fon bg-white/20'><div id='bo5' className=
+            'border p-3 fon'><div id='bo5' className=
             'border p-3 fon bg-white/20'><Button id='bor' className=
             'h-auto border z-10 shadow-medium self-center p-4 radius-large bg-white/20'
             variant="flat" color="default" radius="lg" size="sm">
