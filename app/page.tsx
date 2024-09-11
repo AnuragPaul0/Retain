@@ -434,7 +434,7 @@ export default function Home() {
     ignored and not start the drag and drop.*/}
 
   useEffect(() => { let e = localStorage.getItem('mode'); if (e) check[e] = 1
-  console.log(e) }, [] ) // ✅ no dependency
+  console.log(e, check) }, [] ) // ✅ no dependency
 
   return <div>
     <div style={{ width: '4rem' }} className={
