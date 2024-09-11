@@ -313,10 +313,9 @@ export default function Home() {
     >{ imco(i) }<ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
 
-    <Button id="addc" onClick={ () => { let arts = artists; nextId+=15
+    <div className='h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-
       // Variant
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
@@ -325,7 +324,7 @@ export default function Home() {
       // console.log(b, relm(k))
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
       // console.log(artists)
-  } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></Row>,
+  } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
       arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
