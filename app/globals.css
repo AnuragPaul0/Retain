@@ -204,7 +204,7 @@ div.df, .df { display: flex }
 .w3 { width: 15vw !important }
 span:has(#swi) { background-color: var(--foreground-rgb) }
 .whi { background-color: var(--lis) }
-.form-control:focus { border-color: var(--bgr); box-shadow: 0 0 0 .25rem #04ae5620 }
+input.form-control:focus { border-color: var(--bgr); box-shadow: 0 0 0 .25rem #04ae5620 }
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
