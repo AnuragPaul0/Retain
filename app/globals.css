@@ -132,7 +132,6 @@ padding-left: var(--wi); padding-right: var(--wi) }
 .pl7 { padding-left: 7% !important }
 .w15 { width: 150px }
 #h40 { height: 40vw; overflow: auto }
-span.bun, #bl0, #bor { background-color: unset }
 #inp { height: 4vw }
 #fon { bottom: 1%; left: 2vw; font-size: 1.5vw; margin-bottom: 0 }
 .h17 { height: 176px }
@@ -159,7 +158,8 @@ border-top-left-radius: var(--nextui-radius-large) }
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-#lst { background-color: unset !important; list-style-type: none; border-radius: 5px }
+html body, #lst, span.bun, #bl0, #bor, #del, .foo { background-color: unset !important }
+#lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
 .cnr { margin-bottom: calc(var(--bs-gutter-x)* .5); margin-top: calc(var(--bs-gutter-x) * .5); 
@@ -208,6 +208,8 @@ span:has(#swi) { background-color: var(--foreground-rgb) }
 #inp:has(>input:focus) { border: 1px solid var(--bgr); box-shadow: 0 0 0 .25rem #04ae5630 }
 #b1 { background-color: var(--tbl)}
 .form-control:focus { box-shadow: unset }
+.h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
+
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
@@ -222,8 +224,8 @@ html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
 ::-moz-selection { /* Code for Firefox */ color: var(--foreground-rgb); background: var(--log)}
 ::selection { color: var(--foreground-rgb); background: var(--log) }
 
-html body { font-family: 'Recoleta Medium'; background-color: unset; 
-  --ds-gray-700-value: 0, 0%, 56%; --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
+html body { font-family: 'Recoleta Medium'; --ds-gray-700-value: 0, 0%, 56%;
+ --ds-gray-700: hsla(var(--ds-gray-700-value), 1);
 --r2: calc(var(--nextui-radius-large) / 2); color: rgb(var(--foreground-rgb)) }
 
 /* @media (prefers-color-scheme: light) { body { --e: #eee; --w: #FFF }
@@ -238,8 +240,6 @@ html body { font-family: 'Recoleta Medium'; background-color: unset;
 --ds-gray-1000-value: 0, 0%, 93%; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --tbl: #000000a0 }
 
 /* @media (prefers-color-scheme: dark) { html { --e: var(--lis)  }
-  .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
-  #del, .foo  { background-color: unset }
   .w15, #btnr, .h10, #fbk { color: unset }
   span:has(#swi) { background-color: var(--foreground-rgb) }
 

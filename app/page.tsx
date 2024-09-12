@@ -369,8 +369,8 @@ export default function Home() {
         <p className='p5' style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
         <button data-movable-handle className={"r"+i+" self-center"}
         style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
-        background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}><HandleIcon/>
-        </button></Col></Row></Col>
+        background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}>
+        <HandleIcon/></button></Col></Row></Col>
 
         <Col id='crd' xs lg="4" className='h17 alc top'>
         <Card className="h10 top justify-content-md-center" radius="lg">{ c }</Card></Col>
