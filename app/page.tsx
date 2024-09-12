@@ -420,18 +420,12 @@ export default function Home() {
           backgroundColor: params.isDragged || isSelected ? "#EEE" : "#FFF",
   }}>{ relem(params.value, params.isDragged, els[params.value], params.index) }</li> }}/>,
 
-  input = () => { var input = document.getElementById("myInput"), filter, ul, li, a, i, txtValue;
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        } } }
+  input = (e: any) => { var filter = e.target?.value.toUpperCase(),
+    li = document.querySelectorAll('#c1'), a, txtValue
+    li.forEach((el: any) => { a = el.getElementsByTagName("p")[0]
+      txtValue = a.textContent || a.innerText
+      if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.add("flex")
+  } else { el.classList.replace("flex", 'd-none') } } ) }
 
   {/* Mark any node with the data-movable-handle attribute if you wish
     to use is it as a DnD handle. The rest of renderItem will be then
@@ -718,7 +712,7 @@ export default function Home() {
               version="1.1" id="Capa_1" viewBox="0 0 450.4 450.4" xmlSpace="preserve"><path d=
  "M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
               </svg></span>
-              <input id='bl0' onKeyUp={input()} type="text" className="form-control" placeholder="Search"
+              <input id='bl0' onKeyUp={input} type="text" className="form-control" placeholder="Search"
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
 
