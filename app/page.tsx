@@ -351,8 +351,8 @@ export default function Home() {
   color="default" radius="lg" size="sm">Insert</Button>,
 
   modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
-  return <Col id='c1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
-      onMouseLeave={ (e: any) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative df w"+w+
+    return <Col id='c1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
+      onMouseLeave={ (e: any) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative flex w"+w+
   " pb-2 justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
   // r el
@@ -420,9 +420,8 @@ export default function Home() {
           backgroundColor: params.isDragged || isSelected ? "#EEE" : "#FFF",
   }}>{ relem(params.value, params.isDragged, els[params.value], params.index) }</li> }}/>,
 
-  input = (e: any) => { var filter = e.target?.value.toUpperCase(),
-    li = document.querySelectorAll('#c1'), a, txtValue
-    li.forEach((el: any) => { a = el.getElementsByTagName("p")[0]
+  input = (e: any) => { var filter = e.target?.value.toUpperCase(), a, txtValue
+    document.querySelectorAll('#c1').forEach((el: any) => { a = el.querySelector("p")
       txtValue = a.textContent || a.innerText
       if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.add("flex")
   } else { el.classList.replace("flex", 'd-none') } } ) }
