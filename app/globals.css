@@ -133,7 +133,7 @@ padding-left: var(--wi); padding-right: var(--wi) }
 .w15 { width: 150px }
 #h40 { height: 40vw; overflow: auto }
 #bl0 { border-left: 0 }
-span.bun, #bl0 { background-color: unset }
+span.bun, #bl0, #bor { background-color: unset }
 #inp { height: 4vw }
 #fon { bottom: 1%; left: 2vw; font-size: 1.5vw; margin-bottom: 0 }
 .h17 { height: 176px }
