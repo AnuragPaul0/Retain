@@ -206,8 +206,8 @@ span:has(#swi) { background-color: var(--foreground-rgb) }
 .whi { background-color: var(--lis) }
 #inp { border-radius: var(--bs-border-radius); border: 1px solid var(--foreground-rgb) }
 #inp:has(>input:focus) { border: 1px solid var(--bgr); box-shadow: 0 0 0 .25rem #04ae5630 }
-#b1 { background-color: var(--tbl)}
-.form-control:focus { box-shadow: unset }
+.ades { background-color: var(--tbl) }
+input.form-control:focus { box-shadow: unset }
 .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
 
 .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
