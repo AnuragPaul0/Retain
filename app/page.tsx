@@ -701,16 +701,13 @@ export default function Home() {
               </svg></span>
               <input id='bl0' onKeyUp={input} type="text" className="form-control" placeholder="Search"
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><Button id='bor' className='mwu h-auto border z-10 shadow-medium self-center p-4 radius-large'
-          variant="flat" color="default" radius="lg" size="sm">
-        <span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span></Button>
+        </div><Button id='bor' className={'mwu close h-auto border z-10 shadow-medium self-center p-4'+
+          ' radius-large'} variant="flat" color="default" radius="lg" size="sm">
+        <span onClick={ () => myFunction([''], 0) } className="top-0">&times;</span></Button>
 
       <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
-{/* <Row id='scrw' className="rw pb-2"></Row> */}
-        {/* <Row id='scrw' className="rw pb-2"></Row><Row id='scrw' className="rw pb-2"></Row> */}
-        { modc(iml, 3, 2) }
-        { modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }{ modc(dict, 1, 2) }
-        { modc(iml, 2, 2, '4 image - fallback') }
+        { modc(iml, 3, 2) }{ modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }
+        { modc(dict, 1, 2) }{ modc(iml, 2, 2, '4 image - fallback') }
         { modc(iml, 1, 2, 'Multi Image - fallback') }{ modc(iml, 4, 2) }{ modc(dict, 2, 2) }
         { modc(iml, 2, 2) }{ modc(iml, 1, 2) }{ modc(dict, 1, 2) }{ modc(iml, 1, 2) }</div>
 </Container></div></div></div> }

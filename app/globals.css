@@ -149,7 +149,7 @@ scrollbar-width: none } /* Firefox */
 #cbt { border-radius: calc(var(--nextui-radius-medium) / 3); padding-right: .4rem !important;
 padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 2) }
 
-.grb { background-color: var(--bgr); color: var(--bg) }
+.grb { background-color: var(--bgr); color: #000 }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
 border-top-left-radius: var(--nextui-radius-large) }
 
@@ -215,7 +215,7 @@ scroll-behavior: unset !important }
 html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
   --ds-shadow-border: rgba(0, 0, 0, .08); --ds-background-100: #fff;
   --ds-gray-400-value: 0, 0%, 92%; --ds-gray-400: hsla(var(--ds-gray-400-value), 1);
---ds-gray-1000-value: 0, 0%, 9%; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --log: #04ae56 }
+--ds-gray-1000-value: 0, 0%, 9%; --log: #04ae56; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1) }
 
 ::placeholder, #bl0 { color: var(--foreground-rgb) !important; opacity: 1 /* Firefox */}
 ::-ms-input-placeholder { /* Edge 12-18 */ color: var(--foreground-rgb) !important }
@@ -236,7 +236,8 @@ html body { font-family: 'Recoleta Medium'; --ds-gray-700-value: 0, 0%, 56%;
 
   --ds-shadow-border: hsla(0, 0%, 100%, .145); --ds-background-100: #0a0a0a;
   --ds-gray-400-value: 0, 0%, 18%; --ds-gray-400: hsla(var(--ds-gray-400-value), 1);
---ds-gray-1000-value: 0, 0%, 93%; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1); --tbl: #000000a0 }
+  --ds-gray-1000-value: 0, 0%, 93%; --tbl: #000000a0;
+--ds-gray-1000: hsla(var(--ds-gray-1000-value), 1) }
 
 /* @media (prefers-color-scheme: dark) { html { --e: var(--lis)  }
   .w15, #btnr, .h10, #fbk { color: unset }
