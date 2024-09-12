@@ -701,7 +701,7 @@ export default function Home() {
               </svg></span>
               <input id='bl0' onKeyUp={input} type="text" className="form-control" placeholder="Search"
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><Button id='bor' className={'mwu close h-auto border z-10 shadow-medium self-center p-4'+
+        </div><Button id='bor' className={'mwu close h-auto z-10 shadow-medium self-center p-4'+
           ' top-0 radius-large' } variant="flat" color="default" radius="lg" size="sm">
         <span onClick={ () => myFunction([''], 0) }>&times;</span></Button>
 
