@@ -423,7 +423,7 @@ export default function Home() {
   input = (e: any) => { var filter = e.target?.value.toUpperCase(), a, txtValue
     document.querySelectorAll('#c1').forEach((el: any) => { a = el.querySelector("p")
       txtValue = a.textContent || a.innerText
-      if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.add("flex")
+      if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.replace('d-none', "flex")
   } else { el.classList.replace("flex", 'd-none') } } ) }
 
   {/* Mark any node with the data-movable-handle attribute if you wish
