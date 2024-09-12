@@ -89,11 +89,11 @@ div label { width: 24px }
 
 .switch-toggle { float: right; background: black; height: 24px; display: flex;
   box-shadow: 0 0 0 1px var(--ds-shadow-border); border-radius: 9999px; width: -moz-fit-content;
-  width: 72px; border: 0;
-  margin-right: 90px;
-}
+width: 72px; margin-right: 90px }
 
-@keyframes spin {
+.switch-toggle, #bl0, .bun { border: 0 }
+
+  @keyframes spin {
   0% { transform: rotate(0deg); }
   100% {  transform: rotate(359deg); }
 }
@@ -132,7 +132,6 @@ padding-left: var(--wi); padding-right: var(--wi) }
 .pl7 { padding-left: 7% !important }
 .w15 { width: 150px }
 #h40 { height: 40vw; overflow: auto }
-#bl0 { border-left: 0 }
 span.bun, #bl0, #bor { background-color: unset }
 #inp { height: 4vw }
 #fon { bottom: 1%; left: 2vw; font-size: 1.5vw; margin-bottom: 0 }
@@ -198,13 +197,16 @@ padding-right: 1.5%; width: fit-content; right: 0; position: absolute }
 div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid var(--e) }
-.cb { color: unset; background-color: var(--cb) }
+.cb, .bun { color: unset }
+.cb { background-color: var(--cb) }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 span:has(#swi) { background-color: var(--foreground-rgb) }
 .whi { background-color: var(--lis) }
 input.form-control:focus { border-color: var(--bgr); box-shadow: 0 0 0 .25rem #04ae5620 }
+div:has(>input:focus) { border-radius: var(--bs-border-radius); border: 1px solid var(--bgr);
+box-shadow: 0 0 0 .25rem #04ae5630 }
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
