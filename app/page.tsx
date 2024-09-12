@@ -691,8 +691,8 @@ export default function Home() {
     <div id="imodal" className="modal modalp">
       <div id="imodal-content" className="modal-content" style={{ justifyContent: 'center' }}>
          <div style={{ justifyContent: 'space-between' }} className=
-          { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 hover:bg-gray-900 rounded-md"+
-            " group cursor-pointer hover:shadow-lg" }>
+          { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 rounded-md"+
+            " group] hover:shadow-lg" }>
           <div className='overflow-auto w-50 relative'><div id='bo7' className=
             'border p-3 fon'><div id='bo5' className=
               'border p-3 fon'><Button id='bor' className=
