@@ -43,7 +43,7 @@ el2 = [
 
 addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
   myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
-    { 'a'+r+c+' ades z-10 shadow-medium self-center p-2 radius-large absolute whi' }
+    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
@@ -328,8 +328,7 @@ export default function Home() {
     })
     // bg-white/50 console.log(nextShapes)
     // Re-render with the new array
-    setName(nextShapes)
-    let cl=(e.target as HTMLElement).classList
+    setName(nextShapes); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
     console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
     // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
@@ -683,8 +682,7 @@ export default function Home() {
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 rounded-md"+
             " group] hover:shadow-lg" }>
           <div className='overflow-auto w-50 relative'><div id='bo7' className=
-            'border p-3 fon'><div id='bo5' className=
-              'border p-3 fon'><Button id='bor' className=
+            'border p-3 fon'><div id='bo5' className= 'border p-3 fon'><Button id='bor' className=
                 'h-auto border z-10 shadow-medium self-center p-4 radius-large'
                   variant="flat" color="default" radius="lg" size="sm">
               <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
@@ -703,7 +701,9 @@ export default function Home() {
               </svg></span>
               <input id='bl0' onKeyUp={input} type="text" className="form-control" placeholder="Search"
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
+        </div><Button id='bor' className='h-auto border z-10 shadow-medium self-center p-4 radius-large'
+          variant="flat" color="default" radius="lg" size="sm">
+        <span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span></Button>
 
       <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
 {/* <Row id='scrw' className="rw pb-2"></Row> */}
