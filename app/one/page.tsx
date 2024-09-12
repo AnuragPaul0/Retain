@@ -52,6 +52,11 @@ colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e) => { changeBackground(e, 'n
     style={{ position: 'relative' }}>
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
 
+// colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e: any) => { changeBackground(e, 'n')} }
+//   onMouseLeave={ (e: any) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
+//   style={{ position: 'relative' }}>
+// <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
+
 colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 

@@ -47,11 +47,6 @@ addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
-colum = (o:any) => <Col xs lg="2" onMouseEnter={ (e: any) => { changeBackground(e, 'n')} }
-  onMouseLeave={ (e: any) => changeBackground(e, 'n', 1) } className="df w3 top justify-content-md-center"
-  style={{ position: 'relative' }}>
-<Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(o) }</Col>,
-
 colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
 
