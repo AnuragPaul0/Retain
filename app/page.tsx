@@ -708,7 +708,7 @@ export default function Home() {
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
 
-      <Container id='h40' className="rounded-large"><div id='scrw'>
+      <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
 {/* <Row id='scrw' className="rw pb-2"></Row> */}
         {/* <Row id='scrw' className="rw pb-2"></Row><Row id='scrw' className="rw pb-2"></Row> */}
         { modc(iml, 3, 2) }
