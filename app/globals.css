@@ -123,7 +123,7 @@ animation-name: wid; animation-duration: .7s }
 .bdf { backdrop-filter: unset }
 .w50 { right: 0 }
 .bgy { background-color: orange; color: white }
-div.pr0 { padding-right: 0 !important }
+div.pr0, .bun { padding-right: 0 !important }
 .w2 { width: 12vw !important }
 .cut-text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; --wi: 1vw;
 padding-left: var(--wi); padding-right: var(--wi) }
@@ -204,10 +204,8 @@ div.df, .df { display: flex }
 .w3 { width: 15vw !important }
 span:has(#swi) { background-color: var(--foreground-rgb) }
 .whi { background-color: var(--lis) }
-input.form-control:focus { border-color: var(--bgr); box-shadow: 0 0 0 .25rem #04ae5620 }
-div:has(>input:focus) { border-radius: var(--bs-border-radius); border: 1px solid var(--bgr);
-box-shadow: 0 0 0 .25rem #04ae5630 }
-
+#inp { border-radius: var(--bs-border-radius); border: 1px solid var(--foreground-rgb) }
+div:has(>input:focus) { border: 1px solid var(--bgr); box-shadow: 0 0 0 .25rem #04ae5630 }
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
