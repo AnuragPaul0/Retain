@@ -421,7 +421,7 @@ export default function Home() {
   }}>{ relem(params.value, params.isDragged, els[params.value], params.index) }</li> }}/>,
 
   input = (e: any) => { var filter = e.target?.value.toUpperCase(), a, txtValue
-    document.querySelectorAll('#c1').forEach((el: any) => { a = el.querySelector("#cfo")
+    document.querySelectorAll('#c1').forEach((el: any) => { a = el.querySelector("p:not(.ort)")
       txtValue = a.textContent || a.innerText
       if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.replace('d-none', "flex")
     } else { el.classList.replace("flex", 'd-none')
