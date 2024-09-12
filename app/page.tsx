@@ -84,64 +84,6 @@ relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('
   if (m) container.addEventListener("mouseover", (e) => { changeBackground(e, h)})
 return container },
 
-greeting = (el:any) => { let tt = el.target; f = tt.id == 'btnr'
-  // console.log(el)
-  if (f) { k = <Row id={ 'r'+p.toString() } onMouseEnter={ (e: any) => changeBackground(e, 'n') }
-    onMouseLeave={ (e: any) => changeBackground(e, 'n', 1) } className="pb-9 h21 sp">
-
-    <Col xs lg='2' className='df fd' style={{ borderRight: '1px solid #eee' }}>
-      <Row style={{ height: '25%' }} className="justify-content-md-center">
-        <Col className="justify-content-md-center" style={{ alignContent: 'end',
-          display: 'grid' }}><Button id='del' onClick={(e: any) => changeBackground(e, 'c')}
-          className={ 'r'+p.toString()+" shadow-medium self-center" }
-          style={{ display: "none", zoom: '2',
-            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px',
-      paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-        {/* <CiTrash height='20' style={{ color: '', strokeWidth: .5}}/> */}
-        <svg stroke="red" fill="currentColor" stroke-width=".5" viewBox="0 0 24 24" height="20px"
-          ><g id="Trash"><g><path d=
-            "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-            ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-            "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button>
-      </Col></Row>
-      <Row style={{ flexGrow:.5 }}><Col id='req' className="justify-content-md-center"
-        style={{ blockSize: 'fit-content', display: 'flex' }}>
-          <p className='p5' style={{ marginBottom: 0, zoom: '2' }}>{p}</p><HandleIcon/></Col></Row></Col>
-
-    <Col xs lg="4" className='c2w'>
-        <Card className="h10 top justify-content-md-center"
-          radius="lg"><Card className="alc w90 justify-content-md-center"
-          >{ buttonc('+ Add Product Filters') }</Card>
-{/* <div style={{ alignSelf: 'center', marginBottom: 'calc(var(--nextui-radius-large) / 2)' }}> */}
-            {/* <Button style={{ marginRight: 'calc(var(--nextui-radius-large) / 2)' }} className=
-      </Button>    "shadow-medium p-1 radius-large text-black" variant="flat" color="default"> */}
-    </Card></Col></Row> } else { let c = tt.classList; for (let i = 0; i < c.length; i++) {
-  if (c[i].match(/r\d/)) { k = colmo(c[i][1], co); break } } }
-
-  b = 'beforebegin'
-  if (!f) { a = document.querySelectorAll('.ac')
-    if (a) a.forEach((e: any) => e.style.width = +e.style.width.slice(0, -2)+15+'vw')
-    document.querySelectorAll('#addc').forEach( (e, id) =>
-  e.insertAdjacentElement(b as InsertPosition, relm(k, ['c'+id+co, 'pl0', 'sp', 'w3', 'df'], 1) ) )
-  co++ }
-  else { a = document.querySelector('#addr')
-    if (a) a.insertAdjacentElement(b as InsertPosition, relm(k))
-      a = document.querySelector('#scrw')
-    if (a) a.appendChild(relm(<Row id={ 'r'+p.toString() } style={{ justifyContent: 'flex-start' }}
-    onMouseEnter={ (e: any) => changeBackground(e, 'h') }
-onMouseLeave={ (e: any) => changeBackground(e, 'h', 1) } className="pb-9">{ colum(p) }{ colum(p) }
-
-<Col id="addc" xs lg="1" style={{ width: '8vw', display: 'grid', borderLeft: '1px solid #ddd',
-        paddingLeft: 'calc(var(--bs-gutter-x) * .8)'}}><Row className="justify-content-md-center"
-          style={{ display: 'grid', alignSelf: 'center' }}>
-        <Button onClick={greeting} className="shadow-medium self-center" style={{
-            zoom: '2', fontFamily: 'Recoleta Medium',
-            paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
-            borderRadius: '2px',
-            // transition: 'all 0.5s', cursor: 'pointer'
-    paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+</Button></Row>
-</Col></Row>)), p++ } },
-
 changeBackground = (e:any, h:any, o=0) => {
   // console.log('tt:', e)
   parent = e.target

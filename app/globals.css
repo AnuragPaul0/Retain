@@ -2,6 +2,7 @@
 
 .group[data-pressed=true] { user-select:none }
 #swi:active { width: 1.5rem }
+
 #spa { border:0;clip:rect(0 0 0 0); clip-path:inset(50%); height:1px; margin:-1px; overflow:hidden;
 padding:0; position:absolute; width:1px; white-space:nowrap }
 
@@ -19,8 +20,7 @@ font-size: 18px; border-radius: 4px }
 flex-wrap: nowrap; justify-content: space-between; flex-direction: column }
 
 .statusRow { display: flex; align-items: center; justify-content: space-between; margin-top: 32px;
-  min-height: 34px;
-}
+min-height: 34px }
 
 .root { display: flex; box-shadow: 0 0 0 1px var(--ds-shadow-border); border-radius: 9999px;
 height: 32px;
