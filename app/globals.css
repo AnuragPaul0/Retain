@@ -210,6 +210,9 @@ span:has(#swi) { background-color: var(--foreground-rgb) }
 .form-control:focus { box-shadow: unset }
 .h10, .w90, .w15, #swi, #fbk, .wh, #addc, #btnr { background-color: var(--bg) }
 
+.group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
+background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important }
+
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
@@ -241,9 +244,6 @@ html body { font-family: 'Recoleta Medium'; --ds-gray-700-value: 0, 0%, 56%;
 
 /* @media (prefers-color-scheme: dark) { html { --e: var(--lis)  }
   .w15, #btnr, .h10, #fbk { color: unset }
-  span:has(#swi) { background-color: var(--foreground-rgb) }
-
-  .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
-background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important } } */
+  span:has(#swi) { background-color: var(--foreground-rgb) } */
 
 @layer utilities { .text-balance { text-wrap: balance } }
