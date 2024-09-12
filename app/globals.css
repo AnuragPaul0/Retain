@@ -213,7 +213,7 @@ html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
   --ds-gray-400-value: 0, 0%, 92%; --ds-gray-400: hsla(var(--ds-gray-400-value), 1);
 --ds-gray-1000-value: 0, 0%, 9%; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1) }
 
-::placeholder { color: var(--foreground-rgb) !important; opacity: 1 /* Firefox */}
+::placeholder, #bl0 { color: var(--foreground-rgb) !important; opacity: 1 /* Firefox */}
 ::-ms-input-placeholder { /* Edge 12-18 */ color: var(--foreground-rgb) !important }
 
 ::-moz-selection { /* Code for Firefox */ color: var(--foreground-rgb); background: #04ae56 }
