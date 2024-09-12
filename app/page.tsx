@@ -687,9 +687,9 @@ export default function Home() {
             " group cursor-pointer hover:shadow-lg" }>
           <div className='overflow-auto w-50 relative'><div id='bo7' className=
             'border p-3 fon'><div id='bo5' className=
-            'border p-3 fon bg-white/20'><Button id='bor' className=
-            'h-auto border z-10 shadow-medium self-center p-4 radius-large bg-white/20'
-            variant="flat" color="default" radius="lg" size="sm">
+              'border p-3 fon'><Button id='bor' className=
+                'h-auto border z-10 shadow-medium self-center p-4 radius-large'
+                  variant="flat" color="default" radius="lg" size="sm">
               <svg fill="#04AE56" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
                 xmlSpace="preserve"><g><g><path d=
     "M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
@@ -698,13 +698,14 @@ export default function Home() {
           </g></g></svg></Button></div></div><p id='fon' className='absolute'
           >Select a design to link</p></div>
         <nav className="fon navbar navbar-light"><form className="container-fluid">
-            <div id='inp' className="input-group">
-              <span className="bun input-group-text" id="basic-addon1"><svg fill="#000" height="20px"
+          <div id='inp' className="input-group">
+            <span className="bun input-group-text" id="basic-addon1"><svg fill="currentColor"
+              height="20px"
               version="1.1" id="Capa_1" viewBox="0 0 450.4 450.4" xmlSpace="preserve"><path d=
  "M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
               </svg></span>
               <input id='bl0' type="text" className="form-control" placeholder="Search"
-                aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
+        aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><span onClick={ () => myFunction([''], 0) } className="top-0 close">&times;</span>
 
       <Container id='h40' className="rounded-large"><div id='scrw'>
