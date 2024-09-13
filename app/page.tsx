@@ -227,18 +227,18 @@ export default function Home() {
   [isSelected, setIsSelected] = useState(true),
 
   Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
-    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling
+    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log('c')
       a.classList.add('du'); const controller = new AbortController; check--
       // User clicks anywhere outside of the modal, close
       window.addEventListener('click', () => {
         // console.log(event.target, "clicked")
       a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else check = 1
-    } }
+    console.log('b') } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='del'
+    </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
     onClick={ (el : any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0;
           nextId-=15
           for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
