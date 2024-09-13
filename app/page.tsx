@@ -227,13 +227,13 @@ export default function Home() {
   [isSelected, setIsSelected] = useState(true),
 
   Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
-    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log('c')
+    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log(check)
       a.classList.add('du'); const controller = new AbortController; check--
       // User clicks anywhere outside of the modal, close
       window.addEventListener('click', () => {
         // console.log(event.target, "clicked")
       a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else check = 1
-    console.log('b') } }
+    console.log('b', check) } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
