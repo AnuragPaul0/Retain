@@ -233,16 +233,20 @@ export default function Home() {
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
       <Button id='del'
-        onClick={ () => { let arts = artists; nextId-=15
-      artists.forEach((e:any) => { e.splice({ind}, 1) // remove 1 item only
+        onClick={ (e:any) => { let arts = artists, c = (e.target as HTMLElement).classList, inde=0;
+          nextId-=15
+          for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
+            // console.log(c[i])
+          inde = +c[i].substring(1); break } }
+      artists.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
       } ); tr = document.querySelector('#scrw.r')
       // Variant
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card></Col>, ['w3', 'df', 'top'] ) )
-      // console.log(b, relm(k))"c"+ind+
-      setArtists(arts); todo('Variant', 'removed!') } } className={" mwu self-center"}>
+      // console.log(b, relm(k))
+      setArtists(arts); todo('Variant', 'removed!') } } className={"c"+ind+" mwu self-center"}>
         <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
               fill="currentColor"
           stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
