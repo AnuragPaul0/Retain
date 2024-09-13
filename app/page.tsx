@@ -230,7 +230,7 @@ export default function Home() {
     onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log(check)
       a.classList.add('du'); const controller = new AbortController; check--
       // User clicks anywhere outside of the modal, close
-      window.addEventListener('click', () => {
+      window.addEventListener('click', () => { check = 1
         // console.log(event.target, "clicked")
       a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else {
         a.classList.remove('du'); check = 1}
