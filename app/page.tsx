@@ -240,6 +240,12 @@ export default function Home() {
       // >Variant { co+1 }</Card></Col>, ['w3', 'df', 'top'] ) )
       // // console.log(b, relm(k))"c"+{ind}+
       // setArtists(arts); todo('Variant', 'removed!') } }
+      //   <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
+      //     fill="currentColor"
+      //     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
+      // "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
+      //   ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
+      // "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
   Btn = ({ind=0}) => <Button id='adb' className='mwu atb cb'
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -248,12 +254,6 @@ export default function Home() {
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
       <Button id='del'
         >
-        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
-          fill="currentColor"
-          stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
-      "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
-        ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-      "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg>
       </Button>
   </div></Button>,
 
