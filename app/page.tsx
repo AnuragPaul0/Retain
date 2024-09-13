@@ -297,7 +297,7 @@ export default function Home() {
   color="default" radius="lg" size="sm">Insert</Button>,
 
   modc = (i=iml, r=0, w=3, s=cfo[r][i.c]) => { let p=w==3
-    return <Col id='c1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
+    return <Col id='m1' xs lg="2" onMouseEnter={ (e: any) => inim(e, 'h') }
       onMouseLeave={ (e: any) => inim(e, 'h', 1) } className={ p?'':'pr0 '+"relative flex w"+w+
   " pb-2 justify-content-md-center" }>{ card(i.imc[r], s, p?'cut-text ':'', btn(r, i.c)) }</Col> },
 
