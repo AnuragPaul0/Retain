@@ -139,7 +139,7 @@ padding-left: var(--wi); padding-right: var(--wi) }
 #bor { border-radius: calc(var(--nextui-radius-large)* 4) }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar { display: none }
+.example::-webkit-scrollbar, .bYKxqt { display: none }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example { overflow: auto; -ms-overflow-style: none;  /* IE and Edge */
@@ -208,6 +208,41 @@ input.form-control:focus { box-shadow: unset }
 
 .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
 background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important }
+
+@media screen and (min-width: 1150px) {
+  .bYKxqt {
+      left: 8px;
+  }
+}
+.bYKxqt {
+  position: absolute;
+  width: max-content;
+  min-width: 166px;
+  padding: 8px 0px;
+  background-color: rgb(30, 32, 41);
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px 0px;
+  border-radius: 4px;
+  top: 48px;
+  z-index: 4;
+  visibility: visible;
+  pointer-events: auto;
+}
+.huXTum {
+  border-style: none;
+  background: transparent;
+  padding: 0px;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  outline: unset;
+  cursor: pointer;
+}
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
