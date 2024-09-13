@@ -252,8 +252,7 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
-      <Button id='del'
-        >
+      <Button>
       </Button>
   </div></Button>,
 
