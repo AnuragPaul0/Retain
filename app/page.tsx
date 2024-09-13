@@ -252,8 +252,6 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
-      <Button>
-      </Button>
   </div></Button>,
 
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
