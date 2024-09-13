@@ -232,7 +232,8 @@ export default function Home() {
       // User clicks anywhere outside of the modal, close
       window.addEventListener('click', () => {
         // console.log(event.target, "clicked")
-      a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else check = 1
+      a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else {
+        a.classList.remove('du'); check = 1}
     console.log('b', check) } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
