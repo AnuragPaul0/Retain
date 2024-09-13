@@ -220,7 +220,7 @@ html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
 ::placeholder, #bl0 { color: var(--foreground-rgb) !important; opacity: 1 /* Firefox */}
 ::-ms-input-placeholder { /* Edge 12-18 */ color: var(--foreground-rgb) !important }
 
-::-moz-selection { /* Code for Firefox */ color: var(--foreground-rgb); background: var(--log) }
+::-moz-selection { /* Code for Firefox */ color: var(--bg); background: var(--log) }
 ::selection { color: var(--bg); background: var(--log) }
 
 html body { font-family: 'Recoleta Medium'; --ds-gray-700-value: 0, 0%, 56%;
