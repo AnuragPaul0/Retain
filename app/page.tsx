@@ -10,7 +10,7 @@ import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', check,
+cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', check=1,
 // check:{[key:string]:any} = { dark:0, system:0, light:0 },
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
@@ -227,12 +227,13 @@ export default function Home() {
   [isSelected, setIsSelected] = useState(true),
 
   Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
-    onClick={ (e: any) => { a = e.currentTarget.nextSibling
-      a.classList.add('du'); const controller = new AbortController
+    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling
+      a.classList.add('du'); const controller = new AbortController; check--
       // User clicks anywhere outside of the modal, close
       window.addEventListener('click', () => {
         // console.log(event.target, "clicked")
-      a.classList.remove('du'); controller.abort() }, { signal: controller.signal } )  } }
+      a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else check = 1
+    } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
