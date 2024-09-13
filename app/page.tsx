@@ -251,7 +251,7 @@ export default function Home() {
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
-    </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt"><div>hello!</div>
+    </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt"><div><Button>hello</Button></div>
   </div></Button>,
 
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
