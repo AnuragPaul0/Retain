@@ -225,7 +225,7 @@ export default function Home() {
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
   [isSelected, setIsSelected] = useState(true),
-
+// className={" mwu self-center"}
       //   onClick={ (e:any) => { let arts = artists, c = (e.target as HTMLElement).classList, inde=0;
       //     nextId-=15
       //     for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
@@ -247,7 +247,7 @@ export default function Home() {
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
       <Button id='del'
-        className={" mwu self-center"}>
+        >
         <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
           fill="currentColor"
           stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
