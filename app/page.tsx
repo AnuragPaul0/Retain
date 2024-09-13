@@ -232,31 +232,23 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg><div className="StyledWidgetMenu--1ypwjps bYKxqt">
-      {/* <Button id='del' onClick={ () => { let arts = artists; nextId-=15
-      artists.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
+      <Button id='del'
+        onClick={ () => { let arts = artists; nextId-=15
+      artists.forEach((e:any) => { e.splice({ind}, 1) // remove 1 item only
       } ); tr = document.querySelector('#scrw.r')
-      // Variant"r"+i+
+      // Variant
       tr?.append(relm(<Col xs lg="2" className="df justify-content-md-center"
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card></Col>, ['w3', 'df', 'top'] ) )
-      // console.log(b, relm(k))
-      setArtists(arts); todo('Variant', 'removed!') } }
-        className={" mwu self-center"} style={{ paddingLeft: 'calc(var(--bs-gutter-x) /4) !important',
-          borderRadius: '2px', paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>
-            <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
+      // console.log(b, relm(k))"c"+ind+
+      setArtists(arts); todo('Variant', 'removed!') } } className={" mwu self-center"}>
+        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
               fill="currentColor"
           stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
       "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
         ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
-      "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button> */}
-            {/* <button className="StyledWidgetButton--1ytyc6t huXTum">
-        <div className="StyledWidgetIcon--zmmuun lfkHx">
-          <svg width="24" height="24"><g transform="translate(6, 3)">
-            <path d="M1.07692 2.68695V11.313C1.07692 12.2029 1.79732 12.9231 2.68695 12.9231H11.313C12.2029 12.9231 12.9231 12.2027 12.9231 11.313V2.68695C12.9231 1.79706 12.2027 1.07692 11.313 1.07692H2.68695C1.79706 1.07692 1.07692 1.79732 1.07692 2.68695ZM0 2.68695C0 1.20264 1.2022 0 2.68695 0H11.313C12.7974 0 14 1.2022 14 2.68695V11.313C14 12.7974 12.7978 14 11.313 14H2.68695C1.20264 14 0 12.7978 0 11.313V2.68695Z"
-            fill-rule="evenodd"></path><path d="M4.66732 6.41683H6.41732V4.66683C6.41732 4.34483 6.67865 4.0835 7.00065 4.0835C7.32265 4.0835 7.58398 4.34483 7.58398 4.66683V6.41683H9.33398C9.65598 6.41683 9.91732 6.67816 9.91732 7.00016C9.91732 7.32216 9.65598 7.5835 9.33398 7.5835H7.58398V9.3335C7.58398 9.6555 7.32265 9.91683 7.00065 9.91683C6.67865 9.91683 6.41732 9.6555 6.41732 9.3335V7.5835H4.66732C4.34532 7.5835 4.08398 7.32216 4.08398 7.00016C4.08398 6.67816 4.34532 6.41683 4.66732 6.41683Z"
-          fill-rule="evenodd"></path></g></svg></div><span className="StyledSpan--pw4ua5 jbDPka"
-    >Add site</span></button> */}
+      "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button>
   </div></Button>,
 
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}

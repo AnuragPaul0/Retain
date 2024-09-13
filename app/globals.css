@@ -209,13 +209,11 @@ input.form-control:focus { box-shadow: unset }
 .group[data-selected=true] .group-data-\[selected\=true\]\:bg-success {
 background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !important }
 
-@media screen and (min-width: 1150px) {
-  .bYKxqt {
+@media screen and (min-width: 1150px) { .bYKxqt {
       left: 8px;
   }
 }
-.bYKxqt {
-  position: absolute;
+.bYKxqt { position: absolute;
   width: max-content;
   min-width: 166px;
   padding: 8px 0px;
