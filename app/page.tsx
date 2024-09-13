@@ -245,8 +245,8 @@ export default function Home() {
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card></Col>, ['w3', 'df', 'top'] ) )
-      // console.log(b, relm(k))
-      setArtists(arts); todo('Variant', 'removed!') } } className={"c"+{ind}+" mwu self-center"}>
+      // console.log(b, relm(k))"c"+{ind}+
+      setArtists(arts); todo('Variant', 'removed!') } } className={" mwu self-center"}>
         <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
               fill="currentColor"
           stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
