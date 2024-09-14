@@ -40,8 +40,8 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
-
-addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
+// -1
+addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c
   myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
@@ -247,8 +247,7 @@ export default function Home() {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } } ,nes = name
       arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
-      } ); setName( name.filter( a => a.id !== (name.length-1) )
-      )
+      } ); setName( name.filter( a => a.id !== (name.length-1) ) )
       // setName(nes.splice(ind, 1))
       document.querySelector('.v'+ind)?.remove(); co--
       // Variant'c'+ind+
@@ -281,8 +280,8 @@ export default function Home() {
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
       if (shape.id === ci) { // No change
-        return shape } else { return { ...shape, id: shape.id } // new
-      } } )
+        return shape } else { return { ...shape, id: shape.id } } } ) // new
+     
     // console.log(nextShapes)
     // Re-render with the new array
     setName(nextShapes); let cl=(e.target as HTMLElement).classList
