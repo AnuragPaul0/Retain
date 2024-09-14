@@ -247,10 +247,10 @@ export default function Home() {
             console.log(c[i])
             inde = +c[i].substring(1); break } }
       arts.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
-      } ); setName(name.splice(inde, 1)); document.querySelector('.c'+ind)?.remove()
+      } ); setName(name.splice(inde, 1)); document.querySelector('.v'+ind)?.remove()
       // Variant
       setArtists(arts)
-      console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
+      console.log(artists, name); todo('Variant', 'removed!') } } className={'c'+ind+" mwu self-center"}>
       <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
@@ -267,7 +267,7 @@ export default function Home() {
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
       // Variant
-      tr?.append(relm(<Col xs lg="2" className={'c'+co+" df justify-content-md-center"}
+      tr?.append(relm(<Col xs lg="2" className={'v'+co+" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
@@ -287,8 +287,7 @@ export default function Home() {
     setName(nextShapes); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
     // console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
-    // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
-    //     ['pl0', 'w3', 'df']) )
+
     myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
     className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute" } variant="flat"
   color="default" radius="lg" size="sm">Insert</Button>,
@@ -455,11 +454,11 @@ export default function Home() {
 
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
-              <Col xs lg="2" className="c0 df w3 justify-content-md-center"><Card id='fg1'
+              <Col xs lg="2" className="v0 df w3 justify-content-md-center"><Card id='fg1'
                 isFooterBlurred radius="lg" className="top br2 cb p-1 border-none">Primary Variant</Card>
-              <Btn/></Col><Col xs lg="2" className="top df w3 justify-content-md-center">
-                  <Card id='fg1'
-                  isFooterBlurred radius="lg" className="c1 br2 cb p-1 border-none">Variant 2</Card>
+              <Btn/></Col><Col xs lg="2" className="v1 top df w3 justify-content-md-center">
+                <Card id='fg1'
+                isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
       <Btn ind={1}/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
 
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
