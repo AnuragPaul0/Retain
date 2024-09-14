@@ -270,7 +270,7 @@ export default function Home() {
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
-      // console.log(artists)
+      console.log(artists)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
