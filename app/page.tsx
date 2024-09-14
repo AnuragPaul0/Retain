@@ -257,10 +257,11 @@ export default function Home() {
   "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
   "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></div></div>,
-// { imco(i) }
+
+// { imco(i) }-1
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
     ><ul className='df fon px-0'>
-    { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
+    { name.map(art => <li key={art.id}>{ artists[i][art.id].name }</li> ) }</ul>
 
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
@@ -276,8 +277,7 @@ export default function Home() {
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
-      if (shape.id === ci) {
-        // No change
+      if (shape.id === ci) { // No change
         return shape;
       } else {
         // Return a new circle 50px below + 50
