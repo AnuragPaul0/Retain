@@ -249,8 +249,8 @@ export default function Home() {
       arts.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
       } ); setName(name.splice(inde, 1)); document.querySelector('.c'+ind)?.remove()
       // Variant
-      console.log(arts)
-    setArtists(arts); todo('Variant', 'removed!') } } className={" mwu self-center"}>
+      setArtists(arts)
+      console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
       <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
