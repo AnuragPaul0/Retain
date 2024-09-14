@@ -245,7 +245,7 @@ export default function Home() {
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
         onClick={ () => { let arts = artists
-          , nam = dnam
+          // , nam = dnam
           // name;
           nextId-=15; console.log(artists,ind, name)
           // , inde=0for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
@@ -275,10 +275,10 @@ export default function Home() {
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
       // Variant
-      tr?.append(relm(<Col xs lg="2" className={'v'+co+" df justify-content-md-center"}
+      tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
+      >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
       dnam = [...name, {id: co}]
       console.log(name)
       setName(dnam); co++; setArtists(arts); todo('Variant')
