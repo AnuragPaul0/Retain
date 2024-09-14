@@ -248,7 +248,13 @@ export default function Home() {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } }
       arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
-      } ); setName(nes.splice(ind, 1)); document.querySelector('.v'+ind)?.remove()
+      } ); setName(
+        name.filter(a =>
+          a.id !== ind
+        )
+      )
+      // setName(nes.splice(ind, 1))
+      document.querySelector('.v'+ind)?.remove()
       // Variant'c'+ind+
       setArtists(arts)
       console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
@@ -279,8 +285,7 @@ export default function Home() {
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
       if (shape.id === ci) { // No change
-        return shape } else { return { ...shape,
-          id: shape.id } // new
+        return shape } else { return { ...shape, id: shape.id } // new
       } } )
     // console.log(nextShapes)
     // Re-render with the new array
