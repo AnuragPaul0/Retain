@@ -255,7 +255,7 @@ export default function Home() {
       // Variant'c'+ind+
       setArtists(arts)
       console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
-      <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
+        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
   "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
@@ -471,8 +471,8 @@ export default function Home() {
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
           >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
           let tem = [ { id: 1, name: colmo(p, 1) } ]
-          // console.log(els)
-          for (let i = 1; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
+          // console.log(els) 1
+          for (let i = 0; i < co; i++) { tem[i-1] = { id: i, name: colmo(p, i) } }
           setArtists([...artists, tem])
           setItems([...items, il]); todo() } } className="mwu h-auto shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
