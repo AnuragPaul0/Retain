@@ -242,12 +242,12 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
-        onClick={ (el : any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0;
+        onClick={ (el : any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
           nextId-=15; for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
             // console.log(c[i])
             inde = +c[i].substring(1); break } }
       arts.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
-      } ); document.querySelector('.c'+ind)?.remove()
+      } ); name.splice(inde, 1); document.querySelector('.c'+ind)?.remove()
       // Variant
       console.log(arts)
     setArtists(arts); todo('Variant', 'removed!') } } className={" mwu self-center"}>
