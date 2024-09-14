@@ -246,11 +246,11 @@ export default function Home() {
           nextId-=15; for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
             console.log(c[i])
             inde = +c[i].substring(1); break } }
-      arts.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
+      arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
       } ); setName(name.splice(inde, 1)); document.querySelector('.v'+ind)?.remove()
-      // Variant
+      // Variant'c'+ind+
       setArtists(arts)
-      console.log(artists, name); todo('Variant', 'removed!') } } className={'c'+ind+" mwu self-center"}>
+      console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
       <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
