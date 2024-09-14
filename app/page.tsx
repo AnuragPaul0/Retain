@@ -244,7 +244,7 @@ export default function Home() {
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
         onClick={ (el : any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
           nextId-=15; for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
-            // console.log(c[i])
+            console.log(c[i])
             inde = +c[i].substring(1); break } }
       arts.forEach((e:any) => { e.splice(inde, 1) // remove 1 item only
       } ); setName(name.splice(inde, 1)); document.querySelector('.c'+ind)?.remove()
