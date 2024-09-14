@@ -11,6 +11,7 @@ import { Button } from "@nextui-org/button"
 
 let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', check=1,
+dnam = [{ id: 0 }, { id: 1 }],
 // check:{[key:string]:any} = { dark:0, system:0, light:0 },
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
@@ -244,14 +245,15 @@ export default function Home() {
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
         onClick={ () => { let arts = artists
-          , nam = name;
+          , nam = dnam
+          // name;
           nextId-=15; console.log(artists,ind, name)
           // , inde=0for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } } ,nes = name
-      arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
-      } )
-      setName( nam.filter( a => a.id !== (nam.length-1) ) )
+      arts.forEach((e:any) => { e.splice(ind, 1) } ) // remove 1 item only
+      dnam = dnam.filter( a => a.id !== (dnam.length-1) )
+      setName( dnam )
       // setName(name.splice(ind, 1))
       document.querySelector('.v'+ind)?.remove(); co--
       // Variant'c'+ind+
@@ -277,8 +279,9 @@ export default function Home() {
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
+      dnam = [...name, {id: co}]
       console.log(name)
-      setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
+      setName(dnam); co++; setArtists(arts); todo('Variant')
       console.log(artists, name)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
