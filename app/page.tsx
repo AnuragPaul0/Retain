@@ -266,10 +266,10 @@ export default function Home() {
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
   "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></div></div>,
 
-// { imco(i) }-1
+// { imco(i) }-1name
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
     ><ul className='df fon px-0'>
-    { name.map(art => <li key={art.id}>{ artists[i][art.id].name }</li> ) }</ul>
+    { dnam.map(art => <li key={art.id}>{ artists[i][art.id].name }</li> ) }</ul>
 
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
