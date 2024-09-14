@@ -199,7 +199,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-arr = [ [ { id: 1, name: imco(0, dict) } ] ],
+arr = [ [ { id: 0, name: imco(0) }, { id: 1, name: imco(0, dict) } ] ],
 
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
 tr?.classList.add('df'); setTimeout(() => { tr?.classList.remove('df')}, 1000 ) },
@@ -210,7 +210,8 @@ updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.lo
   c.toggle('dark') // update styles!
 localStorage.setItem("mode", m) } } //save it in local storage
 
-for (let i = 1; i < 5; i++) { arr[i] = [ { id: 1, name: imco(i, dict) } ] }
+for (let i = 1; i < 5; i++) {
+arr[i] = [ { id: 0, name: imco(i) }, { id: 1, name: imco(i, dict) } ] }
 // console.log(arr)
 
 export default function Home() {
@@ -285,11 +286,11 @@ export default function Home() {
         };
       }
     })
-    // bg-white/50 console.log(nextShapes)
+    // console.log(nextShapes)
     // Re-render with the new array
     setName(nextShapes); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
+    // console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
     // document.querySelector('.c'+inp)?.replaceWith(relm(imco(+cl[i][1], +cl[i][2]?dict:iml),
     //     ['pl0', 'w3', 'df']) )
     myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
