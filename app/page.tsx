@@ -40,8 +40,9 @@ el2 = [
     <div key='3' id='alsc'>{buttonc('Discount %') } {buttonc('is', greens)} {buttonc(0)}</div>,
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
-// -1
-addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c
+
+// 
+addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
   myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
@@ -273,6 +274,7 @@ export default function Home() {
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
+      console.log(name)
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
       console.log(artists, name)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
