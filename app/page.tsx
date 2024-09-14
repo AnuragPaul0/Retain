@@ -248,7 +248,7 @@ export default function Home() {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } }
       arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
-      } ); setName( name.filter( a => a.id !== ind )
+      } ); setName( name.filter( a => a.id !== name.length )
       )
       // setName(nes.splice(ind, 1))
       document.querySelector('.v'+ind)?.remove(); co--
