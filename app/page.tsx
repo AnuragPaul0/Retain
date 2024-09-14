@@ -242,11 +242,10 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
-        onClick={ () => { let arts = artists, nes = name
-          nextId-=15
+        onClick={ () => { let arts = artists; nextId-=15
           // , inde=0for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
-          //   inde = +c[i].substring(1); break } }
+          //   inde = +c[i].substring(1); break } } ,nes = name
       arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
       } ); setName( name.filter( a => a.id !== (name.length-1) )
       )
@@ -276,7 +275,7 @@ export default function Home() {
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['w3', 'df', 'top'] ) )
       setName([...name, {id: co}]); co++; setArtists(arts); todo('Variant')
-      console.log(artists)
+      console.log(artists, name)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
