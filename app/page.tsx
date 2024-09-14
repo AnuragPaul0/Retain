@@ -199,6 +199,7 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
+// name
 arr = [ [ { id: 0, name: imco(0) }, { id: 1, name: imco(0, dict) } ] ],
 
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
@@ -224,7 +225,7 @@ export default function Home() {
   [items, setItems] = useState([0, 1, 2, 3, 4]),
 //   console.log(els)
 
-  [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 1 }]),
+  [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 0 }, { id: 1 }]),
   [isSelected, setIsSelected] = useState(true),
 
   Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
@@ -256,9 +257,9 @@ export default function Home() {
   "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
   "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></div></div>,
-
+// { imco(i) }
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
-    >{ imco(i) }<ul className='df fon px-0'>
+    ><ul className='df fon px-0'>
     { name.map(art => <li key={art.id}>{ artists[i][art.id-1].name }</li> ) }</ul>
 
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
