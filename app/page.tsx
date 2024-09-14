@@ -244,15 +244,15 @@ export default function Home() {
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
         onClick={ () => { let arts = artists
-          // , nam = name;
+          , nam = name;
           nextId-=15; console.log(artists,ind, name)
           // , inde=0for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } } ,nes = name
       arts.forEach((e:any) => { e.splice(ind, 1) // remove 1 item only
       } )
-      // setName( nam.filter( a => a.id !== (nam.length-1) ) )
-      setName(name.splice(ind, 1))
+      setName( nam.filter( a => a.id !== (nam.length-1) ) )
+      // setName(name.splice(ind, 1))
       document.querySelector('.v'+ind)?.remove(); co--
       // Variant'c'+ind+
       setArtists(arts)
