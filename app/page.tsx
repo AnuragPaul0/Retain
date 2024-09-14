@@ -258,7 +258,7 @@ export default function Home() {
       document.querySelector('.v'+ind)?.remove(); co--
       // Variant'c'+ind+
       setArtists(arts)
-      console.log(artists, name); todo('Variant', 'removed!') } } className={" mwu self-center"}>
+      console.log(artists, name, dnam); todo('Variant', 'removed!') } } className={" mwu self-center"}>
         <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
@@ -282,14 +282,14 @@ export default function Home() {
       dnam = [...name, {id: co}]
       console.log(name)
       setName(dnam); co++; setArtists(arts); todo('Variant')
-      console.log(artists, name)
+      console.log(artists, name, dnam)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
       if (shape.id === ci) { // No change
-        return shape } else { return { ...shape, id: shape.id } } } ) // new
-     
+      return shape } else { return { ...shape, id: shape.id } } } ) // new
+
     // console.log(nextShapes)
     // Re-render with the new array
     setName(nextShapes); let cl=(e.target as HTMLElement).classList
