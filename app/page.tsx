@@ -257,7 +257,7 @@ export default function Home() {
           nextId-=15;
           for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
             // console.log(c[i])
-            inde = +c[i].substring(1); break } }
+            inde = +c[i].substring(2); break } }
           console.log(artists,inde, name)
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
         dnam = dnam.filter( a => a !== (dnam.length-1) )
