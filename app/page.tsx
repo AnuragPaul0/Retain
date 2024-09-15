@@ -256,7 +256,7 @@ export default function Home() {
           // name;
           nextId-=15;
           console.log(artists,inde, name)
-          for (let i = 0; i < c.length; i++) { if (c[i].match(/v\d/)) {
+          for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
             // console.log(c[i])
             inde = +c[i].substring(1); break } }
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
@@ -270,7 +270,7 @@ export default function Home() {
         for (let i = inde+1; i < dnam.length; i++) {
           document.querySelector('.v'+i)?.classList.replace('v'+i,'v'+(i+1))
           document.querySelector('.bu'+i)?.classList.replace('bu'+i,'bu'+(i+1)) } } }
-        className={" mwu self-center"}>
+        className={'c'+ind+" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
