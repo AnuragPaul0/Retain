@@ -230,8 +230,8 @@ export default function Home() {
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
-
-  Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
+// {ind=0}
+  Btn = () => <div><Button id='adb' className='mwu atb cb'
     onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log(check)
       a.classList.add('du'); const controller = new AbortController; check--
       // User clicks anywhere outside of the modal, close
@@ -245,22 +245,26 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
-        onClick={ () => { let arts = artists
-          // , nam = dnam
+        onClick={ (el: any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
+          // , nam = dnam,nes = name
           // name;
-          nextId-=15; console.log(artists,ind, name)
-          // , inde=0for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
-          //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
-          //   inde = +c[i].substring(1); break } } ,nes = name
-      arts.forEach((e:any) => { e.splice(ind, 1) } ) // remove 1 item only
-      dnam = dnam.filter( a => a !== (dnam.length-1) )
-      setName( dnam )
-      // setName(name.splice(ind, 1)).id
-      document.querySelector('.v'+ind)?.remove(); co--
-      // Variant'c'+ind+
-      setArtists(arts)
-      console.log(artists, name, dnam); todo('Variant', 'removed!') } } className={" mwu self-center"}>
-        <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
+          nextId-=15;
+          console.log(artists,inde, name)
+          for (let i = 0; i < c.length; i++) { if (c[i].match(/v\d/)) {
+            // console.log(c[i])
+            inde = +c[i].substring(1); break } }
+        arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
+        dnam = dnam.filter( a => a !== (dnam.length-1) )
+        setName( dnam )
+        // setName(name.splice(ind, 1)).id
+        document.querySelector('.v'+inde)?.remove(); co--
+        // Variant'c'+ind+
+        setArtists(arts)
+        console.log(artists, name, dnam); todo('Variant', 'removed!')
+        for (let i = inde; i < dnam.length; i++) {
+          document.querySelector('.v'+i)?.classList.replace('v'+i,'v'+(i+1)) } } }
+        className={" mwu self-center"}>
+          <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
   "M19.45,4.06H15.27v-.5a1.5,1.5,0,0,0-1.5-1.5H10.23a1.5,1.5,0,0,0-1.5,1.5v.5H4.55a.5.5,0,0,0,0,1h.72l.42,14.45a2.493,2.493,0,0,0,2.5,2.43h7.62a2.493,2.493,0,0,0,2.5-2.43l.42-14.45h.72A.5.5,0,0,0,19.45,4.06Zm-9.72-.5a.5.5,0,0,1,.5-.5h3.54a.5.5,0,0,1,.5.5v.5H9.73Zm7.58,15.92a1.5,1.5,0,0,1-1.5,1.46H8.19a1.5,1.5,0,0,1-1.5-1.46L6.26,5.06H17.74Z"
@@ -275,11 +279,11 @@ export default function Home() {
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-      // Variant{id: }
+      // Variant{id: } ind={co}
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { va+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
+      >Variant { va+1 }</Card><Btn/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
       dnam = [...name, co]
       console.log(name)
       setName(dnam); co++; va++; setArtists(arts); todo('Variant')
@@ -469,8 +473,8 @@ export default function Home() {
               <Btn/></Col><Col xs lg="2" className="v1 top df w3 justify-content-md-center">
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
-      <Btn ind={1}/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
-
+      <Btn/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
+ {/* ind={1} */}
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { tr = document.querySelector(".ar")
