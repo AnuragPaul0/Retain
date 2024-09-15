@@ -290,7 +290,7 @@ export default function Home() {
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { va+1 }</Card><Btn/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
+      >Variant { va+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
       dnam = [...name, co]
       console.log(name)
       setName(dnam); co++; va++; setArtists(arts); todo('Variant')
@@ -480,8 +480,8 @@ export default function Home() {
               <Btn/></Col><Col xs lg="2" className="v1 top df w3 justify-content-md-center">
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
-      <Btn/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
- {/* ind={1} */}
+      <Btn ind={1}/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
+
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { tr = document.querySelector(".ar")
