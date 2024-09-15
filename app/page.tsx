@@ -9,8 +9,8 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-let tog, parent, p = 5, container, a:any, k:any, b:any, f, pd, tr:any, co = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, inp='',ri=0, ci=2, sta = 'State', adde = 'added', check=1,
+let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
+cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1,
 dnam = [{ id: 0 }, { id: 1 }],
 // check:{[key:string]:any} = { dark:0, system:0, light:0 },
 
@@ -55,9 +55,10 @@ colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-conte
 // open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
-    // console.log(c[i])
-  inp = c[i].substring(1); break } } a = document.querySelector("#"+tr)
+  // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
+  //   // console.log(c[i])
+  // inp = c[i].substring(1); break } }
+  a = document.querySelector("#"+tr)
 
   if (o) { a.classList.add('df'); const controller = new AbortController
   // User clicks anywhere outside of the modal, close
@@ -278,10 +279,10 @@ export default function Home() {
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { co+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
+      >Variant { va+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
       dnam = [...name, {id: co}]
       console.log(name)
-      setName(dnam); co++; setArtists(arts); todo('Variant')
+      setName(dnam); co++; va++; setArtists(arts); todo('Variant')
       console.log(artists, name, dnam)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
