@@ -267,7 +267,7 @@ export default function Home() {
         // Variant'c'+ind+
         setArtists(arts)
         console.log(artists, name, dnam); todo('Variant', 'removed!')
-        for (let i = inde+1; i < dnam.length; i++) {
+        for (let i = inde; i < dnam.length; i++) {
           document.querySelector('.v'+i)?.classList.replace('v'+i,'v'+(i+1))
           document.querySelector('.bu'+i)?.classList.replace('bu'+i,'bu'+(i+1)) } } }
         className={'c'+ind+" mwu self-center"}>
