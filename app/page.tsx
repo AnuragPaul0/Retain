@@ -69,10 +69,10 @@ myFunction = (c:any, o=0) => { tr = 'imodal'
 
 inim = (e:any, h:any, o=0) => {
   // console.log('el:', e)
-  parent = e.target
-  while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
+  parent = e.currentTarget
+  // while (parent.id.match(/c\d/) == null) { parent = parent.parentElement }
   // console.log('par:', parent)
-  pd = parent.id
+  // pd = parent.id
 if (h == 'h') { parent.querySelector('#b1').style.display = o ? "none" : 'block' } },
 
 relm = (rel:any, c = [''], m=0, h='h') => { container = document.createElement('div')
@@ -93,7 +93,6 @@ changeBackground = (e:any, h:any, o=0) => {
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
   (document.querySelector('#del.' + pd) as HTMLElement).style.display = o ? "none" : 'block'
-  // console.log(h, (document.querySelector('#del.' + pd) as HTMLElement))
 }
 else document.querySelectorAll('#'+parent.id).forEach(e => e.remove()) },
 
