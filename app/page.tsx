@@ -268,8 +268,8 @@ export default function Home() {
         setArtists(arts)
         console.log(artists, name, dnam); todo('Variant', 'removed!')
         for (let i = inde; i < dnam.length; i++) {
-          document.querySelector('.v'+(i+1))?.classList.replace('v'+i,'v'+(i+1))
-          document.querySelector('.bu'+(i+1))?.classList.replace('bu'+i,'bu'+(i+1)) } } }
+          document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
+          document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i) } } }
         className={'c'+ind+" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
