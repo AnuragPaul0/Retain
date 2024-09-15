@@ -11,8 +11,8 @@ import { Button } from "@nextui-org/button"
 
 let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1,
-dnam = [{ id: 0 }, { id: 1 }],
-// check:{[key:string]:any} = { dark:0, system:0, light:0 },
+dnam = [0, 1],
+// check:{[key:string]:any} = { dark:0, system:0, light:0 },{ id: 0 }, { id: 1 }
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
@@ -226,9 +226,9 @@ export default function Home() {
    ...cele(el2) ]),
 
   [items, setItems] = useState([0, 1, 2, 3, 4]),
-//   console.log(els)
+//   console.log(els){ id: 0 }, { id: 1 }
 
-  [artists, setArtists] = useState(arr), [name, setName] = useState([{ id: 0 }, { id: 1 }]),
+  [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
 
   Btn = ({ind=0}) => <div><Button id='adb' className='mwu atb cb'
@@ -253,9 +253,9 @@ export default function Home() {
           //   console.log(c[i]), c = (el.target as HTMLElement).classListel : any
           //   inde = +c[i].substring(1); break } } ,nes = name
       arts.forEach((e:any) => { e.splice(ind, 1) } ) // remove 1 item only
-      dnam = dnam.filter( a => a.id !== (dnam.length-1) )
+      dnam = dnam.filter( a => a !== (dnam.length-1) )
       setName( dnam )
-      // setName(name.splice(ind, 1))
+      // setName(name.splice(ind, 1)).id
       document.querySelector('.v'+ind)?.remove(); co--
       // Variant'c'+ind+
       setArtists(arts)
@@ -267,29 +267,30 @@ export default function Home() {
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
   "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></div></div>,
 
-// { imco(i) }-1name
+// { imco(i) }-1name.id
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
-    ><ul className='df fon px-0'>
-    { dnam.map(art => <li key={art.id}>{ artists[i][art.id].name }</li> ) }</ul>
+    ><ul className='df fon px-0'
+    >{ dnam.map(art => <li key={art}>{ artists[i][art].name }</li> ) }</ul>
 
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-      // Variant
+      // Variant{id: }
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
       >Variant { va+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
-      dnam = [...name, {id: co}]
+      dnam = [...name, co]
       console.log(name)
       setName(dnam); co++; va++; setArtists(arts); todo('Variant')
       console.log(artists, name, dnam)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
-    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name.map(shape => {
-      if (shape.id === ci) { // No change
-      return shape } else { return { ...shape, id: shape.id } } } ) // new
+    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name
+    // .map(shape => {
+    //   if (shape === ci) { // No change.id: id{}
+    //   return shape } else { return [ ...shape, shape ] } } ) // new
 
     // console.log(nextShapes)
     // Re-render with the new array
