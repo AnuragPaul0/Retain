@@ -306,8 +306,10 @@ export default function Home() {
     //   return name } else { return [ ...name, shape ] } } ) // new
 
     // console.log(cl[i], 'inp: ', , inpnextShapes)
-    // Re-render with the new arraynextShapes
-    setName([ ...name ]); let cl=(e.target as HTMLElement).classList
+    // Re-render with the new arraynextShapes[ ...name ]
+    setName(name.filter(a =>
+      a !== name.length
+    )); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
 
     myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
