@@ -42,9 +42,14 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-// -1
-addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c
-  myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
+// =c-1
+addes = (r=0, c=2) => <Button onClick={ (e: any) => { let
+  c = (e.currentTarget as HTMLElement).classList; ri=r
+  // ci = 
+  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
+  // console.log(c[i])
+  ci = +c[i].substring(2); break } }
+  myFunction(c, 1)} } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
@@ -269,7 +274,9 @@ export default function Home() {
         for (let i = inde; i < dnam.length; i++) {
           document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
           document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
-          document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i) } } }
+          document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i)
+          for (let j = 5; i < artists.length; j++) {
+            document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } } } }
         className={'co'+ind+" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
