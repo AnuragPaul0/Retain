@@ -299,14 +299,15 @@ export default function Home() {
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     console.log(ri, ci, artists, r,c)
-    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name
+    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr)
+    // const nextShapes = name
     // .map(shape => {
     //   if (shape === ci) { // No change.id: id{}
-    //   return shape } else { return [ ...shape, shape ] } } ) // new
+    //   return name } else { return [ ...name, shape ] } } ) // new
 
     // console.log(cl[i], 'inp: ', , inpnextShapes)
-    // Re-render with the new array
-    setName(nextShapes); let cl=(e.target as HTMLElement).classList
+    // Re-render with the new arraynextShapes
+    setName([ ...name ]); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
 
     myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
