@@ -9,8 +9,8 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1,
+let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb', det = 1,
+cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1, chi = 0,
 dnam = [0, 1],
 // check:{[key:string]:any} = { dark:0, system:0, light:0 },{ id: 0 }, { id: 1 }
 
@@ -212,7 +212,14 @@ updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.lo
   if( (m!==e ) && ( ( m==='light' ) || ( e==='light' ) ) ) {
   let d=document.documentElement, c=d.classList
   c.toggle('dark') // update styles!
-localStorage.setItem("mode", m) } } //save it in local storage
+localStorage.setItem("mode", m) } }, //save it in local storage
+
+chek = (e: any) => { a = e.currentTarget.nextSibling; console.log(check)
+  a.classList.add('du'); const controller = new AbortController; check--
+  // User clicks anywhere outside of the modal, close
+  window.addEventListener('click', () => { check = 1
+  // console.log(event.target, "clicked")
+a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) }
 
 for (let i = 1; i < 5; i++) {
 arr[i] = [ { id: 0, name: imco(i) }, { id: 1, name: imco(i, dict) } ] }
@@ -230,15 +237,14 @@ export default function Home() {
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
-// {ind=0}
-  Btn = () => <div><Button id='adb' className='mwu atb cb'
-    onClick={ (e: any) => { if (check) { a = e.currentTarget.nextSibling; console.log(check)
-      a.classList.add('du'); const controller = new AbortController; check--
-      // User clicks anywhere outside of the modal, close
-      window.addEventListener('click', () => { check = 1
-        // console.log(event.target, "clicked")
-      a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) } else {
-        a.classList.remove('du'); check = 1}
+
+  Btn = ({ind=0}) => <div><Button id='adb' className={'bu'+ind+' mwu atb cb'}
+    onClick={ (e: any) => { let c = (e.target as HTMLElement).classList, inde=0
+      for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
+      // console.log(c[i])
+      inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
+      if (chi == inde) { if (check) { chek(e) } else {
+        a.classList.remove('du'); check = 1}} else { check = 1; chek(e)}
     console.log('b', check) } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -261,8 +267,9 @@ export default function Home() {
         // Variant'c'+ind+
         setArtists(arts)
         console.log(artists, name, dnam); todo('Variant', 'removed!')
-        for (let i = inde; i < dnam.length; i++) {
-          document.querySelector('.v'+i)?.classList.replace('v'+i,'v'+(i+1)) } } }
+        for (let i = inde+1; i < dnam.length; i++) {
+          document.querySelector('.v'+i)?.classList.replace('v'+i,'v'+(i+1))
+          document.querySelector('.bu'+i)?.classList.replace('bu'+i,'bu'+(i+1)) } } }
         className={" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
