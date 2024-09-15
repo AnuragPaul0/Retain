@@ -42,8 +42,8 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-// 
-addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c-1
+// -1
+addes = (r=0, c=2) => <Button onClick={ (e: any) => { ri=r, ci=c
   myFunction((e.target as HTMLElement).classList, 1)} } id='b1' className=
     { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
@@ -298,16 +298,16 @@ export default function Home() {
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
+    console.log(ri, ci, artists, r,c)
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr); const nextShapes = name
     // .map(shape => {
     //   if (shape === ci) { // No change.id: id{}
     //   return shape } else { return [ ...shape, shape ] } } ) // new
 
-    // console.log(nextShapes)
+    // console.log(cl[i], 'inp: ', , inpnextShapes)
     // Re-render with the new array
     setName(nextShapes); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-    // console.log(cl[i], 'inp: ', inp, ri, ci, artists, r,c)
 
     myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
     className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute" } variant="flat"
