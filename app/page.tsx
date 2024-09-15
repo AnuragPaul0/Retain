@@ -255,10 +255,10 @@ export default function Home() {
           // , nam = dnam,nes = name
           // name;
           nextId-=15;
-          console.log(artists,inde, name)
-          for (let i = 0; i < c.length; i++) { if (c[i].match(/c\d/)) {
+          for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
             // console.log(c[i])
             inde = +c[i].substring(1); break } }
+          console.log(artists,inde, name)
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
         dnam = dnam.filter( a => a !== (dnam.length-1) )
         setName( dnam )
@@ -269,8 +269,9 @@ export default function Home() {
         console.log(artists, name, dnam); todo('Variant', 'removed!')
         for (let i = inde; i < dnam.length; i++) {
           document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
-          document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i) } } }
-        className={'c'+ind+" mwu self-center"}>
+          document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
+          document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i) } } }
+        className={'co'+ind+" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
