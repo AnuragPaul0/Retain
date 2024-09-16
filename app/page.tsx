@@ -275,7 +275,7 @@ export default function Home() {
           document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
           document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
           document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i)
-          for (let j = 5; i < artists.length; j++) {
+          for (let j = 5; j < artists.length; j++) {
             document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } } } }
         className={'co'+ind+" mwu self-center"}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
