@@ -271,7 +271,7 @@ export default function Home() {
         // Variant'c'+ind+
         setArtists(arts)
         console.log(artists, name, dnam); todo('Variant', 'removed!')
-        for (let i = inde; i < dnam.length; i++) {
+        for (let i = inde; i <= dnam.length; i++) {
           document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
           document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
           document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i)
