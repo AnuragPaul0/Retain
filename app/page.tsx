@@ -242,7 +242,7 @@ export default function Home() {
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
 
-  Btn = ({ind=0}) => <div><Button id='adb' className={'bu'+ind+' mwu atb cb'}
+  Btn = ({ind=0}) => <div><Button id='adb' className={'bu mwu atb cb'}
     onClick={ (e: any) => { let c = (e.target as HTMLElement).classList, inde=0
       for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // console.log(c[i])
