@@ -218,7 +218,7 @@ updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.lo
   c.toggle('dark') // update styles!
 localStorage.setItem("mode", m) } }, //save it in local storage
 
-chek = (e: any) => { a = e.currentTarget.nextSibling; console.log(check)
+chek = (e: any) => { a = e.currentTarget.nextSibling; console.log('check', check)
   a.classList.add('du'); const controller = new AbortController; check--
   // User clicks anywhere outside of the modal, close
   window.addEventListener('click', () => { check = 1
@@ -274,8 +274,8 @@ export default function Home() {
         for (let i = inde; i < dnam.length; i++) {
           document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)
           document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
-          document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i)
-          console.log(i, document.querySelector('.co'+i))
+          console.log(document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i),
+          i, document.querySelector('.co'+i))
           for (let j = 0; j < artists.length; j++) {
             document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } } } }
         className={'co'+ind+" mwu self-center"}>
