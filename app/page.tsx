@@ -242,15 +242,15 @@ export default function Home() {
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
 
-  Btn = ({ind=0}) => <div><Button id='adb' className={'bu mwu atb cb'}
+// bu {ind=0}
+  Btn = () => <div><Button id='adb' className={'mwu atb cb'}
     onClick={ (e: any) => { let c = (e.target as HTMLElement).classList, inde=0
       for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // console.log(c[i])
       inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
       if (chi == inde) { if (check) { chek(e) } else {
-        a.classList.remove('du'); check = 1}} else { check = 1; chek(e)}
-    console.log('b', check,
-      Array.from(document.querySelectorAll('.bu')).indexOf(e.currentTarget)) } }
+        a.classList.remove('du'); check = 1}} else { check = 1, chek(e) }
+    console.log('b', check) } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
@@ -258,28 +258,26 @@ export default function Home() {
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
         onClick={ (el: any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
           // , nam = dnam,nes = name
-          // name;
           nextId-=15
-          for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
+      inde = Array.from(document.querySelectorAll('.co')).indexOf(el.currentTarget)
+      // for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
             // console.log(c[i])
-            inde = +c[i].substring(2); break } }
+            // +c[i].substring(2); break } }
           console.log(artists,inde, name)
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
-        dnam = dnam.filter( a => a !== (dnam.length-1) )
-        setName( dnam )
+        dnam = dnam.filter( a => a !== (dnam.length-1) ), setName( dnam )
         // setName(name.splice(ind, 1)).id
-        document.querySelector('.v'+inde)?.remove(); co--
+        document.querySelector('.v'+inde)?.remove(), co--, setArtists(arts)
         // Variant'c'+ind+
-        setArtists(arts)
         console.log(artists, name, dnam); todo('Variant', 'removed!')
         for (let i = inde; i < dnam.length; i++) {
-          document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
-          console.log(document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i),
-            i, document.querySelector('.co'+i))
+          // document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
+          // console.log(document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i),
+          //   i, document.querySelector('.co'+i))
+          // document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)'+ind+"
           for (let j = 0; j < artists.length; j++) {
-            document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) }
-          document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i) } } }
-        className={'co'+ind+" mwu self-center"}>
+            document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } } } }
+        className={'co mwu self-center'}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
     stroke-width="0" viewBox="0 0 24 24" width="20"><title>Remove</title><g id="Trash"><g><path d=
@@ -299,7 +297,7 @@ export default function Home() {
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { va+1 }</Card><Btn ind={co}/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
+      >Variant { va+1 }</Card><Btn/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
       dnam = [...name, co]
       console.log(name)
       setName(dnam); co++; va++; setArtists(arts); todo('Variant')
@@ -492,8 +490,8 @@ export default function Home() {
               <Btn/></Col><Col xs lg="2" className="v1 top df w3 justify-content-md-center">
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
-      <Btn ind={1}/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
-
+      <Btn/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
+ {/* ind={1} */}
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { tr = document.querySelector(".ar")
