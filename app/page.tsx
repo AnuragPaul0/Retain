@@ -249,7 +249,8 @@ export default function Home() {
       inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
       if (chi == inde) { if (check) { chek(e) } else {
         a.classList.remove('du'); check = 1}} else { check = 1; chek(e)}
-    console.log('b', check) } }
+    console.log('b', check,
+      Array.from(document.querySelectorAll('.bu')).indexOf(e.currentTarget)) } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
@@ -258,7 +259,7 @@ export default function Home() {
         onClick={ (el: any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
           // , nam = dnam,nes = name
           // name;
-          nextId-=15;
+          nextId-=15
           for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
             // console.log(c[i])
             inde = +c[i].substring(2); break } }
