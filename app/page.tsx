@@ -267,7 +267,7 @@ export default function Home() {
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
         dnam = dnam.filter( a => a !== (dnam.length-1) ), setName( dnam )
         // setName(name.splice(ind, 1)).id
-        document.querySelector('.v'+inde)?.remove(), co--, setArtists(arts)
+        document.querySelectorAll('.v')[inde]?.remove(), co--, setArtists(arts)
         // Variant'c'+ind+
         console.log(artists, name, dnam); todo('Variant', 'removed!')
         for (let i = inde; i < dnam.length; i++) {
@@ -293,11 +293,11 @@ export default function Home() {
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
       { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-      // Variant{id: } ind={co}
+      // Variant{id: } ind={co}+co
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
-      >Variant { va+1 }</Card><Btn/></Col>, ['v'+co, 'w3', 'df', 'top'] ) )
+      >Variant { va+1 }</Card><Btn/></Col>, ['v', 'w3', 'df', 'top'] ) )
       dnam = [...name, co]
       console.log(name)
       setName(dnam); co++; va++; setArtists(arts); todo('Variant')
@@ -482,12 +482,12 @@ export default function Home() {
             <Card style={ { boxShadow: 'none', paddingLeft: '3% !important',
               paddingRight: '3% !important', justifyContent: 'center' } }
           isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Product Filter</Card></Col>
-
+{/* 01 */}
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
-              <Col xs lg="2" className="v0 df w3 justify-content-md-center"><Card id='fg1'
+              <Col xs lg="2" className="v df w3 justify-content-md-center"><Card id='fg1'
                 isFooterBlurred radius="lg" className="top br2 cb p-1 border-none">Primary Variant</Card>
-              <Btn/></Col><Col xs lg="2" className="v1 top df w3 justify-content-md-center">
+              <Btn/></Col><Col xs lg="2" className="v top df w3 justify-content-md-center">
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
       <Btn/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
