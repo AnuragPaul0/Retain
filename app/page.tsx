@@ -245,11 +245,12 @@ export default function Home() {
 // bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
     onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).matches(':focus')
-      console.log(det)
+      // console.log(det)
      } }
-    onClick={ (e: any) => { console.log(det)
+    onClick={ (e: any) => {
+      // console.log(det)
       if (det){  (e.currentTarget as HTMLElement).blur(), det = false } else det = true
-        console.log(det)
+        // console.log(det)
       //  will lose focus
       // .classList, inde=0
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {

@@ -229,9 +229,7 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 }
 .huXTum, #dec { padding: 0 }
 
-#adb:focus {
-  background: aliceblue;
-}
+#adb:focus+div { display: unset }
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
