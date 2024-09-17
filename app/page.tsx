@@ -247,11 +247,10 @@ export default function Home() {
     onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).matches(':focus')
       // console.log(det)
      } }
-    onClick={ (e: any) => {
+    onClick={ (e: any) => { // will lose focus
       // console.log(det)
       if (det){  (e.currentTarget as HTMLElement).blur(), det = false } else det = true
         // console.log(det)
-      //  will lose focus
       // .classList, inde=0
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
