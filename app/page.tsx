@@ -47,10 +47,10 @@ addes = (r=0, c=2) => <Button onClick={ (e: any) => { let
   c = (e.currentTarget as HTMLElement).classList; ri=r
     // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
     // console.log(c[i])+c
-    ci = Array.from(document.querySelectorAll('.a'+r)).indexOf(e.currentTarget)
-    // +c[i].substring(2); break } }
+    ci = Array.from(document.querySelectorAll('.e'+r)).indexOf(e.currentTarget)
+    // +c[i].substring(2); break } }a
     myFunction(c, 1)} } id='b1' className=
-    { 'a'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
+    { 'e'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
@@ -192,11 +192,11 @@ cfo = [ [ sing, sing ], [ 'Multi Image - '+os, '4 Images - '+os ],
 card = (i: any, m=sing, t='', b: any) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
-
+// r
 imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
   return <Col xs lg="2" className="h17 relative df top w3 justify-content-md-center">
     { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
-    {"r"+i+" c1 mwu z-10 self-center p-2 radius-large absolute"} variant="flat"
+    {"e"+i+" c1 mwu z-10 self-center p-2 radius-large absolute"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="currentColor" width="20px" version="1.1"
       id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
