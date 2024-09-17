@@ -248,7 +248,7 @@ export default function Home() {
       console.log(det)
      } }
     onClick={ (e: any) => { console.log(det)
-      if (det){  (e.currentTarget as HTMLElement).blur() } else det = true
+      if (det){  (e.currentTarget as HTMLElement).blur(), det = false } else det = true
         console.log(det)
       //  will lose focus
       // .classList, inde=0
