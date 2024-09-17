@@ -237,7 +237,7 @@ export default function Home() {
 //   console.log(els)
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
-  [isSelected, setIsSelected] = useState(true),
+  [isSelected, setIsSelected] = useState(true), [mdow, setmdow] = useState(0),
 
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
     // onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).hasAttribute('data-focus')
@@ -342,10 +342,12 @@ export default function Home() {
           "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
           </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
         style={{ blockSize: 'fit-content' }}>
-        <p className={'p5' } style={{ marginBottom: 0, zoom: '2',
-          backgroundColor : isDragged ? " unset" : "var(--lis)"
+        {/*  */}
+        <p className={'p5'} style={{ marginBottom: 0, zoom: '2',
+          backgroundColor : mdow ? " unset" : "var(--lis)"
         }}>{i+1}</p>
-        <button data-movable-handle className={"r"+i+" self-center"}
+        <button data-movable-handle className={"r"+i+" self-center"} onMouseDown={ () => { setmdow(1) } }
+          onMouseUp={ () => { setmdow(0) } }
           style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
         background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}>
         <HandleIcon/></button></Col></Row></Col>
@@ -375,8 +377,7 @@ export default function Home() {
         {...props.props} style={{ padding: "0em 0em 1em 0em",
           cursor: props.isDragged ? "grabbing" : "inherit" }}>{props.children}</ul> }
 
-      renderItem={(params: { value: any; index?: number;
-        isDragged: boolean;
+      renderItem={(params: { value: any; index?: number; isDragged: boolean;
         isSelected: boolean;
         props: {
           key?: number;

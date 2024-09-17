@@ -152,11 +152,11 @@ padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 
 .grb { background-color: var(--bgr); color: #000 }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
 border-top-left-radius: var(--nextui-radius-large) }
-/* , .gra  */
+
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-html body, #lst, span.bun, #bl0, #bor, #del, .foo{ background-color: unset !important }
+html body, #lst, span.bun, #bl0, #bor, #del, .foo, .gra { background-color: unset !important }
 #lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
@@ -188,7 +188,7 @@ width: 53% }
 padding-right: 1.5%; width: fit-content; right: 0; position: absolute }
 
 .close:hover, .close:focus { color: red; text-decoration: none; cursor: pointer }
-/* , .p5 */
+
 .c2w { width: 75% !important }
 div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
@@ -199,7 +199,7 @@ div.df, .df { display: flex }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
 span:has(#swi) { background-color: var(--foreground-rgb) }
-#lis, .whi { background-color: var(--lis) }
+#lis, .whi, .p5 { background-color: var(--lis) }
 #inp { border-radius: var(--bs-border-radius); border: 1px solid var(--foreground-rgb) }
 #inp:has(>input:focus) { border: 1px solid var(--bgr); box-shadow: 0 0 0 .25rem #04ae5630 }
 .m1 { background-color: var(--tbl) }
