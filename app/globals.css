@@ -156,7 +156,7 @@ border-top-left-radius: var(--nextui-radius-large) }
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-html body, #lst, span.bun, #bl0, #bor, #del, .foo { background-color: unset !important }
+html body, #lst, span.bun, #bl0, #bor, #del, .foo, .gra { background-color: unset !important }
 #lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
