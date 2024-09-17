@@ -42,13 +42,11 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-// =c-1
 addes = (r=0, c=2) => <Button onClick={ (e: any) => { let
   c = (e.currentTarget as HTMLElement).classList; ri=r
     // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
     // console.log(c[i])+c
     ci = Array.from(document.querySelectorAll('.e'+r)).indexOf(e.currentTarget)
-    // +c[i].substring(2); break } }a
     myFunction(c, 1)} } id='b1' className=
     { 'e'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
@@ -93,7 +91,7 @@ changeBackground = (e:any, h:any, o=0) => {
   while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
   // console.log('parent:', parent)
   pd = parent.id; if (h == 'h') {
-    tog = document.querySelectorAll('#b1.' + pd +', #del.' + pd) as NodeListOf<HTMLElement>
+    tog = document.querySelectorAll('#b1.e' + pd[1] +', #del.' + pd) as NodeListOf<HTMLElement>
     k = o ? "none" : 'block'
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
@@ -236,12 +234,11 @@ export default function Home() {
    ...cele(el2) ]),
 
   [items, setItems] = useState([0, 1, 2, 3, 4]),
-//   console.log(els){ id: 0 }, { id: 1 }
+//   console.log(els)
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true),
 
-// bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
     // onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).hasAttribute('data-focus')
       // console.log(det) } }
@@ -268,17 +265,9 @@ export default function Home() {
           console.log(artists,inde, name)
         arts.forEach((e:any) => { e.splice(inde, 1) } ) // remove 1 item only
         dnam = dnam.filter( a => a !== (dnam.length-1) ), setName( dnam )
-        // setName(name.splice(ind, 1)).id
         document.querySelectorAll('.v')[inde]?.remove(), co--, setArtists(arts)
         // Variant'c'+ind+
         console.log(artists, name, dnam); todo('Variant', 'removed!')
-        // for (let i = inde; i < dnam.length; i++) {
-          // document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
-          // console.log(document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i),
-          //   i, document.querySelector('.co'+i))
-          // document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)'+ind+"
-          // for (let j = 0; j < artists.length; j++) {
-          //   document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } }
           } }
         className={'co mwu self-center'}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
@@ -288,7 +277,6 @@ export default function Home() {
     ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
   "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></div></div>,
 
-// { imco(i) }-1name.id
   rows = (i=0) => <Row id='scrw' className={ 'r'+i+' h17 ac' } style={{ width: nextId+'vw' }}
     ><ul className='df fon px-0'
     >{ dnam.map(art => <li key={art}>{ artists[i][art].name }</li> ) }</ul>
@@ -509,12 +497,12 @@ export default function Home() {
           setItems([...items, il]); todo() } } className="mwu h-auto shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
         paddingRight: 'calc(var(--bs-gutter-x) /4) !important' }}>+
-          <svg id='star' className='cb ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
+          <svg id='star' className='ar w-50 d-none absolute' viewBox="-50 -50 100 100"><defs>
           <circle id="c" r="40" stroke-width="20" fill="none" stroke-dasharray="62.75 188.25"></circle>
         </defs><use xlinkHref="#c" stroke="#04AE56" stroke-dashoffset="219.625"></use></svg></Button>
       </Col><Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li>
     </ul></Container></ScrollSync>
-
+{/* cb  */}
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
     >Design for remaining SKU's</span>
