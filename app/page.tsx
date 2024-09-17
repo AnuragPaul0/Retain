@@ -219,8 +219,8 @@ updateDarkMode = (m='light') => { let e=localStorage.getItem('mode'); console.lo
 localStorage.setItem("mode", m) } }, //save it in local storage
 
 chek = (e: any) => { a = e.currentTarget.nextSibling; console.log('check', check)
-  a.classList.add('du'); const controller = new AbortController; check--
-  // User clicks anywhere outside of the modal, close
+  a.classList.toggle('du'); const controller = new AbortController; check--
+  // User clicks anywhere outside of the modal, closeadd
   window.addEventListener('click', () => { check = 1
   // console.log(event.target, "clicked")
 a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) }
@@ -244,17 +244,19 @@ export default function Home() {
 
 // bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
-    onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).matches(':focus')
+    // onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).hasAttribute('data-focus')
+      // .matches(':focus')
       // console.log(det)
-     } }
+    //  } }
     onClick={ (e: any) => { // will lose focus
       // console.log(det)
-      if (det){  (e.currentTarget as HTMLElement).blur(), det = false } else det = true
+      chek(e)
+      // if (det){ (e.currentTarget as HTMLElement).blur(), det = false } else det = true
         // console.log(det)
       // .classList, inde=0
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
-      // if (chi == inde) { if (check) { chek(e) } else {
+      // if (chi == inde) { if (check) {  } else {
       //   a.classList.remove('du'); check = 1}} else { check = 1, chek(e) }
   } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
