@@ -10,9 +10,9 @@ import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
 let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
-cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1, chi = 0,
-dnam = [0, 1], det = false,
-// check:{[key:string]:any} = { dark:0, system:0, light:0 },{ id: 0 }, { id: 1 }
+cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1,
+dnam = [0, 1],
+// check:{[key:string]:any} = { dark:0, system:0, light:0 } det = false, chi = 0,
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
@@ -45,12 +45,12 @@ el2 = [
 // =c-1
 addes = (r=0, c=2) => <Button onClick={ (e: any) => { let
   c = (e.currentTarget as HTMLElement).classList; ri=r
-  // ci = 
-  for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
-  // console.log(c[i])
-  ci = +c[i].substring(2); break } }
-  myFunction(c, 1)} } id='b1' className=
-    { 'a'+r+c+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
+    // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
+    // console.log(c[i])+c
+    ci = Array.from(document.querySelectorAll('.a'+r)).indexOf(e.currentTarget)
+    // +c[i].substring(2); break } }
+    myFunction(c, 1)} } id='b1' className=
+    { 'a'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
@@ -206,7 +206,6 @@ imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
       ></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
 ></path></g></g></svg></Button>) }</Col>} else return colmo(i) },
 
-// name
 arr = [ [ { id: 0, name: imco(0) }, { id: 1, name: imco(0, dict) } ] ],
 
 todo = (s='State', a='added', tr = document.querySelector("#topdo") ) => { sta=s; adde=a
@@ -220,7 +219,7 @@ localStorage.setItem("mode", m) } }, //save it in local storage
 
 chek = (e: any) => { a = e.currentTarget.nextSibling; console.log('check', check)
   a.classList.toggle('du'); const controller = new AbortController; check--
-  // User clicks anywhere outside of the modal, closeadd
+  // User clicks anywhere outside
   window.addEventListener('click', () => { check = 1
   // console.log(event.target, "clicked")
 a.classList.remove('du'); controller.abort() }, { signal: controller.signal } ) }
@@ -245,15 +244,11 @@ export default function Home() {
 // bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
     // onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).hasAttribute('data-focus')
-      // .matches(':focus')
+      // console.log(det) } }
+    onClick={ (e: any) => {
       // console.log(det)
-    //  } }
-    onClick={ (e: any) => { // will lose focus
-      // console.log(det)
-      chek(e)
-      // if (det){ (e.currentTarget as HTMLElement).blur(), det = false } else det = true
-        // console.log(det)
-      // .classList, inde=0
+      chek(e) // will lose focus
+      // if (det){ (e.currentTarget as HTMLElement).blur(), det = false } else det = tru
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
       // if (chi == inde) { if (check) {  } else {
@@ -264,9 +259,8 @@ export default function Home() {
       className="lucide lucide-ellipsis-vertical">
         <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
     </svg></Button><div className="StyledWidgetMenu--1ypwjps bYKxqt"><Button id='dec'
-        onClick={ (el: any) => { let arts = artists, c = (el.target as HTMLElement).classList, inde=0
-          // , nam = dnam,nes = name
-          nextId-=15
+        onClick={ (el: any) => { let arts = artists, inde=0; nextId-=15
+          // , nam = dnam,nes = name, c = (el.target as HTMLElement).classList
       inde = Array.from(document.querySelectorAll('.co')).indexOf(el.currentTarget)
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/co\d/)) {
             // console.log(c[i])
@@ -278,13 +272,14 @@ export default function Home() {
         document.querySelectorAll('.v')[inde]?.remove(), co--, setArtists(arts)
         // Variant'c'+ind+
         console.log(artists, name, dnam); todo('Variant', 'removed!')
-        for (let i = inde; i < dnam.length; i++) {
+        // for (let i = inde; i < dnam.length; i++) {
           // document.querySelector('.bu'+(i+1))?.classList.replace('bu'+(i+1),'bu'+i)
           // console.log(document.querySelector('.co'+(i+1))?.classList.replace('co'+(i+1),'co'+i),
           //   i, document.querySelector('.co'+i))
           // document.querySelector('.v'+(i+1))?.classList.replace('v'+(i+1),'v'+i)'+ind+"
-          for (let j = 0; j < artists.length; j++) {
-            document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } } } }
+          // for (let j = 0; j < artists.length; j++) {
+          //   document.querySelector('.a'+j+(i+1))?.classList.replace('a'+j+(i+1),'a'+j+i) } }
+          } }
         className={'co mwu self-center'}>
           <svg id='sdel' className="feather feather-x-circle" stroke="currentColor"
         fill="currentColor"
