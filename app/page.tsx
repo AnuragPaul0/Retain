@@ -359,7 +359,7 @@ export default function Home() {
   let el = e.currentTarget as HTMLElement, dat = 'data-pressed'; el.removeAttribute(dat) },
 
   input = (e: any) => { var filter = e.target?.value.toUpperCase(), a, txtValue
-    document.querySelectorAll('#c1').forEach((el: any) => { a = el.querySelector("p:not(.ort)")
+    document.querySelectorAll('#m1').forEach((el: any) => { a = el.querySelector("p:not(.ort)")
       txtValue = a.textContent || a.innerText
       if (txtValue.toUpperCase().indexOf(filter) > -1) { el.classList.replace('d-none', "flex")
     } else { el.classList.replace("flex", 'd-none')
@@ -473,7 +473,7 @@ export default function Home() {
             <Card style={ { boxShadow: 'none', paddingLeft: '3% !important',
               paddingRight: '3% !important', justifyContent: 'center' } }
           isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Product Filter</Card></Col>
-{/* 01 */}
+
           <ScrollSyncPane><div className='example' style={{ ...cnr }}>
             <Row id='scrw' className='ac r' style={{ width: nextId+'vw' }}>
               <Col xs lg="2" className="v df w3 justify-content-md-center"><Card id='fg1'
@@ -482,7 +482,7 @@ export default function Home() {
                 <Card id='fg1'
                 isFooterBlurred radius="lg" className="br2 cb p-1 border-none">Variant 2</Card>
       <Btn/></Col></Row></div></ScrollSyncPane></Row></li></ul>{ List2() }
- {/* ind={1} */}
+
       <ul id='mb0' className="pl0"><li className="par" style={{ listStyleType: "none" }}>
       <Row><Col id='w8v' xs lg="2" className='df fd'><Button id='btnr'
         onClick={ () => { tr = document.querySelector(".ar")
@@ -502,7 +502,7 @@ export default function Home() {
         </defs><use xlinkHref="#c" stroke="#04AE56" stroke-dashoffset="219.625"></use></svg></Button>
       </Col><Col id='crd' xs lg="4"></Col><div className='example' style={{ ...cnr }}></div></Row></li>
     </ul></Container></ScrollSync>
-{/* cb  */}
+
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
     >Design for remaining SKU's</span>
