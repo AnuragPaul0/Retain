@@ -12,7 +12,7 @@ import { Button } from "@nextui-org/button"
 let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1,
 dnam = [0, 1],
-// check:{[key:string]:any} = { dark:0, system:0, light:0 } det = false, chi = 0,
+// check:{[key:string]:any} = { dark:0, system:0, light:0 }
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
   fill="currentColor"><path d="M7 5C7 6.10457 6.10457 7 5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5Z"/>
@@ -42,18 +42,18 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0, c=2) => <Button onClick={ (e: any) => { let
+addes = (r=0) => <Button onClick={ (e: any) => { let
   c = (e.currentTarget as HTMLElement).classList; ri=r
-    // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
-    // console.log(c[i])+c
+    // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {+c, c, c=2, c=2
+    // console.log(c[i])
     ci = Array.from(document.querySelectorAll('.e'+r)).indexOf(e.currentTarget)
     myFunction(c, 1)} } id='b1' className=
     { 'e'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
 
-colmo = (r=0, c=2) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
-<Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r, c) }</Col>,
+colmo = (r=0) => <Col xs lg="2" className="relative df w3 top justify-content-md-center">
+<Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r) }</Col>,
 
 // open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
@@ -91,7 +91,7 @@ changeBackground = (e:any, h:any, o=0) => {
   while (parent.id.match(/r\d/) == null) { parent = parent.parentElement }
   // console.log('parent:', parent)
   pd = parent.id; if (h == 'h') {
-    tog = document.querySelectorAll('#b1.e' + pd[1] +', #del.' + pd) as NodeListOf<HTMLElement>
+    tog = document.querySelectorAll('#b1.e' + pd[1] +'.c1, #del.' + pd) as NodeListOf<HTMLElement>
     k = o ? "none" : 'block'
     tog.forEach((e:any) => {e.style.display = k})
 } else if (h =='n') {
@@ -283,8 +283,8 @@ export default function Home() {
 
     <div className='p-0 h17 fon flex'><Button id="addc" onClick={ () => { let arts = artists; nextId+=15
       artists.forEach((e:any, idx:any) => { arts[idx] = [ ...e,
-      { id: co, name: colmo(idx, co) } ] } ); tr = document.querySelector('#scrw.r')
-      // Variant{id: } ind={co}+co
+      { id: co, name: colmo(idx) } ] } ); tr = document.querySelector('#scrw.r')
+      // Variant{id: } ind={co}+co, co
       tr?.append(relm(<Col xs lg="2" className={" df justify-content-md-center"}
         style={{ width: '100%' }}>
           <Card id='fg1' isFooterBlurred radius="lg" className="br2 cb p-1 border-none"
@@ -490,9 +490,9 @@ export default function Home() {
           const il = items.length; cfo = [...cfo, ['+ Add design', '+ Add design']]
           setels([ ...els, <Card key={il} className="alc w90 justify-content-md-center"
           >{ buttonc('+ Add Product Filters', 'alc fon') }</Card> ])
-          let tem = [ { id: 1, name: colmo(p, 1) } ]
-          console.log(name)
-          for (let i = 0; i < co; i++) { tem[i] = { id: i, name: colmo(p, i) } }
+          let tem = [ { id: 1, name: colmo(p) } ]
+          // console.log(name), i, 1
+          for (let i = 0; i < co; i++) { tem[i] = { id: i, name: colmo(p) } }
           setArtists([...artists, tem])
           setItems([...items, il]); todo() } } className="mwu h-auto shadow-medium self-center" style={{
         paddingLeft: 'calc(var(--bs-gutter-x) /4) !important', borderRadius: '2px', zoom: '2',
