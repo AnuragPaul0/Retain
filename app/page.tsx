@@ -9,9 +9,9 @@ import { Card, CardFooter } from "@nextui-org/card"
 import { Image } from "@nextui-org/image"
 import { Button } from "@nextui-org/button"
 
-let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb', det = 1,
+let tog, parent, p = 5, container, a:any, k:any, pd, tr:any, co = 2, va = 2, greens = 'grb',
 cnr = { width: '51vw' }, nextId = 35.2, ri=0, ci=2, sta = 'State', adde = 'added', check=1, chi = 0,
-dnam = [0, 1],
+dnam = [0, 1], det = false,
 // check:{[key:string]:any} = { dark:0, system:0, light:0 },{ id: 0 }, { id: 1 }
 
 HandleIcon = () => <svg height="20px" className="feather feather-move" viewBox="0 0 24 24"
@@ -244,14 +244,15 @@ export default function Home() {
 
 // bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
-    onClick={ (e: any) => { let c = (e.currentTarget as HTMLElement).matches(':focus')
+    onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).matches(':focus') } }
+    onClick={ (e: any) => { if (det) (e.currentTarget as HTMLElement).blur()
+      //  will lose focus
       // .classList, inde=0
       // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // console.log(c[i])
       // inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
       // if (chi == inde) { if (check) { chek(e) } else {
       //   a.classList.remove('du'); check = 1}} else { check = 1, chek(e) }
-    console.log({c})
   } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
