@@ -342,7 +342,9 @@ export default function Home() {
           "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
           </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
         style={{ blockSize: 'fit-content' }}>
-        <p className={'p5'+ ( isDragged ? " gra" : "" ) } style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
+        <p className={'p5' } style={{ marginBottom: 0, zoom: '2',
+          backgroundColor : isDragged ? " unset" : "var(--lis)"
+        }}>{i+1}</p>
         <button data-movable-handle className={"r"+i+" self-center"}
           style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
         background: "transparent", cursor: isDragged ? "grabbing" : "grab" }} tabIndex={-1}>
