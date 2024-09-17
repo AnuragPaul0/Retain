@@ -194,7 +194,7 @@ div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
 .top { border-right: 1px solid var(--e) }
 .cb, .bun { color: unset }
-.cb { background-color: var(--cb) }
+.cb { background-color: var(--bg) }
 .h21 { height: 250px }
 .sp { justify-content: space-evenly }
 .w3 { width: 15vw !important }
@@ -214,8 +214,7 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
   visibility: visible;
   pointer-events: auto }
 
-.huXTum { border-style: none;
-  background: transparent;
+.huXTum { border-style: none; background: transparent;
   display: flex;
   height: 30px;
   width: 100%;
@@ -225,12 +224,9 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
   -webkit-box-pack: start;
   justify-content: flex-start;
   outline: unset;
-  cursor: pointer;
-}
+  cursor: pointer }
 .huXTum, #dec { padding: 0 }
 
-/* #adb:focus+div { display: unset }
-div:has(>#dec:focus) { display: unset } */
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
