@@ -244,13 +244,15 @@ export default function Home() {
 
 // bu {ind=0}
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
-    onClick={ (e: any) => { let c = (e.target as HTMLElement).classList, inde=0
-      for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
+    onClick={ (e: any) => { let c = (e.currentTarget as HTMLElement).matches(':focus')
+      // .classList, inde=0
+      // for (let i = 0; i < c.length; i++) { if (c[i].match(/bu\d/)) {
       // console.log(c[i])
-      inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
-      if (chi == inde) { if (check) { chek(e) } else {
-        a.classList.remove('du'); check = 1}} else { check = 1, chek(e) }
-    console.log('b', check) } }
+      // inde = +c[i].substring(1); if (det) {chi = inde; det = 0}; break } }
+      // if (chi == inde) { if (check) { chek(e) } else {
+      //   a.classList.remove('du'); check = 1}} else { check = 1, chek(e) }
+    console.log({c})
+  } }
     ><svg height="22" viewBox="8 0 8 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
       className="lucide lucide-ellipsis-vertical">
