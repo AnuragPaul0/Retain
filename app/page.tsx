@@ -341,11 +341,9 @@ export default function Home() {
           ></path><path d="M8.375,8h0a.5.5,0,0,1,1,0l.25,10a.5.5,0,0,1-1,0Z"></path><path d=
           "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
           </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
-        style={{ blockSize: 'fit-content' }}>
+        style={{ blockSize: 'fit-content', backgroundColor : mdow ? " unset" : "var(--lis)" }}>
         {/*  */}
-        <p className={'p5'} style={{ marginBottom: 0, zoom: '2',
-          backgroundColor : mdow ? " unset" : "var(--lis)"
-        }}>{i+1}</p>
+        <p className={'p5'} style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
         <button data-movable-handle className={"r"+i+" self-center"} onMouseDown={ () => { setmdow(1) } }
           onMouseUp={ () => { setmdow(0) } }
           style={{ border: "none", margin: 0, padding: 0, width: "auto", overflow: "visible",
