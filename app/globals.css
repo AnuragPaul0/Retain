@@ -240,8 +240,8 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 .svgContainer svg { display: block }
 #Capa_1:hover { fill: #04ae56 }
 #Meta:hover { fill: blue }
-#Shopify:hover { &#ful { fill: #95BF47 } &#rig { fill: #5E8E3E } &#whi { fill: #fff } }
-
+#Shopify:hover { &>#ful { fill: #95BF47 } &>#rig { fill: #5E8E3E } }
+ /* &#whi { fill: #fff } */
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
