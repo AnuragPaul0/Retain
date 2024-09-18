@@ -399,7 +399,7 @@ export default function Home() {
       " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
         <a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo" href="https://retainiq.io"
-          rel="noopener" style="opacity: 1;">
+          rel="noopener" style={{ opacity: 1 }}>
             <div data-framer-component-type="SVG" data-framer-name="Clip path group"
               className="framer-drq6ak"><div className="svgContainer">
                 <svg id='ret' viewBox="0 0 28 29" preserveAspectRatio="none" width="100%" height="100%">
