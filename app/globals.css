@@ -92,7 +92,7 @@ width: 72px; margin-right: 90px }
 .switch-toggle, #bl0, span.bun { border: 0 }
 
 @keyframes spin { 0% { transform: rotate(0deg); } 100% {  transform: rotate(359deg) } }
-#star, #riq:focus, .spi { animation: spin 2s linear }
+#star, .spi { animation: spin 2s linear }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes exampl { from { top:-100px; opacity: 0 } to { top:0px; opacity:1 } }
 @-webkit-keyframes wid { from { width:200px; x:50px } to { width:1px; x:249px } }
@@ -231,17 +231,15 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 }
 
 .framer-drq6ak { image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0);
-  color: rgb(0, 0, 0); opacity: 1
-}
+  color: rgb(0, 0, 0); opacity: 1 }
 
 .svgContainer { width: 100%; height: 100%; aspect-ratio: inherit }
-
 #ret { width: 100%; height: 100% }
 .svgContainer svg { display: block }
 #Capa_1:hover { fill: #04ae56 }
 #Meta:hover { fill: blue }
 #Shopify:hover { &>#ful { fill: #95BF47 } &>#rig { fill: #5E8E3E } }
- /* &#whi { fill: #fff } */
+
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
