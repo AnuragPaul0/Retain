@@ -152,7 +152,7 @@ padding-left: .4rem !important; margin-right: calc(var(--nextui-radius-large) / 
 .grb { background-color: var(--bgr); color: #000 }
 #cfo { border-bottom-right-radius: var(--nextui-radius-large);
 border-top-left-radius: var(--nextui-radius-large) }
-/* , .gra  */
+
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
@@ -188,7 +188,6 @@ width: 53% }
 padding-right: 1.5%; width: fit-content; right: 0; position: absolute }
 
 .close:hover, .close:focus { color: red; text-decoration: none; cursor: pointer }
-/* , .p5 */
 .c2w { width: 75% !important }
 div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
@@ -229,28 +228,24 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 
 #svg-158090405_915_mask0_17717_9374 {mask-type:luminance}
 
-#svg-templates { position: absolute; overflow: hidden; bottom: 0;
-  left: 0;
+#svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0;
   width: 0;
   height: 0;
   z-index: 0;
   contain: strict
 }
 
-.framer-drq6ak { image-rendering: pixelated;
-  flex-shrink: 0;
+.framer-drq6ak { image-rendering: pixelated; flex-shrink: 0;
   fill: rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   opacity: 1
 }
 
-.svgContainer { width: 100%;
-  height: 100%;
+.svgContainer { width: 100%; height: 100%;
   aspect-ratio: inherit
 }
 
-#ret { width: 100%; height: 100%;
-}
+#ret { width: 100%; height: 100% }
 
 .svgContainer svg { display: block }
 
