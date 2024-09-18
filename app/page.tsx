@@ -293,7 +293,8 @@ export default function Home() {
       console.log(artists, name, dnam)
   } } className={ 'r'+i+" cb mwu h-auto fon shadow-medium self-center" }>+</Button></div></Row>,
 
-  btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
+  btn = (r=0, c=0) => <Button id='b1'
+    onClick={ (e: any) => { arr=artists
     console.log(ri, ci, artists, r,c)
     arr[ri][ci].name=imco(r,c?dict:iml, ri); setArtists(arr)
 
