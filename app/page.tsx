@@ -234,7 +234,7 @@ export default function Home() {
    ...cele(el2) ]),
 
   [items, setItems] = useState([0, 1, 2, 3, 4]),
-//   console.log(els)
+  // console.log(els)
 
   [artists, setArtists] = useState(arr), [name, setName] = useState([0, 1]),
   [isSelected, setIsSelected] = useState(true), [mdow, setmdow] = useState(0),
@@ -397,7 +397,13 @@ export default function Home() {
     <div style={{ width: '4rem' }} className={
       "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
       " ease-out delay-150 duration-200"}>
-      <div className="flex-col justify-start item-center"><div className="my-4"><div className=
+      <div className="flex-col justify-start item-center"><div className="my-4">
+        <a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo" href="https://retainiq.io"
+          rel="noopener" style="opacity: 1;">
+            <div data-framer-component-type="SVG" data-framer-name="Clip path group"
+              className="framer-drq6ak"><div className="svgContainer">
+                <svg id='ret' viewBox="0 0 28 29" preserveAspectRatio="none" width="100%" height="100%">
+                  <use href="#svg-158090405_915"></use></svg></div></div></a><div className=
         {"flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group"+
         " cursor-pointer hover:shadow-lg"}>
           <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
