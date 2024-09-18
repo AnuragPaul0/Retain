@@ -223,26 +223,24 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
   outline: unset;
   cursor: pointer }
 .huXTum, #dec, #riq, #bcu { padding: 0 !important }
-
 #svg-158090405_915_mask0_17717_9374 {mask-type:luminance}
 
-#svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0;
-  height: 0;
+#svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0;
   z-index: 0;
   contain: strict
 }
 
 .framer-drq6ak { image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  opacity: 1
+  color: rgb(0, 0, 0); opacity: 1
 }
 
-.svgContainer { width: 100%; height: 100%; aspect-ratio: inherit
-}
+.svgContainer { width: 100%; height: 100%; aspect-ratio: inherit }
 
 #ret { width: 100%; height: 100% }
-
 .svgContainer svg { display: block }
+#Capa_1:hover { fill: #04ae56 }
+#Meta:hover { fill: blue }
+#Shopify:hover { &#ful { fill: #95BF47 } &#rig { fill: #5E8E3E } &#whi { fill: #fff } }
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
