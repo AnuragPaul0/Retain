@@ -240,8 +240,6 @@ export default function Home() {
   [isSelected, setIsSelected] = useState(true), [mdow, setmdow] = useState(0),
 
   Btn = () => <div><Button id='adb' className={'mwu atb cb'}
-    // onMouseEnter={ (e: any) => { det = (e.currentTarget as HTMLElement).hasAttribute('data-focus')
-      // console.log(det) } }
     onClick={ (e: any) => {
       // console.log(det)
       chek(e) // will lose focus
@@ -298,13 +296,9 @@ export default function Home() {
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     console.log(ri, ci, artists, r,c)
     arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr)
-    // const nextShapes = name
-    // .map(shape => {
-    //   if (shape === ci) { // No change.id: id{}
-    //   return name } else { return [ ...name, shape ] } } ) // new
 
     // console.log(cl[i], 'inp: ', , inpnextShapes)
-    // Re-render with the new arraynextShapes[ ...name ]
+    // Re-render with the new array
     setName(name.filter(a =>
       a !== name.length
     )); let cl=(e.target as HTMLElement).classList
