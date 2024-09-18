@@ -398,12 +398,15 @@ export default function Home() {
       "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
       " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
-        <a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo" href="https://retainiq.io"
+        <Button className="self-center absolute" variant="flat" color="default"
+          ><a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo"
+          href="https://nextjs-boilerplate2-psi-jet.vercel.app"
           rel="noopener" style={{ opacity: 1 }}>
             <div data-framer-component-type="SVG" data-framer-name="Clip path group"
               className="framer-drq6ak"><div className="svgContainer">
                 <svg id='ret' viewBox="0 0 28 29" preserveAspectRatio="none" width="100%" height="100%">
-                  <use href="#svg-158090405_915"></use></svg></div></div></a><div className=
+        <use href="#svg-158090405_915"></use></svg></div></div></a></Button>
+        <div className=
         {"flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group"+
         " cursor-pointer hover:shadow-lg"}>
           <svg viewBox="0 0 45 45" fill="none" id="svg-230198041_977">
@@ -440,7 +443,7 @@ export default function Home() {
                 <path fill="black" d="M79.1 54.7l-5.2 19.6s-5.8-2.7-12.8-2.2c-10.2.6-10.3 7-10.2 8.7.6 8.8 23.6 10.7 24.9 31.2 1 16.2-8.6 27.2-22.4 28.1-16.6 1-25.7-8.7-25.7-8.7l3.5-14.9s9.2 6.9 16.5 6.5c4.8-.3 6.5-4.2 6.3-7-.7-11.4-19.5-10.8-20.7-29.5-1-15.8 9.4-31.8 32.3-33.3 9-.8 13.5 1.5 13.5 1.5z"></path>
                 </svg>
               </div></div>
-            <div className="my-4 pb-4" style={{position: 'absolute', bottom: '0'}}>
+            <div className="my-4 pb-4" style={{ position: 'absolute', bottom: '0' }}>
               <div className=
               "flex mb-2 justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                 <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
@@ -596,7 +599,7 @@ export default function Home() {
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "foo justify-center before:bg-white/10 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0 }}>4 Image - fallback</p>
-            </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
+        </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
           "self-center p-2 radius-large absolute bg-white/20" variant="flat"
           color="default" radius="lg" size="sm">
             <svg fill="#000" width="20px" version="1.1"
@@ -678,7 +681,8 @@ export default function Home() {
         </div><Button id='bor' className={'mwu close h-auto z-10 shadow-medium self-center p-4'+
           ' top-0 radius-large' } variant="flat" color="default" radius="lg" size="sm">
         <span onClick={ () => myFunction() }>&times;</span></Button>
-{/* [''], 0 */}
+{/* [''] */}
+
       <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
         { modc(iml, 3, 2) }{ modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }
         { modc(dict, 1, 2) }{ modc(iml, 2, 2, '4 image - fallback') }
