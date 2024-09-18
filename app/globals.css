@@ -257,6 +257,10 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
   height: 100%;
 }
 
+.svgContainer svg {
+  display: block
+}
+
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
 
