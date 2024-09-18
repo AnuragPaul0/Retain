@@ -227,6 +227,8 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
   cursor: pointer }
 .huXTum, #dec { padding: 0 }
 
+#svg-158090405_915_mask0_17717_9374 {mask-type:luminance}
+
 #svg-templates {
   position: absolute;
   overflow: hidden;
