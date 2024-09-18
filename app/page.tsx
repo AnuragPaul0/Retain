@@ -438,10 +438,10 @@ export default function Home() {
           <path fill="black" d="M79.1 54.7l-5.2 19.6s-5.8-2.7-12.8-2.2c-10.2.6-10.3 7-10.2 8.7.6 8.8 23.6 10.7 24.9 31.2 1 16.2-8.6 27.2-22.4 28.1-16.6 1-25.7-8.7-25.7-8.7l3.5-14.9s9.2 6.9 16.5 6.5c4.8-.3 6.5-4.2 6.3-7-.7-11.4-19.5-10.8-20.7-29.5-1-15.8 9.4-31.8 32.3-33.3 9-.8 13.5 1.5 13.5 1.5z"></path>
         </svg></div></div>
 
-        <div className="my-4 pb-4 " style={{ position: 'absolute' }}>
+        <div className="my-4 pb-4 " style={{ position: 'absolute', bottom: 0 }}>
           <div className=
             "flex mb-2 justify-start items-center gap-4 pl-1 rounded-md group cursor-pointer m-auto">
-            <Button className="bcu mwu self-center" variant="flat"
+            <Button id='bcu' className="mwu self-center" variant="flat"
               onClick={ (e: any) => { tr = (e.currentTarget as HTMLElement).classList; tr.add('spi')
                 setTimeout(() => { tr?.remove('spi')}, 2001 ) } }>
               <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
