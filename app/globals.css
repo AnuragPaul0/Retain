@@ -95,7 +95,7 @@ width: 72px; margin-right: 90px }
   0% { transform: rotate(0deg); }
   100% {  transform: rotate(359deg); }
 }
-#star, #ret:focus { animation: spin 2s linear }
+#star, #riq:focus { animation: spin 2s linear }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes exampl { from { top:-100px; opacity: 0 } to { top:0px; opacity:1 } }

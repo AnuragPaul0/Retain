@@ -398,7 +398,8 @@ export default function Home() {
       "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
       " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
-        <Button className="self-center absolute" variant="flat" color="default"
+
+        <Button id='riq' className="self-center" variant="flat" color="default"
           ><a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo"
           href="https://nextjs-boilerplate2-psi-jet.vercel.app"
           rel="noopener" style={{ opacity: 1 }}>
@@ -406,6 +407,7 @@ export default function Home() {
               className="framer-drq6ak"><div className="svgContainer">
                 <svg id='ret' viewBox="0 0 28 29" preserveAspectRatio="none" width="100%" height="100%">
         <use href="#svg-158090405_915"></use></svg></div></div></a></Button>
+
         <div className=
         {"flex rounded-md mb-8 justify-start items-center gap-4 hover:bg-gray-900 group"+
         " cursor-pointer hover:shadow-lg"}>
