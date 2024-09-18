@@ -44,7 +44,6 @@ el2 = [
 
 addes = (r=0) => <Button onClick={ (e: any) => { let
   c = (e.currentTarget as HTMLElement).classList; ri=r
-    // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {+c, c, c=2, c=2
     // console.log(c[i])
     ci = Array.from(document.querySelectorAll('.e'+r)).indexOf(e.currentTarget)
     myFunction(c, 1)} } id='b1' className=
@@ -58,9 +57,6 @@ colmo = (r=0) => <Col xs lg="2" className="relative df w3 top justify-content-md
 // open/x modal
 myFunction = (c:any, o=0) => { tr = 'imodal'
   // console.log(e)
-  // for (let i = 0; i < c.length; i++) { if (c[i].match(/a\d/)) {
-  //   // console.log(c[i])
-  // inp = c[i].substring(1); break } }
   a = document.querySelector("#"+tr)
 
   if (o) { a.classList.add('df'); const controller = new AbortController
@@ -191,10 +187,10 @@ card = (i: any, m=sing, t='', b: any) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
 // r
-imco = (i: any, im = iml, m=cfo[i][im.c]) => { if (i<5) {
+imco = (i=0, im = iml, e = i) => { let m=cfo[i][im.c]; if (i<5) {
   return <Col xs lg="2" className="h17 relative df top w3 justify-content-md-center">
     { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
-    {"e"+i+" c1 mwu z-10 self-center p-2 radius-large absolute"} variant="flat"
+    {"e"+e+" c1 mwu z-10 self-center p-2 radius-large absolute"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="currentColor" width="20px" version="1.1"
       id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -295,12 +291,11 @@ export default function Home() {
 
   btn = (r=0, c=0) => <Button id='b1' onClick={ (e: any) => { arr=artists
     console.log(ri, ci, artists, r,c)
-    arr[ri][ci].name=imco(r,c?dict:iml); setArtists(arr)
+    arr[ri][ci].name=imco(r,c?dict:iml, ri); setArtists(arr)
 
     // console.log(cl[i], 'inp: ', , inpnextShapes)
     // Re-render with the new array
-    setName(name.filter(a =>
-      a !== name.length
+    setName(name.filter(a => a !== name.length
     )); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
 
@@ -336,7 +331,7 @@ export default function Home() {
           "M15.625,8.007a.5.5,0,0,0-1,0h0l-.25,10a.5.5,0,0,0,1,0Z"></path></g></g></svg></Button></Col>
           </Row><Row style={{ flexGrow:.5 }}><Col id='req' className="df justify-content-md-center"
         style={{ blockSize: 'fit-content', backgroundColor : mdow ? " unset" : "var(--lis)" }}>
-        {/*  */}
+
         <p className={'p5'} style={{ marginBottom: 0, zoom: '2'}}>{i+1}</p>
         <button data-movable-handle className={"r"+i+" self-center"} onMouseDown={ () => { setmdow(1) } }
           onMouseUp={ () => { setmdow(0) } }
