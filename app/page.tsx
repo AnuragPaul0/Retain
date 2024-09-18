@@ -42,11 +42,11 @@ el2 = [
     <div key='4' id='alsc'>{buttonc('Image list Product Image 2') }{ buttonc('is', greens)}
 {buttonc('empty')}</div> ],
 
-addes = (r=0) => <Button onClick={ (e: any) => { let
-  c = (e.currentTarget as HTMLElement).classList; ri=r
-    // console.log(c[i])
+addes = (r=0) => <Button onClick={ (e: any) => { ri=r
+    // console.log(c[i])c, 
+  // let c = (e.currentTarget as HTMLElement).classList;
     ci = Array.from(document.querySelectorAll('.e'+r)).indexOf(e.currentTarget)
-    myFunction(c, 1)} } id='b1' className=
+    myFunction(1)} } id='b1' className=
     { 'e'+r+' z-10 shadow-medium self-center p-2 radius-large absolute whi' }
   variant="flat" color="default" radius="lg" size="sm">
 <div style={{ zoom: 2 }}>+</div> Add design</Button>,
@@ -55,8 +55,8 @@ colmo = (r=0) => <Col xs lg="2" className="relative df w3 top justify-content-md
 <Card isFooterBlurred radius="lg" className="wh border-none"></Card>{ addes(r) }</Col>,
 
 // open/x modal
-myFunction = (c:any, o=0) => { tr = 'imodal'
-  // console.log(e)
+myFunction = (o=0) => { tr = 'imodal'
+  // console.log(e)c:any, 
   a = document.querySelector("#"+tr)
 
   if (o) { a.classList.add('df'); const controller = new AbortController
@@ -186,10 +186,14 @@ cfo = [ [ sing, sing ], [ 'Multi Image - '+os, '4 Images - '+os ],
 card = (i: any, m=sing, t='', b: any) =>
   <Card isFooterBlurred radius="lg" className={ "relative w15 border-none" }>
 <div className={ "df justify-content-md-center" }>{ i }{ b }</div>{ cfr(t, m) }</Card>,
-// r
+
 imco = (i=0, im = iml, e = i) => { let m=cfo[i][im.c]; if (i<5) {
   return <Col xs lg="2" className="h17 relative df top w3 justify-content-md-center">
-    { card(im.imc[i], m, 'cut-text ', <Button id='b1' style={{ display: "none" }} className=
+    { card(im.imc[i], m, 'cut-text ', <Button id='b1' onClick={ (el: any) => { ri=e
+    // console.log(c[i])c, 
+  // let c = (e.currentTarget as HTMLElement).classList;
+    ci = Array.from(document.querySelectorAll('.e'+e)).indexOf(el.currentTarget)
+    myFunction(1) } } style={{ display: "none" }} className=
     {"e"+e+" c1 mwu z-10 self-center p-2 radius-large absolute"} variant="flat"
     color="default" radius="lg" size="sm"><svg fill="currentColor" width="20px" version="1.1"
       id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
@@ -298,8 +302,8 @@ export default function Home() {
     setName(name.filter(a => a !== name.length
     )); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-
-    myFunction([''], 0); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
+// [''], 0
+    myFunction(); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
     className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute" } variant="flat"
   color="default" radius="lg" size="sm">Insert</Button>,
 
@@ -667,8 +671,8 @@ export default function Home() {
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
         </div><Button id='bor' className={'mwu close h-auto z-10 shadow-medium self-center p-4'+
           ' top-0 radius-large' } variant="flat" color="default" radius="lg" size="sm">
-        <span onClick={ () => myFunction([''], 0) }>&times;</span></Button>
-
+        <span onClick={ () => myFunction() }>&times;</span></Button>
+{/* [''], 0 */}
       <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
         { modc(iml, 3, 2) }{ modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }
         { modc(dict, 1, 2) }{ modc(iml, 2, 2, '4 image - fallback') }
