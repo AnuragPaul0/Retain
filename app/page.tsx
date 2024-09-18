@@ -303,7 +303,7 @@ export default function Home() {
     setName(name.filter(a => a !== name.length
     )); let cl=(e.target as HTMLElement).classList
     for (let i = 0; i < cl.length; i++) { if (cl[i].match(/m\d/)) {
-// [''], 0
+
     myFunction(); break } } todo('Variant', 'template updated') } } style={{ display: "none" }}
     className= { 'm'+r+c+" c1 z-10 self-center p-2 radius-large absolute" } variant="flat"
   color="default" radius="lg" size="sm">Insert</Button>,
@@ -400,7 +400,7 @@ export default function Home() {
       " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
 
-        <Button id='riq' className="mwu self-center" variant="flat"
+        <Button id='riq' className="mb-8 mwu self-center" variant="flat"
           ><a className="framer-12434nw framer-k4i4m3" data-framer-name="Logo"
           href="https://nextjs-boilerplate2-psi-jet.vercel.app"
           rel="noopener" style={{ opacity: 1 }}>
@@ -439,15 +439,16 @@ export default function Home() {
         </svg></div></div>
 
         <div className="my-4 pb-4 " style={{ position: 'absolute' }}>
-        {/* <div className=
-          "flex mb-2 justify-start items-center gap-4 pl-1 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto"> */}
-          <Button id='riq' className="mwu self-center" variant="flat">
-            <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
+          <div className=
+            "flex mb-2 justify-start items-center gap-4 pl-1 rounded-md group cursor-pointer m-auto">
+            <Button className="bcu mwu self-center" variant="flat"
+              onClick={ (e: any) => { tr = (e.currentTarget as HTMLElement).classList; tr.add('spi')
+                setTimeout(() => { tr?.remove('spi')}, 2001 ) } }>
+              <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
             stroke-width="0" viewBox="0 0 24 24"
             height="20px"><path fill="none" d="M0 0h24v24H0V0z"></path><path d=
             "M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-      ></path></svg></Button></div></div></div>
-      {/* </div> */}
+      ></path></svg></Button></div></div></div></div>
 
     <div style={{ marginBottom: '4%', marginLeft: '6rem', marginTop: '2rem' }} className="framer"
     data-framer-name="Fuel your Brand's Growth with Personalized Dynamic Creatives"
@@ -677,7 +678,6 @@ export default function Home() {
         </div><Button id='bor' className={'mwu close h-auto z-10 shadow-medium self-center p-4'+
           ' top-0 radius-large' } variant="flat" color="default" radius="lg" size="sm">
         <span onClick={ () => myFunction() }>&times;</span></Button>
-{/* [''] */}
 
       <Container id='h40' className="rounded-large"><div id='scrw' className="flex flex-wrap">
         { modc(iml, 3, 2) }{ modc(iml, 0, 2) }{ modc(iml, 2, 2, '2 image - 0 discount') }
