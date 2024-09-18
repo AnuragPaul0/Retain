@@ -151,7 +151,10 @@ border-top-left-radius: var(--nextui-radius-large) }
 #mb0 { margin-bottom: 0 }
 .pl0, div.pl0 { padding-left: 0 !important }
 #scrw { justify-content: flex-start }
-html body, #lst, span.bun, #bl0, #bor, #del, .foo, #riq, #bcu { background-color: unset !important }
+
+html body, #lst, span.bun, #bl0, #bor, #del, .foo, #riq, #bcu, #dec
+{ background-color: unset !important }
+
 #lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
@@ -223,21 +226,18 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 
 #svg-158090405_915_mask0_17717_9374 {mask-type:luminance}
 
-#svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0;
-  width: 0;
+#svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0;
   height: 0;
   z-index: 0;
   contain: strict
 }
 
-.framer-drq6ak { image-rendering: pixelated; flex-shrink: 0;
-  fill: rgb(0, 0, 0);
+.framer-drq6ak { image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   opacity: 1
 }
 
-.svgContainer { width: 100%; height: 100%;
-  aspect-ratio: inherit
+.svgContainer { width: 100%; height: 100%; aspect-ratio: inherit
 }
 
 #ret { width: 100%; height: 100% }
