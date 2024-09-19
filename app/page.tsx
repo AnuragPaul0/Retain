@@ -421,7 +421,7 @@ export default function Home() {
               <path d="M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
         </g></g></svg></Button></div>
 
-        <div className="flex mb-8 justify-start items-center gap-4 rounded-md group cursor-pointer">
+        <div className="flex justify-start items-center gap-4 rounded-md group cursor-pointer">
           <Button id='riq' className="mb-8 mwu self-center" variant="flat"
             ><svg id='Meta' fill='white' viewBox="0 0 30 20" width="40px"><desc>Logo of Meta</desc>
               <g transform="scale(0.1)"> <path id="Logo0" d="m31.06,125.96c0,10.98 2.41,19.41 5.56,24.51 4.13,6.68 10.29,9.51 16.57,9.51 8.1,0 15.51-2.01 29.79-21.76 11.44-15.83 24.92-38.05 33.99-51.98l15.36-23.6c10.67-16.39 23.02-34.61 37.18-46.96 11.56-10.08 24.03-15.68 36.58-15.68 21.07,0 41.14,12.21 56.5,35.11 16.81,25.08 24.97,56.67 24.97,89.27 0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75l0-31.02c17.63,0 22.03-16.2 22.03-34.74 0-26.42-6.16-55.74-19.73-76.69-9.63-14.86-22.11-23.94-35.84-23.94-14.85,0-26.8,11.2-40.23,31.17-7.14,10.61-14.47,23.54-22.7,38.13l-9.06,16.05c-18.2,32.27-22.81,39.62-31.91,51.75-15.95,21.24-29.57,29.29-47.5,29.29-21.27,0-34.72-9.21-43.05-23.09-6.8-11.31-10.14-26.15-10.14-43.06z"/>
@@ -543,8 +543,8 @@ export default function Home() {
                   }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
             "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-            <Image id='img 'radius='none' style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+            <Image id='img' radius='none' style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="img object-cover opacity-1" height={150} src=
   "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
           width={100}/></Col></div>
           <CardFooter style={{ paddingLeft: '0 !important',

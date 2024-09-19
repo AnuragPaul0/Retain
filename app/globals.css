@@ -239,7 +239,7 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 #Capa_1:hover { fill: #04ae56 }
 #Meta:hover { fill: blue }
 #Shopify:hover { &>#ful { fill: #95BF47 } &>#rig { fill: #5E8E3E } }
-#img { border-bottom-left-radius: 0; border-top-left-radius: 0;
+#img, .img { border-bottom-left-radius: 0; border-top-left-radius: 0;
   border-top-right-radius: var(--nextui-radius-large);
 border-bottom-right-radius: var(--nextui-radius-large) }
 
