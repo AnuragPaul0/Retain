@@ -420,7 +420,7 @@ export default function Home() {
         </svg></Button></div></div>
 
         <div className="my-4 pb-4 " style={{ position: 'absolute', bottom: 0 }}>
-          <div style={{ width: '40px' }} className="flex mb-2 justify-content-md-center items-center gap-4 rounded-md group cursor-pointer m-auto">
+          <div style={{ width: '32px' }} className="flex mb-2 justify-content-md-center items-center gap-4 rounded-md group cursor-pointer m-auto">
             <Button id='bcu' className="h-auto mwu self-center" variant="flat" onClick={ spin }>
               <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
                 stroke-width="0" viewBox="0 0 24 24"
