@@ -177,7 +177,7 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
 #imodal-content { background-color: var(--bg); margin: auto; padding: 0; border: 1px solid #888;
 width: 53% }
 
-.modal-content { height: 41vw }
+.h41 { height: 41vw }
 
 .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; width: fit-content;
 right: 0; position: absolute }

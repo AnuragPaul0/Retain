@@ -629,7 +629,7 @@ export default function Home() {
     </svg>{ sta } { adde }</div></div>
 
     <div id="imodal" className="modal modalp">
-      <div id="imodal-content" className="modal-content" style={{ justifyContent: 'center' }}>
+      <div id="imodal-content" className="h41 modal-content" style={{ justifyContent: 'center' }}>
          <div style={{ justifyContent: 'space-between' }} className=
           { "pb-4 border-bottom flex mb-8 justify-start items-center gap-4 rounded-md"+
             " group] hover:shadow-lg" }>
