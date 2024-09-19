@@ -110,8 +110,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
     <Image id='bol' alt="Woman" className="rr0 object-cover opacity-1" height={75} width={50} src=
     "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg" radius='none'/>
-    <Image radius='none' alt="Woman" className="tol object-cover opacity-1" height={75} width={50} src=
-    "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+    <img src="https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"
+      className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tol object-cover opacity-1"
+    alt="Woman" height="75" width="50"></img></Col>
   <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
     <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
 "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
@@ -120,9 +121,10 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
   <div key='2' className='df'>
     <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
       <Image id='bol' alt="Woman" className="rr0 object-cover opacity-1" height={75} width={50} src=
-        "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg" radius='none'/>
-      <Image radius='none' alt="Woman" className="tol object-cover opacity-1" height={75} width={50}
-      src="https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
+        "https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg" radius='none'/>
+      <img src="https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"
+      className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tol object-cover opacity-1"
+    alt="Woman" height="75" width="50"></img></Col>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
       <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>,
@@ -144,15 +146,12 @@ d2 = (n: any, m=os) => <div key={ n } className='rounded-large df'>
     width={50} src="https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="/>
     <Image radius='none' alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
     "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"/>
-    <Image alt="Woman" radius='none' className="tol object-cover opacity-1" height={50} width={50} src=
-  "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
+    <img src=" https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"
+      className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tol object-cover opacity-1"
+  alt="Woman" height="50" width="50"></img></Col>
   <img src="https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
     className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
-  id="img" alt="Woman" height="150" width="100"></img>
-  {/* <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-    <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
-  "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg" width={100}/></Col> */}
-{ cfr('', m, '50 top-0') }</div>,
+id="img" alt="Woman" height="150" width="100"></img>{ cfr('', m, '50 top-0') }</div>,
 
 dict = { c: 1, imc: [ imk(0), d2(1), d2(2, 'New arrival'), d2(3), imk(4) ]},
 
