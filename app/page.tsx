@@ -107,18 +107,17 @@ cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
 " ml-1 z-10" }><p id='mb0' className={t+( w==ab? '':'ort ' )+"text-tiny" }>{ m }</p></CardFooter>,
 
 iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
-    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-      <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-        borderTopRightRadius: 0
+  <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+    <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+      borderTopRightRadius: 0
+      }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+      "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
+    <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
         }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-        "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
-      <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-          borderTopRightRadius: 0,
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-    "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
-    <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
+  "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+  <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
+    <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
 "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
   width={100} /></Col>{ cfr('', os, '50') }</div>,
 
@@ -414,7 +413,7 @@ export default function Home() {
         <use href="#svg-158090405_915"></use></svg></div></div></a></Button>
 
         <div className="flex mb-8 justify-start items-center gap-4 rounded-md group cursor-pointer">
-          <Button id='riq' className="mb-8 mwu self-center" variant="flat" radius="none"
+          <Button id='riq' className="mwu self-center" variant="flat" radius="none"
             ><svg fill="white" width="40px" version="1.1" id="Capa_1" viewBox="0 0 489.4 489.4"
             xmlSpace="preserve">
             <g> <g> <path d="M0,437.8c0,28.5,23.2,51.6,51.6,51.6h386.2c28.5,0,51.6-23.2,51.6-51.6V51.6c0-28.5-23.2-51.6-51.6-51.6H51.6    C23.1,0,0,23.2,0,51.6C0,51.6,0,437.8,0,437.8z M437.8,464.9H51.6c-14.9,0-27.1-12.2-27.1-27.1v-64.5l92.8-92.8l79.3,79.3    c4.8,4.8,12.5,4.8,17.3,0l143.2-143.2l107.8,107.8v113.4C464.9,452.7,452.7,464.9,437.8,464.9z M51.6,24.5h386.2    c14.9,0,27.1,12.2,27.1,27.1v238.1l-99.2-99.1c-4.8-4.8-12.5-4.8-17.3,0L205.2,333.8l-79.3-79.3c-4.8-4.8-12.5-4.8-17.3,0    l-84.1,84.1v-287C24.5,36.7,36.7,24.5,51.6,24.5z"/>
@@ -543,8 +542,8 @@ export default function Home() {
                   }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
             "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-            <Image id='img' radius='none' style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                  }} alt="Woman" className="img object-cover opacity-1" height={150} src=
+            <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
+                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
           width={100}/></Col></div>
           <CardFooter style={{ paddingLeft: '0 !important',
