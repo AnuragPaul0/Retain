@@ -138,7 +138,7 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     "https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg" radius='none'/></Col>
 </div>, imk(4) ]},
 
-d2 = (n: any, m=os) => <div key={ n } className='df'>
+d2 = (n: any, m=os) => <div key={ n } className='rounded-large df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
     <Image id='bol' radius='none' alt="Woman" className="rr0 object-cover opacity-1" height={50}
     width={50} src="https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="/>
