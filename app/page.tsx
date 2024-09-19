@@ -403,7 +403,7 @@ export default function Home() {
               <path d="M151.7,196.1c34.4,0,62.3-28,62.3-62.3s-28-62.3-62.3-62.3s-62.3,28-62.3,62.3S117.3,196.1,151.7,196.1z M151.7,96    c20.9,0,37.8,17,37.8,37.8s-17,37.8-37.8,37.8s-37.8-17-37.8-37.8S130.8,96,151.7,96z" transform="translate(-36 0)"/>
         </g></g></svg></Button></div>
 
-        <div className="flex justify-start items-center gap-4 rounded-md group cursor-pointer">
+        <div className="flex justify-start items-center gap-4 rounded-md group">
           <Button id='riq' className="br5 h-auto mb-8 mwu self-center" variant="flat" radius="none"
             ><svg id='Meta' fill='white' viewBox="0 0 30 20" width="40px"><desc>Logo of Meta</desc>
               <g transform="scale(0.1)"> <path id="Logo0" d="m31.06,125.96c0,10.98 2.41,19.41 5.56,24.51 4.13,6.68 10.29,9.51 16.57,9.51 8.1,0 15.51-2.01 29.79-21.76 11.44-15.83 24.92-38.05 33.99-51.98l15.36-23.6c10.67-16.39 23.02-34.61 37.18-46.96 11.56-10.08 24.03-15.68 36.58-15.68 21.07,0 41.14,12.21 56.5,35.11 16.81,25.08 24.97,56.67 24.97,89.27 0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75l0-31.02c17.63,0 22.03-16.2 22.03-34.74 0-26.42-6.16-55.74-19.73-76.69-9.63-14.86-22.11-23.94-35.84-23.94-14.85,0-26.8,11.2-40.23,31.17-7.14,10.61-14.47,23.54-22.7,38.13l-9.06,16.05c-18.2,32.27-22.81,39.62-31.91,51.75-15.95,21.24-29.57,29.29-47.5,29.29-21.27,0-34.72-9.21-43.05-23.09-6.8-11.31-10.14-26.15-10.14-43.06z"/>
@@ -418,9 +418,9 @@ export default function Home() {
               <path id='rig' fill="white" d="M129.2 31.5c-.6-.1-12.6-.2-12.6-.2s-10.1-9.8-11.1-10.8c-.4-.4-.9-.6-1.4-.6v149.5l45.1-11.2S130.8 33.8 130.7 32.9c-.2-.9-.9-1.3-1.5-1.4z"></path>
               <path d="M79.1 54.7l-5.2 19.6s-5.8-2.7-12.8-2.2c-10.2.6-10.3 7-10.2 8.7.6 8.8 23.6 10.7 24.9 31.2 1 16.2-8.6 27.2-22.4 28.1-16.6 1-25.7-8.7-25.7-8.7l3.5-14.9s9.2 6.9 16.5 6.5c4.8-.3 6.5-4.2 6.3-7-.7-11.4-19.5-10.8-20.7-29.5-1-15.8 9.4-31.8 32.3-33.3 9-.8 13.5 1.5 13.5 1.5z"></path>
         </svg></Button></div></div>
- {/* pl-1 */}
+
         <div className="my-4 pb-4 " style={{ position: 'absolute', bottom: 0 }}>
-          <div className="flex mb-2 justify-start items-center gap-4 rounded-md group cursor-pointer m-auto">
+          <div style={{ width: '40px' }} className="flex mb-2 justify-content-md-center items-center gap-4 rounded-md group cursor-pointer m-auto">
             <Button id='bcu' className="h-auto mwu self-center" variant="flat" onClick={ spin }>
               <svg className="text-2xl fill-white" stroke="currentColor" fill="currentColor"
                 stroke-width="0" viewBox="0 0 24 24"
