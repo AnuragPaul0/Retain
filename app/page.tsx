@@ -115,7 +115,7 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     alt="Woman" height="75" width="50"></img></Col>
   <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
   <img src="https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-    className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
+    className="hre relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
   id="img" alt="Woman" height="150" width="100"></img></Col>{ cfr('', os, '50') }</div>,
 
   <div key='2' className='df'>
