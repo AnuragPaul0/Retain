@@ -108,48 +108,34 @@ cfr = (t='', m=os, w=ab) => <CardFooter id='cfo' className=
 
 iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
   <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-    <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-      borderTopRightRadius: 0
-      }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-      "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
-    <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-        borderTopRightRadius: 0,
-        }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-  "	https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
+    <Image id='bol' alt="Woman" className="rr0 object-cover opacity-1" height={75} width={50} src=
+      "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg" radius='none'/>
+    <Image radius='none' alt="Woman" className="tol object-cover opacity-1" height={75} width={50} src=
+  "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
   <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
     <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
 "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
   width={100} /></Col>{ cfr('', os, '50') }</div>,
 
   <div key='2' className='df'>
-      <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-          borderTopRightRadius: 0
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg"/>
-        <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "	https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
+    <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
+      <Image id='bol' alt="Woman" className="rr0 object-cover opacity-1" height={75} width={50} src=
+        "https://cdn.pixabay.com/photo/2023/07/23/06/57/leaf-8144517_640.jpg" radius='none'/>
+      <Image radius='none' alt="Woman" className="tol object-cover opacity-1" height={75} width={50}
+        src="https://cdn.pixabay.com/photo/2024/03/26/15/12/sunset-8657085_640.jpg"/></Col>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-            }} alt="Woman" className="object-cover opacity-1" height={150} src=
+      <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>,
 
   <div key='3' className='df'>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0
-        }} alt="Woman" className="object-cover opacity-1" height={150} src=
+      <Image alt="Woman" className="rr0 object-cover opacity-1" height={150} radius='none' src=
         "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg" width={100}/>
     </Col><Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
-        <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-          borderBottomRightRadius: 0
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-          "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg"/>
-      <Image style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0,
-          borderTopRightRadius: 0,
-          }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
-        "	https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"/></Col>
+      <Image id='bol' alt="Woman" className="br0 object-cover opacity-1" height={75} width={50} src=
+        "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg" radius='none'/>
+      <Image id='bol' alt="Woman" className="tl0 tr0 object-cover opacity-1" height={75} width={50} src=
+    "https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg" radius='none'/></Col>
 </div>, imk(4) ]},
 
 d2 = (n: any, m=os) => <div key={ n } className='df'>
