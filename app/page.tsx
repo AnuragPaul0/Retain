@@ -148,7 +148,7 @@ d2 = (n: any, m=os) => <div key={ n } className='rounded-large df'>
   "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
   <img src="https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
     className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
-  id="img" alt="Woman" height="150" width="100" style="height:150px"></img>
+  id="img" alt="Woman" height="150" width="100"></img>
   {/* <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
     <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
   "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg" width={100}/></Col> */}
