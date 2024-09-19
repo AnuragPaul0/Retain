@@ -243,7 +243,7 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 #img, .tol, .tl0 { border-top-left-radius: 0 }
 .tol, .rr0, .br0 { border-bottom-right-radius: 0 }
 .tol, .rr0, .tr0 { border-top-right-radius: 0 }
-.tol { border-bottom-left-radius: var(--nextui-radius-large) }
+.tol { border-bottom-left-radius: var(--nextui-radius-large); height: revert-layer }
 
 #img { border-top-right-radius: var(--nextui-radius-large);
 border-bottom-right-radius: var(--nextui-radius-large) }
