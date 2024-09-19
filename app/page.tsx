@@ -135,8 +135,6 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     <img src="https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg"
       className="ble relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 rr0 object-cover opacity-1"
     alt="Woman" height="150" width="100"/>
-    <Image alt="Woman" className="rr0 object-cover opacity-1" height={150} radius='none' src=
-        "https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_640.jpg" width={100}/>
     </Col><Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
       <Image id='bol' alt="Woman" className="br0 object-cover opacity-1" height={75} width={50} src=
         "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg" radius='none'/>
