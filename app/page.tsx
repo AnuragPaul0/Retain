@@ -114,9 +114,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
       className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tol object-cover opacity-1"
     alt="Woman" height="75" width="50"></img></Col>
   <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-    <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
-"https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
-  width={100} /></Col>{ cfr('', os, '50') }</div>,
+  <img src="https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
+    className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
+  id="img" alt="Woman" height="150" width="100"></img></Col>{ cfr('', os, '50') }</div>,
 
   <div key='2' className='df'>
     <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
@@ -126,8 +126,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
       className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tol object-cover opacity-1"
     alt="Woman" height="75" width="50"></img></Col>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
-      <Image id='img' radius='none' alt="Woman" className="object-cover opacity-1" height={150} src=
-  "https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg" width={100}/></Col></div>,
+    <img src="https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg"
+    className="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 object-cover opacity-1"
+  id="img" alt="Woman" height="150" width="100"></img></Col></div>,
 
   <div key='3' className='df'>
     <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
@@ -136,8 +137,9 @@ iml = {c:0, imc: [ imk(0), <div key='1' className='relative df'>
     </Col><Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
       <Image id='bol' alt="Woman" className="br0 object-cover opacity-1" height={75} width={50} src=
         "https://cdn.pixabay.com/photo/2023/07/10/06/13/mountain-8117525_640.jpg" radius='none'/>
-      <Image id='bol' alt="Woman" className="tl0 tr0 object-cover opacity-1" height={75} width={50} src=
-    "https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg" radius='none'/></Col>
+      <img src="https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_640.jpg"
+        className="brr relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 tl0 tr0 object-cover opacity-1"
+      id="bol" alt="Woman" height="75" width="50"></img></Col>
 </div>, imk(4) ]},
 
 d2 = (n: any, m=os) => <div key={ n } className='rounded-large df'>
