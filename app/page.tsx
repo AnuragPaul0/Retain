@@ -534,16 +534,7 @@ export default function Home() {
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "foo justify-center before:bg-white/10 overflow-hidden py-1 before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
       <p className="text-tiny" style={{ marginBottom: 0 }}
-        >Multi Image - fallback</p></CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
-          color="default" radius="lg" size="sm">
-            <svg fill="#000" width="20px" version="1.1"
-              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> <g> <path d=
-          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-      ></path></g></g></svg></Button></Col>
+        >Multi Image - fallback</p></CardFooter></Card></Col>
 
       <Col xs lg="2" className="df bl justify-content-md-center">
         <Card id='fbk' isFooterBlurred radius="lg" className="border-none">
@@ -554,12 +545,10 @@ export default function Home() {
                   borderTopRightRadius: 0,
                   }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
-                  />
-                <Image style={{ borderRadius: 0
+                  /><Image style={{ borderRadius: 0
                   }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
-                  />
-              <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
+                  /><Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
                   borderTopRightRadius: 0,
                   }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
                 "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
@@ -574,16 +563,7 @@ export default function Home() {
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "foo justify-center before:bg-white/10 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0 }}>4 Image - fallback</p>
-        </CardFooter></Card><Button id='b1' style={{ zIndex: 0 }} className=
-          "self-center p-2 radius-large absolute bg-white/20" variant="flat"
-          color="default" radius="lg" size="sm">
-            <svg fill="#000" width="20px" version="1.1"
-              id="Capa_1" viewBox="0 0 348.882 348.882" xmlSpace="preserve">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> <g> <path d=
-          "M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231 c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685 c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176 C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99 L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386 c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"></path> <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904 c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15 s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798 c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"
-    ></path></g></g></svg></Button></Col></Row></Container>
+        </CardFooter></Card></Col></Row></Container>
 
     <footer className="footer" data-version="v1" data-variant="elevated">
       <nav aria-label="Vercel Directory"><div className="statusRow">
