@@ -381,7 +381,7 @@ export default function Home() {
 
   return <div>
     <div style={{ width: '4rem' }} className={
-      "p-3 h-screen bg-black z-20 fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
+      "p-3 h-screen bg-black fixed top-0 -left-96 lg:left-0 peer-focus:left-0 peer:transition"+
       " ease-out delay-150 duration-200"}>
       <div className="flex-col justify-start item-center"><div className="my-4">
 
@@ -426,7 +426,7 @@ export default function Home() {
                 stroke-width="0" viewBox="0 0 24 24"
                 height="25px"><path fill="none" d="M0 0h24v24H0V0z"></path><path d=
                 "M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-      ></path></svg></Button></div></div></div></div>
+    ></path></svg></Button></div></div></div></div>
 
     <div style={{ marginBottom: '4%', marginLeft: '6rem', marginTop: '2rem' }} className="framer"
       data-framer-name="Fuel your Brand's Growth with Personalized Dynamic Creatives"
@@ -518,15 +518,15 @@ export default function Home() {
             <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
               <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
                 borderTopRightRadius: 0
-                }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                }} alt="Woman" className="z-0 object-cover opacity-1" height={75} width={50} src=
                 "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"/>
               <Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
                   borderTopRightRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={75} width={50} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={75} width={50} src=
             "https://cdn.pixabay.com/photo/2023/11/13/00/47/cactus-8384331_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
             <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={150} src=
   "https://media.istockphoto.com/id/1454962497/photo/aerial-view-on-spring-fields.webp?b=1&s=612x612&w=0&k=20&c=0_xGf6EZu9oskMoXC5tODadRWmzWm6ZvJveUYCWmdBE="
           width={100}/></Col></div>
           <CardFooter style={{ paddingLeft: '0 !important',
@@ -543,18 +543,18 @@ export default function Home() {
             <Col style={{ maxWidth: 'fit-content' }} className="justify-content-md-center">
                 <Image style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
                   borderTopRightRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={50} width={50} src=
   "https://media.istockphoto.com/id/1534040386/photo/an-outdoor-bamboo-gazebo-nestled-amidst-lush-greenery-offering-serene-relaxation-after-a.webp?b=1&s=612x612&w=0&k=20&c=vuWY9Cw4TjBDhJLyMVL20Qm5gddDNQ3UmHATP_s2Xvw="
                   /><Image style={{ borderRadius: 0
-                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={50} width={50} src=
                   "https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg"
                   /><Image style={{ borderTopLeftRadius: 0, borderBottomRightRadius: 0,
                   borderTopRightRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={50} width={50} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={50} width={50} src=
                 "	https://cdn.pixabay.com/photo/2023/10/20/03/36/mushrooms-8328101_640.jpg"/></Col>
           <Col className="justify-content-md-center" style={{ width: 'fit-content' }}>
             <Image style={{ borderBottomLeftRadius: 0, borderTopLeftRadius: 0,
-                  }} alt="Woman" className="object-cover opacity-1" height={150} src=
+                  }} alt="Woman" className="z-0 object-cover opacity-1" height={150} src=
               "https://cdn.pixabay.com/photo/2024/01/31/19/25/sunset-8544672_640.jpg"
           width={100} /></Col></div>
           <CardFooter style={{ paddingTop: '4px !important', paddingBottom: '0 !important',
@@ -563,7 +563,7 @@ export default function Home() {
             borderBottomLeftRadius: 'var(--nextui-radius-large)' }} className=
   "foo justify-center before:bg-white/10 overflow-hidden before:rounded-xl bottom-1 w-[calc(100%_-_8px)] ml-1 z-10"
             ><p className="text-tiny" style={{ marginBottom: 0 }}>4 Image - fallback</p>
-        </CardFooter></Card></Col></Row></Container>
+    </CardFooter></Card></Col></Row></Container>
 
     <footer className="footer" data-version="v1" data-variant="elevated">
       <nav aria-label="Vercel Directory"><div className="statusRow">
