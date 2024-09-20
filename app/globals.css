@@ -268,7 +268,7 @@ html body { font-family: 'Recoleta Medium'; --ds-gray-700-value: 0, 0%, 56%;
 
 .dark { --bg: black; --foreground-rgb: #fff; --lis: #111; --cb: #0f0f0f; --bgr: var(--log);
   --nextui-box-shadow-medium: 0px 0px 15px 0px var(--lis), 0px 2px 30px 0px
-  rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3); scrollbar-color: #424242 #000;
+  rgba(0, 0, 0, .08), 0px 0px 1px 0px rgba(0, 0, 0, .3);
 
   --ds-shadow-border: hsla(0, 0%, 100%, .145); --ds-background-100: #0a0a0a;
   --ds-gray-400-value: 0, 0%, 18%; --ds-gray-400: hsla(var(--ds-gray-400-value), 1);
