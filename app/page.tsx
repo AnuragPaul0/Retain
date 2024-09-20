@@ -483,10 +483,9 @@ export default function Home() {
 
     <p className="framer-text" style={{  marginLeft: '6rem' }}>
       <span style={{ zoom: 2, width: '30%', display: 'inline-block' }}
-    >Design for remaining SKU's</span>
+      >Design for remaining SKU's</span>
 
-    <label data-selected='true'
-      onMouseLeave={ rem } onMouseUp={ rem } onMouseDown={ (e) => {
+    <label data-selected='true' onMouseLeave={ rem } onMouseUp={ rem } onMouseDown={ (e) => {
       console.log('el', e.target)
         let el = e.currentTarget as HTMLElement, dat = 'data-pressed'
         el.setAttribute(dat, "true") } } onClick={ (e) => { console.log('el', e.target)
@@ -494,12 +493,13 @@ export default function Home() {
         // console.log(el)
       if ((e.target as HTMLElement).tagName == 'INPUT') { el.hasAttribute(dat) ? el.removeAttribute(dat) :
         el.setAttribute(dat, "true"), setIsSelected(!isSelected) } } }
-      aria-label="Automatic updates" className="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+      aria-label="Automatic updates" className={"group relative max-w-fit inline-flex items-center"+
+        " justify-start cursor-pointer touch-none tap-highlight-transparent"}
       ><span id='spa'>
         <input defaultChecked={ true } aria-labelledby=":R4mfja:" type="checkbox" role="switch"/>
       </span>
       <span aria-hidden="true" className="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-success group-data-[selected=true]:text-success-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background">
-        <span id='swi' className="z-10 flex items-center justify-center shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
+        <span id='swi' className="flex items-center justify-center shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4">
     </span></span></label></p>
 
     <Container id='NA' style={{ paddingTop: 'calc(var(--bs-gutter-x) * 2)',
