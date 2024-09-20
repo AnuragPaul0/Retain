@@ -151,6 +151,7 @@ border-top-left-radius: var(--nextui-radius-large) }
 html body, #lst, span.bun, #bl0, #bor, #del, .foo, #riq, #bcu, #dec
 { background-color: unset !important }
 
+#buno { background-color: unset }
 #lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }

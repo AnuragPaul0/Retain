@@ -633,7 +633,7 @@ export default function Home() {
               </svg></span>
               <input id='bl0' onKeyUp={input} type="text" className="form-control" placeholder="Search"
         aria-label="Search" aria-describedby="basic-addon1"/></div></form></nav>
-        </div><Button onClick={ () => myFunction() } id='bor' className=
+        </div><Button onClick={ () => myFunction() } id='buno' className=
           {'action-label mwu close h-auto z-10 shadow-medium self-center p-2'+
           ' top-0 radius-large' } variant="flat" color="default" radius="lg" size="sm">
         <span>&times;</span></Button>
