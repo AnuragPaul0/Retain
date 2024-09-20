@@ -181,8 +181,7 @@ width: 53% }
 .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; width: fit-content;
 right: 0; position: absolute }
 
-/* padding-top: .5%; padding-right: 1.5%;  */
-.close:hover, .close:focus { color: red; text-decoration: none; cursor: pointer }
+.close:hover { color: red; text-decoration: none; cursor: pointer }
 .c2w { width: 75% !important }
 div.df, .df { display: flex }
 #adb { border-radius: 4px; padding-left: 7px !important; padding-right: 7px !important }
@@ -223,11 +222,10 @@ background-color: hsl(var(--nextui-success)/var(--nextui-success-opacity, 1)) !i
 #svg-158090405_915_mask0_17717_9374 {mask-type:luminance}
 
 #svg-templates { position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0;
-  z-index: 0; contain: strict
-}
+z-index: 0; contain: strict }
 
 .framer-drq6ak { image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0);
-  color: rgb(0, 0, 0); opacity: 1 }
+color: rgb(0, 0, 0); opacity: 1 }
 
 .svgContainer { width: 100%; height: 100%; aspect-ratio: inherit }
 #ret { width: 100%; height: 100% }
