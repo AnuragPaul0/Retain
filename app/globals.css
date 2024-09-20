@@ -151,7 +151,7 @@ border-top-left-radius: var(--nextui-radius-large) }
 html body, #lst, span.bun, #bl0, #bor, #del, .foo, #riq, #bcu, #dec
 { background-color: unset !important }
 
-#buno { background-color: unset }
+.buno { background-color: unset }
 #lst { list-style-type: none; border-radius: 5px }
 #crd { width: 25vw }
 #w8v { width: 8vw }
@@ -243,7 +243,8 @@ color: rgb(0, 0, 0); opacity: 1 }
 #img { border-top-right-radius: var(--nextui-radius-large) }
 #img, .brr { border-bottom-right-radius: var(--nextui-radius-large) }
 .br5 { border-radius: 5px }
-.action-label:not(.disabled):hover { background-color: var(--vscode-toolbar-hoverBackground) }
+.action-label:not(.disabled):hover { background-color: hsl(var(--nextui-default)/.4) }
+/* var(--vscode-toolbar-hoverBackground) --vscode-toolbar-hoverBackground: rgba(90, 93, 94, 0.31); */
 
 :root { background-color: var(--bg); color: var(--foreground-rgb); --cb: #f0f0f0;
 scroll-behavior: unset !important }
@@ -251,7 +252,6 @@ scroll-behavior: unset !important }
 html { --lis: #f7f7f7; --bg: #fff; --foreground-rgb: #000; --bgr: #04ae5620;
   --ds-shadow-border: rgba(0, 0, 0, .08); --ds-background-100: #fff;
   --ds-gray-400-value: 0, 0%, 92%; --ds-gray-400: hsla(var(--ds-gray-400-value), 1);
-  --vscode-toolbar-hoverBackground: rgba(90, 93, 94, 0.31);
 --ds-gray-1000-value: 0, 0%, 9%; --log: #04ae56; --ds-gray-1000: hsla(var(--ds-gray-1000-value), 1) }
 
 ::placeholder, #bl0 { color: var(--foreground-rgb) !important; opacity: 1 /* Firefox */}
