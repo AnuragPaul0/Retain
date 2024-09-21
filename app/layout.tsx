@@ -1,16 +1,31 @@
 import type { Metadata } from "next"
 import "./globals.css"
-//  by create next app
+
 export const metadata: Metadata = {
   title: "RetainIQ: Leverage AI to Supercharge your performance and email marketing",
-  description: "Generated", icons: {
+  description: `RetainIQ uses automation and generative AI to give brands ownership over the
+   design and performance of their Dynamic Product Ads and Email.`, icons: {
 icon: "https://framerusercontent.com/images/E4ASOtv32Ln0x5c9sOJ8aUHtQYg.png"} }
 
 // rendering on the server, you do not have a browser and thus you do not have access to all the
 // APIs that the browser provides, including localStorage.
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return (
-  <html lang="en"><body><script dangerouslySetInnerHTML={{ __html: `
+  <html lang="en">
+    <head>
+      {/* <!-- Open Graph / Facebook --> */}
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content=
+        "RetainIQ: Leverage AI to Supercharge your performance and email marketing"/>
+      <meta property="og:description" content="RetainIQ uses automation and generative AI to give brands ownership over the design and performance of their Dynamic Product Ads and Email."/>
+      {/* <!-- Twitter --> */}
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:title" content=
+        "RetainIQ: Leverage AI to Supercharge your performance and email marketing"/>
+    <meta name="twitter:description" content="RetainIQ uses automation and generative AI to give brands ownership over the design and performance of their Dynamic Product Ads and Email."/>
+    <link rel="canonical" href="https://retainiq.io/"/>
+  <meta property="og:url" content="https://retainiq.io/"/></head>
+<body><script dangerouslySetInnerHTML={{ __html: `
     // console.log(document.readyState)
     d=document.documentElement,c=d.classList;
     c.remove('light-theme','dark-theme');var e=localStorage.getItem('mode')
