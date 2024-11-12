@@ -12,7 +12,7 @@ icon: "https://framerusercontent.com/images/E4ASOtv32Ln0x5c9sOJ8aUHtQYg.png"} }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return (
   <html lang="en">
-    <head><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website"/>
       <meta property="og:title" content=
