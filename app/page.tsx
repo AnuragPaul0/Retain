@@ -380,8 +380,8 @@ export default function Home() {
     }
     , addEventListeners = () => {
     let interval: any,
-      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
-      window.addEventListener("load", (event) => { e = document.querySelector('#gre'),
+      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split('')
+      window.addEventListener("load", (event) => { let e = document.querySelector('#gre'),
       t = 'Publish Feed'
     if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
