@@ -377,22 +377,22 @@ export default function Home() {
 
   let randomInteger = (min: any, max: any) => {
       return Math.floor(Math.random() * (max - min + 1) + min)
-    }
-    useEffect(() => { let interval = 0,
-      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
-      e = document.querySelector('#gre'),
-      t = 'Publish Feed'
-    //   e.addEventListener('mouseover', () => {
-    //     // console.log('in')
-    //     interval = setInterval(() => { k = ''; t.split('').forEach((element: any) => {
-    //     // console.log(element)
-    //     k+=characters[randomInteger(0, characters.length - 1)] })
-    //     e.innerHTML = k
-    //       }, 50) });
-    // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
-      
-    e = localStorage.getItem('mode')
-    let q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
+    }, 
+  addEventListeners = () => { let interval = 0,
+    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
+    e = document.querySelector('#gre'),
+    t = 'Publish Feed'; e.addEventListener('mouseover', () => {
+      // console.log('in')
+      interval = setInterval(() => { k = ''; t.split('').forEach((element: any) => {
+      // console.log(element)
+      k+=characters[randomInteger(0, characters.length - 1)] })
+      e.innerHTML = k
+        }, 50) });
+    e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'}) }
+  
+    useEffect(() => { addEventListeners()
+    let e = localStorage.getItem('mode')
+    q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
 
   return <div>
