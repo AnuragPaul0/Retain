@@ -378,13 +378,10 @@ export default function Home() {
   let randomInteger = (min: any, max: any) => {
       return Math.floor(Math.random() * (max - min + 1) + min)
     }
-    // , addEventListeners = () => {  }
-  
-    useEffect(() => { {
-      // addEventListeners()
+    , addEventListeners = () => {
     let interval: any,
       characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
-      e = document.querySelector('#gre'),
+      window.addEventListener("load", (event) => { e = document.querySelector('#gre'),
       t = 'Publish Feed'
     if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
@@ -393,7 +390,15 @@ export default function Home() {
       k+=characters[randomInteger(0, characters.length - 1)] })
       e.innerHTML = k }, 50) })
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
-           } else console.log({e}) }
+           } else console.log({e})
+  console.log("page is fully loaded")
+})
+   }
+  
+      addEventListeners()
+    useEffect(() => {
+      // {
+      // }
                      console.log('u')
     let e = localStorage.getItem('mode'),
     q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
