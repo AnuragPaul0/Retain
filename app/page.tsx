@@ -383,9 +383,9 @@ export default function Home() {
     useEffect(() => { {
       // addEventListeners()
     let interval: any,
-    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
-    e = document.querySelector('#gre'),
-    t = 'Publish Feed'
+      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
+      e = document.querySelector('#gre'),
+      t = 'Publish Feed'
     if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
       interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
@@ -394,6 +394,7 @@ export default function Home() {
       e.innerHTML = k }, 50) })
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
            } else console.log({e}) }
+                     console.log('u')
     let e = localStorage.getItem('mode'),
     q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
