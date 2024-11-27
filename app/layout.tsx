@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t)
       if(m.media!==t||m.matches) { c.add('dark') } else {
     d.style.colorScheme = 'light'; c.add('light-theme')}} else if (e==="dark") { c.add("dark") }` }}>
-</script><div class="grain"></div>{children}<div id="svg-templates">
+</script><div className="grain"></div>{children}<div id="svg-templates">
   <svg width="28" height="29" viewBox="0 0 28 29" fill="none" id="svg-158090405_915">
     <mask id="svg-158090405_915_mask0_17717_9374" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="29">
     <path d="M0 0.5H28V28.5H0V0.5Z" fill="white"></path>
