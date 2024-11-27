@@ -378,10 +378,10 @@ export default function Home() {
   let randomInteger = (min: any, max: any) => {
       return Math.floor(Math.random() * (max - min + 1) + min)
     }, 
-  addEventListeners = () => { let interval = 0,
+  addEventListeners = () => { let interval: any,
     characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
     e = document.querySelector('#gre'),
-    t = 'Publish Feed', interval: any
+    t = 'Publish Feed'
     if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
       interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
