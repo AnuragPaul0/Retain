@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import "./globals.css"
-
+import Script from 'next/script'
+ 
+export default Home
 export const metadata: Metadata = {
   title: "RetainIQ: Leverage AI to Supercharge your performance and email marketing",
   description: `RetainIQ uses automation and generative AI to give brands ownership over the
@@ -24,7 +26,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "RetainIQ: Leverage AI to Supercharge your performance and email marketing"/>
     <meta name="twitter:description" content="RetainIQ uses automation and generative AI to give brands ownership over the design and performance of their Dynamic Product Ads and Email."/>
     <link rel="canonical" href="https://retainiq.io/"/>
-    <script type="text/javascript" src="https://anuragpaul0.github.io/Text/res.js"></script>
+    <Script src="https://anuragpaul0.github.io/Text/res.js"></Script>
+{/*       <script type="text/javascript" src="https://"></script> */}
   <meta property="og:url" content="https://retainiq.io/"/></head>
 <body><script dangerouslySetInnerHTML={{ __html: `
     // console.log(document.readyState)
