@@ -375,15 +375,13 @@ export default function Home() {
     to use is it as a DnD handle. The rest of renderItem will be then
   ignored and not start the drag and drop.*/}
 
-  useEffect(() => { 
-
-    let randomInteger = (min: any, max: any) => {
+  let randomInteger = (min: any, max: any) => {
       return Math.floor(Math.random() * (max - min + 1) + min)
-    },
-    interval = 0,
-    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
-    e = document.querySelector('#gre'),
-    t = 'Publish Feed'; e.addEventListener('mouseover', () => {
+    }
+    useEffect(() => { let interval = 0,
+      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
+      e = document.querySelector('#gre'),
+      t = 'Publish Feed'; e.addEventListener('mouseover', () => {
         // console.log('in')
         interval = setInterval(() => { k = ''; t.split('').forEach((element: any) => {
         // console.log(element)
