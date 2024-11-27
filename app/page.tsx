@@ -381,8 +381,8 @@ export default function Home() {
     , addEventListeners = () => {
     let interval: any,
       characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split('')
-      window.addEventListener("load", (event) => { let e = document.querySelector('#gre'),
-      t = 'Publish Feed'
+      // window.addEventListener("load", (event) => { let e = document.querySelector('#gre'),
+      // t = 'Publish Feed'
     // if (e) { e.addEventListener('mouseover', () => {
     //   // console.log('in')
     //   interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
@@ -391,8 +391,7 @@ export default function Home() {
     //   e.innerHTML = k }, 50) })
     // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
     //        } else console.log({e})
-  console.log("page is fully loaded")
-})
+  // console.log("page is fully loaded") })
    }
   
       addEventListeners()
