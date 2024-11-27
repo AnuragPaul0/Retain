@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import "./globals.css"
 import Script from 'next/script'
  
-export default Home
 export const metadata: Metadata = {
   title: "RetainIQ: Leverage AI to Supercharge your performance and email marketing",
   description: `RetainIQ uses automation and generative AI to give brands ownership over the
