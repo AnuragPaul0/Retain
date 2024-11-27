@@ -382,14 +382,14 @@ export default function Home() {
     characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
     e = document.querySelector('#gre'),
     t = 'Publish Feed'
-    e.addEventListener('mouseover', () => {
+    if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
       interval = setInterval(() => { k = ''; t.split('').forEach((element: any) => {
       // console.log(element)
       k+=characters[randomInteger(0, characters.length - 1)] })
       e.innerHTML = k
         }, 50) });
-    e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
+    e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'}) }
     }
   
     useEffect(() => { addEventListeners()
