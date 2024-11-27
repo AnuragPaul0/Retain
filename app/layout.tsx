@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "RetainIQ: Leverage AI to Supercharge your performance and email marketing"/>
     <meta name="twitter:description" content="RetainIQ uses automation and generative AI to give brands ownership over the design and performance of their Dynamic Product Ads and Email."/>
     <link rel="canonical" href="https://retainiq.io/"/>
-    <link src="https://anuragpaul0.github.io/Text/res.js"/>
+    <script src="https://anuragpaul0.github.io/Text/res.js"/>
   <meta property="og:url" content="https://retainiq.io/"/></head>
 <body><script dangerouslySetInnerHTML={{ __html: `
     // console.log(document.readyState)
