@@ -388,8 +388,8 @@ export default function Home() {
       // console.log(element)
       k+=characters[randomInteger(0, characters.length - 1)] })
       e.innerHTML = k }, 50) })
-    // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'}) }
-    }
+    // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
+           } }
   
     useEffect(() => {
       // addEventListeners()
