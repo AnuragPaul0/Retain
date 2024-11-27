@@ -395,7 +395,7 @@ export default function Home() {
 })
    }
   
-      addEventListeners()
+      // addEventListeners()
     useEffect(() => {
       // {
       // }
