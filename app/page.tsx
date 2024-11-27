@@ -389,7 +389,7 @@ export default function Home() {
       k+=characters[randomInteger(0, characters.length - 1)] })
       e.innerHTML = k }, 50) })
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
-           } }
+           } else (console.log({e})) }
   
     useEffect(() => {
       // addEventListeners()
