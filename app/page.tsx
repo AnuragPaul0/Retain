@@ -393,8 +393,8 @@ export default function Home() {
         })
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
       
-    let e = localStorage.getItem('mode'),
-    q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
+    e = localStorage.getItem('mode'),
+    let q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
 
   return <div>
