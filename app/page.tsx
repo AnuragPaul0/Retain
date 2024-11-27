@@ -381,14 +381,14 @@ export default function Home() {
   addEventListeners = () => { let interval = 0,
     characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
     e = document.querySelector('#gre'),
-    t = 'Publish Feed'
+    t = 'Publish Feed', interval: any
     if (e) { e.addEventListener('mouseover', () => {
       // console.log('in')
       interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
       // console.log(element)
       k+=characters[randomInteger(0, characters.length - 1)] })
       e.innerHTML = k }, 50) })
-    // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
+    e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
            } }
   
     useEffect(() => {
