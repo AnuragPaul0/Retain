@@ -388,10 +388,10 @@ export default function Home() {
         k+=characters[randomInteger(0, characters.length - 1)] })
         e.innerHTML = k
           }, 50)
-        })
+        });
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
       
-    e = localStorage.getItem('mode'),
+    e = localStorage.getItem('mode')
     let q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
 
