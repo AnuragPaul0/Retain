@@ -1,5 +1,67 @@
 @tailwind base; @tailwind components; @tailwind utilities;
 
+@keyframes grain {
+  0% {
+      transform: translate(20%,-15%)
+  }
+
+  10% {
+      transform: translate(-20%,-15%)
+  }
+
+  20% {
+      transform: translate(20%,-5%)
+  }
+
+  30% {
+      transform: translate(-20%,-5%)
+  }
+
+  40% {
+      transform: translate(20%,5%)
+  }
+
+  50% {
+      transform: translate(-20%,5%)
+  }
+
+  60% {
+      transform: translate(20%,15%)
+  }
+
+  70% {
+      transform: translate(-20%,15%)
+  }
+
+  80% {
+      transform: translate(20%,5%)
+  }
+
+  90% {
+      transform: translate(-20%,5%)
+  }
+
+  to {
+      transform: translate(20%,-5%)
+  }
+}
+
+.grain {
+  animation: grain 6s steps(10) infinite;
+  background-image: url(https://kand.work/_next/static/media/grain.d0f0defb.png);
+  background-repeat: repeat;
+  height: 300%;
+  left: -100%;
+  opacity: .04;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  z-index: 999
+}
+
+.disabled,.grain {
+  pointer-events: none
+}
 .group[data-pressed=true] { user-select:none }
 #swi:active { width: 1.5rem }
 
