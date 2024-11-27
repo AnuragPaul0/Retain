@@ -392,7 +392,8 @@ export default function Home() {
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'}) }
     }
   
-    useEffect(() => { addEventListeners()
+    useEffect(() => {
+      // addEventListeners()
     let e = localStorage.getItem('mode'),
     q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
