@@ -392,7 +392,7 @@ export default function Home() {
            } else (console.log({e})) }
   
     useEffect(() => {
-      // addEventListeners()
+      addEventListeners()
     let e = localStorage.getItem('mode'),
     q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
