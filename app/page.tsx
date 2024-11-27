@@ -378,7 +378,11 @@ export default function Home() {
   let randomInteger = (min: any, max: any) => {
       return Math.floor(Math.random() * (max - min + 1) + min)
     }, 
-  addEventListeners = () => { let interval: any,
+  // addEventListeners = () => {  }
+  
+    useEffect(() => { {
+      // addEventListeners()
+    let interval: any,
     characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split(''), 
     e = document.querySelector('#gre'),
     t = 'Publish Feed'
@@ -390,9 +394,6 @@ export default function Home() {
       e.innerHTML = k }, 50) })
     e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
            } else console.log({e}) }
-  
-    useEffect(() => {
-      addEventListeners()
     let e = localStorage.getItem('mode'),
     q = document.querySelector<HTMLInputElement>(`[value=${e}]`); if (q) q.checked=!0
   }, [] ) // ✅ no dependency
