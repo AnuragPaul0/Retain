@@ -383,19 +383,19 @@ export default function Home() {
       characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./?'.split('')
       window.addEventListener("load", (event) => { let e = document.querySelector('#gre'),
       t = 'Publish Feed'
-    if (e) { e.addEventListener('mouseover', () => {
-      // console.log('in')
-      interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
-      // console.log(element)
-      k+=characters[randomInteger(0, characters.length - 1)] })
-      e.innerHTML = k }, 50) })
-    e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
-           } else console.log({e})
+    // if (e) { e.addEventListener('mouseover', () => {
+    //   // console.log('in')
+    //   interval = setInterval(() => { let k = ''; t.split('').forEach((element: any) => {
+    //   // console.log(element)
+    //   k+=characters[randomInteger(0, characters.length - 1)] })
+    //   e.innerHTML = k }, 50) })
+    // e.addEventListener('mouseout', () => { clearInterval(interval); e.innerHTML = 'Publish Feed'})
+    //        } else console.log({e})
   console.log("page is fully loaded")
 })
    }
   
-      // addEventListeners()
+      addEventListeners()
     useEffect(() => {
       // {
       // }
